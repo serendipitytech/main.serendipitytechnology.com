@@ -7,6 +7,9 @@
 
 require_once __DIR__ . '/../auth.php';
 require_once __DIR__ . '/../data.php';
+require_once __DIR__ . '/../vendor/twilio/sdk/src/Twilio/autoload.php';
+
+use Twilio\Rest\Client;
 
 // Require authentication
 requireAuthApi();
@@ -58,9 +61,6 @@ function handleGet() {
 }
 
 function handlePost() {
-    require_once __DIR__ . '/../vendor/twilio/sdk/src/Twilio/autoload.php';
-    use Twilio\Rest\Client;
-
     $input = json_decode(file_get_contents('php://input'), true);
     if (!$input) {
         // Fall back to form data
