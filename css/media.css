@@ -13,6 +13,60 @@
   --brand-white: #FFFFFF;
 }
 
+/* Section Navigation Menu */
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  padding: 1.5rem 1rem;
+  background: var(--brand-white);
+  border-bottom: 1px solid var(--brand-light-gray);
+  position: sticky;
+  top: 60px;
+  z-index: 90;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.section-nav a {
+  color: var(--brand-slate);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.section-nav a:hover {
+  color: var(--brand-blue);
+  background: rgba(79, 196, 240, 0.1);
+}
+
+/* Back to top link */
+.back-to-top {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  color: var(--brand-slate);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 1px solid var(--brand-light-gray);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.back-to-top:hover {
+  color: var(--brand-blue);
+  border-color: var(--brand-blue);
+  background: rgba(79, 196, 240, 0.05);
+}
+
+/* Ensure sections have some scroll offset for sticky nav */
+section[id] {
+  scroll-margin-top: 130px;
+}
+
 /* Override section title colors to match brand guide */
 .section-title {
   color: var(--brand-blue);
@@ -338,6 +392,16 @@
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
+  .section-nav {
+    gap: 0.25rem 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .section-nav a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+  }
+
   .value-props {
     flex-direction: column;
     align-items: center;
@@ -358,5 +422,9 @@
 
   .guideline-card {
     min-width: 100%;
+  }
+
+  section[id] {
+    scroll-margin-top: 110px;
   }
 }
