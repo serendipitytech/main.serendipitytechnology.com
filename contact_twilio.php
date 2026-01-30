@@ -1,32 +1,18 @@
 <?php
+/**
+ * Contact form handler
+ * Sends email or SMS based on user preference (public endpoint)
+ */
+
 header('Content-Type: application/json');
 
-// Load environment variables from .env file
-$envFile = __DIR__ . '/.env';
-if (file_exists($envFile)) {
-    $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    foreach ($lines as $line) {
-        if (strpos($line, '#') === 0) continue;
-        if (strpos($line, '=') !== false) {
-            list($key, $value) = explode('=', $line, 2);
-            $_ENV[trim($key)] = trim($value);
-            putenv(trim($key) . '=' . trim($value));
-        }
-    }
-}
-
-// Load Twilio SDK
+require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/vendor/twilio/sdk/src/Twilio/autoload.php';
+
 use Twilio\Rest\Client;
 
-// Load credentials from environment
-$twilioSid = getenv('TWILIO_ACCOUNT_SID');
-$twilioToken = getenv('TWILIO_AUTH_TOKEN');
-$twilioFrom = getenv('TWILIO_PHONE_NUMBER');
-$contactEmail = getenv('CONTACT_EMAIL') ?: 'troy@serendipitytech.net';
-
 // Validate credentials are set
-if (empty($twilioSid) || empty($twilioToken) || empty($twilioFrom)) {
+if (!TWILIO_ACCOUNT_SID || !TWILIO_AUTH_TOKEN || !TWILIO_PHONE_NUMBER) {
     http_response_code(500);
     echo json_encode(['status' => 'error', 'message' => 'Server configuration error']);
     error_log('Twilio credentials not configured in .env file');
@@ -67,9 +53,9 @@ if ($contact_method === 'email') {
         exit;
     }
 
-    $to = $contactEmail;
+    $to = CONTACT_EMAIL;
     $subject = "New Contact Form Submission";
-    $headers = "From: troy@serendipitytech.net";
+    $headers = "From: " . CONTACT_EMAIL;
 
     if (mail($to, $subject, $message, $headers)) {
         echo json_encode(['status' => 'ok', 'message' => 'Email sent successfully']);
@@ -82,39 +68,43 @@ if ($contact_method === 'email') {
 elseif ($contact_method === 'sms') {
     $rawPhone = trim($_POST['phone'] ?? '');
     $digitsOnly = preg_replace('/\D/', '', $rawPhone);
-    
+
     // Ensure it's 10 digits
     if (strlen($digitsOnly) !== 10) {
         http_response_code(400);
         echo json_encode(['status' => 'error', 'message' => 'Phone number must be 10 digits']);
         exit;
     }
-    
+
     $phone = '+1' . $digitsOnly;
-    if (empty($phone)) {
-        http_response_code(400);
-        echo json_encode(['status' => 'error', 'message' => 'Phone number is required for SMS']);
-        exit;
-    }
 
     try {
-        error_log("To: " . $_POST['phone']);
-        error_log("Message: " . $_POST['need']);
-        $client = new Client($twilioSid, $twilioToken);
+        $client = new Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
         $client->messages->create(
             $phone,
             [
-                'from' => $twilioFrom,
+                'from' => TWILIO_PHONE_NUMBER,
                 'body' => $message
             ]
         );
+
+        // Log the outbound message
+        $logEntry = [
+            'from' => TWILIO_PHONE_NUMBER,
+            'to' => $phone,
+            'body' => $message,
+            'timestamp' => time(),
+            'direction' => 'outbound'
+        ];
+
+        file_put_contents(
+            __DIR__ . '/sms_log.json',
+            json_encode($logEntry) . PHP_EOL,
+            FILE_APPEND | LOCK_EX
+        );
+
         echo json_encode(['status' => 'ok', 'message' => 'SMS sent successfully']);
-    file_put_contents('sms_log.json', json_encode([
-    'from' => $twilioFrom,
-    'to' => $phone,
-    'body' => $message,
-    'timestamp' => time()
-]) . "\n", FILE_APPEND);
+
     } catch (Exception $e) {
         http_response_code(500);
         echo json_encode(['status' => 'error', 'message' => 'Failed to send SMS: ' . $e->getMessage()]);

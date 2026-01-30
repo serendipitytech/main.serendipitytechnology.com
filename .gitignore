@@ -10,6 +10,11 @@
 # SMS log (contains conversation data)
 sms_log.json
 
+# Data directory (contains messages and voicemails)
+data/*.json
+!data/.gitkeep
+!data/.htaccess
+
 # Compressed archives
 *.zip
 
