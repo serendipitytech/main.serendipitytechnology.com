@@ -22,3 +22,7 @@ sms_log.json
 
 # Claude Code
 .claude/
+
+# Local documentation
+CLAUDE.md
+docs/
