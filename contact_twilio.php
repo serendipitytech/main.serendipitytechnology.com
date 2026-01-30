@@ -2,6 +2,7 @@
 /**
  * Contact form handler
  * Sends email or SMS based on user preference (public endpoint)
+ * Sends alert to admin for all submissions
  */
 
 header('Content-Type: application/json');
@@ -10,6 +11,48 @@ require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/vendor/twilio/sdk/src/Twilio/autoload.php';
 
 use Twilio\Rest\Client;
+
+/**
+ * Send alert SMS to admin about new contact form submission
+ */
+function sendAdminAlert($name, $email, $phone, $need, $contactMethod) {
+    if (!TWILIO_ACCOUNT_SID || !TWILIO_AUTH_TOKEN || !ADMIN_PHONE) {
+        return;
+    }
+
+    try {
+        // Format phone for display
+        $phoneFormatted = $phone;
+        if ($phone) {
+            $digits = preg_replace('/\D/', '', $phone);
+            if (strlen($digits) === 10) {
+                $phoneFormatted = '(' . substr($digits, 0, 3) . ') ' . substr($digits, 3, 3) . '-' . substr($digits, 6);
+            }
+        }
+
+        // Truncate message if too long
+        $preview = strlen($need) > 80 ? substr($need, 0, 80) . '...' : $need;
+
+        $alertMessage = "New contact form:\n";
+        $alertMessage .= "Name: {$name}\n";
+        if ($email) $alertMessage .= "Email: {$email}\n";
+        if ($phone) $alertMessage .= "Phone: {$phoneFormatted}\n";
+        $alertMessage .= "Method: " . ucfirst($contactMethod) . "\n\n";
+        $alertMessage .= "\"{$preview}\"\n\n";
+        $alertMessage .= "View: https://serendipitytechnology.com/main/chat_ui.php";
+
+        $client = new Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
+        $client->messages->create(
+            ADMIN_PHONE,
+            [
+                'from' => TWILIO_PHONE_NUMBER,
+                'body' => $alertMessage
+            ]
+        );
+    } catch (Exception $e) {
+        error_log('Failed to send admin alert for contact form: ' . $e->getMessage());
+    }
+}
 
 // Validate credentials are set
 if (!TWILIO_ACCOUNT_SID || !TWILIO_AUTH_TOKEN || !TWILIO_PHONE_NUMBER) {
@@ -58,6 +101,8 @@ if ($contact_method === 'email') {
     $headers = "From: " . CONTACT_EMAIL;
 
     if (mail($to, $subject, $message, $headers)) {
+        // Send admin alert
+        sendAdminAlert($name, $email, $phone, $need, $contact_method);
         echo json_encode(['status' => 'ok', 'message' => 'Email sent successfully']);
     } else {
         http_response_code(500);
@@ -102,6 +147,9 @@ elseif ($contact_method === 'sms') {
             json_encode($logEntry) . PHP_EOL,
             FILE_APPEND | LOCK_EX
         );
+
+        // Send admin alert
+        sendAdminAlert($name, $email, $rawPhone, $need, $contact_method);
 
         echo json_encode(['status' => 'ok', 'message' => 'SMS sent successfully']);
 
