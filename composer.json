@@ -1,0 +1,8 @@
+{
+    "name": "serendipitytech/main-website",
+    "description": "Serendipity Technology marketing website",
+    "require": {
+        "php": ">=7.1",
+        "twilio/sdk": "^8.6"
+    }
+}

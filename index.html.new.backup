@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serendipity Technology</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: url('https://images.squarespace-cdn.com/content/v1/55fb8119e4b0ef39e06a4b61/1447475742063-8SAIPSFZVSKUR38AH18B/image-asset.jpeg?format=2500w') no-repeat center center/cover;
+      padding: 4rem 1rem;
+      text-align: center;
+      position: relative;
+      color: white;
+    }
+    .header-overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 12px;
+      display: inline-block;
+      max-width: 90%;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .header-overlay:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+      background-color: rgba(0, 0, 0, 0.65); /* slightly deeper on hover */
+    }
+    .logo {
+      max-width: 300px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    h1, p.tagline {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin: 0.5rem 0;
+    }
+    p.tagline {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      background-color: #00a2e8;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    /*.section-title {*/
+    /*  font-size: 1.6rem;*/
+    /*  margin-bottom: 1rem;*/
+    /*  color: #00a2e8;*/
+    /*  text-align: center;*/
+    /*}*/
+    .section-title {
+      position: relative;
+      display: inline-block;
+      font-size: 2rem;
+      color: #00a2e8;
+      margin-bottom: 1.5rem;
+    }
+    
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 4px;
+      margin-top: 6px;
+      background: linear-gradient(90deg, #00a2e8, #ffa645);
+      border-radius: 2px;
+    }
+    section:nth-of-type(even) {
+  background-color: #fafafa;
+}
+    .cards-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .card {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: #fff;
+}
+    .card img {
+      max-width: 100%;
+      height: 160px;  /* enforce a fixed height */
+      object-fit: cover;  /* centers/crops image inside the box */
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+    .card h3 {
+      min-height: 2.5rem;  /* ensures two-line titles sit evenly */
+    }
+    .card .img-frame {
+      background: #eef2f5;
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+
+    /*.card:hover {*/
+    /*      transform: translateY(-4px);*/
+    /*      box-shadow: 0 4px 12px rgba(0,0,0,0.1);*/
+    /*    }*/
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border: 1px solid #f16522;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+    .modal-content input, .modal-content textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .close {
+      float: right;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      background: #f4f4f4;
+    }
+
+    @media (max-width: 600px) {
+      .cards-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .header-overlay {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-overlay">
+      <img src="img/logo.png" alt="Serendipity Technology Logo" class="logo" />
+      <h1>Custom App Solutions</h1>
+      <p class="tagline">Solving pain points with creativity and tech built just for you.</p>
+      <button class="btn" onclick="openModal()">Let's Talk</button>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section-title">What We Do</h2>
+    <div class="cards-row">
+      <div class="card">
+        <div class="img-frame"><img src="img/data_integration.svg" alt="Automation"></div>
+        <h3>Automation</h3>
+        <p>Streamline your processes and reduce manual tasks with purpose-built workflows tailored to your business.</p>
+      </div>
+      <div class="card">
+        <div class="img-frame"><img src="img/integration.svg" alt="Integration"></div>
+        <h3>Integration</h3>
+        <p>Connect the tools you already use — from CRMs to spreadsheets — so your data works smarter, not harder.</p>
+      </div>
+      <div class="card">
+        <div class="img-frame"><img src="img/insight.svg" alt="Insight"></div>
+        <h3>Insight</h3>
+        <p>Turn your information into actionable intelligence with simple dashboards and custom reporting tools.</p>
+      </div>
+    </div>
+  </section>
+  
+<section>
+  <h2 class="section-title" style="color: #f16522;">Recent Projects</h2>
+  <div class="cards-row">
+    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
+      <img src="img/map-pin-plus.svg" alt="Map icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
+      <div style="text-align: left;">
+        <h3 style="margin-top: 0;">Interactive Mapping Utility</h3>
+        <p>A custom-built tool to visualize location-based data and connect it to relational datasets. Designed to simplify complex queries and support real-time lookups through an intuitive map-based interface.</p>
+      </div>
+    </div>
+    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
+      <img src="img/maps-arrow-diagonal.svg" alt="Location icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
+      <div style="text-align: left;">
+        <h3 style="margin-top: 0;">Community Resource Locator</h3>
+        <p>This project centralized scattered data into a clean, user-friendly system for public visibility. The goal was to surface physical access points and support services in underserved areas — solving both data hygiene and discoverability challenges.</p>
+      </div>
+    </div>
+    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
+      <img src="img/group.svg" alt="People icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
+      <div style="text-align: left;">
+        <h3 style="margin-top: 0;">Custom Membership Platform</h3>
+        <p>We developed a secure, scalable membership database to manage signups, communication, events, and reporting — all tailored to a non-profit’s internal workflow and visibility needs, without vendor lock-in.</p>
+      </div>
+    </div>
+    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
+      <img src="img/reply-to-message.svg" alt="Email icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
+      <div style="text-align: left;">
+        <h3 style="margin-top: 0;">Email Marketing Integration</h3>
+        <p>Integrated third-party platforms with custom logic for segmentation, contact syncing, and automated workflows — enabling smarter, more targeted outreach without relying solely on standard CRM features.</p>
+      </div>
+    </div>
+    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
+      <img src="img/multiple-pages-empty.svg" alt="Catalog icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
+      <div style="text-align: left;">
+        <h3 style="margin-top: 0;">Dynamic Inventory Catalog</h3>
+        <p>Created a visual inventory catalog that reads Excel data and images from folders to generate a searchable, web-friendly display — ideal for sharing product collections with clients and internal teams.</p>
+      </div>
+    </div>
+    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
+      <img src="img/settings-profiles.svg" alt="File sharing icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
+      <div style="text-align: left;">
+        <h3 style="margin-top: 0;">Customer Resource Management</h3>
+        <p>A centralized system for client-uploaded files, review feedback, and project signoff — streamlining collaboration and asset readiness for print, digital, or live event use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Contact Us</h2>
+        <form id="contactForm" action="contact.php" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="need" rows="4" placeholder="Describe your business need..." required></textarea>
+          <button type="submit" class="btn">Send</button>
+          <div id="formResponse" style="margin-top: 1rem; font-weight: bold;"></div>
+        </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Serendipity Technology &bull; Troy Shimkus &bull;
+    <a href="mailto:troy@serendipitytech.net">troy@serendipitytech.net</a>
+  </footer>
+
+  <script>
+
+function openModal() {
+  document.getElementById('contactModal').style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('contactModal').style.display = 'none';
+}
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent page reload
+
+  const form = e.target;
+  const formData = new FormData(form);
+  const responseDiv = document.getElementById('formResponse');
+
+  fetch(form.action, {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    responseDiv.textContent = data.message;
+    if (data.status === 'ok') {
+      form.reset();
+      // Close modal after 2 seconds
+      setTimeout(() => {
+        responseDiv.textContent = '';
+        closeModal();
+      }, 2000);
+    }
+  })
+  .catch(error => {
+    responseDiv.textContent = 'There was a problem submitting the form.';
+    console.error('Error:', error);
+  });
+});
+
+  </script>
+</body>
+</html>

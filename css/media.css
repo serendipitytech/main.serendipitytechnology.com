@@ -1,0 +1,362 @@
+/* Media Kit Page Styles */
+/* Extends concierge_style.css with media-specific components */
+
+/* Note: Brand fonts (Lato, Roboto) are imported in concierge_style.css */
+
+/* Brand color variables */
+:root {
+  --brand-blue: #4FC4F0;
+  --brand-orange: #F7B06A;
+  --brand-charcoal: #1F2937;
+  --brand-slate: #475569;
+  --brand-light-gray: #E5E7EB;
+  --brand-white: #FFFFFF;
+}
+
+/* Override section title colors to match brand guide */
+.section-title {
+  color: var(--brand-blue);
+}
+
+.section-title::after {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-orange));
+}
+
+/* Section intro text */
+.section-intro {
+  color: var(--brand-slate);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+}
+
+/* Subsection titles */
+.subsection-title {
+  color: var(--brand-charcoal);
+  font-size: 1.3rem;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--brand-light-gray);
+}
+
+/* About section content */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--brand-charcoal);
+}
+
+.value-props {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.value-prop {
+  background: var(--brand-white);
+  border: 1px solid var(--brand-light-gray);
+  border-left: 4px solid var(--brand-blue);
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: left;
+  color: var(--brand-slate);
+}
+
+.value-prop strong {
+  color: var(--brand-charcoal);
+}
+
+/* Color palette section */
+.color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.color-swatch {
+  background: var(--brand-white);
+  border: 1px solid var(--brand-light-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 160px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-swatch:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.swatch {
+  height: 80px;
+  width: 100%;
+}
+
+.color-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.color-name {
+  font-weight: bold;
+  color: var(--brand-charcoal);
+  font-size: 0.95rem;
+}
+
+.color-hex {
+  font-family: 'Roboto Mono', monospace;
+  color: var(--brand-slate);
+  font-size: 0.85rem;
+}
+
+.color-usage {
+  color: var(--brand-slate);
+  font-size: 0.8rem;
+}
+
+/* Typography section */
+.typography-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.font-sample {
+  background: var(--brand-white);
+  border: 1px solid var(--brand-light-gray);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  min-width: 220px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.font-sample:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.font-name {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--brand-charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.font-usage {
+  color: var(--brand-slate);
+  font-size: 0.9rem;
+}
+
+/* Logo grid */
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.logo-card {
+  background: var(--brand-white);
+  border: 1px solid var(--brand-light-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.logo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-color: var(--brand-orange);
+}
+
+.logo-preview {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.logo-preview.light-bg {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.logo-preview.dark-bg {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+}
+
+.logo-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.logo-details {
+  padding: 1rem;
+  border-top: 1px solid var(--brand-light-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.logo-name {
+  font-weight: bold;
+  color: var(--brand-charcoal);
+}
+
+.logo-format {
+  color: var(--brand-slate);
+  font-size: 0.85rem;
+}
+
+/* Download button */
+.download-btn {
+  display: inline-block;
+  background: var(--brand-blue);
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.download-btn:hover {
+  background: #3ab0dc;
+  transform: translateY(-2px);
+}
+
+.download-btn.large {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+}
+
+/* Guidelines section */
+.guidelines-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.guideline-card {
+  background: var(--brand-white);
+  border: 1px solid var(--brand-light-gray);
+  border-radius: 12px;
+  padding: 1.5rem;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.guideline-card.full-width {
+  flex-basis: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.guideline-card h3 {
+  color: var(--brand-charcoal);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--brand-blue);
+}
+
+.guideline-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--brand-slate);
+}
+
+.guideline-card li {
+  margin-bottom: 0.5rem;
+}
+
+.guideline-card p {
+  color: var(--brand-slate);
+  margin-bottom: 1rem;
+}
+
+/* Contact section */
+.contact-info {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-info p {
+  margin: 0.75rem 0;
+  color: var(--brand-charcoal);
+}
+
+.contact-info a {
+  color: var(--brand-blue);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Home link in nav */
+.scroll-home-link {
+  color: var(--brand-blue);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.scroll-home-link:hover {
+  background: var(--brand-light-gray);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .value-props {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .value-prop {
+    max-width: 100%;
+  }
+
+  .logo-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .color-swatch {
+    width: 140px;
+  }
+
+  .guideline-card {
+    min-width: 100%;
+  }
+}

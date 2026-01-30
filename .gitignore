@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+
+# IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# SMS log (contains conversation data)
+sms_log.json
+
+# Compressed archives
+*.zip
+
+# Environment files
+.env
+.env.local
+
+# Composer dependencies
+/vendor/
+
+# Claude Code
+.claude/

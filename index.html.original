@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serendipity Technology</title>
+  <link rel="stylesheet" href="css/concierge_style.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+      once: true,
+      duration: 800
+    });
+  });
+</script>
+</head>
+<body>
+<nav id="scrollNav">
+  <div class="scroll-nav-inner">
+    <img src="img/logo_sm.png" alt="Logo" class="scroll-logo" />
+    <span class="scroll-title">Custom App Solutions</span>
+    <button class="scroll-chat-btn" onclick="openModal()" aria-label="Open Chat">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.5C21 14.9853 18.9853 17 16.5 17H13L7.5 21V17H6.5C4.01472 17 2 14.9853 2 12.5V8.5C2 6.01472 4.01472 4 6.5 4H16.5C18.9853 4 21 6.01472 21 8.5V12.5Z" />
+  </svg>
+</button>
+  </div>
+</nav>
+
+    <div id="header-sentinel"></div>
+  <header id="mainHeader">
+    <div class="header-overlay">
+      <img src="img/logo.png" alt="Serendipity Technology Logo" class="logo" />
+      <h1>Custom App Solutions</h1>
+      <p class="tagline">Solving pain points with creativity and tech built just for you.</p>
+      <button class="btn" onclick="openModal()">Let's Talk</button>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section-title">What We Do</h2>
+    <div class="cards-row">
+      <div class="card">
+        <div class="img-frame"><img src="img/data_integration.svg" alt="Automation"></div>
+        <h3>Automation</h3>
+        <p>Streamline your processes and reduce manual tasks with purpose-built workflows tailored to your business.</p>
+      </div>
+      <div class="card">
+        <div class="img-frame"><img src="img/integration.svg" alt="Integration"></div>
+        <h3>Integration</h3>
+        <p>Connect the tools you already use — from CRMs to spreadsheets — so your data works smarter, not harder.</p>
+      </div>
+      <div class="card">
+        <div class="img-frame"><img src="img/insight.svg" alt="Insight"></div>
+        <h3>Insight</h3>
+        <p>Turn your information into actionable intelligence with simple dashboards and custom reporting tools.</p>
+      </div>
+    </div>
+  </section>
+  
+<section>
+  <h2 class="section-title" style="color: #F7B06A;">Recent Projects</h2>
+  <div class="cards-row">
+    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
+      <img src="img/map-pin-plus.svg" alt="Map icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
+      <div style="text-align: left;">
+        <h3 style="margin-top: 0;">Interactive Mapping Utility</h3>
+        <p>A custom-built tool to visualize location-based data and connect it to relational datasets. Designed to simplify complex queries and support real-time lookups through an intuitive map-based interface.</p>
+      </div>
+    </div>
+    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
+      <img src="img/maps-arrow-diagonal.svg" alt="Location icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
+      <div style="text-align: left;">
+        <h3 style="margin-top: 0;">Community Resource Locator</h3>
+        <p>This project centralized scattered data into a clean, user-friendly system for public visibility. The goal was to surface physical access points and support services in underserved areas — solving both data hygiene and discoverability challenges.</p>
+      </div>
+    </div>
+    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
+      <img src="img/group.svg" alt="People icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
+      <div style="text-align: left;">
+        <h3 style="margin-top: 0;">Custom Membership Platform</h3>
+        <p>We developed a secure, scalable membership database to manage signups, communication, events, and reporting — all tailored to a non-profit’s internal workflow and visibility needs, without vendor lock-in.</p>
+      </div>
+    </div>
+    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
+      <img src="img/reply-to-message.svg" alt="Email icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
+      <div style="text-align: left;">
+        <h3 style="margin-top: 0;">Email Marketing Integration</h3>
+        <p>Integrated third-party platforms with custom logic for segmentation, contact syncing, and automated workflows — enabling smarter, more targeted outreach without relying solely on standard CRM features.</p>
+      </div>
+    </div>
+    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
+      <img src="img/multiple-pages-empty.svg" alt="Catalog icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
+      <div style="text-align: left;">
+        <h3 style="margin-top: 0;">Dynamic Inventory Catalog</h3>
+        <p>Created a visual inventory catalog that reads Excel data and images from folders to generate a searchable, web-friendly display — ideal for sharing product collections with clients and internal teams.</p>
+      </div>
+    </div>
+    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
+      <img src="img/settings-profiles.svg" alt="File sharing icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
+      <div style="text-align: left;">
+        <h3 style="margin-top: 0;">Customer Resource Management</h3>
+        <p>A centralized system for client-uploaded files, review feedback, and project signoff — streamlining collaboration and asset readiness for print, digital, or live event use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Contact Us</h2>
+<form id="contactForm" action="contact.php" method="POST" target="formFrame" onsubmit="formSent();">
+  <label>
+    Name:
+    <input type="text" name="name" required />
+  </label>
+  <label>
+    Email:
+    <input type="email" name="email" required />
+  </label>
+  <label>
+    What is your project?
+    <textarea name="need" required></textarea>
+  </label>
+  <button type="submit" class="btn">Send</button>
+</form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Serendipity Technology &bull; Troy Shimkus &bull;
+    <a href="mailto:troy@serendipitytech.net">troy@serendipitytech.net</a>
+  </footer>
+
+  <script>
+
+function openModal() {
+  document.getElementById('contactModal').style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('contactModal').style.display = 'none';
+}
+
+function formSent() {
+  setTimeout(() => {
+    alert("Thanks! Your message has been sent.");
+    document.getElementById("contactForm").reset();
+    closeModal();
+  }, 500);
+}
+
+window.addEventListener("scroll", () => {
+  const scrollNav = document.getElementById("scrollNav");
+  if (window.scrollY > 100) {
+    scrollNav.classList.add("visible");
+  } else {
+    scrollNav.classList.remove("visible");
+  }
+});
+
+  </script>
+  <iframe name="formFrame" style="display: none;"></iframe>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $to = "troy@serendipitytech.net";
+    $subject = "New Contact Form Submission";
+
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $need = htmlspecialchars($_POST['need']);
+
+    $body = "Name: $name\nEmail: $email\nNeed:\n$need";
+    $headers = "From: troy@serendipitytech.net\r\n";
+    $headers .= "Reply-To: $email\r\n";
+
+    mail($to, $subject, $body, $headers);
+
+    // Optional success message
+    echo "OK";
+}
+?>
