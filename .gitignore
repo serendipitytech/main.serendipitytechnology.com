@@ -22,8 +22,8 @@ data/*.json
 .env
 .env.local
 
-# Composer dependencies
-/vendor/
+# Composer dependencies (included for deployment to hosts without Composer)
+# /vendor/
 
 # Claude Code
 .claude/
