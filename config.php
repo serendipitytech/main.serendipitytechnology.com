@@ -39,3 +39,6 @@ define('WEBHOOK_SECRET', env('WEBHOOK_SECRET'));
 
 // Contact email
 define('CONTACT_EMAIL', env('CONTACT_EMAIL', 'troy@serendipitytech.net'));
+
+// Admin phone for SMS alerts
+define('ADMIN_PHONE', env('ADMIN_PHONE', '+14074436844'));
