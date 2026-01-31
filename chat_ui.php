@@ -90,6 +90,16 @@ $twilioNumber = TWILIO_PHONE_NUMBER;
     <div class="flex-1 flex flex-col">
       <!-- SMS View -->
       <div id="smsView" class="flex-1 flex flex-col">
+        <!-- Conversation Header (shown when conversation selected) -->
+        <div id="conversationHeader" class="hidden bg-white border-b px-4 py-2 flex items-center justify-between">
+          <span id="conversationPhone" class="font-medium text-gray-900"></span>
+          <button onclick="deleteCurrentConversation()" class="text-red-500 hover:text-red-700 text-sm flex items-center gap-1 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+            Delete
+          </button>
+        </div>
         <div class="flex-1 overflow-y-auto p-4" id="messageList">
           <p class="text-gray-400 text-center mt-10">Select a conversation</p>
         </div>
@@ -219,6 +229,12 @@ function renderContactList() {
 async function selectContact(phone) {
   currentPhone = phone;
   renderContactList();
+
+  // Show conversation header
+  const header = document.getElementById('conversationHeader');
+  const phoneDisplay = document.getElementById('conversationPhone');
+  header.classList.remove('hidden');
+  phoneDisplay.textContent = formatPhone(phone);
 
   const list = document.getElementById('messageList');
   list.innerHTML = '<p class="text-gray-400 text-center mt-10">Loading...</p>';
@@ -445,6 +461,35 @@ async function sendSuggestedResponse(phone, message) {
 function startSmsConversation(phone) {
   switchTab('sms');
   selectContact(phone);
+}
+
+// Delete current conversation
+async function deleteCurrentConversation() {
+  if (!currentPhone) return;
+
+  const confirmed = confirm(`Delete all messages with ${formatPhone(currentPhone)}? This cannot be undone.`);
+  if (!confirmed) return;
+
+  try {
+    const res = await fetch(`api/messages.php?phone=${encodeURIComponent(currentPhone)}`, {
+      method: 'DELETE'
+    });
+
+    if (res.ok) {
+      // Reset view
+      currentPhone = '';
+      document.getElementById('conversationHeader').classList.add('hidden');
+      document.getElementById('messageList').innerHTML = '<p class="text-gray-400 text-center mt-10">Select a conversation</p>';
+
+      // Reload contacts
+      loadContacts();
+    } else {
+      const data = await res.json();
+      alert('Failed to delete: ' + (data.error || 'Unknown error'));
+    }
+  } catch (err) {
+    alert('Error: ' + err.message);
+  }
 }
 
 // Update unread badges

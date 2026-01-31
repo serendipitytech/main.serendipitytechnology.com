@@ -59,7 +59,7 @@
       &times;
     </button>
     <h2 class="text-xl font-semibold mb-4">Contact Us</h2>
-    <form id="contactForm" action="contact_twilio.php" method="POST" target="formFrame" onsubmit="return formSent();" class="space-y-4">
+    <form id="contactForm" class="space-y-4">
       <label class="block">
         <span class="text-gray-700 font-medium">Name</span>
         <input type="text" name="name" required
@@ -69,21 +69,22 @@
       </label>
       <label class="block">
         <span class="text-gray-700 font-medium">Email</span>
-        <input type="email" name="email"
+        <input type="email" name="email" id="email"
           class="mt-1 w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50
           focus:bg-white focus:border-[#4FC4F0] focus:ring-2 focus:ring-[#4FC4F0]/20
           outline-none transition-all duration-200" />
+        <span id="emailError" class="text-red-500 text-sm mt-1 hidden"></span>
       </label>
       <label class="block">
         <span class="text-gray-700 font-medium">Phone</span>
         <input type="tel" name="phone" id="phone" required
-          pattern="\d{10}"
-          maxlength="10"
+          maxlength="14"
           inputmode="numeric"
-          placeholder="10-digit number"
+          placeholder="(555) 555-5555"
           class="mt-1 w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50
           focus:bg-white focus:border-[#4FC4F0] focus:ring-2 focus:ring-[#4FC4F0]/20
           outline-none transition-all duration-200" />
+        <span id="phoneError" class="text-red-500 text-sm mt-1 hidden"></span>
       </label>
       <label class="block">
         <span class="text-gray-700 font-medium">What is your project?</span>
@@ -204,17 +205,141 @@ function closeModal() {
   document.getElementById("contactForm").reset();
 }
 
-function formSent() {
-  // Show success message
-  const successMsg = document.getElementById("formSuccess");
-  successMsg.classList.remove("hidden");
+// Phone number formatting and validation
+const phoneInput = document.getElementById('phone');
+phoneInput.addEventListener('input', function(e) {
+  // Strip non-digits
+  let digits = e.target.value.replace(/\D/g, '');
 
-  // Hide modal after 3 seconds
-  setTimeout(() => {
-    closeModal();
-  }, 3000);
+  // Limit to 10 digits
+  if (digits.length > 10) digits = digits.slice(0, 10);
 
-  return true; // Allow form to actually submit
+  // Format as (XXX) XXX-XXXX
+  let formatted = '';
+  if (digits.length > 0) formatted = '(' + digits.slice(0, 3);
+  if (digits.length >= 3) formatted += ') ' + digits.slice(3, 6);
+  if (digits.length >= 6) formatted += '-' + digits.slice(6, 10);
+
+  e.target.value = formatted;
+  validatePhone();
+});
+
+function validatePhone() {
+  const phone = document.getElementById('phone');
+  const error = document.getElementById('phoneError');
+  const digits = phone.value.replace(/\D/g, '');
+
+  if (digits.length === 0) {
+    error.textContent = 'Phone number is required';
+    error.classList.remove('hidden');
+    return false;
+  } else if (digits.length < 10) {
+    error.textContent = 'Please enter a complete 10-digit phone number';
+    error.classList.remove('hidden');
+    return false;
+  }
+
+  error.classList.add('hidden');
+  return true;
+}
+
+// Email validation
+function validateEmail() {
+  const email = document.getElementById('email');
+  const error = document.getElementById('emailError');
+  const contactMethod = document.querySelector('input[name="contact_method"]:checked').value;
+
+  // Email required if contact method is email
+  if (contactMethod === 'email' && !email.value.trim()) {
+    error.textContent = 'Email is required when choosing email contact';
+    error.classList.remove('hidden');
+    return false;
+  }
+
+  // Validate email format if provided
+  if (email.value.trim()) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value)) {
+      error.textContent = 'Please enter a valid email address';
+      error.classList.remove('hidden');
+      return false;
+    }
+  }
+
+  error.classList.add('hidden');
+  return true;
+}
+
+// Re-validate email when contact method changes
+document.querySelectorAll('input[name="contact_method"]').forEach(radio => {
+  radio.addEventListener('change', validateEmail);
+});
+
+document.getElementById('email').addEventListener('blur', validateEmail);
+
+// Handle form submission with proper error handling
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  // Validate before submitting
+  const phoneValid = validatePhone();
+  const emailValid = validateEmail();
+
+  if (!phoneValid || !emailValid) {
+    return;
+  }
+
+  const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const successMsg = document.getElementById('formSuccess');
+  const errorMsg = document.getElementById('formError');
+
+  // Disable button and show loading state
+  const originalText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
+  // Hide any previous messages
+  successMsg.classList.add('hidden');
+  if (errorMsg) errorMsg.classList.add('hidden');
+
+  try {
+    // Create form data and convert phone to digits only for backend
+    const formData = new FormData(form);
+    const phoneDigits = document.getElementById('phone').value.replace(/\D/g, '');
+    formData.set('phone', phoneDigits);
+
+    const res = await fetch('contact_twilio.php', {
+      method: 'POST',
+      body: formData
+    });
+
+    const data = await res.json();
+
+    if (res.ok && data.status === 'ok') {
+      successMsg.classList.remove('hidden');
+      setTimeout(() => closeModal(), 3000);
+    } else {
+      showFormError(data.message || 'Something went wrong. Please try again.');
+    }
+  } catch (err) {
+    showFormError('Network error. Please check your connection and try again.');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+});
+
+function showFormError(message) {
+  let errorMsg = document.getElementById('formError');
+  if (!errorMsg) {
+    errorMsg = document.createElement('div');
+    errorMsg.id = 'formError';
+    errorMsg.className = 'text-red-600 mt-4';
+    document.getElementById('formSuccess').after(errorMsg);
+  }
+  errorMsg.textContent = message;
+  errorMsg.classList.remove('hidden');
 }
 
 
@@ -228,6 +353,5 @@ function formSent() {
   });
 </script>
 
-<iframe name="formFrame" style="display: none;"></iframe>
 </body>
 </html>

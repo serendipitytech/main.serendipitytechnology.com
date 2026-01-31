@@ -8,6 +8,7 @@
 header('Content-Type: application/json');
 
 require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/data.php';
 require_once __DIR__ . '/vendor/twilio/sdk/src/Twilio/autoload.php';
 
 use Twilio\Rest\Client;
@@ -177,8 +178,10 @@ if ($contact_method === 'email') {
     $to = CONTACT_EMAIL;
     $subject = "New Contact Form Submission";
 
+    // Always send admin SMS alert for form submissions
+    sendAdminAlert($name, $email, $phone, $need, $contact_method);
+
     if (sendEmailViaResend($to, CONTACT_EMAIL, 'Serendipity Technology', $subject, $message)) {
-        sendAdminAlert($name, $email, $phone, $need, $contact_method);
         echo json_encode(['status' => 'ok', 'message' => 'Email sent successfully']);
     } else {
         http_response_code(500);
@@ -209,22 +212,16 @@ elseif ($contact_method === 'sms') {
             ]
         );
 
-        // Log the outbound message
-        $logEntry = [
+        // Save to messages data store (appears in chat UI)
+        addMessage([
             'from' => TWILIO_PHONE_NUMBER,
             'to' => $phone,
             'body' => $message,
             'timestamp' => time(),
             'direction' => 'outbound'
-        ];
+        ]);
 
-        file_put_contents(
-            __DIR__ . '/sms_log.json',
-            json_encode($logEntry) . PHP_EOL,
-            FILE_APPEND | LOCK_EX
-        );
-
-        // Send admin alert
+        // Send admin SMS alert
         sendAdminAlert($name, $email, $rawPhone, $need, $contact_method);
 
         echo json_encode(['status' => 'ok', 'message' => 'SMS sent successfully']);

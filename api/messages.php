@@ -25,6 +25,9 @@ switch ($method) {
     case 'POST':
         handlePost();
         break;
+    case 'DELETE':
+        handleDelete();
+        break;
     default:
         http_response_code(405);
         echo json_encode(['error' => 'Method not allowed']);
@@ -109,4 +112,20 @@ function handlePost() {
         http_response_code(500);
         echo json_encode(['error' => 'Failed to send: ' . $e->getMessage()]);
     }
+}
+
+function handleDelete() {
+    $phone = $_GET['phone'] ?? null;
+
+    if (empty($phone)) {
+        http_response_code(400);
+        echo json_encode(['error' => 'Missing required parameter: phone']);
+        return;
+    }
+
+    $count = deleteConversation($phone);
+    echo json_encode([
+        'status' => 'ok',
+        'deleted' => $count
+    ]);
 }

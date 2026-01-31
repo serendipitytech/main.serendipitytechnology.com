@@ -95,6 +95,26 @@ function markMessagesRead($phoneNumber) {
 }
 
 /**
+ * Delete all messages for a specific phone number (conversation)
+ * @param string $phoneNumber
+ * @return int Number of messages deleted
+ */
+function deleteConversation($phoneNumber) {
+    $messages = getMessages();
+    $twilioNumber = TWILIO_PHONE_NUMBER;
+    $originalCount = count($messages);
+
+    $messages = array_values(array_filter($messages, function($msg) use ($phoneNumber, $twilioNumber) {
+        $isMatch = ($msg['from'] === $twilioNumber && $msg['to'] === $phoneNumber) ||
+                   ($msg['to'] === $twilioNumber && $msg['from'] === $phoneNumber);
+        return !$isMatch;
+    }));
+
+    saveMessages($messages);
+    return $originalCount - count($messages);
+}
+
+/**
  * Get messages for a specific phone number (conversation)
  * @param string $phoneNumber
  * @return array
