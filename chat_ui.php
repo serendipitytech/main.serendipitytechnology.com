@@ -553,6 +553,30 @@ document.getElementById('messageForm').addEventListener('submit', async function
   }
 });
 
+// Refresh current conversation without resetting scroll
+async function refreshCurrentConversation() {
+  if (!currentPhone || currentTab !== 'sms') return;
+
+  try {
+    const res = await fetch(`api/messages.php?phone=${encodeURIComponent(currentPhone)}`);
+    const data = await res.json();
+
+    if (data.status === 'ok') {
+      const list = document.getElementById('messageList');
+      const wasAtBottom = list.scrollHeight - list.scrollTop <= list.clientHeight + 50;
+
+      renderMessages(data.messages || []);
+
+      // Keep scroll at bottom if user was already there
+      if (wasAtBottom) {
+        list.scrollTop = list.scrollHeight;
+      }
+    }
+  } catch (err) {
+    console.error('Failed to refresh conversation:', err);
+  }
+}
+
 // Initial load
 loadContacts();
 loadVoicemails();
@@ -561,6 +585,7 @@ loadVoicemails();
 setInterval(() => {
   loadContacts();
   loadVoicemails();
+  refreshCurrentConversation();
 }, 5000);
 </script>
 
