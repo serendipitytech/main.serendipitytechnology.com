@@ -13,6 +13,76 @@ require_once __DIR__ . '/vendor/twilio/sdk/src/Twilio/autoload.php';
 use Twilio\Rest\Client;
 
 /**
+ * Validate Cloudflare Turnstile CAPTCHA token
+ */
+function validateTurnstile($token) {
+    if (empty($token) || !TURNSTILE_SECRET_KEY) {
+        return false;
+    }
+
+    $ch = curl_init('https://challenges.cloudflare.com/turnstile/v0/siteverify');
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => http_build_query([
+            'secret' => TURNSTILE_SECRET_KEY,
+            'response' => $token
+        ]),
+        CURLOPT_RETURNTRANSFER => true
+    ]);
+
+    $result = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($httpCode !== 200 || $result === false) {
+        error_log('Turnstile API request failed');
+        return false;
+    }
+
+    $response = json_decode($result, true);
+    return $response['success'] ?? false;
+}
+
+/**
+ * Send email via Resend API
+ */
+function sendEmailViaResend($to, $fromEmail, $fromName, $subject, $body) {
+    if (!RESEND_API_KEY) {
+        error_log('Resend API key not configured');
+        return false;
+    }
+
+    $data = [
+        'from' => $fromName . ' <' . $fromEmail . '>',
+        'to' => [$to],
+        'subject' => $subject,
+        'text' => $body
+    ];
+
+    $ch = curl_init('https://api.resend.com/emails');
+    curl_setopt_array($ch, [
+        CURLOPT_HTTPHEADER => [
+            'Authorization: Bearer ' . RESEND_API_KEY,
+            'Content-Type: application/json'
+        ],
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => json_encode($data),
+        CURLOPT_RETURNTRANSFER => true
+    ]);
+
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($httpCode < 200 || $httpCode >= 300) {
+        error_log('Resend API error: HTTP ' . $httpCode . ' - ' . $response);
+        return false;
+    }
+
+    return true;
+}
+
+/**
  * Send alert SMS to admin about new contact form submission
  */
 function sendAdminAlert($name, $email, $phone, $need, $contactMethod) {
@@ -82,6 +152,14 @@ if (empty($name) || empty($need)) {
     exit;
 }
 
+// Validate Turnstile CAPTCHA (if configured)
+$turnstileToken = $_POST['cf-turnstile-response'] ?? '';
+if (TURNSTILE_SECRET_KEY && !validateTurnstile($turnstileToken)) {
+    http_response_code(400);
+    echo json_encode(['status' => 'error', 'message' => 'CAPTCHA verification failed. Please try again.']);
+    exit;
+}
+
 // Compose message
 $message = "Name: $name\n";
 $message .= $email ? "Email: $email\n" : '';
@@ -98,10 +176,8 @@ if ($contact_method === 'email') {
 
     $to = CONTACT_EMAIL;
     $subject = "New Contact Form Submission";
-    $headers = "From: " . CONTACT_EMAIL;
 
-    if (mail($to, $subject, $message, $headers)) {
-        // Send admin alert
+    if (sendEmailViaResend($to, CONTACT_EMAIL, 'Serendipity Technology', $subject, $message)) {
         sendAdminAlert($name, $email, $phone, $need, $contact_method);
         echo json_encode(['status' => 'ok', 'message' => 'Email sent successfully']);
     } else {

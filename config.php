@@ -42,3 +42,10 @@ define('CONTACT_EMAIL', env('CONTACT_EMAIL', 'troy@serendipitytech.net'));
 
 // Admin phone for SMS alerts
 define('ADMIN_PHONE', env('ADMIN_PHONE', '+14074436844'));
+
+// Resend API key for email delivery
+define('RESEND_API_KEY', env('RESEND_API_KEY'));
+
+// Cloudflare Turnstile CAPTCHA keys
+define('TURNSTILE_SITE_KEY', env('TURNSTILE_SITE_KEY'));
+define('TURNSTILE_SECRET_KEY', env('TURNSTILE_SECRET_KEY'));
