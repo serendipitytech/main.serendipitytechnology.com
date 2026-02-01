@@ -4,7 +4,9 @@
 
 ## About
 
-Serendipity Technology builds custom software applications for businesses that need tailored solutions. We specialize in:
+Serendipity Technology builds custom software applications for businesses that need tailored solutions. Based in Volusia County, Florida, we serve clients throughout the United States.
+
+We specialize in:
 
 - **Workflow Automation**: Streamlining processes and reducing manual tasks with purpose-built workflows
 - **Data Integration**: Connecting existing tools (CRMs, spreadsheets, databases) so data works smarter
@@ -22,8 +24,9 @@ Serendipity Technology builds custom software applications for businesses that n
 ## Contact
 
 - Website: https://serendipitytechnology.com
-- Email: troy@serendipitytech.net
-- Phone: 407-545-6070
+- Phone: (407) 545-6070
+- Location: Volusia County, Florida, USA
+- Facebook: https://www.facebook.com/serendipitytech
 
 ## Projects
 

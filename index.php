@@ -19,11 +19,28 @@ $gridProjects = getGridProjects();
   </script>
   <title>Serendipity Technology | Custom App Solutions</title>
   <meta name="description" content="Custom software solutions that streamline operations with purpose-built workflows, data integration, and automated reporting." />
+  <meta name="geo.region" content="US-FL" />
+  <meta name="geo.placename" content="Volusia County" />
   <link rel="canonical" href="https://serendipitytechnology.com/main/" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="img/logos/serendipity_icon_150.png" />
   <link rel="apple-touch-icon" href="img/logos/serendipity_icon_500.png" />
+
+  <!-- Critical CSS for Above-the-Fold Content -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+    :root{--color-primary:#4FC4F0;--color-accent:#F7B06A;--color-text:#1F2937;--font-body:'Roboto',-apple-system,BlinkMacSystemFont,sans-serif;--font-heading:"Gill Sans","Gill Sans MT",'Roboto',sans-serif;--header-height:60px}
+    body{font-family:var(--font-body);font-weight:300;font-size:17px;margin:0;background:#fff;color:var(--color-text);line-height:1.7;-webkit-font-smoothing:antialiased}
+    h1,h2,h3{font-family:var(--font-heading);font-weight:700;line-height:1.3;color:var(--color-text)}
+    header{background:url('https://images.squarespace-cdn.com/content/v1/55fb8119e4b0ef39e06a4b61/1447475742063-8SAIPSFZVSKUR38AH18B/image-asset.jpeg?format=2500w') no-repeat center center/cover;padding:4rem 1rem;text-align:center;position:relative;color:#fff}
+    .header-overlay{background:rgba(0,0,0,.6);padding:2rem;border-radius:12px;display:inline-block;max-width:90%;transition:transform .2s,box-shadow .2s}
+    #scrollNav{position:fixed;top:-80px;left:0;right:0;opacity:0;display:flex;align-items:center;justify-content:space-between;background-color:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(0,0,0,.06);padding:.5rem 1rem;z-index:999;transition:top .3s,opacity .3s;height:var(--header-height);box-sizing:border-box}
+    #scrollNav.visible{top:0;opacity:1}
+    .scroll-nav-inner{max-width:1000px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;box-sizing:border-box}
+    .scroll-logo{height:40px}.scroll-title{font-size:1.2rem;font-weight:700}
+    .scroll-chat-btn{background:none;border:none;font-size:1.4rem;cursor:pointer}
+  </style>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -32,6 +49,8 @@ $gridProjects = getGridProjects();
   <meta property="og:description" content="Custom software solutions with purpose-built workflows, data integration, and automated reporting." />
   <meta property="og:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
   <meta property="og:site_name" content="Serendipity Technology" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:publisher" content="https://www.facebook.com/serendipitytech" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
@@ -56,9 +75,14 @@ $gridProjects = getGridProjects();
       "@type": "ContactPoint",
       "telephone": "+1-407-545-6070",
       "contactType": "customer service",
-      "email": "troy@serendipitytech.net"
+      "areaServed": {
+        "@type": "State",
+        "name": "Florida"
+      }
     },
-    "sameAs": []
+    "sameAs": [
+      "https://www.facebook.com/serendipitytech"
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -69,9 +93,24 @@ $gridProjects = getGridProjects();
     "image": "https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png",
     "url": "https://serendipitytechnology.com",
     "telephone": "+1-407-545-6070",
-    "email": "troy@serendipitytech.net",
     "priceRange": "$$",
     "description": "Custom software solutions that streamline operations through purpose-built workflows, data integration, and automated reporting.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Volusia County",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      {
+        "@type": "State",
+        "name": "Florida"
+      },
+      {
+        "@type": "Country",
+        "name": "United States"
+      }
+    ],
     "serviceType": ["Custom Software Development", "Workflow Automation", "Data Integration", "Business Process Automation"]
   }
   </script>
@@ -269,9 +308,16 @@ $gridProjects = getGridProjects();
   <?php endif; ?>
 </section>
 <footer class="mt-10 text-center text-sm text-gray-600 py-4 bg-gray-100">
-  &copy; 2025 Serendipity Technology &bull; Troy Shimkus &bull;
-  <a href="mailto:troy@serendipitytech.net" class="text-blue-500 hover:underline">troy@serendipitytech.net</a>
-  <span class="block mt-2 text-xs text-gray-400"><a href="media.html" class="hover:underline">Media Kit</a></span>
+  <div>&copy; <?= date('Y') ?> Serendipity Technology &bull; Troy Shimkus &bull; Volusia County, FL</div>
+  <div class="mt-2 flex items-center justify-center gap-4">
+    <a href="tel:+14075456070" class="text-blue-500 hover:underline">(407) 545-6070</a>
+    <span>&bull;</span>
+    <a href="https://www.facebook.com/serendipitytech" target="_blank" rel="noopener" class="text-blue-500 hover:underline inline-flex items-center gap-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      Facebook
+    </a>
+  </div>
+  <div class="mt-2 text-xs text-gray-400"><a href="media.html" class="hover:underline">Media Kit</a></div>
 </footer>
 
 <script>
