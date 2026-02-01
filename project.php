@@ -63,7 +63,7 @@ $nextProject = $allProjects[$nextIndex];
     </script>
     <title><?= htmlspecialchars($pageTitle) ?> | Serendipity Technology</title>
     <?php if (!$notFound): ?>
-    <meta name="description" content="<?= htmlspecialchars($meta['summary'] ?? 'Custom software project by Serendipity Technology') ?>" />
+    <meta name="description" content="<?= htmlspecialchars($meta['summary'] ?? 'Custom software project by Serendipity Technology') ?> | Volusia County workflow automation specialists." />
     <meta name="geo.region" content="US-FL" />
     <meta name="geo.placename" content="Volusia County" />
     <link rel="canonical" href="https://serendipitytechnology.com/main/project.php?slug=<?= htmlspecialchars($slug) ?>" />
@@ -99,6 +99,27 @@ $nextProject = $allProjects[$nextIndex];
     <meta name="twitter:title" content="<?= htmlspecialchars($pageTitle) ?>" />
     <meta name="twitter:description" content="<?= htmlspecialchars($meta['summary'] ?? 'Custom software project') ?>" />
     <meta name="twitter:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Serendipity Technology",
+      "url": "https://serendipitytechnology.com",
+      "description": "Custom software solutions for workflow automation, data integration, and reporting. Serving Volusia County, FL and beyond.",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Volusia County, FL"
+      },
+      "telephone": "+1-407-545-6070",
+      "email": "troy@serendipitytech.net",
+      "image": "https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png",
+      "sameAs": [
+        "https://facebook.com/serendipitytech"
+      ]
+    }
+    </script>
     <?php endif; ?>
 
     <link rel="stylesheet" href="css/concierge_style.css">

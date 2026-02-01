@@ -18,7 +18,8 @@ $gridProjects = getGridProjects();
     gtag('config', 'G-G50KCN37LQ');
   </script>
   <title>Serendipity Technology | Custom App Solutions</title>
-  <meta name="description" content="Custom software solutions that streamline operations with purpose-built workflows, data integration, and automated reporting." />
+  <meta name="description" content="Custom software development in Volusia County, FL. Workflow automation, data integration, and automated reporting for small businesses, nonprofits, and local government." />
+  <meta name="keywords" content="custom software development Volusia County, workflow automation Florida, data integration small business, business process automation, technology consulting Central Florida" />
   <meta name="geo.region" content="US-FL" />
   <meta name="geo.placename" content="Volusia County" />
   <link rel="canonical" href="https://serendipitytechnology.com/main/" />
@@ -46,7 +47,7 @@ $gridProjects = getGridProjects();
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://serendipitytechnology.com/main/" />
   <meta property="og:title" content="Serendipity Technology | Custom App Solutions" />
-  <meta property="og:description" content="Custom software solutions with purpose-built workflows, data integration, and automated reporting." />
+  <meta property="og:description" content="Custom software development in Volusia County. Workflow automation and data integration for Florida businesses." />
   <meta property="og:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
   <meta property="og:site_name" content="Serendipity Technology" />
   <meta property="og:locale" content="en_US" />
@@ -55,7 +56,7 @@ $gridProjects = getGridProjects();
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Serendipity Technology | Custom App Solutions" />
-  <meta name="twitter:description" content="Custom software solutions with purpose-built workflows, data integration, and automated reporting." />
+  <meta name="twitter:description" content="Custom software development in Volusia County. Workflow automation and data integration for Florida businesses." />
   <meta name="twitter:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
 
   <!-- Schema.org Structured Data -->
@@ -93,8 +94,9 @@ $gridProjects = getGridProjects();
     "image": "https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png",
     "url": "https://serendipitytechnology.com",
     "telephone": "+1-407-545-6070",
+    "email": "troy@serendipitytech.net",
     "priceRange": "$$",
-    "description": "Custom software solutions that streamline operations through purpose-built workflows, data integration, and automated reporting.",
+    "description": "Custom software solutions for workflow automation, data integration, and reporting. Serving Volusia County, FL and beyond.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Volusia County",
@@ -103,15 +105,22 @@ $gridProjects = getGridProjects();
     },
     "areaServed": [
       {
-        "@type": "State",
-        "name": "Florida"
+        "@type": "Place",
+        "name": "Volusia County, FL"
       },
       {
-        "@type": "Country",
-        "name": "United States"
+        "@type": "Place",
+        "name": "Central Florida"
+      },
+      {
+        "@type": "State",
+        "name": "Florida"
       }
     ],
-    "serviceType": ["Custom Software Development", "Workflow Automation", "Data Integration", "Business Process Automation"]
+    "sameAs": [
+      "https://facebook.com/serendipitytech"
+    ],
+    "serviceType": ["Custom Software Development", "Workflow Automation", "Data Integration", "Business Process Automation", "Automated Reporting", "Technology Consulting"]
   }
   </script>
 
@@ -154,8 +163,8 @@ $gridProjects = getGridProjects();
 <header id="mainHeader">
   <div class="header-overlay">
     <img src="img/logo.png" alt="Serendipity Technology Logo" class="mx-auto mb-4" style="width: 300px;" />
-    <h1 class="text-4xl font-bold mt-6 mb-2 text-white">Custom App Solutions</h1>
-    <p class="text-lg mb-6 text-white">Solving pain points with creativity and tech built just for you.</p>
+    <h1 class="text-4xl font-bold mt-6 mb-2 text-white">Custom Software Development in Volusia County</h1>
+    <p class="text-lg mb-6 text-white">Workflow automation and data integration for Florida businesses — no vendor lock-in.</p>
 <button onclick="openModal()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
   Let's Talk
 </button>
@@ -234,19 +243,19 @@ $gridProjects = getGridProjects();
     <h2 class="section-title">What We Do</h2>
     <div class="cards-row">
       <div class="card">
-        <div class="img-frame"><img src="img/data_integration.svg" alt="Automation"></div>
-        <h3>Automation</h3>
-        <p>Streamline your processes and reduce manual tasks with purpose-built workflows tailored to your business.</p>
+        <div class="img-frame"><img src="img/data_integration.svg" alt="Workflow Automation"></div>
+        <h3>Workflow Automation</h3>
+        <p>Business process automation specialists serving Volusia County. Reduce manual tasks with purpose-built workflows tailored to your operations.</p>
       </div>
       <div class="card">
-        <div class="img-frame"><img src="img/integration.svg" alt="Integration"></div>
-        <h3>Integration</h3>
-        <p>Connect the tools you already use — from CRMs to spreadsheets — so your data works smarter, not harder.</p>
+        <div class="img-frame"><img src="img/integration.svg" alt="Data Integration"></div>
+        <h3>Data Integration</h3>
+        <p>Data integration for small businesses in Florida. Connect CRMs, spreadsheets, and existing tools so your data works smarter.</p>
       </div>
       <div class="card">
-        <div class="img-frame"><img src="img/insight.svg" alt="Insight"></div>
-        <h3>Insight</h3>
-        <p>Turn your information into actionable intelligence with simple dashboards and custom reporting tools.</p>
+        <div class="img-frame"><img src="img/insight.svg" alt="Automated Reporting"></div>
+        <h3>Automated Reporting</h3>
+        <p>Automated reporting for nonprofits and local government. Turn your data into actionable intelligence with custom dashboards.</p>
       </div>
     </div>
   </section>

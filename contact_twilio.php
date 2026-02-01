@@ -86,7 +86,7 @@ function sendEmailViaResend($to, $fromEmail, $fromName, $subject, $body) {
 /**
  * Send alert SMS to admin about new contact form submission
  */
-function sendAdminAlert($name, $email, $phone, $need, $contactMethod) {
+function sendAdminAlert($name, $email, $phone, $need, $contactMethod, $organization = '', $eventDate = '') {
     if (!TWILIO_ACCOUNT_SID || !TWILIO_AUTH_TOKEN || !ADMIN_PHONE) {
         return;
     }
@@ -104,10 +104,15 @@ function sendAdminAlert($name, $email, $phone, $need, $contactMethod) {
         // Truncate message if too long
         $preview = strlen($need) > 80 ? substr($need, 0, 80) . '...' : $need;
 
-        $alertMessage = "New contact form:\n";
+        // Determine if this is an event inquiry
+        $isEventInquiry = !empty($organization) || !empty($eventDate);
+
+        $alertMessage = $isEventInquiry ? "New EVENT inquiry:\n" : "New contact form:\n";
         $alertMessage .= "Name: {$name}\n";
+        if ($organization) $alertMessage .= "Org: {$organization}\n";
         if ($email) $alertMessage .= "Email: {$email}\n";
         if ($phone) $alertMessage .= "Phone: {$phoneFormatted}\n";
+        if ($eventDate) $alertMessage .= "Event: {$eventDate}\n";
         $alertMessage .= "Method: " . ucfirst($contactMethod) . "\n\n";
         $alertMessage .= "\"{$preview}\"\n\n";
         $alertMessage .= "View: https://serendipitytechnology.com/main/chat_ui.php";
@@ -146,6 +151,8 @@ $email = trim($_POST['email'] ?? '');
 $phone = trim($_POST['phone'] ?? '');
 $need = trim($_POST['need'] ?? '');
 $contact_method = $_POST['contact_method'] ?? 'email';
+$organization = trim($_POST['organization'] ?? '');
+$event_date = trim($_POST['event_date'] ?? '');
 
 if (empty($name) || empty($need)) {
     http_response_code(400);
@@ -163,8 +170,10 @@ if (TURNSTILE_SECRET_KEY && !validateTurnstile($turnstileToken)) {
 
 // Compose message
 $message = "Name: $name\n";
+$message .= $organization ? "Organization: $organization\n" : '';
 $message .= $email ? "Email: $email\n" : '';
 $message .= $phone ? "Phone: $phone\n" : '';
+$message .= $event_date ? "Event Date: $event_date\n" : '';
 $message .= "\nMessage:\n$need";
 
 // Handle Email
@@ -179,7 +188,7 @@ if ($contact_method === 'email') {
     $subject = "New Contact Form Submission";
 
     // Always send admin SMS alert for form submissions
-    sendAdminAlert($name, $email, $phone, $need, $contact_method);
+    sendAdminAlert($name, $email, $phone, $need, $contact_method, $organization, $event_date);
 
     if (sendEmailViaResend($to, CONTACT_EMAIL, 'Serendipity Technology', $subject, $message)) {
         echo json_encode(['status' => 'ok', 'message' => 'Email sent successfully']);
@@ -222,7 +231,7 @@ elseif ($contact_method === 'sms') {
         ]);
 
         // Send admin SMS alert
-        sendAdminAlert($name, $email, $rawPhone, $need, $contact_method);
+        sendAdminAlert($name, $email, $rawPhone, $need, $contact_method, $organization, $event_date);
 
         echo json_encode(['status' => 'ok', 'message' => 'SMS sent successfully']);
 
