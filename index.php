@@ -8,8 +8,17 @@ $gridProjects = getGridProjects();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Serendipity Technology | Custom App Solutions & Workflow Automation</title>
-  <meta name="description" content="Custom software solutions that streamline operations through purpose-built workflows, data integration, and automated reporting. Transform your business processes today." />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G50KCN37LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G50KCN37LQ');
+  </script>
+  <title>Serendipity Technology | Custom App Solutions</title>
+  <meta name="description" content="Custom software solutions that streamline operations with purpose-built workflows, data integration, and automated reporting." />
   <link rel="canonical" href="https://serendipitytechnology.com/main/" />
 
   <!-- Favicon -->
@@ -19,8 +28,8 @@ $gridProjects = getGridProjects();
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://serendipitytechnology.com/main/" />
-  <meta property="og:title" content="Serendipity Technology | Custom App Solutions & Workflow Automation" />
-  <meta property="og:description" content="Custom software solutions that streamline operations through purpose-built workflows, data integration, and automated reporting." />
+  <meta property="og:title" content="Serendipity Technology | Custom App Solutions" />
+  <meta property="og:description" content="Custom software solutions with purpose-built workflows, data integration, and automated reporting." />
   <meta property="og:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
   <meta property="og:site_name" content="Serendipity Technology" />
 
