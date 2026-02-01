@@ -5,6 +5,10 @@
  * Sends alert to admin for all submissions
  */
 
+// Temporarily enable error display for debugging (remove after fixing)
+ini_set('display_errors', 0);
+error_reporting(E_ALL);
+
 header('Content-Type: application/json');
 
 require_once __DIR__ . '/config.php';
