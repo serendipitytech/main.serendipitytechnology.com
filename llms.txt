@@ -1,0 +1,42 @@
+# Serendipity Technology
+
+> Custom software solutions that streamline operations through purpose-built workflows, data integration, and automated reporting.
+
+## About
+
+Serendipity Technology builds custom software applications for businesses that need tailored solutions. We specialize in:
+
+- **Workflow Automation**: Streamlining processes and reducing manual tasks with purpose-built workflows
+- **Data Integration**: Connecting existing tools (CRMs, spreadsheets, databases) so data works smarter
+- **Business Intelligence**: Turning information into actionable insights with dashboards and reporting tools
+
+## Services
+
+- Custom application development
+- Workflow automation
+- System integration
+- Data migration and ETL
+- API development
+- Dashboard and reporting tools
+
+## Contact
+
+- Website: https://serendipitytechnology.com
+- Email: troy@serendipitytech.net
+- Phone: 407-545-6070
+
+## Projects
+
+We have completed projects including:
+- Custom membership platforms
+- Event check-in systems
+- Interactive mapping utilities
+- Community resource locators
+- Email marketing integrations
+- Dynamic inventory catalogs
+- Production asset management systems
+
+## Documentation
+
+- Main site: https://serendipitytechnology.com/main/
+- Media kit: https://serendipitytechnology.com/main/media.html

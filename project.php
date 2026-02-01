@@ -53,6 +53,28 @@ $nextProject = $allProjects[$nextIndex];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($pageTitle) ?> | Serendipity Technology</title>
+    <?php if (!$notFound): ?>
+    <meta name="description" content="<?= htmlspecialchars($meta['summary'] ?? 'Custom software project by Serendipity Technology') ?>" />
+    <link rel="canonical" href="https://serendipitytechnology.com/main/project.php?slug=<?= htmlspecialchars($slug) ?>" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logos/serendipity_icon_150.png" />
+    <link rel="apple-touch-icon" href="img/logos/serendipity_icon_500.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://serendipitytechnology.com/main/project.php?slug=<?= htmlspecialchars($slug) ?>" />
+    <meta property="og:title" content="<?= htmlspecialchars($pageTitle) ?> | Serendipity Technology" />
+    <meta property="og:description" content="<?= htmlspecialchars($meta['summary'] ?? 'Custom software project by Serendipity Technology') ?>" />
+    <meta property="og:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
+    <meta property="og:site_name" content="Serendipity Technology" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="<?= htmlspecialchars($pageTitle) ?>" />
+    <meta name="twitter:description" content="<?= htmlspecialchars($meta['summary'] ?? 'Custom software project') ?>" />
+    <meta name="twitter:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
+    <?php endif; ?>
 
     <link rel="stylesheet" href="css/concierge_style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
@@ -109,7 +131,7 @@ $nextProject = $allProjects[$nextIndex];
             <div class="project-header <?= (!empty($meta['hero_image']) && file_exists(__DIR__ . '/img/' . $meta['hero_image'])) ? 'has-hero-image' : '' ?>">
                 <div class="project-header-left">
                     <div class="project-icon-large">
-                        <img src="img/<?= htmlspecialchars($meta['icon'] ?? 'default.svg') ?>" alt="">
+                        <img src="img/<?= htmlspecialchars($meta['icon'] ?? 'default.svg') ?>" alt="<?= htmlspecialchars($meta['title']) ?> icon">
                     </div>
                     <div class="project-title-area">
                         <?php if (!empty($meta['featured'])): ?>

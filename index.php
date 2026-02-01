@@ -8,7 +8,64 @@ $gridProjects = getGridProjects();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Serendipity Technology</title>
+  <title>Serendipity Technology | Custom App Solutions & Workflow Automation</title>
+  <meta name="description" content="Custom software solutions that streamline operations through purpose-built workflows, data integration, and automated reporting. Transform your business processes today." />
+  <link rel="canonical" href="https://serendipitytechnology.com/main/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logos/serendipity_icon_150.png" />
+  <link rel="apple-touch-icon" href="img/logos/serendipity_icon_500.png" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://serendipitytechnology.com/main/" />
+  <meta property="og:title" content="Serendipity Technology | Custom App Solutions & Workflow Automation" />
+  <meta property="og:description" content="Custom software solutions that streamline operations through purpose-built workflows, data integration, and automated reporting." />
+  <meta property="og:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
+  <meta property="og:site_name" content="Serendipity Technology" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Serendipity Technology | Custom App Solutions" />
+  <meta name="twitter:description" content="Custom software solutions with purpose-built workflows, data integration, and automated reporting." />
+  <meta name="twitter:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Serendipity Technology",
+    "url": "https://serendipitytechnology.com",
+    "logo": "https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png",
+    "description": "Custom software solutions that streamline operations through purpose-built workflows, data integration, and automated reporting.",
+    "founder": {
+      "@type": "Person",
+      "name": "Troy Shimkus"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-407-545-6070",
+      "contactType": "customer service",
+      "email": "troy@serendipitytech.net"
+    },
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Serendipity Technology",
+    "image": "https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png",
+    "url": "https://serendipitytechnology.com",
+    "telephone": "+1-407-545-6070",
+    "email": "troy@serendipitytech.net",
+    "priceRange": "$$",
+    "description": "Custom software solutions that streamline operations through purpose-built workflows, data integration, and automated reporting.",
+    "serviceType": ["Custom Software Development", "Workflow Automation", "Data Integration", "Business Process Automation"]
+  }
+  </script>
 
   <!-- Your custom styles -->
   <link rel="stylesheet" href="css/concierge_style.css">
@@ -156,7 +213,7 @@ $gridProjects = getGridProjects();
       <div class="featured-badge">Featured</div>
       <div class="featured-content">
         <div class="featured-icon">
-          <img src="img/<?= htmlspecialchars($meta['icon'] ?? 'default.svg') ?>" alt="" />
+          <img src="img/<?= htmlspecialchars($meta['icon'] ?? 'default.svg') ?>" alt="<?= htmlspecialchars($meta['title']) ?> icon" />
         </div>
         <div class="featured-text">
           <h3><?= htmlspecialchars($meta['title']) ?></h3>
@@ -180,7 +237,7 @@ $gridProjects = getGridProjects();
     ?>
     <a href="project.php?slug=<?= htmlspecialchars($meta['slug']) ?>" class="project-card<?= $hiddenClass ?>" data-aos="fade-up"<?= $i < $visibleCount ? " data-aos-delay=\"$delay\"" : '' ?>>
       <div class="project-icon">
-        <img src="img/<?= htmlspecialchars($meta['icon'] ?? 'default.svg') ?>" alt="" />
+        <img src="img/<?= htmlspecialchars($meta['icon'] ?? 'default.svg') ?>" alt="<?= htmlspecialchars($meta['title']) ?> icon" />
       </div>
       <div class="project-text">
         <h4><?= htmlspecialchars($meta['title']) ?></h4>

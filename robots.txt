@@ -1,0 +1,17 @@
+# Robots.txt for serendipitytechnology.com
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Disallow admin and sensitive areas
+Disallow: /login.php
+Disallow: /chat_ui.php
+Disallow: /chat_ui.html
+Disallow: /api/
+Disallow: /data/
+Disallow: /send_sms.php
+Disallow: /sms_inbound.php
+
+# Sitemap location
+Sitemap: https://serendipitytechnology.com/main/sitemap.xml
