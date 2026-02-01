@@ -196,8 +196,8 @@ if ($contact_method === 'email') {
     // Always send admin SMS alert for form submissions
     sendAdminAlert($name, $email, $phone, $need, $contact_method, $organization, $event_date);
 
-    // Use send subdomain for Resend email delivery
-    $fromEmail = 'contact@send.serendipitytechnology.com';
+    // Use verified root domain for Resend email delivery
+    $fromEmail = 'contact@serendipitytechnology.com';
     $result = sendEmailViaResend($to, $fromEmail, 'Serendipity Technology', $subject, $message);
     if ($result === true) {
         echo json_encode(['status' => 'ok', 'message' => 'Email sent successfully']);
