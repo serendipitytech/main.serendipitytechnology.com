@@ -194,7 +194,9 @@ if ($contact_method === 'email') {
     // Always send admin SMS alert for form submissions
     sendAdminAlert($name, $email, $phone, $need, $contact_method, $organization, $event_date);
 
-    if (sendEmailViaResend($to, CONTACT_EMAIL, 'Serendipity Technology', $subject, $message)) {
+    // Use send subdomain for Resend email delivery
+    $fromEmail = 'contact@send.serendipitytechnology.com';
+    if (sendEmailViaResend($to, $fromEmail, 'Serendipity Technology', $subject, $message)) {
         echo json_encode(['status' => 'ok', 'message' => 'Email sent successfully']);
     } else {
         http_response_code(500);
