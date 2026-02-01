@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
 
         <p class="mt-6 text-center text-xs text-gray-500">
-            <a href="index.html" class="hover:underline">Back to main site</a>
+            <a href="index.php" class="hover:underline">Back to main site</a>
         </p>
     </div>
 </body>

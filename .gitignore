@@ -31,3 +31,7 @@ data/*.json
 # Local documentation
 CLAUDE.md
 docs/
+
+# Thumbnail cache (auto-generated)
+img/cache/*.jpg
+!img/cache/.gitkeep

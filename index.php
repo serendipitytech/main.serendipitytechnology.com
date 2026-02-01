@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/projects.php';
+$featuredProjects = getFeaturedProjects();
+$gridProjects = getGridProjects();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,52 +146,61 @@
     </div>
   </section>
   
-<section>
+<section class="projects-section">
   <h2 class="section-title" style="color: #F7B06A;">Recent Projects</h2>
-  <div class="cards-row">
-    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
-      <img src="img/map-pin-plus.svg" alt="Map icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
-      <div style="text-align: left;">
-        <h3 style="margin-top: 0;">Interactive Mapping Utility</h3>
-        <p>A custom-built tool to visualize location-based data and connect it to relational datasets. Designed to simplify complex queries and support real-time lookups through an intuitive map-based interface.</p>
+
+  <!-- Featured Projects (dynamically rendered from /projects/*.md) -->
+  <div class="featured-projects">
+    <?php $delay = 0; foreach ($featuredProjects as $project): $meta = $project['meta']; ?>
+    <a href="project.php?slug=<?= htmlspecialchars($meta['slug']) ?>" class="featured-card" data-aos="fade-up"<?= $delay ? " data-aos-delay=\"$delay\"" : '' ?>>
+      <div class="featured-badge">Featured</div>
+      <div class="featured-content">
+        <div class="featured-icon">
+          <img src="img/<?= htmlspecialchars($meta['icon'] ?? 'default.svg') ?>" alt="" />
+        </div>
+        <div class="featured-text">
+          <h3><?= htmlspecialchars($meta['title']) ?></h3>
+          <p><?= htmlspecialchars($meta['summary'] ?? '') ?></p>
+        </div>
       </div>
-    </div>
-    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
-      <img src="img/maps-arrow-diagonal.svg" alt="Location icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
-      <div style="text-align: left;">
-        <h3 style="margin-top: 0;">Community Resource Locator</h3>
-        <p>This project centralized scattered data into a clean, user-friendly system for public visibility. The goal was to surface physical access points and support services in underserved areas — solving both data hygiene and discoverability challenges.</p>
-      </div>
-    </div>
-    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
-      <img src="img/group.svg" alt="People icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
-      <div style="text-align: left;">
-        <h3 style="margin-top: 0;">Custom Membership Platform</h3>
-        <p>We developed a secure, scalable membership database to manage signups, communication, events, and reporting — all tailored to a non-profit’s internal workflow and visibility needs, without vendor lock-in.</p>
-      </div>
-    </div>
-    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
-      <img src="img/reply-to-message.svg" alt="Email icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
-      <div style="text-align: left;">
-        <h3 style="margin-top: 0;">Email Marketing Integration</h3>
-        <p>Integrated third-party platforms with custom logic for segmentation, contact syncing, and automated workflows — enabling smarter, more targeted outreach without relying solely on standard CRM features.</p>
-      </div>
-    </div>
-    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
-      <img src="img/multiple-pages-empty.svg" alt="Catalog icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
-      <div style="text-align: left;">
-        <h3 style="margin-top: 0;">Dynamic Inventory Catalog</h3>
-        <p>Created a visual inventory catalog that reads Excel data and images from folders to generate a searchable, web-friendly display — ideal for sharing product collections with clients and internal teams.</p>
-      </div>
-    </div>
-    <div class="card" style="display: flex; align-items: flex-start; gap: 1rem;">
-      <img src="img/settings-profiles.svg" alt="File sharing icon" style="width: 40px; height: 40px; margin-top: 0.25rem;" />
-      <div style="text-align: left;">
-        <h3 style="margin-top: 0;">Customer Resource Management</h3>
-        <p>A centralized system for client-uploaded files, review feedback, and project signoff — streamlining collaboration and asset readiness for print, digital, or live event use.</p>
-      </div>
-    </div>
+      <div class="featured-accent"></div>
+    </a>
+    <?php $delay += 100; endforeach; ?>
   </div>
+
+  <!-- Project Grid (dynamically rendered from /projects/*.md) -->
+  <div class="projects-grid" id="projectsGrid">
+    <?php
+    $delay = 150;
+    $gridArray = array_values($gridProjects); // Re-index array
+    $visibleCount = 3; // Show first 3, hide the rest
+    foreach ($gridArray as $i => $project):
+      $meta = $project['meta'];
+      $hiddenClass = $i >= $visibleCount ? ' hidden-project' : '';
+    ?>
+    <a href="project.php?slug=<?= htmlspecialchars($meta['slug']) ?>" class="project-card<?= $hiddenClass ?>" data-aos="fade-up"<?= $i < $visibleCount ? " data-aos-delay=\"$delay\"" : '' ?>>
+      <div class="project-icon">
+        <img src="img/<?= htmlspecialchars($meta['icon'] ?? 'default.svg') ?>" alt="" />
+      </div>
+      <div class="project-text">
+        <h4><?= htmlspecialchars($meta['title']) ?></h4>
+        <p><?= htmlspecialchars($meta['summary'] ?? '') ?></p>
+      </div>
+    </a>
+    <?php $delay += 50; endforeach; ?>
+  </div>
+
+  <!-- View All Button (only show if there are hidden projects) -->
+  <?php if (count($gridArray) > $visibleCount): ?>
+  <div class="projects-toggle" data-aos="fade-up" data-aos-delay="300">
+    <button id="toggleProjects" class="toggle-btn" onclick="toggleProjects()">
+      <span class="toggle-text">View All Projects</span>
+      <svg class="toggle-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </div>
+  <?php endif; ?>
 </section>
 <footer class="mt-10 text-center text-sm text-gray-600 py-4 bg-gray-100">
   &copy; 2025 Serendipity Technology &bull; Troy Shimkus &bull;
@@ -351,6 +365,26 @@ function showFormError(message) {
       scrollNav.classList.remove("visible");
     }
   });
+
+// Projects toggle functionality
+function toggleProjects() {
+  const grid = document.getElementById('projectsGrid');
+  const btn = document.getElementById('toggleProjects');
+  const text = btn.querySelector('.toggle-text');
+  const icon = btn.querySelector('.toggle-icon');
+
+  grid.classList.toggle('expanded');
+
+  if (grid.classList.contains('expanded')) {
+    text.textContent = 'Show Less';
+    icon.style.transform = 'rotate(180deg)';
+    // Trigger AOS for newly visible cards
+    AOS.refresh();
+  } else {
+    text.textContent = 'View All Projects';
+    icon.style.transform = 'rotate(0deg)';
+  }
+}
 </script>
 
 </body>
