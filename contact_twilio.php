@@ -50,11 +50,12 @@ function validateTurnstile($token) {
 
 /**
  * Send email via Resend API
+ * Returns true on success, or error string on failure
  */
 function sendEmailViaResend($to, $fromEmail, $fromName, $subject, $body) {
     if (!RESEND_API_KEY) {
         error_log('Resend API key not configured');
-        return false;
+        return 'Resend API key not configured';
     }
 
     $data = [
@@ -81,7 +82,8 @@ function sendEmailViaResend($to, $fromEmail, $fromName, $subject, $body) {
 
     if ($httpCode < 200 || $httpCode >= 300) {
         error_log('Resend API error: HTTP ' . $httpCode . ' - ' . $response);
-        return false;
+        $errorData = json_decode($response, true);
+        return $errorData['message'] ?? ('Resend API error: HTTP ' . $httpCode);
     }
 
     return true;
@@ -196,11 +198,12 @@ if ($contact_method === 'email') {
 
     // Use send subdomain for Resend email delivery
     $fromEmail = 'contact@send.serendipitytechnology.com';
-    if (sendEmailViaResend($to, $fromEmail, 'Serendipity Technology', $subject, $message)) {
+    $result = sendEmailViaResend($to, $fromEmail, 'Serendipity Technology', $subject, $message);
+    if ($result === true) {
         echo json_encode(['status' => 'ok', 'message' => 'Email sent successfully']);
     } else {
         http_response_code(500);
-        echo json_encode(['status' => 'error', 'message' => 'Failed to send email']);
+        echo json_encode(['status' => 'error', 'message' => 'Failed to send email: ' . $result]);
     }
 }
 // Handle SMS
