@@ -755,7 +755,9 @@
         </label>
 
         <?php if ($_SERVER['HTTP_HOST'] !== 'localhost' && strpos($_SERVER['HTTP_HOST'], 'localhost:') !== 0): ?>
+        <!-- Turnstile disabled for now — re-enable after pipeline testing
         <div class="cf-turnstile mb-4" data-sitekey="0x4AAAAAAAzfTuKLagPsH2Hm" data-theme="light"></div>
+        -->
         <?php endif; ?>
 
         <div id="formMessage" class="hidden mb-4 p-3 rounded-lg text-sm"></div>
@@ -831,11 +833,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     errors.push('Please enter a valid email address.');
   }
-  // Check Turnstile CAPTCHA
-  const turnstileResponse = this.querySelector('[name="cf-turnstile-response"]');
-  if (!turnstileResponse || !turnstileResponse.value) {
-    errors.push('Please complete the security check.');
-  }
+  // Turnstile CAPTCHA disabled for testing
+  // const turnstileResponse = this.querySelector('[name="cf-turnstile-response"]');
+  // if (!turnstileResponse || !turnstileResponse.value) {
+  //   errors.push('Please complete the security check.');
+  // }
   if (errors.length) {
     msg.className = 'mb-4 p-3 rounded-lg text-sm bg-red-50 text-red-700 border border-red-200';
     msg.textContent = errors.join(' ');
