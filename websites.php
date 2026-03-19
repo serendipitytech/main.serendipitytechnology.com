@@ -680,7 +680,7 @@
       </div>
 
       <!-- Form -->
-      <form id="contactForm" class="p-6">
+      <form id="contactForm" class="p-6" novalidate>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <label class="block">
             <span class="text-gray-700 font-medium text-sm">Name *</span>
@@ -820,6 +820,24 @@ document.getElementById('contactForm').addEventListener('submit', async function
   e.preventDefault();
   const btn = this.querySelector('button[type="submit"]');
   const msg = document.getElementById('formMessage');
+
+  // Client-side validation (replaces browser-native validation)
+  const name = this.querySelector('[name="name"]').value.trim();
+  const email = this.querySelector('[name="email"]').value.trim();
+  const errors = [];
+  if (!name) errors.push('Name is required.');
+  if (!email) {
+    errors.push('Email is required.');
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errors.push('Please enter a valid email address.');
+  }
+  if (errors.length) {
+    msg.className = 'mb-4 p-3 rounded-lg text-sm bg-red-50 text-red-700 border border-red-200';
+    msg.textContent = errors.join(' ');
+    msg.classList.remove('hidden');
+    return;
+  }
+
   btn.disabled = true;
   btn.innerHTML = 'Sending...';
 
