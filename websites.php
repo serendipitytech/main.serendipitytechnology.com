@@ -698,7 +698,7 @@
           </label>
           <label class="block">
             <span class="text-gray-700 font-medium text-sm">Email *</span>
-            <input type="email" name="email" required
+            <input type="text" name="email" required
               class="mt-1 w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-gray-50
               focus:bg-white focus:border-[#4FC4F0] focus:ring-2 focus:ring-[#4FC4F0]/20
               outline-none transition-all duration-200 text-sm" />
