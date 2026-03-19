@@ -853,7 +853,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   data.source = 'websites-page';
 
   try {
-    const response = await fetch('contact.php', {
+    const response = await fetch('website-inquiry.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
