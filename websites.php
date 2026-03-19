@@ -13,7 +13,7 @@
     gtag('config', 'G-G50KCN37LQ');
   </script>
   <title>AI-Powered Websites for Small Business | Serendipity Technology</title>
-  <meta name="description" content="Professional websites with AI-powered updates starting at $29/month. Submit a change request, our AI builds it overnight. Business email, client portal, and hosting included." />
+  <meta name="description" content="Professional websites with AI-powered updates starting at $9/month. Submit a change request, our AI builds it overnight. Business email, client portal, and hosting included." />
   <meta name="keywords" content="small business website Florida, AI website updates, affordable web hosting, business email, Volusia County web design, Deltona website, managed website service" />
   <meta name="geo.region" content="US-FL" />
   <meta name="geo.placename" content="Volusia County" />
@@ -27,7 +27,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://serendipitytechnology.com/websites.php" />
   <meta property="og:title" content="AI-Powered Websites for Small Business | Serendipity Technology" />
-  <meta property="og:description" content="Professional websites with AI-powered updates. Submit a request, our AI builds it overnight. Starting at $29/month." />
+  <meta property="og:description" content="Professional websites with AI-powered updates. Submit a request, our AI builds it overnight. Starting at $9/month." />
   <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
   <meta property="og:site_name" content="Serendipity Technology" />
   <meta property="og:locale" content="en_US" />
@@ -35,7 +35,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="AI-Powered Websites | Serendipity Technology" />
-  <meta name="twitter:description" content="Professional websites with AI-powered updates starting at $29/month. No developer needed." />
+  <meta name="twitter:description" content="Professional websites with AI-powered updates starting at $9/month. No developer needed." />
   <meta name="twitter:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
 
   <!-- Schema.org -->
@@ -59,8 +59,13 @@
       "itemListElement": [
         {
           "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Starter Website", "description": "Professional template website with pay-per-request AI updates" },
-          "price": "29", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "USD", "unitText": "MONTH" }
+          "itemOffered": { "@type": "Service", "name": "Base Website", "description": "Single page website with pay-per-request AI updates" },
+          "price": "9", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "9", "priceCurrency": "USD", "unitText": "MONTH" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Starter Website", "description": "Two-page website with one included AI update per month" },
+          "price": "19", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "19", "priceCurrency": "USD", "unitText": "MONTH" }
         },
         {
           "@type": "Offer",
@@ -117,7 +122,7 @@
     .bg-gray-50 > *{max-width:1000px;margin-left:auto;margin-right:auto}
 
     /* Pricing */
-    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+    .pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2rem}
     .pricing-card{background:#fff;border:2px solid #e5e7eb;border-radius:16px;padding:2rem;position:relative;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
     .pricing-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1);border-color:#4FC4F0}
     .pricing-card.featured{border-color:#F7B06A;background:linear-gradient(135deg,#fffbf5 0%,#fff 100%)}
@@ -179,7 +184,10 @@
     @keyframes modalIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
     /* Responsive */
-    @media(max-width:900px){
+    @media(max-width:1100px){
+      .pricing-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:600px){
       .pricing-grid{grid-template-columns:1fr}
       .process-steps{grid-template-columns:repeat(2,1fr)}
     }
@@ -291,16 +299,16 @@
   <p class="text-gray-600 mb-6">Every plan includes hosting, SSL, and AI-powered site updates. No contracts — cancel anytime.</p>
 
   <div class="pricing-grid">
-    <!-- Starter -->
+    <!-- Base -->
     <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
-      <h3 class="pricing-title">Starter</h3>
-      <p class="text-gray-500 text-sm">Get Online Fast</p>
-      <div class="pricing-price">$29 <span>/ month</span></div>
-      <p class="pricing-setup">$199 one-time setup</p>
+      <h3 class="pricing-title">Base</h3>
+      <p class="text-gray-500 text-sm">Just the Essentials</p>
+      <div class="pricing-price">$9 <span>/ month</span></div>
+      <p class="pricing-setup">$49 one-time setup</p>
       <ul class="pricing-features">
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Professional template website
+          Single page website
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -308,7 +316,7 @@
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          2 email forwarding addresses
+          Email forwarding to your inbox
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -316,26 +324,65 @@
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          AI updates — $25 per request
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Basic SEO setup
+          AI updates — $19 per request
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           Contact form
+        </li>
+        <li class="disabled">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          No content migration
+        </li>
+      </ul>
+      <button onclick="openModal('base')" class="btn-primary w-full" style="justify-content:center">Get Started</button>
+    </div>
+
+    <!-- Starter -->
+    <div class="pricing-card" data-aos="fade-up" data-aos-delay="75">
+      <h3 class="pricing-title">Starter</h3>
+      <p class="text-gray-500 text-sm">Get Online Fast</p>
+      <div class="pricing-price">$19 <span>/ month</span></div>
+      <p class="pricing-setup">$59 one-time setup</p>
+      <ul class="pricing-features">
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          2-page website design
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          1 page migrated from existing site
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Staging subdomain included
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Email forwarding to your inbox
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          1 AI update/month included
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Additional updates $19 each
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Basic SEO setup
         </li>
       </ul>
       <button onclick="openModal('starter')" class="btn-primary w-full" style="justify-content:center">Get Started</button>
     </div>
 
     <!-- Growth (Featured) -->
-    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="150">
       <h3 class="pricing-title">Growth</h3>
       <p class="text-gray-500 text-sm">Best for Growing Businesses</p>
       <div class="pricing-price">$49 <span>/ month</span></div>
-      <p class="pricing-setup">$399 one-time setup</p>
+      <p class="pricing-setup">$199 one-time setup</p>
       <ul class="pricing-features">
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -343,7 +390,7 @@
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Staging subdomain included
+          Full content migration
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -370,7 +417,7 @@
     </div>
 
     <!-- Professional -->
-    <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="pricing-card" data-aos="fade-up" data-aos-delay="225">
       <h3 class="pricing-title">Professional</h3>
       <p class="text-gray-500 text-sm">Full-Service Solution</p>
       <div class="pricing-price">$99 <span>/ month</span></div>
@@ -402,7 +449,7 @@
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Google Workspace setup assistance
+          Google Workspace setup <span style="font-size:.8rem;color:#94a3b8">*</span>
         </li>
       </ul>
       <button onclick="openModal('professional')" class="btn-primary w-full" style="justify-content:center">Get Started</button>
@@ -412,12 +459,15 @@
   <p class="text-center text-gray-500 text-sm mt-6">
     All plans are month-to-month &bull; No contracts &bull; Cancel anytime &bull; We'll export your site files if you leave
   </p>
+  <p class="text-center text-gray-400 text-xs mt-2">
+    * Google Workspace requires a separate subscription billed directly by Google. We handle the setup and configuration.
+  </p>
 </section>
 
 <!-- Add-ons -->
 <section data-aos="fade-up">
-  <h2 class="section-title">Add-Ons &amp; Extras</h2>
-  <p class="text-gray-600 mb-4">Need more? Add these to any plan.</p>
+  <h2 class="section-title">Add-Ons &amp; Upgrades</h2>
+  <p class="text-gray-600 mb-4">Grow at your own pace. Add these to any plan as your business needs evolve.</p>
 
   <div class="addon-grid">
     <div class="addon-item" data-aos="fade-up" data-aos-delay="0">
@@ -426,24 +476,49 @@
       <div class="addon-label">Extra Email Mailbox</div>
     </div>
     <div class="addon-item" data-aos="fade-up" data-aos-delay="50">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4FC4F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <div class="addon-price">$15/mo</div>
+      <div class="addon-label">Hosted Email <span style="font-size:.75rem;color:#94a3b8">(Base/Starter upgrade)</span></div>
+    </div>
+    <div class="addon-item" data-aos="fade-up" data-aos-delay="100">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4FC4F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
       <div class="addon-price">$3/mo</div>
       <div class="addon-label">Additional Storage (500MB)</div>
     </div>
-    <div class="addon-item" data-aos="fade-up" data-aos-delay="100">
+    <div class="addon-item" data-aos="fade-up" data-aos-delay="150">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4FC4F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-      <div class="addon-price">$25/each</div>
+      <div class="addon-price">$19/each</div>
       <div class="addon-label">Extra AI Update Request</div>
     </div>
-    <div class="addon-item" data-aos="fade-up" data-aos-delay="150">
+    <div class="addon-item" data-aos="fade-up" data-aos-delay="200">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4FC4F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <div class="addon-price">$99 one-time</div>
+      <div class="addon-label">Custom Email Template Design</div>
+    </div>
+    <div class="addon-item" data-aos="fade-up" data-aos-delay="250">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4FC4F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      <div class="addon-price">$199 one-time</div>
+      <div class="addon-label">Payment Gateway Integration</div>
+    </div>
+    <div class="addon-item" data-aos="fade-up" data-aos-delay="300">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4FC4F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <div class="addon-price">$29/mo</div>
+      <div class="addon-label">SMS Notifications &amp; Alerts</div>
+    </div>
+    <div class="addon-item" data-aos="fade-up" data-aos-delay="350">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4FC4F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <div class="addon-price">$149 one-time</div>
+      <div class="addon-label">Event Check-In System</div>
+    </div>
+    <div class="addon-item" data-aos="fade-up" data-aos-delay="400">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4FC4F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
       <div class="addon-price">$149 one-time</div>
       <div class="addon-label">Google Workspace Setup</div>
     </div>
-    <div class="addon-item" data-aos="fade-up" data-aos-delay="200">
+    <div class="addon-item" data-aos="fade-up" data-aos-delay="450">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4FC4F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
       <div class="addon-price">$125/hr</div>
-      <div class="addon-label">Custom Development</div>
+      <div class="addon-label">Custom Feature Development</div>
     </div>
   </div>
 </section>
@@ -527,7 +602,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
       <div class="faq-answer">
-        Every plan includes 2 email forwarding addresses (your@domain.com → your Gmail). Growth and Professional plans include 2 hosted mailboxes with pooled storage. Need more? Add extra mailboxes for $5/month each. If you outgrow basic email, we can help you set up Google Workspace.
+        Base and Starter plans include email forwarding (your@domain.com → your Gmail). Growth and Professional plans include 2 hosted mailboxes with pooled storage. Need more? Add extra mailboxes for $5/month each, or add hosted email to any plan for $15/month. If you outgrow basic email, we can help you set up Google Workspace.
       </div>
     </div>
 
@@ -570,7 +645,7 @@
 <section class="cta-section" data-aos="fade-up">
   <h2 class="text-3xl font-bold mb-4">Ready to Get Online?</h2>
   <p class="text-gray-300 text-lg max-w-2xl mx-auto">
-    Get a professional website with AI-powered updates starting at $29/month. No contracts, no surprises.
+    Get a professional website with AI-powered updates starting at $9/month. No contracts, no surprises.
   </p>
 
   <div class="cta-buttons">
@@ -644,7 +719,8 @@
             focus:bg-white focus:border-[#4FC4F0] focus:ring-2 focus:ring-[#4FC4F0]/20
             outline-none transition-all duration-200 text-sm">
             <option value="">Not sure yet</option>
-            <option value="starter">Starter — $29/mo</option>
+            <option value="base">Base — $9/mo</option>
+            <option value="starter">Starter — $19/mo</option>
             <option value="growth">Growth — $49/mo</option>
             <option value="professional">Professional — $99/mo</option>
           </select>
