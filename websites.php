@@ -831,6 +831,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     errors.push('Please enter a valid email address.');
   }
+  // Check Turnstile CAPTCHA
+  const turnstileResponse = this.querySelector('[name="cf-turnstile-response"]');
+  if (!turnstileResponse || !turnstileResponse.value) {
+    errors.push('Please complete the security check.');
+  }
   if (errors.length) {
     msg.className = 'mb-4 p-3 rounded-lg text-sm bg-red-50 text-red-700 border border-red-200';
     msg.textContent = errors.join(' ');
