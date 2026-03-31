@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G50KCN37LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G50KCN37LQ');
+  </script>
+  
+  <title>Knowledge Base | Serendipity Technology</title>
+  <meta name="description" content="Help articles and guides for Serendipity Technology clients." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://serendipitytechnology.com/main/kb/" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/logos/serendipity_icon_150.png" />
+  <link rel="apple-touch-icon" href="../img/logos/serendipity_icon_500.png" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #4FC4F0;
+      --color-accent: #F7B06A;
+      --color-charcoal: #1f2937;
+      --color-slate: #475569;
+      --color-light-gray: #e5e7eb;
+      --color-bg: #f4f4f5;
+      --color-white: #ffffff;
+      --font-heading: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      --font-body: 'Roboto', 'Segoe UI', Helvetica, Arial, sans-serif;
+      --gradient-brand: linear-gradient(to right, #4FC4F0, #F7B06A);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--color-charcoal);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .gradient-bar {
+      height: 4px;
+      background: var(--gradient-brand);
+    }
+    
+    .kb-header {
+      background: var(--color-white);
+      padding: 24px 32px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .kb-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    
+    .kb-logo {
+      height: 48px;
+      width: auto;
+    }
+    
+    .kb-title {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-charcoal);
+      margin: 0;
+    }
+    
+    .breadcrumb {
+      max-width: 900px;
+      margin: 24px auto 0;
+      padding: 0 32px;
+      font-size: 14px;
+      color: var(--color-slate);
+    }
+    
+    .breadcrumb a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .breadcrumb a:hover {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+    
+    .breadcrumb-separator {
+      margin: 0 8px;
+      color: var(--color-light-gray);
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 32px auto;
+      padding: 0 32px 64px;
+    }
+    
+    .page-header {
+      background: var(--color-white);
+      border-radius: 16px;
+      padding: 48px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 24px rgba(79, 196, 240, 0.08);
+      text-align: center;
+    }
+    
+    .page-title {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--color-charcoal);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    
+    .page-subtitle {
+      font-size: 18px;
+      color: var(--color-slate);
+      margin: 0;
+    }
+    
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    
+    .article-card {
+      background: var(--color-white);
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(79, 196, 240, 0.15);
+    }
+    
+    .article-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #4FC4F0 0%, #3AB0D9 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 24px;
+    }
+    
+    .article-title {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      margin-bottom: 8px;
+    }
+    
+    .article-description {
+      font-size: 15px;
+      color: var(--color-slate);
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    .article-tag {
+      display: inline-block;
+      background: #f0f9ff;
+      color: var(--color-primary);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 12px;
+      margin-top: 12px;
+    }
+    
+    @media (max-width: 768px) {
+      .kb-header {
+        padding: 16px 20px;
+      }
+      
+      .kb-header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      
+      .kb-logo {
+        height: 40px;
+      }
+      
+      .kb-title {
+        font-size: 20px;
+      }
+      
+      .breadcrumb {
+        padding: 0 20px;
+        font-size: 13px;
+      }
+      
+      .container {
+        padding: 0 20px 48px;
+        margin: 24px auto;
+      }
+      
+      .page-header {
+        padding: 32px 24px;
+        border-radius: 12px;
+      }
+      
+      .page-title {
+        font-size: 28px;
+      }
+      
+      .page-subtitle {
+        font-size: 16px;
+      }
+      
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="gradient-bar"></div>
+  
+  <header class="kb-header">
+    <div class="kb-header-inner">
+      <img src="../img/logos/serendipity_main_vector.svg" alt="Serendipity Technology" class="kb-logo" />
+      <h1 class="kb-title">Knowledge Base</h1>
+    </div>
+  </header>
+  
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.php">Home</a>
+    <span class="breadcrumb-separator">›</span>
+    <span>Knowledge Base</span>
+  </nav>
+  
+  <main class="container">
+    <div class="page-header">
+      <h1 class="page-title">How can we help?</h1>
+      <p class="page-subtitle">Guides and documentation for Serendipity Technology clients</p>
+    </div>
+    
+    <div class="articles-grid">
+      <a href="newsletter-quickstart.html" class="article-card">
+        <div class="article-icon">📧</div>
+        <h2 class="article-title">Newsletter Quick Start</h2>
+        <p class="article-description">Get started with your Keila-powered newsletter platform. Learn how to create, send, and manage email campaigns.</p>
+        <span class="article-tag">Getting Started</span>
+      </a>
+      
+      <!-- Placeholder for future articles -->
+      <div class="article-card" style="opacity: 0.4; pointer-events: none;">
+        <div class="article-icon">🌐</div>
+        <h2 class="article-title">Website Management</h2>
+        <p class="article-description">Coming soon: Learn how to update your website content and manage your online presence.</p>
+        <span class="article-tag">Coming Soon</span>
+      </div>
+      
+      <div class="article-card" style="opacity: 0.4; pointer-events: none;">
+        <div class="article-icon">📊</div>
+        <h2 class="article-title">Dashboard Overview</h2>
+        <p class="article-description">Coming soon: Navigate your project dashboard and track your campaigns and metrics.</p>
+        <span class="article-tag">Coming Soon</span>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
