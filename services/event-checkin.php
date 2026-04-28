@@ -25,7 +25,13 @@
 
   <?php include __DIR__ . '/partials/service-styles.php'; ?>
 </head>
-<body class="svc-page">
+<body class="svc-page has-fixed-header">
+
+<?php
+$header_always_visible = true;
+$header_chat_action = 'openEventContactModal()';
+include __DIR__ . '/../partials/site-header.php';
+?>
 
 <?php
 /* ============ HERO ============ */
@@ -214,22 +220,7 @@ $cta_secondary_href = 'javascript:openEventContactModal()';
 include __DIR__ . '/partials/service-cta.php';
 ?>
 
-<footer style="border-top:1px solid var(--svc-border); padding:32px 0; text-align:center; font-size:13px; color:var(--svc-text-muted);">
-  <div class="svc-container">
-    <p style="margin:0 0 8px 0;">
-      <a href="/" style="color:inherit; text-decoration:none;">Serendipity Technology</a>
-      &middot;
-      <a href="/services/candidates" style="color:inherit; text-decoration:none;">Candidate Sites</a>
-      &middot;
-      <a href="/services/business-sites" style="color:inherit; text-decoration:none;">Business Sites</a>
-      &middot;
-      <a href="/services/membership" style="color:inherit; text-decoration:none;">Membership Portal</a>
-      &middot;
-      <a href="/services/" style="color:inherit; text-decoration:none;">All Services</a>
-    </p>
-    <p style="margin:0;">&copy; <?= date('Y') ?> Serendipity Technology. Events run better with the right tools.</p>
-  </div>
-</footer>
+<?php include __DIR__ . '/../partials/site-footer.php'; ?>
 
 <!-- Event Check-In Contact Modal -->
 <div id="eventContactModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:1000; overflow-y:auto;">

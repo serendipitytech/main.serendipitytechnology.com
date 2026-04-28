@@ -102,11 +102,7 @@
     body{font-family:var(--font-body);font-weight:300;font-size:17px;margin:0;background:#fff;color:var(--color-text);line-height:1.7;-webkit-font-smoothing:antialiased}
     h1,h2,h3{font-family:var(--font-heading);font-weight:700;line-height:1.3;color:var(--color-text)}
 
-    /* Scroll Nav */
-    #scrollNav{position:fixed;top:-80px;left:0;right:0;opacity:0;display:flex;align-items:center;justify-content:space-between;background-color:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(0,0,0,.06);padding:.5rem 1rem;z-index:999;transition:top .3s,opacity .3s;height:var(--header-height);box-sizing:border-box}
-    #scrollNav.visible{top:0;opacity:1}
-    .scroll-nav-inner{max-width:1000px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;box-sizing:border-box}
-    .scroll-logo{height:40px}.scroll-title{font-size:1.2rem;font-weight:700}
+    /* scrollNav styles handled by site-header.php partial */
 
     /* Hero */
     .site-header{background:linear-gradient(135deg,rgba(31,41,55,0.85),rgba(31,41,55,0.9)),url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;padding:6rem 1rem 5rem}
@@ -206,13 +202,11 @@
 </head>
 <body>
 
-<nav id="scrollNav">
-  <div class="scroll-nav-inner">
-    <a href="index.php"><img src="img/logo_sm.png" alt="Logo" class="scroll-logo" /></a>
-    <span class="scroll-title">Website Services</span>
-    <a href="index.php" class="text-gray-600 hover:text-gray-900 text-sm font-medium">Home</a>
-  </div>
-</nav>
+<?php
+$header_always_visible = false;
+$header_chat_action = 'openContactModal()';
+include __DIR__ . '/partials/site-header.php';
+?>
 
 <header class="site-header">
   <div class="header-overlay" style="max-width: 700px; margin: 0 auto; text-align: center;">
@@ -772,16 +766,10 @@
   </div>
 </div>
 
+<?php include __DIR__ . '/partials/site-footer.php'; ?>
+
 <script>
-// Scroll nav
-window.addEventListener('scroll', () => {
-  const nav = document.getElementById('scrollNav');
-  if (window.scrollY > 200) {
-    nav.classList.add('visible');
-  } else {
-    nav.classList.remove('visible');
-  }
-});
+// Scroll listener handled by site-header.php partial
 
 // Modal
 function openModal(plan) {
@@ -791,6 +779,9 @@ function openModal(plan) {
     document.getElementById('planSelect').value = plan;
   }
 }
+// Alias so site-header chat button works
+window.openContactModal = function() { openModal(); };
+
 function closeModal() {
   document.getElementById('contactModal').classList.add('hidden');
   document.body.style.overflow = '';

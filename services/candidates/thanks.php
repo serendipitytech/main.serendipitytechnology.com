@@ -15,6 +15,7 @@
   <meta name="robots" content="noindex">
 
   <?php include __DIR__ . '/../partials/service-styles.php'; ?>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <style>
     .thanks-hero {
       background: linear-gradient(135deg, #1a2a3a 0%, #0f1e2d 100%);
@@ -104,7 +105,13 @@
     }
   </style>
 </head>
-<body class="svc-page">
+<body class="svc-page has-fixed-header">
+
+<?php
+$header_always_visible = true;
+$header_chat_action = 'openContactModal()';
+include __DIR__ . '/../../partials/site-header.php';
+?>
 
 <div class="thanks-hero">
   <div class="svc-container">
@@ -147,11 +154,8 @@
   </div>
 </div>
 
-<footer style="border-top:1px solid var(--svc-border); padding:24px 0; text-align:center; font-size:13px; color:var(--svc-text-muted);">
-  <div class="svc-container">
-    &copy; <?= date('Y') ?> Serendipity Technology. All campaigns deserve good tools.
-  </div>
-</footer>
+<?php include __DIR__ . '/../../partials/site-footer.php'; ?>
+<?php include __DIR__ . '/../../partials/site-contact-modal.php'; ?>
 
 </body>
 </html>

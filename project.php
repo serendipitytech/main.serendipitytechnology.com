@@ -78,10 +78,8 @@ $nextProject = $allProjects[$nextIndex];
       :root{--color-primary:#4FC4F0;--color-accent:#F7B06A;--color-text:#1F2937;--font-body:'Roboto',-apple-system,BlinkMacSystemFont,sans-serif;--font-heading:"Gill Sans","Gill Sans MT",'Roboto',sans-serif;--header-height:60px}
       body{font-family:var(--font-body);font-weight:300;font-size:17px;margin:0;background:#fff;color:var(--color-text);line-height:1.7;-webkit-font-smoothing:antialiased}
       h1,h2,h3{font-family:var(--font-heading);font-weight:700;line-height:1.3;color:var(--color-text)}
-      #scrollNav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;background-color:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(0,0,0,.06);padding:.5rem 1rem;z-index:999;height:var(--header-height);box-sizing:border-box}
-      .scroll-nav-inner{max-width:1000px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;box-sizing:border-box}
-      .scroll-logo{height:40px}.scroll-title{font-size:1.2rem;font-weight:700}
-      .project-page{padding-top:var(--header-height)}
+      /* scrollNav styles handled by site-header.php partial */
+      .project-page{padding-top:60px}
     </style>
 
     <!-- Open Graph / Facebook -->
@@ -132,25 +130,18 @@ $nextProject = $allProjects[$nextIndex];
             AOS.init({ once: true, duration: 600 });
         });
     </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
-<body>
+<body class="has-fixed-header">
 
 <!-- Reading Progress Bar -->
 <div class="reading-progress" id="readingProgress"></div>
 
-<!-- Sticky Nav (always visible on project pages) -->
-<nav id="scrollNav" class="always-visible">
-    <div class="scroll-nav-inner">
-        <a href="index.php"><img src="img/logo_sm.png" alt="Logo" class="scroll-logo" /></a>
-        <span class="scroll-title">Custom App Solutions</span>
-        <a href="index.php" class="scroll-chat-btn" aria-label="Home">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg>
-        </a>
-    </div>
-</nav>
+<?php
+$header_always_visible = true;
+$header_chat_action = 'openContactModal()';
+include __DIR__ . '/partials/site-header.php';
+?>
 
 <div class="project-page">
 <?php if ($notFound): ?>
@@ -298,17 +289,7 @@ $nextProject = $allProjects[$nextIndex];
     <img id="lightbox-img" src="" alt="Enlarged screenshot">
 </div>
 
-<footer class="mt-10 text-center text-sm text-gray-600 py-4 bg-gray-100">
-  <div>&copy; <?= date('Y') ?> Serendipity Technology &bull; Troy Shimkus &bull; Volusia County, FL</div>
-  <div class="mt-2 flex items-center justify-center gap-4">
-    <a href="tel:+14075456070" class="text-blue-500 hover:underline">(407) 545-6070</a>
-    <span>&bull;</span>
-    <a href="https://www.facebook.com/serendipitytech" target="_blank" rel="noopener" class="text-blue-500 hover:underline inline-flex items-center gap-1">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-      Facebook
-    </a>
-  </div>
-</footer>
+<?php include __DIR__ . '/partials/site-footer.php'; ?>
 
 <script>
     // Reading progress bar
@@ -362,6 +343,7 @@ $nextProject = $allProjects[$nextIndex];
         }
     });
 </script>
+<?php include __DIR__ . '/partials/site-contact-modal.php'; ?>
 
 </body>
 </html>

@@ -20,6 +20,7 @@ $error = trim($_GET['error'] ?? '');
   <link rel="canonical" href="https://serendipitytechnology.com/services/candidates/signup">
 
   <?php include __DIR__ . '/../partials/service-styles.php'; ?>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <style>
     /* ---- Signup page extras ---- */
     .signup-hero {
@@ -218,7 +219,13 @@ $error = trim($_GET['error'] ?? '');
     }
   </style>
 </head>
-<body class="svc-page">
+<body class="svc-page has-fixed-header">
+
+<?php
+$header_always_visible = true;
+$header_chat_action = 'openContactModal()';
+include __DIR__ . '/../../partials/site-header.php';
+?>
 
 <!-- Hero banner -->
 <div class="signup-hero">
@@ -398,11 +405,8 @@ $error = trim($_GET['error'] ?? '');
   </div>
 </section>
 
-<footer style="border-top:1px solid var(--svc-border); padding:24px 0; text-align:center; font-size:13px; color:var(--svc-text-muted);">
-  <div class="svc-container">
-    &copy; <?= date('Y') ?> Serendipity Technology. All campaigns deserve good tools.
-  </div>
-</footer>
+<?php include __DIR__ . '/../../partials/site-footer.php'; ?>
+<?php include __DIR__ . '/../../partials/site-contact-modal.php'; ?>
 
 </body>
 </html>

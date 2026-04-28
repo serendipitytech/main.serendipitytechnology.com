@@ -31,10 +31,7 @@
     h1,h2,h3{font-family:var(--font-heading);font-weight:700;line-height:1.3;color:var(--color-text)}
     header{background:linear-gradient(135deg, rgba(79,196,240,0.9), rgba(58,176,220,0.95)), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;padding:5rem 1rem;text-align:center;position:relative;color:#fff}
     .header-overlay{background:rgba(0,0,0,.5);padding:2.5rem;border-radius:16px;display:inline-block;max-width:90%;transition:transform .2s,box-shadow .2s}
-    #scrollNav{position:fixed;top:-80px;left:0;right:0;opacity:0;display:flex;align-items:center;justify-content:space-between;background-color:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(0,0,0,.06);padding:.5rem 1rem;z-index:999;transition:top .3s,opacity .3s;height:var(--header-height);box-sizing:border-box}
-    #scrollNav.visible{top:0;opacity:1}
-    .scroll-nav-inner{max-width:1000px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;box-sizing:border-box}
-    .scroll-logo{height:40px}.scroll-title{font-size:1.2rem;font-weight:700}
+    /* scrollNav styles handled by site-header.php partial */
   </style>
 
   <!-- Open Graph / Facebook -->
@@ -467,13 +464,11 @@
 </head>
 <body>
 
-<nav id="scrollNav">
-  <div class="scroll-nav-inner">
-    <a href="index.php"><img src="img/logo_sm.png" alt="Logo" class="scroll-logo" /></a>
-    <span class="scroll-title">Event Services</span>
-    <a href="index.php" class="text-gray-600 hover:text-gray-900 text-sm font-medium">Home</a>
-  </div>
-</nav>
+<?php
+$header_always_visible = false;
+$header_chat_action = 'openContactModal()';
+include __DIR__ . '/partials/site-header.php';
+?>
 
 <header class="event-header">
   <div class="header-overlay" style="max-width: 700px;">
@@ -862,27 +857,15 @@
   .animate-modal-in { animation: modal-in 0.25s ease-out; }
 </style>
 
-<footer class="mt-10 text-center text-sm text-gray-600 py-4 bg-gray-100">
-  <div>&copy; <?= date('Y') ?> Serendipity Technology &bull; Troy Shimkus &bull; Volusia County, FL</div>
-  <div class="mt-2 flex items-center justify-center gap-4">
-    <a href="tel:+14075456070" class="text-blue-500 hover:underline">(407) 545-6070</a>
-    <span>&bull;</span>
-    <a href="https://www.facebook.com/serendipitytech" target="_blank" rel="noopener" class="text-blue-500 hover:underline inline-flex items-center gap-1">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-      Facebook
-    </a>
-  </div>
-  <div class="mt-2 text-xs text-gray-400">
-    <a href="index.php" class="hover:underline">Home</a> &bull;
-    <a href="media.html" class="hover:underline">Media Kit</a>
-  </div>
-</footer>
+<?php include __DIR__ . '/partials/site-footer.php'; ?>
 
 <script>
 function openModal() {
   document.getElementById("contactModal").classList.remove("hidden");
   document.body.style.overflow = "hidden";
 }
+// Alias so site-header chat button works
+window.openContactModal = openModal;
 
 function closeModal() {
   document.getElementById("contactModal").classList.add("hidden");
@@ -1014,14 +997,7 @@ function showFormError(message) {
   errorMsg.classList.remove('hidden');
 }
 
-window.addEventListener("scroll", () => {
-  const scrollNav = document.getElementById("scrollNav");
-  if (window.scrollY > 100) {
-    scrollNav.classList.add("visible");
-  } else {
-    scrollNav.classList.remove("visible");
-  }
-});
+// Scroll listener handled by site-header.php partial
 </script>
 
 </body>
