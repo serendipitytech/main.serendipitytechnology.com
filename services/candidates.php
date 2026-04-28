@@ -100,7 +100,7 @@ include __DIR__ . '/partials/service-features.php';
 <?php
 /* ============ PRICING ============ */
 $pricing_title = 'Simple, predictable pricing';
-$pricing_subtitle = 'No multi-year contracts. No qualifying-stage rate hikes. Cancel anytime, especially if your race ends sooner than planned.';
+$pricing_subtitle = 'No multi-year contracts. No qualifying-stage rate hikes. Cancel anytime — like when we help you win your primary so you can turn your focus to serving your constituents.';
 $pricing_tiers = [
   [
     'name' => 'Candidate',
@@ -145,7 +145,7 @@ $pricing_tiers = [
     'cta_href' => '#faq',
   ],
 ];
-$pricing_footnote = '<strong>Designed for active campaigns.</strong> The Candidate Package is intended for political campaigns ending within 12 months of signup. For ongoing political organizations, PACs, or campaigns more than a year out, see our <a href="/services/business-sites">Business Site packages</a> or <a href="/website-inquiry.php">contact us</a> for custom options.';
+$pricing_footnote = '<strong>Designed for active campaigns.</strong> The Candidate Package is intended for political campaigns ending within 12 months of signup. For ongoing political organizations, PACs, or campaigns more than a year out, see our <a href="/websites.php">Business Site packages</a> or <a href="javascript:openContactModal()">contact us</a> for custom options.';
 include __DIR__ . '/partials/service-pricing.php';
 ?>
 
@@ -188,7 +188,7 @@ $faq_items = [
   ],
   [
     'q' => 'What if I need a multi-page site or more advanced features?',
-    'a' => 'The Candidate Package is intentionally a single page. For multi-page campaigns, complex donation flows, custom integrations, or larger design needs, contact us about a custom build or look at our <a href="/services/business-sites">Business Site packages</a>.',
+    'a' => 'The Candidate Package is intentionally a single page. For multi-page campaigns, complex donation flows, custom integrations, or larger design needs, contact us about a custom build or look at our <a href="/websites.php">Business Site packages</a>.',
   ],
 ];
 include __DIR__ . '/partials/service-faq.php';
@@ -201,7 +201,7 @@ $cta_subtitle = 'Tell us about your race and we will have your site live in days
 $cta_text = 'Get Started — $49';
 $cta_href = '/services/candidates/signup';
 $cta_secondary_text = 'Have Questions? Contact Us';
-$cta_secondary_href = '/website-inquiry.php?service=candidates';
+$cta_secondary_href = 'javascript:openContactModal()';
 include __DIR__ . '/partials/service-cta.php';
 ?>
 
@@ -210,15 +210,210 @@ include __DIR__ . '/partials/service-cta.php';
     <p style="margin:0 0 8px 0;">
       <a href="/" style="color:inherit; text-decoration:none;">Serendipity Technology</a>
       &middot;
-      <a href="/services/business-sites" style="color:inherit; text-decoration:none;">Business Sites</a>
+      <a href="/websites.php" style="color:inherit; text-decoration:none;">Business Sites</a>
       &middot;
-      <a href="/services/membership" style="color:inherit; text-decoration:none;">Membership Portal</a>
-      &middot;
-      <a href="/services/event-checkin" style="color:inherit; text-decoration:none;">Event Check-In</a>
+      More services coming soon
     </p>
     <p style="margin:0;">&copy; <?= date('Y') ?> Serendipity Technology. All campaigns deserve good tools.</p>
   </div>
 </footer>
+
+<!-- Candidate Contact Modal -->
+<div id="candidateContactModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:1000; overflow-y:auto;">
+  <div style="min-height:100%; display:flex; align-items:flex-start; justify-content:center; padding:32px 16px;">
+    <div style="background:#fff; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,0.2); width:100%; max-width:640px; position:relative;">
+
+      <!-- Modal header -->
+      <div style="position:sticky; top:0; background:#fff; border-bottom:1px solid #e5e7eb; padding:16px 24px; border-radius:12px 12px 0 0; display:flex; align-items:center; justify-content:space-between; z-index:10;">
+        <div>
+          <h2 style="margin:0 0 2px; font-size:18px; font-weight:700; color:#1f2937;">Get in Touch</h2>
+          <p style="margin:0; font-size:13px; color:#6b7280;">Tell us about your race and we'll get back within 24 hours</p>
+        </div>
+        <button onclick="closeContactModal()" aria-label="Close"
+          style="width:36px; height:36px; border:none; background:none; cursor:pointer; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#9ca3af; transition:background 0.15s;"
+          onmouseover="this.style.background='#f3f4f6'" onmouseout="this.style.background='none'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Form -->
+      <form id="candidateContactForm" style="padding:24px;" novalidate>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+          <label style="display:block;">
+            <span style="font-size:13px; font-weight:600; color:#374151; display:block; margin-bottom:4px;">Name <span style="color:#F7B06A;">*</span></span>
+            <input type="text" name="name" required
+              style="width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; background:#f9fafb; box-sizing:border-box; font-family:inherit; color:#1f2937;"
+              onfocus="this.style.borderColor='#4FC4F0';this.style.boxShadow='0 0 0 3px rgba(79,196,240,0.15)';this.style.background='#fff'"
+              onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none';this.style.background='#f9fafb'">
+          </label>
+          <label style="display:block;">
+            <span style="font-size:13px; font-weight:600; color:#374151; display:block; margin-bottom:4px;">Email <span style="color:#F7B06A;">*</span></span>
+            <input type="email" name="email" required
+              style="width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; background:#f9fafb; box-sizing:border-box; font-family:inherit; color:#1f2937;"
+              onfocus="this.style.borderColor='#4FC4F0';this.style.boxShadow='0 0 0 3px rgba(79,196,240,0.15)';this.style.background='#fff'"
+              onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none';this.style.background='#f9fafb'">
+          </label>
+          <label style="display:block;">
+            <span style="font-size:13px; font-weight:600; color:#374151; display:block; margin-bottom:4px;">Phone <span style="font-size:12px; font-weight:400; color:#9ca3af;">(optional)</span></span>
+            <input type="tel" name="phone"
+              style="width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; background:#f9fafb; box-sizing:border-box; font-family:inherit; color:#1f2937;"
+              onfocus="this.style.borderColor='#4FC4F0';this.style.boxShadow='0 0 0 3px rgba(79,196,240,0.15)';this.style.background='#fff'"
+              onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none';this.style.background='#f9fafb'">
+          </label>
+          <label style="display:block;">
+            <span style="font-size:13px; font-weight:600; color:#374151; display:block; margin-bottom:4px;">Campaign / Committee Name <span style="color:#F7B06A;">*</span></span>
+            <input type="text" name="campaign_name" required
+              style="width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; background:#f9fafb; box-sizing:border-box; font-family:inherit; color:#1f2937;"
+              onfocus="this.style.borderColor='#4FC4F0';this.style.boxShadow='0 0 0 3px rgba(79,196,240,0.15)';this.style.background='#fff'"
+              onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none';this.style.background='#f9fafb'">
+          </label>
+        </div>
+
+        <label style="display:block; margin-bottom:12px;">
+          <span style="font-size:13px; font-weight:600; color:#374151; display:block; margin-bottom:4px;">Office Sought <span style="color:#F7B06A;">*</span></span>
+          <input type="text" name="office" required placeholder="e.g. Volusia County School Board, District 4"
+            style="width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; background:#f9fafb; box-sizing:border-box; font-family:inherit; color:#1f2937;"
+            onfocus="this.style.borderColor='#4FC4F0';this.style.boxShadow='0 0 0 3px rgba(79,196,240,0.15)';this.style.background='#fff'"
+            onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none';this.style.background='#f9fafb'">
+        </label>
+
+        <label style="display:block; margin-bottom:12px;">
+          <span style="font-size:13px; font-weight:600; color:#374151; display:block; margin-bottom:4px;">Election Date <span style="color:#F7B06A;">*</span></span>
+          <input type="date" name="election_date" required
+            style="width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; background:#f9fafb; box-sizing:border-box; font-family:inherit; color:#1f2937;"
+            onfocus="this.style.borderColor='#4FC4F0';this.style.boxShadow='0 0 0 3px rgba(79,196,240,0.15)';this.style.background='#fff'"
+            onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none';this.style.background='#f9fafb'">
+        </label>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+          <label style="display:block;">
+            <span style="font-size:13px; font-weight:600; color:#374151; display:block; margin-bottom:4px;">Domain Status</span>
+            <select name="domain_status"
+              style="width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; background:#f9fafb; box-sizing:border-box; font-family:inherit; color:#1f2937;"
+              onfocus="this.style.borderColor='#4FC4F0';this.style.background='#fff'"
+              onblur="this.style.borderColor='#e5e7eb';this.style.background='#f9fafb'">
+              <option value="">— Select —</option>
+              <option value="have">I have a domain</option>
+              <option value="need">I need one registered</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+          </label>
+          <label style="display:block;">
+            <span style="font-size:13px; font-weight:600; color:#374151; display:block; margin-bottom:4px;">Domain Name <span style="font-size:12px; font-weight:400; color:#9ca3af;">(optional)</span></span>
+            <input type="text" name="domain" placeholder="e.g. janesmith2026.com"
+              style="width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; background:#f9fafb; box-sizing:border-box; font-family:inherit; color:#1f2937;"
+              onfocus="this.style.borderColor='#4FC4F0';this.style.boxShadow='0 0 0 3px rgba(79,196,240,0.15)';this.style.background='#fff'"
+              onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none';this.style.background='#f9fafb'">
+          </label>
+        </div>
+
+        <label style="display:block; margin-bottom:16px;">
+          <span style="font-size:13px; font-weight:600; color:#374151; display:block; margin-bottom:4px;">Message <span style="font-size:12px; font-weight:400; color:#9ca3af;">(optional)</span></span>
+          <textarea name="message" rows="3" placeholder="Tell us about your race, timeline, or any questions..."
+            style="width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; background:#f9fafb; box-sizing:border-box; font-family:inherit; color:#1f2937; resize:vertical;"
+            onfocus="this.style.borderColor='#4FC4F0';this.style.boxShadow='0 0 0 3px rgba(79,196,240,0.15)';this.style.background='#fff'"
+            onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none';this.style.background='#f9fafb'"></textarea>
+        </label>
+
+        <div id="candidateFormMessage" style="display:none; margin-bottom:12px; padding:10px 14px; border-radius:6px; font-size:14px;"></div>
+
+        <button type="submit" id="candidateSubmitBtn"
+          style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:12px 24px; font-size:15px; font-weight:700; background:#4FC4F0; color:#fff; border:none; border-radius:6px; cursor:pointer; font-family:inherit; transition:background 0.15s;">
+          Submit Inquiry
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+function openContactModal() {
+  document.getElementById('candidateContactModal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeContactModal() {
+  document.getElementById('candidateContactModal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.getElementById('candidateContactModal').addEventListener('click', function(e) {
+  if (e.target === this) closeContactModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeContactModal();
+});
+
+document.getElementById('candidateContactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('candidateSubmitBtn');
+  var msg = document.getElementById('candidateFormMessage');
+
+  var name          = this.querySelector('[name="name"]').value.trim();
+  var email         = this.querySelector('[name="email"]').value.trim();
+  var campaign_name = this.querySelector('[name="campaign_name"]').value.trim();
+  var office        = this.querySelector('[name="office"]').value.trim();
+  var election_date = this.querySelector('[name="election_date"]').value.trim();
+
+  var errors = [];
+  if (!name)          errors.push('Name is required.');
+  if (!email)         errors.push('Email is required.');
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push('Please enter a valid email address.');
+  if (!campaign_name) errors.push('Campaign / committee name is required.');
+  if (!office)        errors.push('Office sought is required.');
+  if (!election_date) errors.push('Election date is required.');
+
+  if (errors.length) {
+    msg.style.display = 'block';
+    msg.style.background = '#fef2f2';
+    msg.style.border = '1px solid #fecaca';
+    msg.style.color = '#b91c1c';
+    msg.textContent = errors.join(' ');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  var formData = new FormData(this);
+  var data = Object.fromEntries(formData);
+
+  try {
+    var response = await fetch('/api/candidate-inquiry.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    var result = await response.json();
+
+    if (result.success) {
+      msg.style.display = 'block';
+      msg.style.background = '#f0fdf4';
+      msg.style.border = '1px solid #bbf7d0';
+      msg.style.color = '#166534';
+      msg.textContent = "Thanks! We'll be in touch within 24 hours.";
+      this.reset();
+    } else {
+      throw new Error(result.message || 'Something went wrong');
+    }
+  } catch (err) {
+    msg.style.display = 'block';
+    msg.style.background = '#fef2f2';
+    msg.style.border = '1px solid #fecaca';
+    msg.style.color = '#b91c1c';
+    msg.textContent = err.message || 'Something went wrong. Please try again or email us directly.';
+  }
+
+  btn.disabled = false;
+  btn.innerHTML = 'Submit Inquiry <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+});
+</script>
 
 </body>
 </html>
