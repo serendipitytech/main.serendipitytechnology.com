@@ -3,6 +3,12 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Clean URLs for /services/* — rewrite to .php files
+# Skip if file or directory exists naturally
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^services/([a-z0-9-]+)/?$ services/$1.php [L]
+
 # Force www to non-www (optional - uncomment if preferred)
 # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
