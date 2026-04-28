@@ -1,6 +1,9 @@
 # Force HTTPS
+# Checks both native HTTPS and X-Forwarded-Proto (used when behind a reverse proxy like Traefik).
+# Both conditions must be true for the redirect to fire, preventing loops.
 RewriteEngine On
 RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Clean URLs for /services/* — rewrite to .php files
