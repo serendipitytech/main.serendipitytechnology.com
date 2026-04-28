@@ -76,7 +76,7 @@ if (TWILIO_ACCOUNT_SID && TWILIO_AUTH_TOKEN && ADMIN_PHONE) {
         // Truncate message preview if too long
         $preview = strlen($body) > 100 ? substr($body, 0, 100) . '...' : $body;
 
-        $alertMessage = "New SMS from {$fromFormatted}:\n\"{$preview}\"\n\nView: https://serendipitytechnology.com/main/chat_ui.php";
+        $alertMessage = "New SMS from {$fromFormatted}:\n\"{$preview}\"\n\nView: https://serendipitytechnology.com/chat_ui.php";
 
         $client = new Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
         $client->messages->create(

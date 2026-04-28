@@ -17,7 +17,7 @@
   <meta name="keywords" content="event check-in Volusia County, AV operator Florida, gala check-in service, fundraiser technology support, nonprofit event services, Daytona Beach event tech" />
   <meta name="geo.region" content="US-FL" />
   <meta name="geo.placename" content="Volusia County" />
-  <link rel="canonical" href="https://serendipitytechnology.com/main/events.php" />
+  <link rel="canonical" href="https://serendipitytechnology.com/events.php" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="img/logos/serendipity_icon_150.png" />
@@ -39,10 +39,10 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://serendipitytechnology.com/main/events.php" />
+  <meta property="og:url" content="https://serendipitytechnology.com/events.php" />
   <meta property="og:title" content="Event Check-In & AV Operator Services | Volusia County, FL" />
   <meta property="og:description" content="Simplify your next gala, fundraiser, or civic event with local, reliable guest check-in and AV support in Central Florida." />
-  <meta property="og:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
+  <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
   <meta property="og:site_name" content="Serendipity Technology" />
   <meta property="og:locale" content="en_US" />
   <meta property="article:publisher" content="https://www.facebook.com/serendipitytech" />
@@ -51,7 +51,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Event Check-In & AV Services | Volusia County" />
   <meta name="twitter:description" content="Local, reliable guest check-in and AV support for galas, fundraisers, and civic events in Florida." />
-  <meta name="twitter:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
+  <meta name="twitter:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
 
   <!-- Schema.org LocalBusiness + Service -->
   <script type="application/ld+json">
@@ -73,7 +73,7 @@
     ],
     "telephone": "+1-407-545-6070",
     "email": "info@serendipitytech.net",
-    "image": "https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png",
+    "image": "https://serendipitytechnology.com/img/logos/serendipity_icon_500.png",
     "sameAs": [
       "https://facebook.com/serendipitytech"
     ],

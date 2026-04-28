@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://serendipitytechnology.com/main/</loc>
+    <loc>https://serendipitytechnology.com/</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://serendipitytechnology.com/main/media.html</loc>
+    <loc>https://serendipitytechnology.com/media.html</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -16,7 +16,7 @@
 
   <!-- Service Pages -->
   <url>
-    <loc>https://serendipitytechnology.com/main/events.php</loc>
+    <loc>https://serendipitytechnology.com/events.php</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -24,61 +24,61 @@
 
   <!-- Project Pages -->
   <url>
-    <loc>https://serendipitytechnology.com/main/project.php?slug=custom-membership-platform</loc>
+    <loc>https://serendipitytechnology.com/project.php?slug=custom-membership-platform</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://serendipitytechnology.com/main/project.php?slug=event-checkin</loc>
+    <loc>https://serendipitytechnology.com/project.php?slug=event-checkin</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://serendipitytechnology.com/main/project.php?slug=interactive-mapping-utility</loc>
+    <loc>https://serendipitytechnology.com/project.php?slug=interactive-mapping-utility</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://serendipitytechnology.com/main/project.php?slug=community-resource-locator</loc>
+    <loc>https://serendipitytechnology.com/project.php?slug=community-resource-locator</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://serendipitytechnology.com/main/project.php?slug=email-marketing-integration</loc>
+    <loc>https://serendipitytechnology.com/project.php?slug=email-marketing-integration</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://serendipitytechnology.com/main/project.php?slug=dynamic-inventory-catalog</loc>
+    <loc>https://serendipitytechnology.com/project.php?slug=dynamic-inventory-catalog</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://serendipitytechnology.com/main/project.php?slug=production-asset-management</loc>
+    <loc>https://serendipitytechnology.com/project.php?slug=production-asset-management</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://serendipitytechnology.com/main/project.php?slug=craft-inventory</loc>
+    <loc>https://serendipitytechnology.com/project.php?slug=craft-inventory</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://serendipitytechnology.com/main/project.php?slug=local-email-management</loc>
+    <loc>https://serendipitytechnology.com/project.php?slug=local-email-management</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://serendipitytechnology.com/main/project.php?slug=crowd-counter</loc>
+    <loc>https://serendipitytechnology.com/project.php?slug=crowd-counter</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

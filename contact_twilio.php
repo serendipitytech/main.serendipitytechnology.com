@@ -121,7 +121,7 @@ function sendAdminAlert($name, $email, $phone, $need, $contactMethod, $organizat
         if ($eventDate) $alertMessage .= "Event: {$eventDate}\n";
         $alertMessage .= "Method: " . ucfirst($contactMethod) . "\n\n";
         $alertMessage .= "\"{$preview}\"\n\n";
-        $alertMessage .= "View: https://serendipitytechnology.com/main/chat_ui.php";
+        $alertMessage .= "View: https://serendipitytechnology.com/chat_ui.php";
 
         $client = new Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
         $client->messages->create(

@@ -14,4 +14,4 @@ Disallow: /send_sms.php
 Disallow: /sms_inbound.php
 
 # Sitemap location
-Sitemap: https://serendipitytechnology.com/main/sitemap.xml
+Sitemap: https://serendipitytechnology.com/sitemap.xml

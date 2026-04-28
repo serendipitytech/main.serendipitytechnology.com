@@ -66,7 +66,7 @@ $nextProject = $allProjects[$nextIndex];
     <meta name="description" content="<?= htmlspecialchars($meta['summary'] ?? 'Custom software project by Serendipity Technology') ?> | Volusia County workflow automation specialists." />
     <meta name="geo.region" content="US-FL" />
     <meta name="geo.placename" content="Volusia County" />
-    <link rel="canonical" href="https://serendipitytechnology.com/main/project.php?slug=<?= htmlspecialchars($slug) ?>" />
+    <link rel="canonical" href="https://serendipitytechnology.com/project.php?slug=<?= htmlspecialchars($slug) ?>" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="img/logos/serendipity_icon_150.png" />
@@ -86,10 +86,10 @@ $nextProject = $allProjects[$nextIndex];
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://serendipitytechnology.com/main/project.php?slug=<?= htmlspecialchars($slug) ?>" />
+    <meta property="og:url" content="https://serendipitytechnology.com/project.php?slug=<?= htmlspecialchars($slug) ?>" />
     <meta property="og:title" content="<?= htmlspecialchars($pageTitle) ?> | Serendipity Technology" />
     <meta property="og:description" content="<?= htmlspecialchars($meta['summary'] ?? 'Custom software project by Serendipity Technology') ?>" />
-    <meta property="og:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
+    <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
     <meta property="og:site_name" content="Serendipity Technology" />
     <meta property="og:locale" content="en_US" />
     <meta property="article:publisher" content="https://www.facebook.com/serendipitytech" />
@@ -98,7 +98,7 @@ $nextProject = $allProjects[$nextIndex];
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="<?= htmlspecialchars($pageTitle) ?>" />
     <meta name="twitter:description" content="<?= htmlspecialchars($meta['summary'] ?? 'Custom software project') ?>" />
-    <meta name="twitter:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
+    <meta name="twitter:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
 
     <!-- Schema.org LocalBusiness -->
     <script type="application/ld+json">
@@ -114,7 +114,7 @@ $nextProject = $allProjects[$nextIndex];
       },
       "telephone": "+1-407-545-6070",
       "email": "troy@serendipitytech.net",
-      "image": "https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png",
+      "image": "https://serendipitytechnology.com/img/logos/serendipity_icon_500.png",
       "sameAs": [
         "https://facebook.com/serendipitytech"
       ]

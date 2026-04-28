@@ -41,5 +41,5 @@ We have completed projects including:
 
 ## Documentation
 
-- Main site: https://serendipitytechnology.com/main/
-- Media kit: https://serendipitytechnology.com/main/media.html
+- Main site: https://serendipitytechnology.com/
+- Media kit: https://serendipitytechnology.com/media.html

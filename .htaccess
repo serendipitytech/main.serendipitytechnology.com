@@ -6,11 +6,25 @@ RewriteCond %{HTTPS} off
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Clean URLs for /services/* — rewrite to .php files
-# Skip if file or directory exists naturally
+# Clean URLs for /services/*
+#
+# Tricky case: /services/candidates exists as BOTH a .php file AND a directory
+# (the directory holds /services/candidates/signup.php and /services/candidates/thanks.php).
+# Without DirectorySlash Off, Apache's mod_dir would intercept /services/candidates and
+# 301-redirect it to /services/candidates/ before mod_rewrite gets a chance, then 403.
+DirectorySlash Off
+
+# Specific: /services/candidates -> services/candidates.php (the marketing landing page)
+RewriteRule ^services/candidates/?$ /services/candidates.php [L]
+
+# Nested: /services/candidates/<page> -> services/candidates/<page>.php
+# (handles /services/candidates/signup, /services/candidates/thanks, etc.)
+RewriteRule ^services/candidates/([a-z0-9-]+)/?$ /services/candidates/$1.php [L]
+
+# Generic: /services/<name> -> services/<name>.php
+# Skip if file already exists naturally (e.g. *.php or static asset)
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^services/([a-z0-9-]+)/?$ services/$1.php [L]
+RewriteRule ^services/([a-z0-9-]+)/?$ /services/$1.php [L]
 
 # Force www to non-www (optional - uncomment if preferred)
 # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]

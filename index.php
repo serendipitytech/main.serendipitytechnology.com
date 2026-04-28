@@ -22,7 +22,7 @@ $gridProjects = getGridProjects();
   <meta name="keywords" content="custom software development Volusia County, workflow automation Florida, data integration small business, business process automation, technology consulting Central Florida" />
   <meta name="geo.region" content="US-FL" />
   <meta name="geo.placename" content="Volusia County" />
-  <link rel="canonical" href="https://serendipitytechnology.com/main/" />
+  <link rel="canonical" href="https://serendipitytechnology.com/" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="img/logos/serendipity_icon_150.png" />
@@ -45,10 +45,10 @@ $gridProjects = getGridProjects();
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://serendipitytechnology.com/main/" />
+  <meta property="og:url" content="https://serendipitytechnology.com/" />
   <meta property="og:title" content="Serendipity Technology | Custom App Solutions" />
   <meta property="og:description" content="Custom software development in Volusia County. Workflow automation and data integration for Florida businesses." />
-  <meta property="og:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
+  <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
   <meta property="og:site_name" content="Serendipity Technology" />
   <meta property="og:locale" content="en_US" />
   <meta property="article:publisher" content="https://www.facebook.com/serendipitytech" />
@@ -57,7 +57,7 @@ $gridProjects = getGridProjects();
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Serendipity Technology | Custom App Solutions" />
   <meta name="twitter:description" content="Custom software development in Volusia County. Workflow automation and data integration for Florida businesses." />
-  <meta name="twitter:image" content="https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png" />
+  <meta name="twitter:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -66,7 +66,7 @@ $gridProjects = getGridProjects();
     "@type": "Organization",
     "name": "Serendipity Technology",
     "url": "https://serendipitytechnology.com",
-    "logo": "https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png",
+    "logo": "https://serendipitytechnology.com/img/logos/serendipity_icon_500.png",
     "description": "Custom software solutions that streamline operations through purpose-built workflows, data integration, and automated reporting.",
     "founder": {
       "@type": "Person",
@@ -91,7 +91,7 @@ $gridProjects = getGridProjects();
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Serendipity Technology",
-    "image": "https://serendipitytechnology.com/main/img/logos/serendipity_icon_500.png",
+    "image": "https://serendipitytechnology.com/img/logos/serendipity_icon_500.png",
     "url": "https://serendipitytechnology.com",
     "telephone": "+1-407-545-6070",
     "email": "troy@serendipitytech.net",
