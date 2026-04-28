@@ -17,7 +17,7 @@ $features_subtitle = $features_subtitle ?? '';
 <section class="svc-section svc-section-alt" id="features">
   <div class="svc-container">
     <div class="svc-text-center">
-      <h2 class="svc-h2"><?= htmlspecialchars($features_title ?? "What's Included") ?></h2>
+      <h2 class="svc-h2 svc-h2-center"><?= htmlspecialchars($features_title ?? "What's Included") ?></h2>
       <?php if (!empty($features_subtitle)): ?>
         <p class="svc-lede svc-text-center" style="margin-left:auto;margin-right:auto;"><?= htmlspecialchars($features_subtitle) ?></p>
       <?php endif; ?>

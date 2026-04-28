@@ -11,7 +11,7 @@ $faq_title = $faq_title ?? 'Frequently Asked Questions';
 <section class="svc-section" id="faq">
   <div class="svc-container">
     <div class="svc-text-center">
-      <h2 class="svc-h2"><?= htmlspecialchars($faq_title) ?></h2>
+      <h2 class="svc-h2 svc-h2-center"><?= htmlspecialchars($faq_title) ?></h2>
     </div>
 
     <div class="svc-faq-list">

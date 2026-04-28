@@ -27,7 +27,7 @@ $pricing_footnote = $pricing_footnote ?? '';
 <section class="svc-section" id="pricing">
   <div class="svc-container">
     <div class="svc-text-center">
-      <h2 class="svc-h2"><?= htmlspecialchars($pricing_title ?? 'Pricing') ?></h2>
+      <h2 class="svc-h2 svc-h2-center"><?= htmlspecialchars($pricing_title ?? 'Pricing') ?></h2>
       <?php if (!empty($pricing_subtitle)): ?>
         <p class="svc-lede svc-text-center" style="margin-left:auto;margin-right:auto;"><?= htmlspecialchars($pricing_subtitle) ?></p>
       <?php endif; ?>

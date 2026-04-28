@@ -30,6 +30,7 @@
 
 <?php
 /* ============ HERO ============ */
+$hero_bg_image = 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=2000&q=70';
 $hero_eyebrow = 'Candidate Package';
 $hero_title = 'A campaign website ready in days, not weeks';
 $hero_lede = 'Single-page campaign site with your custom domain, branded email, and unlimited content updates throughout the season. Built for local and down-ballot candidates who deserve better tools.';

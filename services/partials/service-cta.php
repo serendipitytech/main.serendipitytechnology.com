@@ -14,7 +14,7 @@
 <section class="svc-section">
   <div class="svc-container">
     <div class="svc-cta">
-      <h2 class="svc-h2"><?= htmlspecialchars($cta_title ?? 'Ready to get started?') ?></h2>
+      <h2 class="svc-h2 svc-h2-center"><?= htmlspecialchars($cta_title ?? 'Ready to get started?') ?></h2>
       <?php if (!empty($cta_subtitle)): ?>
         <p><?= htmlspecialchars($cta_subtitle) ?></p>
       <?php endif; ?>
