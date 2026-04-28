@@ -210,9 +210,13 @@ include __DIR__ . '/partials/service-cta.php';
     <p style="margin:0 0 8px 0;">
       <a href="/" style="color:inherit; text-decoration:none;">Serendipity Technology</a>
       &middot;
-      <a href="/websites.php" style="color:inherit; text-decoration:none;">Business Sites</a>
+      <a href="/services/business-sites" style="color:inherit; text-decoration:none;">Business Sites</a>
       &middot;
-      More services coming soon
+      <a href="/services/event-checkin" style="color:inherit; text-decoration:none;">Event Check-In</a>
+      &middot;
+      <a href="/services/membership" style="color:inherit; text-decoration:none;">Membership Portal</a>
+      &middot;
+      <a href="/services/" style="color:inherit; text-decoration:none;">All Services</a>
     </p>
     <p style="margin:0;">&copy; <?= date('Y') ?> Serendipity Technology. All campaigns deserve good tools.</p>
   </div>

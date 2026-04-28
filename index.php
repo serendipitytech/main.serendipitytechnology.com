@@ -165,6 +165,67 @@ $gridProjects = getGridProjects();
     [data-aos]:not(.aos-animate) {
       animation: aos-failsafe 0.4s ease-out 2s forwards;
     }
+
+    /* Services index card grid */
+    .services-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 900px) {
+      .services-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .services-cards-grid { grid-template-columns: 1fr; }
+    }
+    .services-index-card {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px;
+      text-decoration: none;
+      color: #1f2937;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      cursor: pointer;
+    }
+    .services-index-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+      border-color: #F7B06A;
+      color: #1f2937;
+    }
+    .services-index-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(79,196,240,0.12) 0%, rgba(247,176,106,0.12) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4FC4F0;
+      margin-bottom: 12px;
+      flex-shrink: 0;
+    }
+    .services-index-card-body h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0 0 6px 0;
+      color: #1f2937;
+    }
+    .services-index-card-body p {
+      font-size: 13px;
+      color: #6b7280;
+      margin: 0 0 12px 0;
+      line-height: 1.5;
+      flex: 1;
+    }
+    .services-index-card-price {
+      font-size: 12px;
+      font-weight: 600;
+      color: #4FC4F0;
+    }
   </style>
 </head>
 <body>
@@ -281,6 +342,59 @@ $gridProjects = getGridProjects();
     </div>
   </section>
   
+<section id="services-section" style="padding:2rem 1rem; max-width:1000px; margin:auto;">
+  <h2 class="section-title">Services</h2>
+  <p style="color:#475569; margin-bottom:1.5rem;">Ready-to-launch solutions, no custom build required.</p>
+  <div class="services-cards-grid">
+    <a href="/services/candidates" class="services-index-card">
+      <div class="services-index-card-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <div class="services-index-card-body">
+        <h3>Candidate Sites</h3>
+        <p>Single-page campaign websites with unlimited updates throughout your race.</p>
+        <span class="services-index-card-price">$20/mo + $49 setup</span>
+      </div>
+    </a>
+    <a href="/services/business-sites" class="services-index-card">
+      <div class="services-index-card-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="services-index-card-body">
+        <h3>Business Websites</h3>
+        <p>Professionally managed sites with AI-powered updates and business email.</p>
+        <span class="services-index-card-price">From $10/mo + $49 setup</span>
+      </div>
+    </a>
+    <a href="/services/event-checkin" class="services-index-card">
+      <div class="services-index-card-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </div>
+      <div class="services-index-card-body">
+        <h3>Event Check-In</h3>
+        <p>Real-time multi-device check-in for galas, conferences, and private events.</p>
+        <span class="services-index-card-price">$499 per event</span>
+      </div>
+    </a>
+    <a href="/services/membership" class="services-index-card">
+      <div class="services-index-card-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="services-index-card-body">
+        <h3>Membership Portal</h3>
+        <p>Unlimited members, events, and admins. Flat pricing for clubs and nonprofits.</p>
+        <span class="services-index-card-price">$49/mo + $199 setup</span>
+      </div>
+    </a>
+  </div>
+  <div style="text-align:center; margin-top:1.5rem;">
+    <a href="/services/" style="color:#4FC4F0; font-weight:500; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+      View all services
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+
 <section class="projects-section">
   <h2 class="section-title" style="color: #F7B06A;">Recent Projects</h2>
 

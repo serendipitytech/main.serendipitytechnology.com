@@ -14,6 +14,9 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # 301-redirect it to /services/candidates/ before mod_rewrite gets a chance, then 403.
 DirectorySlash Off
 
+# Index: /services/ -> services/index.php (services catalog page)
+RewriteRule ^services/?$ /services/index.php [L]
+
 # Specific: /services/candidates -> services/candidates.php (the marketing landing page)
 RewriteRule ^services/candidates/?$ /services/candidates.php [L]
 
