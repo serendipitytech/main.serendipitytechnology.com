@@ -19,7 +19,7 @@
         <p><?= htmlspecialchars($cta_subtitle) ?></p>
       <?php endif; ?>
       <div class="svc-hero-actions">
-        <a href="<?= htmlspecialchars($cta_href ?? '#pricing') ?>" class="svc-btn svc-btn-primary svc-btn-lg">
+        <a href="<?= htmlspecialchars($cta_href ?? '#pricing') ?>" class="svc-btn svc-btn-<?= $cta_style ?? 'accent' ?> svc-btn-lg">
           <?= htmlspecialchars($cta_text ?? 'Get Started') ?>
         </a>
         <?php if (!empty($cta_secondary_text)): ?>

@@ -34,6 +34,8 @@ $hero_bg_image = 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto
 $hero_eyebrow = 'Candidate Package';
 $hero_title = 'A campaign website ready in days, not weeks';
 $hero_lede = 'Single-page campaign site with your custom domain, branded email, and unlimited content updates throughout the season. Built for local and down-ballot candidates who deserve better tools.';
+$hero_accent_text = 'Get Started — $49';
+$hero_accent_href = '/services/candidates/signup';
 $hero_cta_text = 'See Pricing';
 $hero_cta_href = '#pricing';
 $hero_secondary_text = "What's Included";
@@ -120,7 +122,7 @@ $pricing_tiers = [
     ],
     'featured' => true,
     'badge' => 'All-In-One',
-    'cta_text' => 'Start Your Campaign Site',
+    'cta_text' => 'Get Started — $49',
     'cta_href' => '/services/candidates/signup',
   ],
   [
@@ -139,8 +141,8 @@ $pricing_tiers = [
       'Higher tiers available ($25/mo for 25K, $59/mo for 100K)',
     ],
     'featured' => false,
-    'cta_text' => 'Learn About Newsletters',
-    'cta_href' => '#faq-newsletter',
+    'cta_text' => 'Newsletter FAQ',
+    'cta_href' => '#faq',
   ],
 ];
 $pricing_footnote = '<strong>Designed for active campaigns.</strong> The Candidate Package is intended for political campaigns ending within 12 months of signup. For ongoing political organizations, PACs, or campaigns more than a year out, see our <a href="/services/business-sites">Business Site packages</a> or <a href="/website-inquiry.php">contact us</a> for custom options.';

@@ -79,7 +79,16 @@ $pricing_footnote = $pricing_footnote ?? '';
             <?php endforeach; ?>
           </ul>
 
-          <a href="<?= htmlspecialchars($tier['cta_href']) ?>" class="svc-btn svc-btn-block <?= !empty($tier['featured']) ? 'svc-btn-primary' : 'svc-btn-secondary' ?>">
+          <?php
+          // Featured tier gets the accent (orange) CTA to match the hero's primary conversion button
+          // Non-featured gets the white/outline secondary style
+          $cta_class = !empty($tier['featured']) ? 'svc-btn-accent' : 'svc-btn-secondary';
+          // Allow per-tier override
+          if (!empty($tier['cta_style'])) {
+              $cta_class = 'svc-btn-' . $tier['cta_style'];
+          }
+          ?>
+          <a href="<?= htmlspecialchars($tier['cta_href']) ?>" class="svc-btn svc-btn-block <?= $cta_class ?>">
             <?= htmlspecialchars($tier['cta_text'] ?? 'Get Started') ?>
           </a>
         </div>

@@ -3,16 +3,18 @@
  * Service hero — reusable hero section with background + frosted card overlay
  *
  * Variables expected (set before include):
- *   $hero_bg_image — optional background image URL (uses gradient fallback if omitted)
- *   $hero_eyebrow  — small uppercase label above headline
- *   $hero_title    — main headline
- *   $hero_lede     — supporting paragraph
- *   $hero_cta_text — primary button text (default: "Get Started")
- *   $hero_cta_href — primary button href (default: "#pricing")
- *   $hero_secondary_text — optional secondary button text
- *   $hero_secondary_href — optional secondary button href
+ *   $hero_bg_image    — optional background image URL (uses gradient fallback if omitted)
+ *   $hero_eyebrow     — small uppercase label above headline
+ *   $hero_title       — main headline
+ *   $hero_lede        — supporting paragraph
+ *   $hero_cta_text    — primary (blue) button text — typically "See Pricing"
+ *   $hero_cta_href    — primary button href (default: "#pricing")
+ *   $hero_secondary_text — secondary (white/outline) button text — typically "What's Included"
+ *   $hero_secondary_href — secondary button href
+ *   $hero_accent_text — accent (orange) button text — typically "Get Started — $XX"
+ *   $hero_accent_href — accent button href (e.g. signup link)
  */
-$hero_cta_text = $hero_cta_text ?? 'Get Started';
+$hero_cta_text = $hero_cta_text ?? 'See Pricing';
 $hero_cta_href = $hero_cta_href ?? '#pricing';
 $hero_style = '';
 if (!empty($hero_bg_image)) {
@@ -30,6 +32,11 @@ if (!empty($hero_bg_image)) {
         <p class="svc-lede"><?= htmlspecialchars($hero_lede) ?></p>
       <?php endif; ?>
       <div class="svc-hero-actions">
+        <?php if (!empty($hero_accent_text)): ?>
+          <a href="<?= htmlspecialchars($hero_accent_href ?? '#pricing') ?>" class="svc-btn svc-btn-accent svc-btn-lg">
+            <?= htmlspecialchars($hero_accent_text) ?>
+          </a>
+        <?php endif; ?>
         <a href="<?= htmlspecialchars($hero_cta_href) ?>" class="svc-btn svc-btn-primary svc-btn-lg">
           <?= htmlspecialchars($hero_cta_text) ?>
         </a>

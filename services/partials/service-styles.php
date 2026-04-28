@@ -228,7 +228,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 20px;
+  padding: 12px 16px;
   font-size: 15px;
   font-weight: 600;
   border-radius: var(--svc-radius-sm);
@@ -236,8 +236,13 @@
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
-  line-height: 1;
-  white-space: nowrap;
+  line-height: 1.2;
+  text-align: center;
+  /* Allow wrapping on small screens — prevents overflow from long button text */
+  white-space: normal;
+  max-width: 100%;
+  word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 .svc-btn:active { transform: translateY(1px); }
