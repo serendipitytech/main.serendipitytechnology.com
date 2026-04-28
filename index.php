@@ -141,10 +141,31 @@ $gridProjects = getGridProjects();
     document.addEventListener("DOMContentLoaded", function () {
       AOS.init({
         once: true,
-        duration: 800
+        duration: 600,
+        offset: 50,           // trigger animation slightly earlier (default 120)
+        easing: 'ease-out',
+        disable: 'phone'      // skip on phones — they're already mid-scroll fast
       });
     });
+    // Refresh AOS positions after all images/fonts load — fixes Safari delay where
+    // AOS calculates positions before page is fully laid out and gets stuck.
+    window.addEventListener('load', function () {
+      if (typeof AOS !== 'undefined') {
+        AOS.refreshHard();
+      }
+    });
   </script>
+  <style>
+    /* Failsafe: if AOS hasn't applied within 2 seconds (e.g. CDN slow, Safari quirk),
+       reveal the elements anyway. Without this, content can stay invisible behind
+       opacity:0 indefinitely if AOS fails to initialize. */
+    @keyframes aos-failsafe {
+      to { opacity: 1; transform: translate3d(0, 0, 0); }
+    }
+    [data-aos]:not(.aos-animate) {
+      animation: aos-failsafe 0.4s ease-out 2s forwards;
+    }
+  </style>
 </head>
 <body>
 <nav id="scrollNav">
