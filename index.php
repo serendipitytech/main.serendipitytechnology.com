@@ -227,7 +227,7 @@ $gridProjects = getGridProjects();
           </label>
         </div>
       </div>
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAACWJ-_uz-IpGJG0B" data-theme="light"></div>
+      <div id="turnstileWidget" class="cf-turnstile" data-sitekey="0x4AAAAAACWJ-_uz-IpGJG0B" data-theme="light"></div>
       <button type="submit"
         class="w-full py-3 px-4 rounded-lg font-semibold text-white
         bg-[#4FC4F0] hover:bg-[#3ab0dc]
@@ -338,6 +338,12 @@ function closeModal() {
   document.getElementById("contactModal").classList.add("hidden");
   document.getElementById("formSuccess").classList.add("hidden");
   document.getElementById("contactForm").reset();
+  // Reset Turnstile so the next time the modal opens the user gets a fresh challenge
+  if (typeof turnstile !== 'undefined') {
+    try { turnstile.reset('#turnstileWidget'); } catch (e) {
+      try { turnstile.reset(); } catch (_) {}
+    }
+  }
 }
 
 // Phone number formatting and validation
@@ -462,6 +468,17 @@ document.getElementById('contactForm').addEventListener('submit', async function
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = originalText;
+    // Reset Turnstile widget — the token is single-use, so we need a fresh
+    // challenge before the user can submit again. Without this, a second
+    // submission from the same modal session fails captcha validation.
+    if (typeof turnstile !== 'undefined') {
+      try {
+        turnstile.reset('#turnstileWidget');
+      } catch (e) {
+        // Fallback: reset all widgets on the page
+        try { turnstile.reset(); } catch (_) {}
+      }
+    }
   }
 });
 
