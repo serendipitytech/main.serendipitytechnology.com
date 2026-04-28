@@ -29,6 +29,10 @@ RewriteRule ^services/candidates/([a-z0-9-]+)/?$ /services/candidates/$1.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^services/([a-z0-9-]+)/?$ /services/$1.php [L]
 
+# media.html was renamed to media.php (PHP includes for shared header/footer)
+# Redirect old URL to new for inbound link preservation
+RewriteRule ^media\.html$ /media.php [L,R=301]
+
 # Force www to non-www (optional - uncomment if preferred)
 # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
