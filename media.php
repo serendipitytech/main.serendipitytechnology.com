@@ -94,7 +94,7 @@
 <body class="has-fixed-header">
 
 <?php
-$header_always_visible = false;
+$header_always_visible = true;
 $header_chat_action = 'openContactModal()';
 include __DIR__ . '/partials/site-header.php';
 ?>
