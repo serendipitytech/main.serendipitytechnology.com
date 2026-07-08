@@ -20,7 +20,7 @@ $footer_simple = $footer_simple ?? false;
     margin: 0 auto;
     padding: 48px 24px 24px;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     gap: 32px;
   }
   @media (max-width: 768px) {
@@ -152,7 +152,14 @@ $footer_simple = $footer_simple ?? false;
       <ul>
         <li><a href="/projects.php">Custom Projects</a></li>
         <li><a href="/#projects">Recent Projects</a></li>
+      </ul>
+    </div>
+
+    <div class="site-footer-col">
+      <h4>Company</h4>
+      <ul>
         <li><a href="/media.php">Media Kit</a></li>
+        <li><a href="/engagement-terms.php">Engagement Terms</a></li>
       </ul>
     </div>
 

@@ -74,3 +74,9 @@ Options -Indexes
     ExpiresByType text/css "access plus 1 week"
     ExpiresByType application/javascript "access plus 1 week"
 </IfModule>
+
+
+# Clean URLs for top-level PHP pages (extensionless)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(get-started|templates|media|projects|chat|events)/?$ /$1.php [L]

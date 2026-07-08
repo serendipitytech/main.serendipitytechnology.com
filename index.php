@@ -226,7 +226,7 @@ $gridProjects = getGridProjects();
 </head>
 <body>
 <?php
-$header_always_visible = false;
+$header_always_visible = true;
 $header_chat_action = 'openContactModal()';
 include __DIR__ . '/partials/site-header.php';
 ?>
@@ -385,7 +385,7 @@ include __DIR__ . '/partials/site-header.php';
   </div>
 </section>
 
-<section class="projects-section">
+<section class="projects-section" id="projects">
   <h2 class="section-title" style="color: #F7B06A;">Recent Projects</h2>
 
   <!-- Featured Projects (dynamically rendered from /projects/*.md) -->
