@@ -17,15 +17,15 @@ tags:
 
 ## The Challenge
 
-When a network of brands, chapters, or vendors each needs its own online store, the usual answer is a separate storefront for every one, and a separate bill, a separate login, and separate upkeep to go with it. Costs and maintenance multiply, nothing is consistent, and leadership has no shared view across the stores. Off-the-shelf platforms simply weren't built for one organization running many storefronts.
+When a network of brands, chapters, or vendors each needs its own online store, the usual answer is a separate storefront for every one, and a separate bill, login, and stack of upkeep to go with it. Costs and maintenance multiply, nothing stays consistent, and leadership has no shared view across the stores. Off-the-shelf platforms simply weren't built for one organization running many storefronts at once.
 
 ## Our Approach
 
-We built a commerce platform that is multi-tenant from the ground up: a single system runs many branded storefronts, each with its own look, catalog, and pricing, all sharing the same infrastructure. Payment integrity was non-negotiable, so background workers reconcile every order against the payment processor (Stripe Connect) and nothing slips through a webhook gap. A staging mirror and migrate-first deploys mean a change ships safely across every store at once, not one risky update at a time.
+We built a commerce platform that's multi-tenant from the ground up: a single system runs many branded storefronts, each with its own look, catalog, and pricing, all sharing the same infrastructure underneath. Payment integrity was non-negotiable, so background workers reconcile every order against the payment processor (Stripe Connect), and nothing slips through a webhook gap. A staging mirror and migrate-first deploys mean a change ships safely across every store at once, not one risky update at a time.
 
 ## Key Features
 
-- **Multi-Tenant by Design**: Many branded stores from one platform and one codebase, add a new storefront without standing up a new system
+- **Multi-Tenant by Design**: Many branded stores from one platform and one codebase; add a new storefront without standing up a new system
 - **Per-Store Identity**: Independent branding, catalog, and pricing on top of shared infrastructure
 - **Payment Integrity**: Stripe Connect payments with automated reconciliation, so revenue always ties out across every store
 - **Reporting Two Ways**: A central view across all storefronts, plus per-store detail

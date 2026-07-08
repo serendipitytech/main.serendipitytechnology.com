@@ -5,9 +5,9 @@ icon: map-pin-plus.svg
 featured: true
 order: 2
 summary: >
-  A field-engagement platform for reaching constituents where they are: search
-  the base, see who's nearby on a map, and build an efficient visit route, all
-  from one system a non-technical team can actually run.
+  A field-engagement platform for reaching constituents where they are:
+  search the base, see who's nearby on a map, and build an efficient visit
+  route, all from one system a non-technical team can actually run.
 hero_image: projects/interactive-mapping-utility-hero.png
 tags:
   - constituent-engagement
@@ -17,7 +17,7 @@ tags:
 
 ## The Challenge
 
-Organizations that engage constituents in the field, canvassing, outreach, casework, keep hitting the same wall: their people, their turf, and their data live in three different places. Answering a simple question like "who should we visit near this address?" meant database queries, spreadsheet cross-referencing, and a paper map, and there was no shared system for a team to work from together.
+Organizations that engage constituents in the field, canvassing, outreach, casework, keep hitting the same wall: their people, their turf, and their data all live in different places. Answering a simple question like "who should we visit near this address?" meant database queries, spreadsheet cross-referencing, and a paper map. There was no shared system for a team to actually work from together.
 
 ## Our Approach
 
