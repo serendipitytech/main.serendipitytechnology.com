@@ -3,7 +3,7 @@ title: Dynamic Inventory Catalog
 slug: dynamic-inventory-catalog
 icon: multiple-pages-empty.svg
 featured: false
-order: 5
+order: 6
 summary: >
   Internal product catalog consolidating multiple vendor sources into a
   searchable system for sales teams, with customer-facing segmented views.

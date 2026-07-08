@@ -3,7 +3,7 @@ title: Custom Membership Platform
 slug: custom-membership-platform
 icon: group.svg
 featured: true
-order: 3
+order: 4
 summary: >
   Secure, scalable membership database for signups, communication, events,
   and reporting — tailored to non-profit workflows.

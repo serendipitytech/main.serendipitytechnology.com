@@ -3,7 +3,7 @@ title: Crowd Counter
 slug: crowd-counter
 icon: group.svg
 featured: false
-order: 10
+order: 12
 summary: >
   Self-contained AI tool for estimating crowd sizes from video or photos
   using YOLOv8 object detection, with automated reporting and GPS grouping.

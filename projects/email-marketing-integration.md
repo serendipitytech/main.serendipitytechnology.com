@@ -3,7 +3,7 @@ title: Email Marketing Integration
 slug: email-marketing-integration
 icon: reply-to-message.svg
 featured: false
-order: 4
+order: 9
 summary: >
   Open-source Mautic deployment enabling statewide voter outreach with automated
   data sync, custom segment imports, and multi-organization support.

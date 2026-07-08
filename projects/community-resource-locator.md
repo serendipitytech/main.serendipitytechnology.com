@@ -3,7 +3,7 @@ title: Community Resource Locator
 slug: community-resource-locator
 icon: maps-arrow-diagonal.svg
 featured: false
-order: 2
+order: 8
 summary: >
   This project centralized scattered data into a clean, user-friendly system
   for public visibility. The goal was to surface physical access points and
