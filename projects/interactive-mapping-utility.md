@@ -1,42 +1,42 @@
 ---
-title: Location Intelligence & Route Optimization
+title: Constituent Engagement Platform
 slug: interactive-mapping-utility
-icon: maps-arrow-diagonal.svg
+icon: map-pin-plus.svg
 featured: true
 order: 2
 summary: >
-  Ask "who or what is within X miles of this address?" and get an instant map,
-  filtered results, and an optimized route. Complex spatial queries, no GIS
-  expertise required.
+  A field-engagement platform for reaching constituents where they are: search
+  the base, see who's nearby on a map, and build an efficient visit route, all
+  from one system a non-technical team can actually run.
 hero_image: projects/interactive-mapping-utility-hero.png
 tags:
+  - constituent-engagement
   - mapping
-  - route-optimization
-  - location-data
+  - outreach
 ---
 
 ## The Challenge
 
-Any team that works in the field runs into the same wall: finding every record within a radius of an address used to mean running database queries, cross-referencing spreadsheets, and plotting routes by hand. A simple "who's within half a mile of this intersection?" could eat 20 minutes, time the people out doing the work don't have.
+Organizations that engage constituents in the field, canvassing, outreach, casework, keep hitting the same wall: their people, their turf, and their data live in three different places. Answering a simple question like "who should we visit near this address?" meant database queries, spreadsheet cross-referencing, and a paper map, and there was no shared system for a team to work from together.
 
 ## Our Approach
 
-We built a web-based mapping interface with spatial database indexing at its core. The map is the tool: enter an address and a radius, and it instantly plots every matching record as a color-coded marker. A multi-source geocoding pipeline (local cache first, public geocoder as fallback) keeps address-to-coordinate lookups fast and reliable, and caching means repeated searches don't pay the same cost twice.
+We built a constituent engagement platform with mapping at its center. A team searches the constituent base, sees everyone within a radius of any address plotted instantly on an interactive map, filters by the criteria that matter, and generates an optimized route to go visit them. Role-based accounts keep coordinators, team leads, and volunteers working from the same data at the right level of access, and a multi-source geocoding pipeline keeps address lookups fast and reliable.
 
 ## Key Features
 
-- **Radius Search**: Enter any address and radius (0.1 to 5+ miles) to surface every record in that area with a spatial query
-- **Route Optimization**: A nearest-neighbor algorithm builds efficient routes; click any point to re-sequence from there
-- **Spatial Speed at Scale**: An index-based prefilter narrows the set before precise distance math, so results stay fast even on large datasets
-- **Multi-Criteria Filtering**: Narrow by category or custom fields with results updating live
+- **Constituent Search**: Query the full base with multi-criteria filtering, no database skills required
+- **Radius Mapping**: See everyone within a chosen distance of any address, plotted the moment you ask
+- **Route Optimization**: Build an efficient visit order automatically; click any point to re-sequence from there
+- **Role-Based Access**: Coordinators, team leads, and volunteers share one system with appropriate permissions
 - **Field-Ready Outputs**: Interactive map, sortable table, CSV export, and a print-optimized view
 
 ## The Results
 
-- Proximity lookups drop from minutes to seconds
-- Non-technical staff run complex spatial queries on their own
-- The same engine adapts across use cases: field service, delivery routing, outreach, inspections, and real estate
+- Field planning drops from a multi-step chore to a few clicks
+- Non-technical volunteers run their own lists and routes
+- One shared platform replaces scattered queries, spreadsheets, and paper maps
 
 ## Technologies Used
 
-Leaflet.js, PHP, MySQL with spatial indexing, public geocoding APIs, Docker
+Leaflet.js, PHP, MySQL with spatial indexing, role-based access control, public geocoding APIs, Docker

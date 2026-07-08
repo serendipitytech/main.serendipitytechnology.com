@@ -1,40 +1,41 @@
 ---
-title: Custom E-Commerce Platform
+title: Multi-Store Commerce Platform
 slug: custom-ecommerce-platform
 icon: view-grid.svg
 featured: true
 order: 3
 summary: >
-  A custom online store built to replace an outgrown off-the-shelf setup, with
-  real payment integrity, reporting, and reconciliation built in from day one.
+  One platform that runs many branded storefronts at once, each with its own
+  look, catalog, and payments, sharing the same infrastructure and reporting
+  underneath. Built for organizations that need more than a single store.
 hero_image: projects/custom-ecommerce-platform-hero.png
 tags:
   - e-commerce
+  - multi-tenant
   - payments
-  - platform
 ---
 
 ## The Challenge
 
-A growing merchant had outgrown a plugin-based store. Orders and payouts didn't always tie out, reconciling revenue was a manual chore, and the reporting they needed to run the business simply wasn't there. Every new feature meant fighting the platform instead of building on it.
+When a network of brands, chapters, or vendors each needs its own online store, the usual answer is a separate storefront for every one, and a separate bill, a separate login, and separate upkeep to go with it. Costs and maintenance multiply, nothing is consistent, and leadership has no shared view across the stores. Off-the-shelf platforms simply weren't built for one organization running many storefronts.
 
 ## Our Approach
 
-We built a custom commerce platform on Python and Flask with PostgreSQL and Redis, using Stripe Connect for payments. The design put payment integrity first: background workers reconcile every order against the payment processor, so revenue always ties out and nothing slips through a webhook gap. A staging mirror plus a migrate-first deploy process means changes ship safely, without risking live orders.
+We built a commerce platform that is multi-tenant from the ground up: a single system runs many branded storefronts, each with its own look, catalog, and pricing, all sharing the same infrastructure. Payment integrity was non-negotiable, so background workers reconcile every order against the payment processor (Stripe Connect) and nothing slips through a webhook gap. A staging mirror and migrate-first deploys mean a change ships safely across every store at once, not one risky update at a time.
 
 ## Key Features
 
-- Stripe Connect payments with destination charges and webhook-driven order capture
-- Automated reconciliation that catches missed or mismatched payments before they become accounting problems
-- A pricing and catalog engine tailored to the merchant's product model
-- Reporting built for the way the business actually operates
-- A full staging environment and safe, repeatable deploys
+- **Multi-Tenant by Design**: Many branded stores from one platform and one codebase, add a new storefront without standing up a new system
+- **Per-Store Identity**: Independent branding, catalog, and pricing on top of shared infrastructure
+- **Payment Integrity**: Stripe Connect payments with automated reconciliation, so revenue always ties out across every store
+- **Reporting Two Ways**: A central view across all storefronts, plus per-store detail
+- **Safe Deploys at Scale**: A full staging environment and repeatable deploys that cover every tenant
 
-## The Results
+## The Market Need It Solves
 
-- Revenue that reconciles cleanly instead of by hand
-- A fragile plugin stack replaced with a platform the business owns and can extend
-- Room to add features without fighting someone else's framework
+- Organizations and networks that need many stores without many systems, or many bills
+- One platform to maintain and improve instead of one per brand
+- Revenue that reconciles cleanly across every storefront, not store by store
 
 ## Technologies Used
 
