@@ -386,7 +386,7 @@ include __DIR__ . '/partials/site-header.php';
 </section>
 
 <section class="projects-section" id="projects">
-  <h2 class="section-title" style="color: #F7B06A;">Recent Projects</h2>
+  <h2 class="section-title" style="color: #B3701A;">Recent Projects</h2>
 
   <!-- Featured Projects (dynamically rendered from /projects/*.md) -->
   <div class="featured-projects">
