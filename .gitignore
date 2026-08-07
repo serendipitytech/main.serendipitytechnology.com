@@ -37,3 +37,7 @@ img/cache/*.jpg
 !img/cache/.gitkeep
 data/candidate_signups/
 *.bak.*
+
+# Local-only working dirs (not part of the deployed site)
+_vps_backup_*/
+img/ecamm/
