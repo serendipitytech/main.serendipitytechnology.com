@@ -12,8 +12,8 @@
     gtag('js', new Date());
     gtag('config', 'G-G50KCN37LQ');
   </script>
-  <title>Event Check-In & AV Operator Services | Volusia County, FL | Serendipity Technology</title>
-  <meta name="description" content="Simplify your next gala, fundraiser, or civic event with local, reliable guest check-in and AV support. Custom packages, nonprofit discounts, and sponsor recognition available." />
+  <title>Event Check-In & AV Services | Volusia County, FL</title>
+  <meta name="description" content="Local, reliable guest check-in and AV support for galas, fundraisers, and civic events in Volusia County. Custom packages and nonprofit discounts." />
   <meta name="keywords" content="event check-in Volusia County, AV operator Florida, gala check-in service, fundraiser technology support, nonprofit event services, Daytona Beach event tech" />
   <meta name="geo.region" content="US-FL" />
   <meta name="geo.placename" content="Volusia County" />

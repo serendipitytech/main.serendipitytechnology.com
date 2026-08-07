@@ -58,6 +58,8 @@ Options -Indexes
     Header set X-Frame-Options "SAMEORIGIN"
     Header set X-XSS-Protection "1; mode=block"
     Header set Referrer-Policy "strict-origin-when-cross-origin"
+    # HSTS — safe: HTTPS is already forced above. 1yr + subdomains + preload-eligible.
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>
 
 # Enable compression
