@@ -23,6 +23,34 @@
 
   <link rel="canonical" href="https://serendipitytechnology.com/services/business-sites">
 
+  <!-- Schema.org Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Small business website design and hosting",
+    "name": "AI-Powered Business Websites",
+    "description": "Professional small-business websites with AI-powered updates: submit a change request and our AI builds it overnight. Hosting, security, business email, and a client portal included.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Serendipity Technology",
+      "url": "https://serendipitytechnology.com"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Volusia County, FL" },
+      { "@type": "Place", "name": "Central Florida" },
+      { "@type": "State", "name": "Florida" }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "10",
+      "priceCurrency": "USD",
+      "description": "Managed website hosting with AI-powered updates, starting at $10/month",
+      "url": "https://serendipitytechnology.com/services/business-sites"
+    }
+  }
+  </script>
+
   <?php include __DIR__ . '/partials/service-styles.php'; ?>
 </head>
 <body class="svc-page has-fixed-header">

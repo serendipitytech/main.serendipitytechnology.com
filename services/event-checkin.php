@@ -23,6 +23,34 @@
 
   <link rel="canonical" href="https://serendipitytechnology.com/services/event-checkin">
 
+  <!-- Schema.org Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Event check-in and guest management",
+    "name": "Real-Time Event Check-In",
+    "description": "Multi-device synced check-in app for galas, conferences, and private events. Roster import, live dashboard, setup, training, and remote support included.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Serendipity Technology",
+      "url": "https://serendipitytechnology.com"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Volusia County, FL" },
+      { "@type": "Place", "name": "Central Florida" },
+      { "@type": "State", "name": "Florida" }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "499",
+      "priceCurrency": "USD",
+      "description": "Per-event check-in service, includes setup and training",
+      "url": "https://serendipitytechnology.com/services/event-checkin"
+    }
+  }
+  </script>
+
   <?php include __DIR__ . '/partials/service-styles.php'; ?>
 </head>
 <body class="svc-page has-fixed-header">

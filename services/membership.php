@@ -23,6 +23,34 @@
 
   <link rel="canonical" href="https://serendipitytechnology.com/services/membership">
 
+  <!-- Schema.org Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Membership management software",
+    "name": "Membership Portal for Clubs & Nonprofits",
+    "description": "Member management with unlimited members, events, and admins at one flat monthly price. Designed for clubs, nonprofits, and associations — no per-member fees.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Serendipity Technology",
+      "url": "https://serendipitytechnology.com"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Volusia County, FL" },
+      { "@type": "Place", "name": "Central Florida" },
+      { "@type": "State", "name": "Florida" }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "199",
+      "priceCurrency": "USD",
+      "description": "Membership portal setup, then flat monthly pricing with no per-member tax",
+      "url": "https://serendipitytechnology.com/services/membership"
+    }
+  }
+  </script>
+
   <?php include __DIR__ . '/partials/service-styles.php'; ?>
   <style>
     /* Newsletter add-on section */

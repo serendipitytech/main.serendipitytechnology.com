@@ -24,6 +24,34 @@
 
   <link rel="canonical" href="https://serendipitytechnology.com/services/candidates">
 
+  <!-- Schema.org Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Political campaign website design",
+    "name": "Campaign Websites for Candidates",
+    "description": "Single-page campaign website with a custom domain, branded email, and unlimited content updates throughout the season. Built for local and down-ballot candidates.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Serendipity Technology",
+      "url": "https://serendipitytechnology.com"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Volusia County, FL" },
+      { "@type": "Place", "name": "Central Florida" },
+      { "@type": "State", "name": "Florida" }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "49",
+      "priceCurrency": "USD",
+      "description": "Campaign website setup, then unlimited updates through the season",
+      "url": "https://serendipitytechnology.com/services/candidates"
+    }
+  }
+  </script>
+
   <?php include __DIR__ . '/partials/service-styles.php'; ?>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
