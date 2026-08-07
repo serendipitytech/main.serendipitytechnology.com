@@ -160,6 +160,8 @@ $footer_simple = $footer_simple ?? false;
       <ul>
         <li><a href="/media.php">Media Kit</a></li>
         <li><a href="/engagement-terms.php">Engagement Terms</a></li>
+        <li><a href="/privacy-policy.php">Privacy Policy</a></li>
+        <li><a href="/terms.php">Terms of Service</a></li>
       </ul>
     </div>
 
@@ -177,6 +179,10 @@ $footer_simple = $footer_simple ?? false;
   <div class="site-footer-bottom">
     <div>&copy; <?= date('Y') ?> Serendipity Technology &middot; Troy Shimkus &middot; Volusia County, FL</div>
     <div>
+      <a href="/privacy-policy.php">Privacy Policy</a>
+      &middot;
+      <a href="/terms.php">Terms of Service</a>
+      &middot;
       <a href="/sitemap.xml">Sitemap</a>
       &middot;
       <a href="/robots.txt">robots.txt</a>

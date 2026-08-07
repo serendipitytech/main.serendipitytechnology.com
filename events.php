@@ -823,6 +823,9 @@ include __DIR__ . '/partials/site-header.php';
                 <span class="text-gray-600 group-hover:text-gray-900 transition-colors text-sm">Text</span>
               </label>
             </div>
+            <p class="text-xs text-gray-500 mt-2 leading-snug">
+              By selecting <strong>Text</strong>, you agree to receive SMS from Serendipity Technology at the number provided (replies to your inquiry plus appointment and project updates). Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help. Consent is not a condition of purchase, and we never share your number. See our <a href="/terms.php" class="underline hover:text-gray-700">Terms</a> and <a href="/privacy-policy.php" class="underline hover:text-gray-700">Privacy Policy</a>.
+            </p>
           </div>
           <?php if ($_SERVER['HTTP_HOST'] !== 'localhost' && strpos($_SERVER['HTTP_HOST'], 'localhost:') !== 0): ?>
           <div class="cf-turnstile" data-sitekey="0x4AAAAAACWJ-_uz-IpGJG0B" data-theme="light"></div>

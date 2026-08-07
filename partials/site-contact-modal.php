@@ -179,6 +179,9 @@
           <label><input type="radio" name="contact_method" value="email" checked> Email</label>
           <label><input type="radio" name="contact_method" value="sms"> Text</label>
         </div>
+        <p style="font-size:11px; color:#6b7280; margin-top:8px; line-height:1.45;">
+          By selecting <strong>Text</strong>, you agree to receive SMS from Serendipity Technology at the number provided (replies to your inquiry plus appointment and project updates). Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help. Consent is not a condition of purchase, and we never share your number. See our <a href="/terms.php">Terms</a> and <a href="/privacy-policy.php">Privacy Policy</a>.
+        </p>
       </div>
       <div id="siteContactTurnstile" class="cf-turnstile" data-sitekey="0x4AAAAAACWJ-_uz-IpGJG0B" data-theme="light" style="margin-top:12px;"></div>
       <button type="submit" class="site-modal-submit">Send Message</button>

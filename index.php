@@ -116,7 +116,7 @@ $gridProjects = getGridProjects();
     "sameAs": [
       "https://facebook.com/serendipitytech"
     ],
-    "serviceType": ["Custom Software Development", "Workflow Automation", "Data Integration", "Business Process Automation", "Automated Reporting", "Technology Consulting"]
+    "serviceType": ["Custom Software Development", "Workflow Automation", "Data Integration", "Business Process Automation", "Automated Reporting", "Technology Consulting", "SMS and Text Messaging Services", "Email Delivery", "Client Communications"]
   }
   </script>
 
@@ -222,6 +222,30 @@ $gridProjects = getGridProjects();
       font-weight: 600;
       color: #4FC4F0;
     }
+
+    /* "What We Do" grid: 4 cards balanced in one row on desktop,
+       2x2 on tablet, stacked on mobile. Overrides the 3-up .cards-row
+       flex sizing (min/max-width, flex:1) so the grid controls width. */
+    .wwd-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .wwd-grid .card {
+      min-width: 0;
+      max-width: none;
+      flex: none;
+    }
+    .wwd-grid .card p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    @media (max-width: 900px) {
+      .wwd-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .wwd-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -298,6 +322,9 @@ include __DIR__ . '/partials/site-header.php';
             <span class="text-gray-600 group-hover:text-gray-900 transition-colors">Text</span>
           </label>
         </div>
+        <p class="text-xs text-gray-500 mt-2 leading-snug">
+          By selecting <strong>Text</strong>, you agree to receive SMS from Serendipity Technology at the number provided (replies to your inquiry plus appointment and project updates). Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help. Consent is not a condition of purchase, and we never share your number. See our <a href="/terms.php" class="underline hover:text-gray-700">Terms</a> and <a href="/privacy-policy.php" class="underline hover:text-gray-700">Privacy Policy</a>.
+        </p>
       </div>
       <div id="turnstileWidget" class="cf-turnstile" data-sitekey="0x4AAAAAACWJ-_uz-IpGJG0B" data-theme="light"></div>
       <button type="submit"
@@ -313,7 +340,7 @@ include __DIR__ . '/partials/site-header.php';
 </div>
   <section>
     <h2 class="section-title">What We Do</h2>
-    <div class="cards-row">
+    <div class="cards-row wwd-grid">
       <div class="card">
         <div class="img-frame"><img src="img/data_integration.svg" alt="Workflow Automation"></div>
         <h3>Workflow Automation</h3>
@@ -328,6 +355,11 @@ include __DIR__ . '/partials/site-header.php';
         <div class="img-frame"><img src="img/insight.svg" alt="Automated Reporting"></div>
         <h3>Automated Reporting</h3>
         <p>Automated reporting for nonprofits and local government. Turn your data into actionable intelligence with custom dashboards.</p>
+      </div>
+      <div class="card">
+        <div class="img-frame"><img src="img/reply-to-message.svg" alt="Client Communications"></div>
+        <h3>Client Communications</h3>
+        <p>SMS, text notifications, and email delivery sent on behalf of client businesses and organizations: appointment reminders, event and shift confirmations, and account updates. Opt-in, compliant, and on your brand voice. See our <a href="/terms.php">Terms</a> and <a href="/privacy-policy.php">Privacy Policy</a>.</p>
       </div>
     </div>
   </section>
