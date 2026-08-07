@@ -15,5 +15,3 @@ Disallow: /sms_inbound.php
 
 # Sitemap location
 Sitemap: https://serendipitytechnology.com/sitemap.xml
-
-# Deploy pipeline established 2026-08-07 (webhook: serendipity-site-deploy)
