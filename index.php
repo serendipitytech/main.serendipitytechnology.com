@@ -608,6 +608,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const data = await res.json();
 
     if (res.ok && data.status === 'ok') {
+      if (typeof gtag === 'function') { gtag('event', 'generate_lead', { form_location: 'homepage_contact' }); }
       successMsg.classList.remove('hidden');
       setTimeout(() => closeModal(), 3000);
     } else {

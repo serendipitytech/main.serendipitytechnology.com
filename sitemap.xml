@@ -22,7 +22,45 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Services (productized offerings — canonical clean URLs) -->
+  <url>
+    <loc>https://serendipitytechnology.com/services/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://serendipitytechnology.com/services/business-sites</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://serendipitytechnology.com/services/event-checkin</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://serendipitytechnology.com/services/candidates</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://serendipitytechnology.com/services/membership</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Marketing / Content Pages -->
+  <url>
+    <loc>https://serendipitytechnology.com/websites.php</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://serendipitytechnology.com/get-started.php</loc>
     <lastmod>2026-08-07</lastmod>

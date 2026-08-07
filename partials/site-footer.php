@@ -189,3 +189,15 @@ $footer_simple = $footer_simple ?? false;
     </div>
   </div>
 </footer>
+
+<script>
+  // Click-to-call conversion tracking — one delegated listener catches every
+  // tel: link site-wide (this footer renders on every page). Fires a GA4
+  // 'contact' lead event so phone calls from ads are measurable too.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (a && typeof gtag === 'function') {
+      gtag('event', 'contact', { method: 'phone', form_location: 'tel_link' });
+    }
+  });
+</script>

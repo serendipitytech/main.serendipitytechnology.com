@@ -8,8 +8,29 @@ include __DIR__ . '/partials/site-header.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Started — Serendipity Technology</title>
+    <meta name="google-site-verification" content="3TXwmMDxBCEQDR9EF8e6yvCEyiTcS7at1zDQ5f0F2zc" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G50KCN37LQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G50KCN37LQ');
+    </script>
+
+    <title>Get Started — Custom Software Project | Serendipity Technology</title>
+    <meta name="description" content="Start your custom software project with Serendipity Technology. Tell us what you need — workflow automation, data integration, or a custom app — and we'll scope it with you." />
     <link rel="canonical" href="https://serendipitytechnology.com/get-started">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://serendipitytechnology.com/get-started" />
+    <meta property="og:title" content="Get Started — Custom Software Project | Serendipity Technology" />
+    <meta property="og:description" content="Tell us what you need and we'll scope your custom software project with you." />
+    <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
+    <meta property="og:site_name" content="Serendipity Technology" />
+    <meta name="twitter:card" content="summary" />
     <style>
         :root {
             --primary: #4FC4F0;
@@ -809,6 +830,12 @@ include __DIR__ . '/partials/site-header.php';
     </style>
 </head>
 <body class="has-fixed-header">
+
+<!-- Page intro (SEO h1 + orientation) -->
+<div style="max-width:900px;margin:0 auto;padding:24px 24px 0;text-align:center;">
+    <h1 style="font-family:'Gill Sans','Gill Sans MT',sans-serif;font-size:clamp(1.6rem,4vw,2.2rem);color:#1F2937;margin:0 0 8px;">Get Started With Your Custom Software Project</h1>
+    <p style="color:#475569;font-size:1.05rem;margin:0 0 8px;">Pick a starting point, tell us what you need, and we'll scope it with you.</p>
+</div>
 
 <!-- Progress -->
 <div class="progress-container">

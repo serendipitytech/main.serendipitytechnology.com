@@ -9,7 +9,7 @@ include __DIR__ . '/partials/site-header.php';
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Site Templates — Serendipity Technology</title>
-  <meta name="description" content="Ready-to-deploy website templates for campaigns, businesses, and nonprofits." />
+  <meta name="description" content="Ready-to-deploy website templates for political campaigns, small businesses, and nonprofits — launched for you in days, then updated on request by our AI." />
   <link rel="canonical" href="https://serendipitytechnology.com/templates" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />

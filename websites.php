@@ -13,7 +13,7 @@
     gtag('config', 'G-G50KCN37LQ');
   </script>
   <title>AI-Powered Websites for Small Business | Serendipity Technology</title>
-  <meta name="description" content="Professional websites with AI-powered updates starting at $9/month. Submit a change request, our AI builds it overnight. Business email, client portal, and hosting included." />
+  <meta name="description" content="Professional small-business websites with AI-powered updates from $9/month. Submit a change request, our AI builds it overnight. Email, portal, and hosting included." />
   <meta name="keywords" content="small business website Florida, AI website updates, affordable web hosting, business email, Volusia County web design, Deltona website, managed website service" />
   <meta name="geo.region" content="US-FL" />
   <meta name="geo.placename" content="Volusia County" />
@@ -852,6 +852,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const result = await response.json();
 
     if (result.success) {
+      if (typeof gtag === 'function') { gtag('event', 'generate_lead', { form_location: 'websites_contact' }); }
       msg.className = 'mb-4 p-3 rounded-lg text-sm bg-green-50 text-green-700 border border-green-200';
       msg.textContent = "Thanks! We'll be in touch within 24 hours.";
       msg.classList.remove('hidden');

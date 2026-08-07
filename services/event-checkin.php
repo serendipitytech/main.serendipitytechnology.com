@@ -11,7 +11,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Event Check-In Service — Serendipity Technology</title>
-  <meta name="description" content="Real-time event check-in for galas, conferences, and private events. Multi-device sync, roster import, live dashboard. $499 per event, includes setup, training, and remote support.">
+  <meta name="description" content="Real-time event check-in for galas, conferences, and private events. Multi-device sync, roster import, and a live dashboard. $499 per event, setup and training included.">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
   <!-- Open Graph -->
@@ -394,6 +394,7 @@ document.getElementById('eventContactForm').addEventListener('submit', async fun
     var result = await response.json();
 
     if (result.success) {
+      if (typeof gtag === 'function') { gtag('event', 'generate_lead', { form_location: 'service_event_checkin' }); }
       msg.style.display = 'block';
       msg.style.background = '#f0fdf4';
       msg.style.border = '1px solid #bbf7d0';

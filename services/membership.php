@@ -459,6 +459,7 @@ document.getElementById('membershipContactForm').addEventListener('submit', asyn
     var result = await response.json();
 
     if (result.success) {
+      if (typeof gtag === 'function') { gtag('event', 'generate_lead', { form_location: 'service_membership' }); }
       msg.style.display = 'block';
       msg.style.background = '#f0fdf4';
       msg.style.border = '1px solid #bbf7d0';

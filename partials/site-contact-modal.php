@@ -262,6 +262,10 @@
         var res = await fetch('/contact_twilio.php', { method: 'POST', body: formData });
         var data = await res.json();
         if (res.ok && data.status === 'ok') {
+          // GA4 lead conversion — the signal every ad platform optimizes toward.
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', { form_location: 'site_contact_modal', contact_method: method });
+          }
           feedback.className = 'site-modal-feedback success';
           feedback.textContent = 'Thanks! Your message has been sent. We\'ll be in touch soon.';
           form.reset();
