@@ -10,7 +10,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services — Serendipity Technology</title>
+  <title>Productized Software Services in Florida | Serendipity Technology</title>
   <meta name="description" content="Ready-to-launch productized services from Serendipity Technology. Business websites, candidate sites, event check-in, and membership portals — deployed in days.">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 

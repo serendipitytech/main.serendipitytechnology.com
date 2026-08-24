@@ -10,8 +10,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Website Packages — Serendipity Technology</title>
-  <meta name="description" content="Managed business websites with AI-powered updates, hosting, SSL, and business email. Starting at $10/month + $49 setup. Serendipity Technology.">
+  <title>Small Business Websites with AI Updates | Serendipity Technology</title>
+  <meta name="description" content="Small business websites with AI-powered updates — submit a request, our AI builds it overnight. Hosting, SSL, and business email included. From $10/month + $49 setup.">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
   <!-- Open Graph -->
@@ -65,7 +65,7 @@ include __DIR__ . '/../partials/site-header.php';
 /* ============ HERO ============ */
 $hero_bg_image    = 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=70';
 $hero_eyebrow     = 'Business Sites';
-$hero_title       = 'Professional websites with AI-powered updates';
+$hero_title       = 'Small business websites with AI-powered updates';
 $hero_lede        = 'Hosting, security, and a client portal — managed for you. Submit a change request, our AI builds it overnight. Starting at $10/month.';
 $hero_accent_text = 'Get Started — $49';
 $hero_accent_href = 'javascript:openBusinessContactModal()';

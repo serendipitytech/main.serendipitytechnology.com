@@ -10,8 +10,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Membership Portal — Serendipity Technology</title>
-  <meta name="description" content="Membership management with unlimited members, events, and admins. One flat monthly price for clubs, nonprofits, and associations. $199 setup + $49/month.">
+  <title>Membership Software, No Per-Member Fee | Serendipity Technology</title>
+  <meta name="description" content="Membership software with no per-member fee — unlimited members, events, and admins at one flat monthly price. For clubs, nonprofits, and associations. $199 setup + $49/mo.">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
   <!-- Open Graph -->

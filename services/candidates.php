@@ -11,7 +11,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Candidate Site Package — Serendipity Technology</title>
+  <title>Campaign Websites for Local Candidates | Serendipity Technology</title>
   <meta name="description" content="Single-page campaign website with custom domain, branded email, and unlimited updates. Built for local and down-ballot candidates. $49 setup + $20/month.">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
@@ -67,7 +67,7 @@ include __DIR__ . '/../partials/site-header.php';
 /* ============ HERO ============ */
 $hero_bg_image = 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=2000&q=70';
 $hero_eyebrow = 'Candidate Package';
-$hero_title = 'A campaign website ready in days, not weeks';
+$hero_title = 'Campaign websites for local candidates — ready in days';
 $hero_lede = 'Single-page campaign site with your custom domain, branded email, and unlimited content updates throughout the season. Built for local and down-ballot candidates who deserve better tools.';
 $hero_accent_text = 'Get Started — $49';
 $hero_accent_href = '/services/candidates/signup';

@@ -18,7 +18,7 @@ $gridProjects = getGridProjects();
     gtag('js', new Date());
     gtag('config', 'G-G50KCN37LQ');
   </script>
-  <title>Serendipity Technology | Custom App Solutions</title>
+  <title>Custom Software Development in Volusia County, FL | Serendipity</title>
   <meta name="description" content="Custom software development in Volusia County, FL. Workflow automation, data integration, and reporting for small businesses, nonprofits, and local government." />
   <meta name="keywords" content="custom software development Volusia County, workflow automation Florida, data integration small business, business process automation, technology consulting Central Florida" />
   <meta name="geo.region" content="US-FL" />
