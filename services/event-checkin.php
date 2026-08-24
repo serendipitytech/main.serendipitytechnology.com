@@ -10,8 +10,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Event Check-In Service — Serendipity Technology</title>
-  <meta name="description" content="Real-time event check-in for galas, conferences, and private events. Multi-device sync, roster import, and a live dashboard. $499 per event, setup and training included.">
+  <title>Event Check-In App & Software | Serendipity Technology</title>
+  <meta name="description" content="Real-time event check-in app for galas, conferences, and private events. Multi-device sync, roster import, live dashboard, 5-tier roles. $499 per event, setup and training included.">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
   <!-- Open Graph -->
@@ -64,8 +64,8 @@ include __DIR__ . '/../partials/site-header.php';
 <?php
 /* ============ HERO ============ */
 $hero_bg_image       = 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=2000&q=70';
-$hero_eyebrow        = 'Event Check-In';
-$hero_title          = 'Real-time event check-in, deployed for your event';
+$hero_eyebrow        = 'Event Check-In App';
+$hero_title          = 'The real-time event check-in app, deployed for your event';
 $hero_lede           = 'Multi-device synced check-in app for galas, conferences, and private events. Set up in days, includes training and live remote support.';
 $hero_accent_text    = 'Book an Event — $499';
 $hero_accent_href    = 'javascript:openEventContactModal()';
@@ -196,6 +196,14 @@ $pricing_tiers = [
 $pricing_footnote = 'All pricing is per event. Contact us for custom arrangements — recurring series, multi-day events, or high-attendance venues with specific requirements. Travel for onsite support outside Central Florida is quoted on a per-event basis.';
 include __DIR__ . '/partials/service-pricing.php';
 ?>
+
+<!-- Cross-link to the full-service AV/on-site offering -->
+<div style="max-width:820px;margin:0 auto;padding:20px 24px;text-align:center;">
+  <p style="color:#4b5563;font-size:15px;margin:0;">
+    Prefer we run it for you? Our <a href="/events" style="color:#2cb1e3;font-weight:600;">event AV &amp; on-site check-in services</a>
+    add trained operators, AV support, and day-of staffing for your event.
+  </p>
+</div>
 
 <?php
 /* ============ FAQ ============ */

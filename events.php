@@ -12,8 +12,8 @@
     gtag('js', new Date());
     gtag('config', 'G-G50KCN37LQ');
   </script>
-  <title>Event Check-In & AV Services | Volusia County, FL</title>
-  <meta name="description" content="Local, reliable guest check-in and AV support for galas, fundraisers, and civic events in Volusia County. Custom packages and nonprofit discounts." />
+  <title>Event AV & On-Site Support Services | Volusia County, FL</title>
+  <meta name="description" content="Done-for-you event AV support and on-site guest check-in for galas, fundraisers, and civic events in Volusia County. On-site operators, custom packages, nonprofit discounts." />
   <meta name="keywords" content="event check-in Volusia County, AV operator Florida, gala check-in service, fundraiser technology support, nonprofit event services, Daytona Beach event tech" />
   <meta name="geo.region" content="US-FL" />
   <meta name="geo.placename" content="Volusia County" />
@@ -473,7 +473,7 @@ include __DIR__ . '/partials/site-header.php';
 <header class="event-header">
   <div class="header-overlay" style="max-width: 700px;">
     <img src="img/logo.png" alt="Serendipity Technology Logo" class="mx-auto mb-4" style="width: 200px;" />
-    <h1 class="text-3xl md:text-4xl font-bold mt-4 mb-3 text-white">Stress-Free Event Check-In & AV Services</h1>
+    <h1 class="text-3xl md:text-4xl font-bold mt-4 mb-3 text-white">On-Site Event AV & Check-In Services in Volusia County</h1>
     <p class="text-lg mb-4 text-white opacity-90">Local support for nonprofits, galas, and fundraisers in Volusia County and beyond.</p>
 
     <div class="hero-features">
@@ -503,6 +503,7 @@ include __DIR__ . '/partials/site-header.php';
   <h2 class="section-title">Event Check-In App</h2>
   <p class="text-lg text-gray-600 max-w-3xl">
     Best for galas, fundraisers, sponsor/VIP check-in, fast entry, and accurate attendance tracking. We consolidate your lists from multiple sources — Square, Eventbrite, and your manual VIP and personal sales lists.
+    Running check-in yourself? See the <a href="/services/event-checkin" class="text-primary underline hover:no-underline">event check-in app on its own</a> — features, roles, and self-serve pricing.
   </p>
 
   <div class="included-grid" data-aos="fade-up" data-aos-delay="100">
