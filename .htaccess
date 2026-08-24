@@ -33,6 +33,11 @@ RewriteRule ^services/([a-z0-9-]+)/?$ /services/$1.php [L]
 # Redirect old URL to new for inbound link preservation
 RewriteRule ^media\.html$ /media.php [L,R=301]
 
+# websites.php consolidated into services/business-sites.php (2026-08).
+# Both were selling the same AI-website product with conflicting pricing — one
+# canonical page now. 301 preserves any inbound links + link equity.
+RewriteRule ^websites(\.php)?/?$ /services/business-sites [L,R=301]
+
 # Force www to non-www (optional - uncomment if preferred)
 # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]

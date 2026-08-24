@@ -180,7 +180,7 @@ $pricing_tiers = [
     'cta_href' => '#faq',
   ],
 ];
-$pricing_footnote = '<strong>Designed for active campaigns.</strong> The Candidate Package is intended for political campaigns ending within 12 months of signup. For ongoing political organizations, PACs, or campaigns more than a year out, see our <a href="/websites.php">Business Site packages</a> or <a href="javascript:openContactModal()">contact us</a> for custom options.';
+$pricing_footnote = '<strong>Designed for active campaigns.</strong> The Candidate Package is intended for political campaigns ending within 12 months of signup. For ongoing political organizations, PACs, or campaigns more than a year out, see our <a href="/services/business-sites">Business Site packages</a> or <a href="javascript:openContactModal()">contact us</a> for custom options.';
 include __DIR__ . '/partials/service-pricing.php';
 ?>
 
@@ -223,7 +223,7 @@ $faq_items = [
   ],
   [
     'q' => 'What if I need a multi-page site or more advanced features?',
-    'a' => 'The Candidate Package is intentionally a single page. For multi-page campaigns, complex donation flows, custom integrations, or larger design needs, contact us about a custom build or look at our <a href="/websites.php">Business Site packages</a>.',
+    'a' => 'The Candidate Package is intentionally a single page. For multi-page campaigns, complex donation flows, custom integrations, or larger design needs, contact us about a custom build or look at our <a href="/services/business-sites">Business Site packages</a>.',
   ],
 ];
 include __DIR__ . '/partials/service-faq.php';

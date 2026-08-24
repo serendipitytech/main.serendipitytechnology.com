@@ -56,12 +56,6 @@
 
   <!-- Marketing / Content Pages -->
   <url>
-    <loc>https://serendipitytechnology.com/websites.php</loc>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://serendipitytechnology.com/get-started.php</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>

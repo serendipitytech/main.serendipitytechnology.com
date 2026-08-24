@@ -166,7 +166,7 @@ $pricing_tiers = [
   [
     'name'    => 'Growth',
     'tagline' => 'For businesses building their presence',
-    'price'   => 25,
+    'price'   => 19,
     'period'  => '/month',
     'setup'   => '$99 one-time setup',
     'features' => [
@@ -174,6 +174,7 @@ $pricing_tiers = [
       'Custom domain',
       'Hosting & SSL included',
       '<strong>1 included update per month</strong>',
+      'Additional updates — $19 each',
       '<strong>1 business email mailbox</strong>',
       'Client portal access',
       'Analytics dashboard',
@@ -194,6 +195,7 @@ $pricing_tiers = [
       'Custom domain',
       'Hosting & SSL included',
       '<strong>2 included updates per month</strong>',
+      'Additional updates — $10 each',
       '<strong>2 business email mailboxes</strong>',
       'Client portal with priority queue',
       'Analytics dashboard',
@@ -214,7 +216,8 @@ $pricing_tiers = [
       'Up to 10 pages',
       'Custom domain',
       'Hosting & SSL included',
-      '<strong>4 included updates per month — priority</strong>',
+      '<strong>5 included updates per month — priority</strong>',
+      'Additional updates — $5 each',
       '<strong>2 business email mailboxes (1GB each)</strong>',
       'Client portal with priority support',
       'Analytics dashboard',
@@ -225,7 +228,7 @@ $pricing_tiers = [
     'cta_href'  => 'javascript:openBusinessContactModal()',
   ],
 ];
-$pricing_footnote = 'Additional updates on Starter are billed at $19 per request. Extra updates on paid tiers (beyond your monthly allotment) are $19 each. All plans are month-to-month with no long-term contract. <a href="javascript:openBusinessContactModal()">Contact us</a> for custom or enterprise requirements.';
+$pricing_footnote = 'Update requests beyond your monthly allotment scale with your plan: $19 each on Starter &amp; Growth, $10 each on Business, $5 each on Pro. All plans are month-to-month with no long-term contract. <a href="javascript:openBusinessContactModal()">Contact us</a> for custom or enterprise requirements.';
 include __DIR__ . '/partials/service-pricing.php';
 ?>
 
@@ -370,7 +373,7 @@ include __DIR__ . '/partials/service-cta.php';
               onblur="this.style.borderColor='#e5e7eb';this.style.background='#f9fafb'">
               <option value="">— Not sure yet —</option>
               <option value="starter">Starter ($10/mo)</option>
-              <option value="growth">Growth ($25/mo)</option>
+              <option value="growth">Growth ($19/mo)</option>
               <option value="business">Business ($49/mo)</option>
               <option value="pro">Pro ($99/mo)</option>
             </select>
