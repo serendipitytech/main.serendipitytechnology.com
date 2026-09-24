@@ -87,3 +87,6 @@ Options -Indexes
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(get-started|templates|media|projects|chat|events)/?$ /$1.php [L]
+
+# Branded short links: /s/<slug> -> s.php?c=<slug> (map lives in s.php)
+RewriteRule ^s/([A-Za-z0-9_-]+)/?$ /s.php?c=$1 [L]
