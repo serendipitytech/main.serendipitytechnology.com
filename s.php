@@ -9,9 +9,17 @@ $links = [
     '44VEFQQ2' => 'https://checkin.serendipitytechnology.com/redeem?code=44VEFQQ2&event=acbc24b7-a07f-40e8-a718-c64084b1b4bf',
 ];
 
+// Case-insensitive slug lookup (keys above may be stored in any case).
 $slug = isset($_GET['c']) ? trim((string) $_GET['c']) : '';
-if ($slug !== '' && isset($links[$slug])) {
-    header('Location: ' . $links[$slug], true, 302); // 302: destinations may change per event
+$target = null;
+if ($slug !== '') {
+    $needle = strtoupper($slug);
+    foreach ($links as $code => $url) {
+        if (strtoupper($code) === $needle) { $target = $url; break; }
+    }
+}
+if ($target !== null) {
+    header('Location: ' . $target, true, 302); // 302: destinations may change per event
     exit;
 }
 
