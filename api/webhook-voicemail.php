@@ -49,10 +49,23 @@ if (empty($from)) {
     exit;
 }
 
+// Determine the actual called line. n8n now passes the real 'to' through;
+// fall back to the main Twilio number for older payloads that don't send it.
+$to = $input['to'] ?? TWILIO_PHONE_NUMBER;
+if (empty($to)) {
+    $to = TWILIO_PHONE_NUMBER;
+}
+
+// Optional source label from n8n (e.g. 'serendipity', 'serendipity-outreach-561',
+// 'deltona_strong', 'gardens'). Defaults to plain 'serendipity' when absent so
+// existing main-line payloads keep behaving exactly as before.
+$source = $input['source'] ?? 'serendipity';
+
 // Build voicemail record
 $voicemail = [
     'from' => $from,
-    'to' => TWILIO_PHONE_NUMBER,
+    'to' => $to,
+    'source' => $source,
     'recording_url' => $input['recording_url'] ?? '',
     'transcription' => $input['transcription'] ?? '',
     'duration' => intval($input['duration'] ?? 0),

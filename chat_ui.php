@@ -308,6 +308,16 @@ async function loadVoicemails() {
   }
 }
 
+// Label a voicemail's called line when it's not the main Serendipity number.
+// Matches on the 'source' field n8n sends, with a fallback match on 'to'
+// in case a payload only carries the raw number.
+function getLineTag(vm) {
+  if (vm.source === 'serendipity-outreach-561' || (vm.to && vm.to.includes('5619359321'))) {
+    return 'Outreach (561)';
+  }
+  return '';
+}
+
 // Render voicemail list
 function renderVoicemailList() {
   const list = document.getElementById('voicemailList');
@@ -327,6 +337,7 @@ function renderVoicemailList() {
 
     const urgencyClass = vm.urgency === 'HIGH' ? 'urgency-high' : vm.urgency === 'MEDIUM' ? 'urgency-medium' : 'urgency-low';
     const urgencyIcon = vm.urgency === 'HIGH' ? '🔴' : vm.urgency === 'MEDIUM' ? '🟡' : '🟢';
+    const lineTag = getLineTag(vm);
 
     li.innerHTML = `
       <div class="flex justify-between items-start">
@@ -334,6 +345,7 @@ function renderVoicemailList() {
           <div class="flex items-center gap-2">
             <span class="font-medium text-gray-900">${formatPhone(vm.from)}</span>
             ${!vm.read ? '<span class="unread-badge">New</span>' : ''}
+            ${lineTag ? `<span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#F7B06A22;color:#9a5a12;">${lineTag}</span>` : ''}
           </div>
           <div class="flex items-center gap-2 mt-1">
             <span class="${urgencyClass} text-sm">${urgencyIcon} ${vm.urgency || 'LOW'}</span>
@@ -375,12 +387,17 @@ async function selectVoicemail(vm) {
   const urgencyClass = vm.urgency === 'HIGH' ? 'urgency-high' : vm.urgency === 'MEDIUM' ? 'urgency-medium' : 'urgency-low';
   const urgencyIcon = vm.urgency === 'HIGH' ? '🔴' : vm.urgency === 'MEDIUM' ? '🟡' : '🟢';
 
+  const lineTag = getLineTag(vm);
+
   detail.innerHTML = `
     <div class="max-w-2xl mx-auto">
       <div class="bg-white rounded-lg shadow p-6">
         <div class="flex justify-between items-start mb-4">
           <div>
-            <h3 class="text-lg font-semibold text-gray-900">${formatPhone(vm.from)}</h3>
+            <div class="flex items-center gap-2">
+              <h3 class="text-lg font-semibold text-gray-900">${formatPhone(vm.from)}</h3>
+              ${lineTag ? `<span class="text-xs font-medium px-2 py-0.5 rounded-full" style="background:#F7B06A22;color:#9a5a12;">${lineTag}</span>` : ''}
+            </div>
             <p class="text-sm text-gray-500">${new Date((vm.timestamp || vm.created_at) * 1000).toLocaleString()}</p>
           </div>
           <div class="text-right">
