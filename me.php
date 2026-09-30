@@ -28,7 +28,8 @@ $links = [
     ['label' => 'Save my contact', 'url' => '/me?vcard=1', 'icon' => 'contact', 'primary' => true],
     ['label' => 'Website',         'url' => 'https://serendipitytechnology.com', 'icon' => 'globe'],
     ['label' => 'Email me',        'url' => 'mailto:troy@serendipitytech.net',   'icon' => 'mail'],
-    ['label' => 'YouTube',         'url' => '', 'icon' => 'youtube'], // add channel URL to show
+    ['label' => 'YouTube',         'url' => 'https://www.youtube.com/@serendipitytech', 'icon' => 'youtube'],
+    ['label' => 'LinkedIn',        'url' => 'https://www.linkedin.com/in/troyshimkus/', 'icon' => 'linkedin'],
 ];
 
 function icon(string $n): string {
@@ -38,6 +39,7 @@ function icon(string $n): string {
         'globe'   => "<svg $s><circle cx='12' cy='12' r='10'/><line x1='2' y1='12' x2='22' y2='12'/><path d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/></svg>",
         'mail'    => "<svg $s><rect x='2' y='4' width='20' height='16' rx='2'/><path d='m22 7-10 6L2 7'/></svg>",
         'youtube' => "<svg $s><path d='M22.5 6.5a2.8 2.8 0 0 0-2-2C18.9 4 12 4 12 4s-6.9 0-8.5.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1 12a29 29 0 0 0 .5 5.5 2.8 2.8 0 0 0 2 2C5.1 20 12 20 12 20s6.9 0 8.5-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 23 12a29 29 0 0 0-.5-5.5z'/><path d='m10 15 5-3-5-3z'/></svg>",
+        'linkedin'=> "<svg $s><path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z'/><rect x='2' y='9' width='4' height='12'/><circle cx='4' cy='4' r='2'/></svg>",
     ][$n] ?? '';
 }
 ?><!DOCTYPE html>
