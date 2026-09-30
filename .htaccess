@@ -90,3 +90,6 @@ RewriteRule ^(get-started|templates|media|projects|chat|events)/?$ /$1.php [L]
 
 # Branded short links: /s/<slug> -> s.php?c=<slug> (map lives in s.php)
 RewriteRule ^s/([A-Za-z0-9_-]+)/?$ /s.php?c=$1 [L]
+
+# Personal link-in-bio page: /me -> me.php (QSA keeps ?vcard=1 for the contact card)
+RewriteRule ^me/?$ /me.php [L,QSA]
