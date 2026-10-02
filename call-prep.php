@@ -6,6 +6,8 @@
 declare(strict_types=1);
 header('X-Robots-Tag: noindex, nofollow');
 $ref = isset($_GET['ref']) ? trim((string)$_GET['ref']) : '';
+$pname = isset($_GET['name']) ? trim((string)$_GET['name']) : '';
+$pemail = isset($_GET['email']) ? trim((string)$_GET['email']) : '';
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,11 +47,11 @@ button:disabled{opacity:.6;cursor:default}
   <div class="card">
     <form id="f">
       <?php if ($ref !== ''): ?><div class="ref">Regarding: <strong><?= htmlspecialchars($ref) ?></strong></div><?php endif; ?>
-      <label>Your name</label><input name="name" required>
-      <label>Your email</label><input type="email" name="email" required>
+      <label>Your name</label><input name="name" required value="<?= htmlspecialchars($pname) ?>">
+      <label>Your email</label><input type="email" name="email" required value="<?= htmlspecialchars($pemail) ?>">
       <label>What's the main thing you'd like to get out of this call?</label><textarea name="goal"></textarea>
       <label>Any specific questions or topics you want to cover?</label><textarea name="questions"></textarea>
-      <label>Anything helpful to share ahead of time? Links, docs, context.</label><textarea name="materials"></textarea>
+      <label>Anything helpful to share ahead of time?</label><textarea name="materials" placeholder="Links or a bit of context. To send a file, just reply to your calendar invite with it attached."></textarea>
       <button type="submit" id="b">Send it over</button>
       <div class="err" id="e">Something went wrong sending that. You can also just reply to the calendar invite. </div>
     </form>
