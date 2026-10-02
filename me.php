@@ -60,7 +60,7 @@ function icon(string $n): string {
 <meta property="og:title" content="Troy Shimkus">
 <meta property="og:description" content="Owner, Serendipity Technology">
 <style>
-:root{--ink:#16233c;--muted:#5b6b85;--card:#ffffff;--line:#e4e9f2;--blue:#00a2e8;--orange:#ffa645;}
+:root{--ink:#16233c;--muted:#5b6b85;--card:#ffffff;--line:#e4e9f2;--blue:#4FC4F0;--orange:#F7B06A;}
 *{box-sizing:border-box}
 body{margin:0;min-height:100vh;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
   color:var(--ink);background:linear-gradient(160deg,#e7f1fc 0%,#eef2f7 46%,#f5f1ea 100%);
@@ -76,7 +76,7 @@ a.btn{display:flex;align-items:center;gap:14px;width:100%;padding:18px 22px;bord
 a.btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(20,40,80,.12)}
 a.btn:active{transform:translateY(0)}
 a.btn .lbl{flex:1;text-align:center;margin-right:21px}
-a.btn.primary{background:linear-gradient(135deg,var(--blue),#0089c7);color:#fff;border:none;box-shadow:0 8px 20px rgba(0,120,190,.30)}
+a.btn.primary{background:linear-gradient(135deg,var(--blue),#2E9FD1);color:#fff;border:none;box-shadow:0 8px 20px rgba(0,120,190,.30)}
 .ico{display:flex;width:21px}
 footer{margin-top:auto;padding-top:38px}
 .accent{width:64px;height:4px;border-radius:4px;margin:0 auto 16px;background:linear-gradient(to right,var(--blue),var(--orange))}

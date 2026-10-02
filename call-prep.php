@@ -16,7 +16,7 @@ $pemail = isset($_GET['email']) ? trim((string)$_GET['email']) : '';
 <meta name="robots" content="noindex, nofollow">
 <title>Quick call prep | Serendipity Technology</title>
 <style>
-:root{--ink:#16233c;--muted:#5b6b85;--card:#fff;--line:#e4e9f2;--blue:#00a2e8;--orange:#ffa645;}
+:root{--ink:#16233c;--muted:#5b6b85;--card:#fff;--line:#e4e9f2;--blue:#4FC4F0;--orange:#F7B06A;}
 *{box-sizing:border-box}
 body{margin:0;min-height:100vh;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--ink);
   background:linear-gradient(160deg,#e7f1fc 0%,#eef2f7 46%,#f5f1ea 100%);display:flex;justify-content:center;padding:40px 18px;}
@@ -31,7 +31,7 @@ input,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-
 input:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,162,232,.12)}
 textarea{min-height:74px;resize:vertical}
 .ref{background:#eef4fb;border:1px solid #d6e6f7;border-radius:10px;padding:10px 13px;font-size:14px;color:#2a4a72;margin-bottom:4px}
-button{width:100%;margin-top:22px;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--blue),#0089c7);color:#fff;font-size:16px;font-weight:700;cursor:pointer}
+button{width:100%;margin-top:22px;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--blue),#2E9FD1);color:#fff;font-size:16px;font-weight:700;cursor:pointer}
 button:disabled{opacity:.6;cursor:default}
 .note{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
 .ok{display:none;text-align:center;padding:14px 0}
