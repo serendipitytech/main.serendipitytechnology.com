@@ -93,3 +93,6 @@ RewriteRule ^s/([A-Za-z0-9_-]+)/?$ /s.php?c=$1 [L]
 
 # Personal link-in-bio page: /me -> me.php (QSA keeps ?vcard=1 for the contact card)
 RewriteRule ^me/?$ /me.php [L,QSA]
+
+# Optional call-prep form: /call-prep -> call-prep.php (QSA keeps ?ref=)
+RewriteRule ^call-prep/?$ /call-prep.php [L,QSA]
