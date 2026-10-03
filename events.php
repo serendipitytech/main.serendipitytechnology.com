@@ -200,7 +200,7 @@
     .pricing-price {
       font-size: 2.5rem;
       font-weight: 700;
-      color: #4FC4F0;
+      color: #1A7FAA;
       margin: 1rem 0;
     }
 
@@ -301,7 +301,7 @@
     .step-number {
       width: 48px;
       height: 48px;
-      background: linear-gradient(135deg, #4FC4F0, #3ab0dc);
+      background: linear-gradient(135deg, #1A7FAA, #176E96);
       color: white;
       font-weight: 700;
       font-size: 1.25rem;
@@ -375,7 +375,7 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #4FC4F0, #3ab0dc);
+      background: linear-gradient(135deg, #1A7FAA, #176E96);
       color: white;
       border: none;
       padding: 1rem 2rem;
@@ -392,7 +392,7 @@
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(79,196,240,0.4);
+      box-shadow: 0 8px 20px rgba(26,127,170,0.4);
     }
 
     .btn-secondary {
@@ -502,8 +502,8 @@ include __DIR__ . '/partials/site-header.php';
 <section data-aos="fade-up">
   <h2 class="section-title">Event Check-In App</h2>
   <p class="text-lg text-gray-600 max-w-3xl">
-    Best for galas, fundraisers, sponsor/VIP check-in, fast entry, and accurate attendance tracking. We consolidate your lists from multiple sources — Square, Eventbrite, and your manual VIP and personal sales lists.
-    Running check-in yourself? See the <a href="/services/event-checkin" class="text-primary underline hover:no-underline">event check-in app on its own</a> — features, roles, and self-serve pricing.
+    Best for galas, fundraisers, sponsor/VIP check-in, fast entry, and accurate attendance tracking. We consolidate your lists from multiple sources, Square, Eventbrite, and your manual VIP and personal sales lists.
+    Running check-in yourself? See the <a href="/services/event-checkin" class="underline hover:no-underline" style="color:#1A7FAA">event check-in app on its own</a>, features, roles, and self-serve pricing.
   </p>
 
   <div class="included-grid" data-aos="fade-up" data-aos-delay="100">
@@ -513,7 +513,7 @@ include __DIR__ . '/partials/site-header.php';
       </div>
       <div>
         <strong class="block text-gray-900">Warm Guest Welcome</strong>
-        <span class="text-gray-600 text-sm">Staff can personally greet each guest — no flipping through spreadsheets or scrambling for QR codes.</span>
+        <span class="text-gray-600 text-sm">Staff can personally greet each guest, no flipping through spreadsheets or scrambling for QR codes.</span>
       </div>
     </div>
     <div class="included-item">
@@ -540,7 +540,7 @@ include __DIR__ . '/partials/site-header.php';
       </div>
       <div>
         <strong class="block text-gray-900">Post-Event Export</strong>
-        <span class="text-gray-600 text-sm">Get a clean attendance list with timestamps — perfect for follow-up and donor tracking.</span>
+        <span class="text-gray-600 text-sm">Get a clean attendance list with timestamps, perfect for follow-up and donor tracking.</span>
       </div>
     </div>
   </div>
@@ -627,7 +627,7 @@ include __DIR__ . '/partials/site-header.php';
     <div class="bg-gradient-to-r from-blue-50 to-amber-50 p-4 rounded-lg mb-6">
       <div class="text-2xl font-bold text-gray-900">$200 off</div>
       <div class="text-gray-600">Event Check-In Package</div>
-      <div class="text-sm text-gray-500 mt-1">Limited availability — must be confirmed in writing prior to event</div>
+      <div class="text-sm text-gray-500 mt-1">Limited availability, must be confirmed in writing prior to event</div>
     </div>
 
     <h3 class="font-semibold text-gray-900 mb-3">Sponsor Recognition Requirements</h3>
@@ -668,7 +668,7 @@ include __DIR__ . '/partials/site-header.php';
 <section data-aos="fade-up">
   <h2 class="section-title">About Serendipity Technology</h2>
   <p class="text-lg text-gray-600 max-w-3xl mb-6">
-    We help nonprofits and civic organizations run smoother events through practical, reliable technology support. Your program stays on time, your media plays correctly, and your team can focus on donors and guests — not day-of logistics.
+    We help nonprofits and civic organizations run smoother events through practical, reliable technology support. Your program stays on time, your media plays correctly, and your team can focus on donors and guests, not day-of logistics.
   </p>
 
   <div class="trust-badges">
@@ -710,7 +710,7 @@ include __DIR__ . '/partials/site-header.php';
     <div class="process-step" data-aos="fade-up" data-aos-delay="300">
       <div class="step-number">4</div>
       <h3 class="font-semibold mb-2">Relax</h3>
-      <p class="text-gray-600 text-sm">We handle the tech — you focus on guests</p>
+      <p class="text-gray-600 text-sm">We handle the tech, you focus on guests</p>
     </div>
   </div>
 </section>
@@ -838,7 +838,7 @@ include __DIR__ . '/partials/site-header.php';
         <!-- Submit -->
         <button type="submit"
           class="w-full py-3 px-4 rounded-lg font-semibold text-white
-          bg-gradient-to-r from-[#4FC4F0] to-[#3ab0dc] hover:from-[#3ab0dc] hover:to-[#2a9bc7]
+          bg-gradient-to-r from-[#1A7FAA] to-[#176E96] hover:from-[#176E96] hover:to-[#125C7D]
           shadow-lg shadow-[#4FC4F0]/25 hover:shadow-xl hover:shadow-[#4FC4F0]/30
           hover:-translate-y-0.5 transition-all duration-200">
           Send Request

@@ -11,12 +11,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engagement Terms — Serendipity Technology</title>
+  <title>Engagement Terms | Serendipity Technology</title>
   <meta name="description" content="Rates, engagement models, payment terms, and what's included for Serendipity Technology clients.">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Engagement Terms — Serendipity Technology">
+  <meta property="og:title" content="Engagement Terms | Serendipity Technology">
   <meta property="og:description" content="How we work together: rates, models, payment terms, and what's always included.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://serendipitytechnology.com/engagement-terms">
@@ -30,7 +30,7 @@
     /* Page-specific tweaks on top of the shared .svc-* system */
     .svc-page { padding-top: 60px; } /* offset for fixed header */
     .terms-hero {
-      background: linear-gradient(135deg, #00516A 0%, #00a2e8 100%);
+      background: linear-gradient(135deg, #00516A 0%, #4FC4F0 100%);
       color: #fff;
       padding: 56px 0 44px;
       text-align: center;
@@ -54,7 +54,7 @@
       font-weight: 700;
       margin: 0 0 18px;
       color: #00516A;
-      border-bottom: 2px solid #00a2e8;
+      border-bottom: 2px solid #4FC4F0;
       padding-bottom: 8px;
       display: inline-block;
     }
@@ -125,7 +125,7 @@
       box-shadow: 0 4px 12px rgba(15,23,42,0.06);
     }
     .contact-cta h3 { margin: 0 0 8px; font-size: 19px; color: #00516A; }
-    .contact-cta a { color: #00a2e8; text-decoration: none; font-weight: 600; }
+    .contact-cta a { color: #1A7FAA; text-decoration: none; font-weight: 600; }
     .contact-cta a:hover { text-decoration: underline; }
     .contact-cta .phone { font-size: 16px; color: #111827; font-weight: 600; margin-top: 4px; }
 
@@ -170,7 +170,7 @@ include __DIR__ . '/partials/site-header.php';
     </div>
 
     <p>
-      The Democratic and civic discount applies to Democratic clubs and caucuses, county and state Democratic infrastructure, and democratically-aligned 501(c) civic organizations &mdash; including the Volusia County Democratic Black Caucus, NW Dems, the Volusia County Democratic clubs and caucuses, and similar mission-aligned organizations. Eligibility confirmed at engagement start.
+      The Democratic and civic discount applies to Democratic clubs and caucuses, county and state Democratic infrastructure, and democratically-aligned 501(c) civic organizations, including the Volusia County Democratic Black Caucus, NW Dems, the Volusia County Democratic clubs and caucuses, and similar mission-aligned organizations. Eligibility confirmed at engagement start.
     </p>
     <p><strong>Billing increments:</strong> 15 minutes ($28.13 / 15 min at discounted rate)</p>
   </div>
@@ -207,7 +207,7 @@ include __DIR__ . '/partials/site-header.php';
         </tr>
       </tbody>
     </table>
-    <p style="color: #6b7280;">You can mix these — e.g., a small monthly retainer for routine work plus occasional fixed-fee project bills.</p>
+    <p style="color: #6b7280;">You can mix these, e.g., a small monthly retainer for routine work plus occasional fixed-fee project bills.</p>
   </div>
 </section>
 
@@ -219,7 +219,7 @@ include __DIR__ . '/partials/site-header.php';
       <li><strong>Net 30</strong> on all invoices (due within 30 days of invoice date)</li>
       <li><strong>Accepted methods:</strong> Credit/debit card, ACH bank transfer (preferred for invoices over $200)</li>
       <li><strong>Late notice:</strong> Invoices &gt; 60 days past due trigger a follow-up; work may be paused pending payment</li>
-      <li><strong>Recurring services billed in advance</strong> per Serendipity policy — disclaimer included on every recurring invoice</li>
+      <li><strong>Recurring services billed in advance</strong> per Serendipity policy, disclaimer included on every recurring invoice</li>
     </ul>
   </div>
 </section>
@@ -229,11 +229,11 @@ include __DIR__ . '/partials/site-header.php';
   <div class="svc-container">
     <h2>Client Portal</h2>
     <p>
-      Every active client gets free access to a hosted Client Portal at <a href="https://dashboard.serendipitylabs.cloud" style="color: #00a2e8; text-decoration: none; font-weight: 600;">dashboard.serendipitylabs.cloud</a>, which provides:
+      Every active client gets free access to a hosted Client Portal at <a href="https://dashboard.serendipitylabs.cloud" style="color: #1A7FAA; text-decoration: none; font-weight: 600;">dashboard.serendipitylabs.cloud</a>, which provides:
     </p>
     <ul>
       <li>Live project status with every work item tracked in real-time</li>
-      <li>Estimate approval workflow — you see scoped work + pricing before it's started</li>
+      <li>Estimate approval workflow, you see scoped work + pricing before it's started</li>
       <li>Payment history and online payment options</li>
       <li>Direct request-submission for new features or questions</li>
     </ul>
@@ -254,9 +254,9 @@ include __DIR__ . '/partials/site-header.php';
 
     <h2 style="margin-top: 32px;">What's Specifically Excluded</h2>
     <ul>
-      <li>Out-of-pocket service costs (Google Workspace seats, Stripe processing, etc.) &mdash; passed through at cost unless otherwise quoted</li>
-      <li>Travel and on-site work outside Volusia County, FL &mdash; billed separately</li>
-      <li>Emergency response outside normal business hours &mdash; billed at 1.5× standard rate (minimum 1 hour)</li>
+      <li>Out-of-pocket service costs (Google Workspace seats, Stripe processing, etc.), passed through at cost unless otherwise quoted</li>
+      <li>Travel and on-site work outside Volusia County, FL, billed separately</li>
+      <li>Emergency response outside normal business hours, billed at 1.5× standard rate (minimum 1 hour)</li>
       <li>Third-party software licensing required for your specific work</li>
     </ul>
   </div>
@@ -267,7 +267,7 @@ include __DIR__ . '/partials/site-header.php';
   <div class="svc-container">
     <h2>Working Hours &amp; Boundaries</h2>
     <ul>
-      <li>I generally work 8 AM – 6 PM Eastern, Monday–Friday. Off-hours response is best-effort.</li>
+      <li>I generally work 8 AM to 6 PM Eastern, Monday–Friday. Off-hours response is best-effort.</li>
       <li>New engagement starts within 1–2 weeks of agreement; emergencies discussed case-by-case.</li>
       <li>I retain the right to decline work that conflicts with mission alignment or capacity.</li>
     </ul>

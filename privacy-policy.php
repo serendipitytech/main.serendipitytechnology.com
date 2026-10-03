@@ -10,10 +10,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Serendipity Technology</title>
+  <title>Privacy Policy | Serendipity Technology</title>
   <meta name="description" content="How Serendipity Technology collects, uses, and protects your information, including our SMS/text messaging practices.">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
-  <meta property="og:title" content="Privacy Policy — Serendipity Technology">
+  <meta property="og:title" content="Privacy Policy | Serendipity Technology">
   <meta property="og:description" content="How we collect, use, and protect your information, including SMS/text messaging.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://serendipitytechnology.com/privacy-policy">
@@ -25,7 +25,7 @@
   <style>
     .svc-page { padding-top: 60px; }
     .legal-hero {
-      background: linear-gradient(135deg, #00516A 0%, #00a2e8 100%);
+      background: linear-gradient(135deg, #00516A 0%, #4FC4F0 100%);
       color: #fff; padding: 56px 0 44px; text-align: center;
     }
     .legal-hero .svc-eyebrow { color: rgba(255,255,255,0.85); }
@@ -38,7 +38,7 @@
     .legal-section p, .legal-section li { color: #374151; line-height: 1.7; }
     .legal-section ul { margin: 8px 0 8px 20px; }
     .legal-callout {
-      background: #f0f9ff; border-left: 4px solid #00a2e8;
+      background: #f0f9ff; border-left: 4px solid #4FC4F0;
       padding: 14px 18px; border-radius: 8px; margin: 16px 0;
     }
   </style>

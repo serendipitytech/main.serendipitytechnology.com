@@ -4,7 +4,8 @@
     :root {
       /* Brand Colors */
       --color-primary: #4FC4F0;
-      --color-primary-dark: #3ab0dc;
+      --color-primary-dark: #176E96;
+      --color-primary-deep: #1A7FAA;
       --color-accent: #F7B06A;
       --color-text: #1F2937;
       --color-text-muted: #4b5563;
@@ -99,7 +100,7 @@
       margin-bottom: 1.5rem;
     }
     .btn {
-      background-color: #4FC4F0;
+      background-color: #1A7FAA;
       color: white;
       border: none;
       padding: 0.75rem 1.5rem;
@@ -109,7 +110,7 @@
       transition: background-color 0.2s ease;
     }
     .btn:hover {
-      background-color: #3ab0dc;
+      background-color: #176E96;
     }
     section {
       padding: 2rem 1rem;
@@ -119,14 +120,14 @@
     /*.section-title {*/
     /*  font-size: 1.6rem;*/
     /*  margin-bottom: 1rem;*/
-    /*  color: #00a2e8;*/
+    /*  color: #4FC4F0;*/
     /*  text-align: center;*/
     /*}*/
     .section-title {
       position: relative;
       display: inline-block;
       font-size: 2rem;
-      color: #4FC4F0;
+      color: #1F2937;
       margin-bottom: 1.5rem;
     }
 
@@ -232,7 +233,7 @@
       background: #E5E7EB;
     }
     footer a {
-      color: #4FC4F0;
+      color: #1A7FAA;
       text-decoration: none;
     }
     footer a:hover {
@@ -362,7 +363,7 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: linear-gradient(135deg, #4FC4F0, #3ab0dc);
+  background: linear-gradient(135deg, #1A7FAA, #176E96);
   color: white;
   font-size: 0.7rem;
   font-weight: 600;
@@ -534,7 +535,7 @@ a.hidden-project {
 
 .toggle-btn:hover {
   border-color: #4FC4F0;
-  color: #4FC4F0;
+  color: #1A7FAA;
   background: rgba(79, 196, 240, 0.05);
 }
 
@@ -683,7 +684,7 @@ a.hidden-project {
 
 .project-hero-image:hover .hero-image-hint {
   opacity: 1;
-  color: var(--color-primary);
+  color: #1A7FAA;
 }
 
 /* Lightbox */
@@ -750,7 +751,7 @@ a.hidden-project {
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
-  color: var(--color-primary);
+  color: #1A7FAA;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 400;
@@ -820,7 +821,7 @@ a.hidden-project {
 
 .featured-badge-large {
   display: inline-block;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  background: linear-gradient(135deg, #1A7FAA, #176E96);
   color: white;
   font-size: 0.7rem;
   font-weight: 500;
@@ -883,7 +884,7 @@ a.hidden-project {
 
 .project-tag:hover {
   border-color: var(--color-primary);
-  color: var(--color-primary);
+  color: #1A7FAA;
 }
 
 /* Content Area */

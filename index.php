@@ -141,7 +141,7 @@ $gridProjects = getGridProjects();
         duration: 600,
         offset: 50,           // trigger animation slightly earlier (default 120)
         easing: 'ease-out',
-        disable: 'phone'      // skip on phones — they're already mid-scroll fast
+        disable: 'phone'      // skip on phones, they're already mid-scroll fast
       });
     });
     // Refresh AOS positions after all images/fonts load — fixes Safari delay where
@@ -221,7 +221,7 @@ $gridProjects = getGridProjects();
     .services-index-card-price {
       font-size: 12px;
       font-weight: 600;
-      color: #4FC4F0;
+      color: #1A7FAA;
     }
 
     /* "What We Do" grid: 4 cards balanced in one row on desktop,
@@ -261,7 +261,7 @@ include __DIR__ . '/partials/site-header.php';
   <div class="header-overlay">
     <img src="img/logo.png" alt="Serendipity Technology Logo" class="mx-auto mb-4" style="width: 300px;" />
     <h1 class="text-4xl font-bold mt-6 mb-2 text-white">Custom Software Development in Volusia County</h1>
-    <p class="text-lg mb-6 text-white">Workflow automation and data integration for Florida businesses — no vendor lock-in.</p>
+    <p class="text-lg mb-6 text-white">Workflow automation and data integration for Florida businesses, no vendor lock-in.</p>
 <button onclick="openModal()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
   Let's Talk
 </button>
@@ -330,7 +330,7 @@ include __DIR__ . '/partials/site-header.php';
       <div id="turnstileWidget" class="cf-turnstile" data-sitekey="0x4AAAAAACWJ-_uz-IpGJG0B" data-theme="light"></div>
       <button type="submit"
         class="w-full py-3 px-4 rounded-lg font-semibold text-white
-        bg-[#4FC4F0] hover:bg-[#3ab0dc]
+        bg-[#1A7FAA] hover:bg-[#176E96]
         shadow-md hover:shadow-lg hover:-translate-y-0.5
         transition-all duration-200">
         Send Message
@@ -411,7 +411,7 @@ include __DIR__ . '/partials/site-header.php';
     </a>
   </div>
   <div style="text-align:center; margin-top:1.5rem;">
-    <a href="/services/" style="color:#4FC4F0; font-weight:500; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+    <a href="/services/" style="color:#1A7FAA; font-weight:500; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
       View all services
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>

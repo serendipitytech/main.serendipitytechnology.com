@@ -97,7 +97,7 @@ if (!RESEND_API_KEY) {
 $emailPayload = [
     'from'    => 'Candidate Inquiries <contact@serendipitytechnology.com>',
     'to'      => ['info@serendipitytech.net'],
-    'subject' => "New Candidate Inquiry — {$campaign_name}",
+    'subject' => "New Candidate Inquiry, {$campaign_name}",
     'text'    => $body,
 ];
 

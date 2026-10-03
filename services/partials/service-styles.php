@@ -19,7 +19,8 @@
   --svc-border: #e5e7eb;
   --svc-border-hover: #d1d5db;
   --svc-primary: #4FC4F0;
-  --svc-primary-hover: #2cb1e3;
+  --svc-primary-hover: #176E96;
+  --svc-primary-solid: #1A7FAA;
   --svc-primary-text: #ffffff;
   --svc-accent: #F7B06A;
   --svc-accent-hover: #f59e0b;
@@ -248,9 +249,9 @@
 .svc-btn:active { transform: translateY(1px); }
 
 .svc-btn-primary {
-  background: var(--svc-primary);
+  background: var(--svc-primary-solid);
   color: var(--svc-primary-text);
-  border-color: var(--svc-primary);
+  border-color: var(--svc-primary-solid);
 }
 
 .svc-btn-primary:hover {
@@ -372,7 +373,7 @@
 .svc-pricing-number {
   font-size: 40px;
   font-weight: 700;
-  color: var(--svc-primary);
+  color: #1A7FAA;
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -489,7 +490,7 @@
   font-family: inherit;
 }
 
-.svc-faq-question:hover { color: var(--svc-primary); }
+.svc-faq-question:hover { color: #1A7FAA; }
 
 .svc-faq-toggle {
   flex-shrink: 0;
@@ -512,7 +513,7 @@
 }
 
 .svc-faq-answer a {
-  color: var(--svc-primary);
+  color: #1A7FAA;
   text-decoration: underline;
 }
 

@@ -88,7 +88,7 @@ $header_chat_action = $header_chat_action ?? 'openContactModal()';
     transition: color 0.15s ease;
     white-space: nowrap;
   }
-  .scroll-nav-link:hover { color: #4FC4F0; }
+  .scroll-nav-link:hover { color: #1A7FAA; }
   @media (max-width: 768px) {
     .scroll-nav-links { display: none; }
   }
@@ -103,7 +103,7 @@ $header_chat_action = $header_chat_action ?? 'openContactModal()';
     align-items: center;
     transition: color 0.15s ease;
   }
-  .scroll-chat-btn:hover { color: #4FC4F0; }
+  .scroll-chat-btn:hover { color: #1A7FAA; }
   /* When always-visible, body needs top padding so content doesn't hide under nav */
   body.has-fixed-header {
     padding-top: 60px;

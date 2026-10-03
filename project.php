@@ -148,7 +148,7 @@ include __DIR__ . '/partials/site-header.php';
     <div class="not-found">
         <h1>Project Not Found</h1>
         <p>Sorry, we couldn't find the project you're looking for.</p>
-        <a href="index.php" class="btn" style="display: inline-block; background: var(--color-primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;">
+        <a href="index.php" class="btn" style="display: inline-block; background: var(--color-primary-deep, #1A7FAA); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;">
             Back to Home
         </a>
     </div>

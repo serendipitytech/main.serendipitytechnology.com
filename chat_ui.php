@@ -106,7 +106,7 @@ $twilioNumber = TWILIO_PHONE_NUMBER;
 
         <form id="messageForm" class="flex p-4 bg-white border-t">
           <input type="text" id="messageInput" name="body" placeholder="Your message..." class="flex-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#4FC4F0]" required />
-          <button type="submit" class="ml-2 bg-[#4FC4F0] hover:bg-[#3ab0dc] text-white px-4 py-2 rounded transition-colors">Send</button>
+          <button type="submit" class="ml-2 bg-[#1A7FAA] hover:bg-[#176E96] text-white px-4 py-2 rounded transition-colors">Send</button>
         </form>
       </div>
 
@@ -280,7 +280,7 @@ function renderMessages(messages) {
 
     div.className = `mb-3 max-w-[75%] ${isOutbound ? 'ml-auto' : ''}`;
     div.innerHTML = `
-      <div class="p-3 rounded-lg ${isOutbound ? 'bg-[#4FC4F0] text-white' : 'bg-gray-200 text-gray-900'}">
+      <div class="p-3 rounded-lg ${isOutbound ? 'bg-[#1A7FAA] text-white' : 'bg-gray-200 text-gray-900'}">
         ${msg.body || ''}
       </div>
       <div class="text-xs text-gray-400 mt-1 ${isOutbound ? 'text-right' : ''}">${formatTime(msg.timestamp || msg.created_at)}</div>
@@ -436,7 +436,7 @@ async function selectVoicemail(vm) {
           <label class="block text-sm font-medium text-gray-700 mb-2">Suggested Response</label>
           <p class="text-gray-600 bg-blue-50 p-3 rounded border border-blue-100">${vm.suggested_response}</p>
           <button onclick="sendSuggestedResponse('${vm.from}', \`${vm.suggested_response.replace(/`/g, '\\`')}\`)"
-                  class="mt-2 bg-[#4FC4F0] hover:bg-[#3ab0dc] text-white px-4 py-2 rounded text-sm transition-colors">
+                  class="mt-2 bg-[#1A7FAA] hover:bg-[#176E96] text-white px-4 py-2 rounded text-sm transition-colors">
             Send This Response
           </button>
         </div>

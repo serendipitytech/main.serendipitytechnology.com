@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <button
                 type="submit"
-                class="w-full bg-[#4FC4F0] hover:bg-[#3ab0dc] text-white font-semibold py-2 px-4 rounded-md transition-colors"
+                class="w-full bg-[#1A7FAA] hover:bg-[#176E96] text-white font-semibold py-2 px-4 rounded-md transition-colors"
             >
                 Login
             </button>

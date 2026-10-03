@@ -118,7 +118,7 @@
     padding: 12px;
     border: 0;
     border-radius: 8px;
-    background: #4FC4F0;
+    background: #1A7FAA;
     color: #fff;
     font-size: 15px;
     font-weight: 600;
@@ -126,7 +126,7 @@
     transition: background 0.15s ease;
     margin-top: 8px;
   }
-  .site-modal-submit:hover { background: #2cb1e3; }
+  .site-modal-submit:hover { background: #176E96; }
   .site-modal-submit:disabled { opacity: 0.6; cursor: not-allowed; }
   .site-modal-feedback {
     font-size: 14px;

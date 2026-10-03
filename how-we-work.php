@@ -9,13 +9,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How We Work | AI-Directed Engineering — Serendipity Technology</title>
-  <meta name="description" content="One architect. AI-directed execution. Agency-scale results for small organizations in Central Florida — without the agency overhead.">
+  <title>How We Work | AI-Directed Engineering | Serendipity Technology</title>
+  <meta name="description" content="One architect. AI-directed execution. Agency-scale results for small organizations in Central Florida, without the agency overhead.">
   <link rel="canonical" href="https://serendipitytechnology.com/how-we-work">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="How We Work — Serendipity Technology">
+  <meta property="og:title" content="How We Work | Serendipity Technology">
   <meta property="og:description" content="One architect. AI-directed execution. Agency-scale results for small organizations in Central Florida.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://serendipitytechnology.com/how-we-work">
@@ -33,6 +33,7 @@
   <style>
     :root {
       --primary: #4FC4F0;
+      --primary-deep: #1A7FAA;
       --accent:  #F7B06A;
       --text:    #1F2937;
       --muted:   #475569;
@@ -61,13 +62,13 @@
       color: var(--text);
     }
 
-    a { color: var(--primary); text-decoration: none; }
+    a { color: #1A7FAA; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     /* ── Gradient bar ── */
     .gradient-bar {
       height: 4px;
-      background: linear-gradient(to right, #00a2e8, #ffa645);
+      background: linear-gradient(to right, #4FC4F0, #F7B06A);
     }
 
     /* ── Container ── */
@@ -114,7 +115,7 @@
       flex-wrap: wrap;
     }
     .btn-primary {
-      background: var(--primary);
+      background: var(--primary-deep);
       color: #fff;
       font-weight: 500;
       padding: 12px 28px;
@@ -125,7 +126,7 @@
       transition: background 0.2s;
       text-decoration: none;
     }
-    .btn-primary:hover { background: #38b2dc; text-decoration: none; color: #fff; }
+    .btn-primary:hover { background: #176E96; text-decoration: none; color: #fff; }
     .btn-ghost {
       background: transparent;
       color: #fff;
@@ -219,7 +220,7 @@
       font-family: var(--font-heading);
       font-size: 44px;
       font-weight: 700;
-      color: var(--primary);
+      color: #1A7FAA;
       line-height: 1;
       display: block;
     }
@@ -324,7 +325,7 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background: var(--primary);
+      background: var(--primary-deep);
       color: #fff;
       display: flex;
       align-items: center;
@@ -339,7 +340,7 @@
 
     /* ── CTA band ── */
     .cta-band {
-      background: var(--primary);
+      background: var(--primary-deep);
       padding: 72px 24px;
       text-align: center;
       color: #fff;
@@ -348,7 +349,7 @@
     .cta-band p { color: rgba(255,255,255,0.88); max-width: 540px; margin: 0 auto 28px; font-size: 16px; }
     .btn-white {
       background: #fff;
-      color: var(--primary);
+      color: var(--primary-deep);
       font-weight: 600;
       padding: 13px 32px;
       border-radius: 8px;
@@ -359,7 +360,7 @@
       display: inline-block;
       transition: opacity 0.2s;
     }
-    .btn-white:hover { opacity: 0.9; text-decoration: none; color: var(--primary); }
+    .btn-white:hover { opacity: 0.9; text-decoration: none; color: #176E96; }
     .cta-secondary-link {
       display: block;
       margin-top: 16px;
@@ -401,7 +402,7 @@ include __DIR__ . '/partials/site-header.php';
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     SECTION 1 — THE CONCEPT
+     SECTION 1, THE CONCEPT
 ═══════════════════════════════════════════════ -->
 <section class="section" id="concept">
   <div class="container">
@@ -415,7 +416,7 @@ include __DIR__ . '/partials/site-header.php';
       <p>
         Troy owns the architecture. He designs the system, sets the security rules, makes the final
         calls on every data model and integration point, and is accountable for what goes into
-        production. What AI does is the heavy lifting of implementation — writing code against those
+        production. What AI does is the heavy lifting of implementation, writing code against those
         specifications, reviewing it, and maintaining it across dozens of services.
       </p>
       <p>
@@ -425,7 +426,7 @@ include __DIR__ . '/partials/site-header.php';
       </p>
       <p>
         What this means in practice: a single practitioner running the equivalent workload of a
-        small engineering team — not by cutting corners, but by redirecting where human judgment
+        small engineering team, not by cutting corners, but by redirecting where human judgment
         goes. Judgment is spent on architecture and client outcomes. Execution is delegated to AI
         under that judgment.
       </p>
@@ -438,7 +439,7 @@ include __DIR__ . '/partials/site-header.php';
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     SECTION 2 — WHAT THIS MEANS FOR YOU
+     SECTION 2, WHAT THIS MEANS FOR YOU
 ═══════════════════════════════════════════════ -->
 <section class="section section-alt" id="benefits">
   <div class="container">
@@ -458,7 +459,7 @@ include __DIR__ . '/partials/site-header.php';
         <h3>You pay for outcomes, not overhead.</h3>
         <p>
           A traditional agency bills you for project managers, developers, QA, and account
-          coordination time — organizational overhead as much as technology. This model passes
+          coordination time, organizational overhead as much as technology. This model passes
           the efficiency directly to you: the same caliber of custom software, without the
           agency markup.
         </p>
@@ -474,8 +475,8 @@ include __DIR__ . '/partials/site-header.php';
         <h3>One person knows your entire system.</h3>
         <p>
           No handoffs. No "the person who built that moved on." Troy built it, Troy maintains
-          it, Troy answers for it. When something breaks at 11pm, there is no ticket queue —
-          there is a person who cares about your platform.
+          it, Troy answers for it. When something breaks at 11pm, there is no ticket queue.
+          There is a person who cares about your platform.
         </p>
       </div>
 
@@ -490,7 +491,7 @@ include __DIR__ . '/partials/site-header.php';
         <p>
           Enterprise projects stall in approval chains and inter-team coordination. This
           practice is structurally incapable of that. An architecture decision gets made,
-          communicated to you, and moves to implementation — not to three other stakeholders
+          communicated to you, and moves to implementation, not to three other stakeholders
           who need to be looped in first.
         </p>
       </div>
@@ -500,7 +501,7 @@ include __DIR__ . '/partials/site-header.php';
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     SECTION 3 — THE RECEIPTS / INFRASTRUCTURE
+     SECTION 3, THE RECEIPTS / INFRASTRUCTURE
 ═══════════════════════════════════════════════ -->
 <section class="section" id="proof">
   <div class="container">
@@ -526,7 +527,7 @@ include __DIR__ . '/partials/site-header.php';
 
     <div class="prose" data-aos="fade-up" data-aos-delay="120">
       <p>
-        Every client's data, API keys, and credentials live in fully isolated environments —
+        Every client's data, API keys, and credentials live in fully isolated environments:
         separate networks, separate secrets, no cross-contamination. That is not a policy;
         it is enforced at the infrastructure level through Docker network isolation and
         per-client secret management.
@@ -542,7 +543,7 @@ include __DIR__ . '/partials/site-header.php';
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     SECTION 4 — PROJECT VIGNETTES
+     SECTION 4, PROJECT VIGNETTES
 ═══════════════════════════════════════════════ -->
 <section class="section section-alt" id="work">
   <div class="container">
@@ -558,7 +559,7 @@ include __DIR__ . '/partials/site-header.php';
         <h3>Public-Facing Elections Information API</h3>
         <p>
           A political data operation needed a way to let canvassers and volunteers look up
-          voter precinct information in the field — accurately, fast, without a training
+          voter precinct information in the field, accurately, fast, without a training
           manual. We built a public-facing elections-information API with a real-time lookup
           interface, geocoded precinct data, an administrative validation engine, and
           auto-syncing public documentation. The system handles the full data pipeline from
@@ -588,7 +589,7 @@ include __DIR__ . '/partials/site-header.php';
         <h3>Marketing Automation and Email Infrastructure for a Data-Driven Organization</h3>
         <p>
           A data-driven organization managing a six-figure contact database needed reliable,
-          cost-controlled outreach — not landing in spam, not hitting daily send limits, not
+          cost-controlled outreach, not landing in spam, not hitting daily send limits, not
           paying per-contact retail rates to a commercial platform. We stood up a self-hosted
           marketing-automation platform with campaign segmentation, contact lifecycle
           management, and delivery backed by Amazon SES, provisioned for 50,000 emails per
@@ -618,7 +619,7 @@ include __DIR__ . '/partials/site-header.php';
         <h3>Custom E-Commerce Platform for a Multi-Tenant Merchandise Reseller</h3>
         <p>
           An off-the-shelf storefront was costing a merchandise reseller flexibility and
-          margin — it couldn't support the dynamic pricing logic, per-tenant catalog rules,
+          margin, it couldn't support the dynamic pricing logic, per-tenant catalog rules,
           or reporting depth the business actually needed. We replaced it with a purpose-built
           platform: a customer-facing storefront, a dynamic pricing matrix, per-tenant order
           management, and reporting dashboards that give the operator real visibility into
@@ -727,7 +728,7 @@ include __DIR__ . '/partials/site-header.php';
           Traefik reverse proxy with automatic SSL, nightly encrypted backups with offsite
           archiving, a real-time traffic analytics dashboard, and an AI operations assistant
           monitoring the stack around the clock. Per-client credential isolation is enforced
-          at the network level — not by policy, by architecture.
+          at the network level, not by policy, by architecture.
         </p>
         <div class="vignette-tags">
           <span class="tag">Docker orchestration</span>
@@ -742,7 +743,7 @@ include __DIR__ . '/partials/site-header.php';
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     SECTION 5 — HOW WE WORK TOGETHER
+     SECTION 5, HOW WE WORK TOGETHER
 ═══════════════════════════════════════════════ -->
 <section class="section" id="process">
   <div class="container">
@@ -763,7 +764,7 @@ include __DIR__ . '/partials/site-header.php';
         <div class="step-number">2</div>
         <h3>Architecture proposal</h3>
         <p>
-          A written document — not a sales deck — describing the technical approach, what you
+          A written document, not a sales deck, describing the technical approach, what you
           own at the end, how it fits your existing tools, and what it costs. No
           mystery-meat proposals.
         </p>

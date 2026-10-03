@@ -19,14 +19,14 @@ include __DIR__ . '/partials/site-header.php';
       gtag('config', 'G-G50KCN37LQ');
     </script>
 
-    <title>Get Started — Custom Software Project | Serendipity Technology</title>
-    <meta name="description" content="Start your custom software project with Serendipity Technology. Tell us what you need — workflow automation, data integration, or a custom app — and we'll scope it with you." />
+    <title>Get Started | Custom Software Project | Serendipity Technology</title>
+    <meta name="description" content="Start your custom software project with Serendipity Technology. Tell us what you need, workflow automation, data integration, or a custom app, and we'll scope it with you." />
     <link rel="canonical" href="https://serendipitytechnology.com/get-started">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://serendipitytechnology.com/get-started" />
-    <meta property="og:title" content="Get Started — Custom Software Project | Serendipity Technology" />
+    <meta property="og:title" content="Get Started | Custom Software Project | Serendipity Technology" />
     <meta property="og:description" content="Tell us what you need and we'll scope your custom software project with you." />
     <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
     <meta property="og:site_name" content="Serendipity Technology" />
@@ -34,7 +34,7 @@ include __DIR__ . '/partials/site-header.php';
     <style>
         :root {
             --primary: #4FC4F0;
-            --primary-dark: #3BA8D8;
+            --primary-dark: #1A7FAA;
             --primary-light: rgba(79,196,240,0.1);
             --accent: #F7B06A;
             --accent-dark: #E89B4E;
@@ -110,7 +110,7 @@ include __DIR__ . '/partials/site-header.php';
             transition: all 0.2s ease;
         }
         .progress-step.active .step-number {
-            background: var(--primary);
+            background: #1A7FAA;
             color: var(--white);
         }
         .progress-step.completed .step-number {
@@ -198,7 +198,7 @@ include __DIR__ . '/partials/site-header.php';
             right: 12px;
             width: 28px;
             height: 28px;
-            background: var(--primary);
+            background: #1A7FAA;
             color: var(--white);
             border-radius: 50%;
             display: flex;
@@ -280,7 +280,7 @@ include __DIR__ . '/partials/site-header.php';
         }
         .btn-preview {
             font-size: 12px;
-            color: var(--primary);
+            color: #1A7FAA;
             background: none;
             border: 1px solid var(--primary);
             border-radius: 6px;
@@ -289,7 +289,7 @@ include __DIR__ . '/partials/site-header.php';
             transition: background 0.15s ease, color 0.15s ease;
         }
         .btn-preview:hover {
-            background: var(--primary);
+            background: #1A7FAA;
             color: var(--white);
         }
 
@@ -343,9 +343,9 @@ include __DIR__ . '/partials/site-header.php';
             transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
             color: var(--slate);
         }
-        .filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+        .filter-btn:hover { border-color: var(--primary); color: #1A7FAA; }
         .filter-btn.active {
-            background: var(--primary);
+            background: #1A7FAA;
             color: var(--white);
             border-color: var(--primary);
         }
@@ -469,7 +469,7 @@ include __DIR__ . '/partials/site-header.php';
             font-size: 13px;
             color: var(--slate);
         }
-        .file-upload .upload-text strong { color: var(--primary); }
+        .file-upload .upload-text strong { color: #1A7FAA; }
 
         /* Plan Cards */
         .plan-grid {
@@ -518,7 +518,7 @@ include __DIR__ . '/partials/site-header.php';
         .plan-price .setup {
             font-size: 28px;
             font-weight: 700;
-            color: var(--primary);
+            color: #1A7FAA;
         }
         .plan-price .setup-label {
             font-size: 13px;
@@ -616,7 +616,7 @@ include __DIR__ . '/partials/site-header.php';
         }
         .btn-secondary:hover {
             border-color: var(--primary);
-            color: var(--primary);
+            color: #1A7FAA;
         }
         .btn-large {
             width: 100%;
@@ -866,7 +866,7 @@ include __DIR__ . '/partials/site-header.php';
     <div class="step-panel active" id="step1">
         <div class="panel-header">
             <h2>Choose Your Template</h2>
-            <p>Pick a starting point — we'll customize it to match your brand perfectly.</p>
+            <p>Pick a starting point, we'll customize it to match your brand perfectly.</p>
         </div>
 
         <div class="category-filter">
@@ -1043,32 +1043,32 @@ include __DIR__ . '/partials/site-header.php';
                 <h4>Order Summary</h4>
                 <div class="summary-row">
                     <span class="label">Template</span>
-                    <span class="value" id="summaryTemplate">—</span>
+                    <span class="value" id="summaryTemplate">-</span>
                 </div>
                 <div class="summary-row">
                     <span class="label">Theme</span>
-                    <span class="value" id="summaryTheme">—</span>
+                    <span class="value" id="summaryTheme">-</span>
                 </div>
                 <div class="summary-row">
                     <span class="label">Client</span>
-                    <span class="value" id="summaryClient">—</span>
+                    <span class="value" id="summaryClient">-</span>
                 </div>
                 <div class="summary-row">
                     <span class="label">Domain</span>
-                    <span class="value" id="summaryDomain">—</span>
+                    <span class="value" id="summaryDomain">-</span>
                 </div>
                 <div class="summary-row">
                     <span class="label">Plan</span>
-                    <span class="value" id="summaryPlan">—</span>
+                    <span class="value" id="summaryPlan">-</span>
                 </div>
                 <div class="summary-row">
                     <span class="label">Email Newsletter</span>
-                    <span class="value" id="summaryMailing">—</span>
+                    <span class="value" id="summaryMailing">-</span>
                 </div>
             </div>
             <div class="summary-total">
                 <span>Setup Fee</span>
-                <span id="summaryTotal">—</span>
+                <span id="summaryTotal">-</span>
             </div>
             <p style="font-size:13px; color:var(--gray); margin-top:8px;">
                 Monthly hosting billed separately via invoice after site goes live.
@@ -1346,12 +1346,12 @@ function updateSummary() {
         : (formState.template === 'envato' ? 'Envato Elements (TBD)' : 'Custom Template');
 
     document.getElementById('summaryTemplate').textContent = templateName;
-    document.getElementById('summaryTheme').textContent = formState.themeName || '—';
-    document.getElementById('summaryClient').textContent = formState.clientName || '—';
-    document.getElementById('summaryDomain').textContent = formState.domainName || '—';
-    document.getElementById('summaryPlan').textContent = plan ? plan.name + ' ($' + plan.monthly + '/mo)' : '—';
+    document.getElementById('summaryTheme').textContent = formState.themeName || '-';
+    document.getElementById('summaryClient').textContent = formState.clientName || '-';
+    document.getElementById('summaryDomain').textContent = formState.domainName || '-';
+    document.getElementById('summaryPlan').textContent = plan ? plan.name + ' ($' + plan.monthly + '/mo)' : '-';
     document.getElementById('summaryMailing').textContent = formState.mailingList ? 'Yes' : 'No';
-    document.getElementById('summaryTotal').textContent = plan ? '$' + plan.setup : '—';
+    document.getElementById('summaryTotal').textContent = plan ? '$' + plan.setup : '-';
 }
 
 function checkSubmitReady() {
@@ -1582,7 +1582,7 @@ function openPreview(templateId) {
     // Update reset defaults
     previewDefaults[t.previewUrl] = { primary: defaults.primary, accent: defaults.accent };
 
-    document.getElementById('previewTitle').textContent = t.name + ' — Live Preview';
+    document.getElementById('previewTitle').textContent = t.name + ', Live Preview';
     previewFrame.src = t.previewUrl;
     document.getElementById('previewModal').classList.add('show');
     document.body.style.overflow = 'hidden';

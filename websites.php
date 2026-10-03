@@ -122,9 +122,9 @@
     .pricing-card{background:#fff;border:2px solid #e5e7eb;border-radius:16px;padding:1.75rem;position:relative;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;display:flex;flex-direction:column}
     .pricing-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1);border-color:#4FC4F0}
     .pricing-card.featured{border-color:#F7B06A;background:linear-gradient(135deg,#fffbf5 0%,#fff 100%)}
-    .pricing-card.featured::before{content:'Most Popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#F7B06A,#f59e0b);color:white;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:.35rem 1rem;border-radius:20px}
+    .pricing-card.featured::before{content:'Most Popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#F7B06A,#f59e0b);color:#1F2937;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:.35rem 1rem;border-radius:20px}
     .pricing-title{font-size:1.4rem;margin-bottom:.5rem}
-    .pricing-price{font-size:2.5rem;font-weight:700;color:#4FC4F0;margin:1rem 0}
+    .pricing-price{font-size:2.5rem;font-weight:700;color:#1A7FAA;margin:1rem 0}
     .pricing-price span{font-size:1rem;font-weight:400;color:#6b7280}
     .pricing-setup{font-size:.85rem;color:#6b7280;margin-top:-.5rem;margin-bottom:1rem}
     .pricing-features{list-style:none;padding:0;margin:1.5rem 0;flex:1}
@@ -137,7 +137,7 @@
     .addon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.5rem}
     .addon-item{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.25rem;text-align:center;transition:border-color .2s}
     .addon-item:hover{border-color:#4FC4F0}
-    .addon-price{font-size:1.25rem;font-weight:700;color:#4FC4F0;margin:.5rem 0 .25rem}
+    .addon-price{font-size:1.25rem;font-weight:700;color:#1A7FAA;margin:.5rem 0 .25rem}
     .addon-label{font-size:.9rem;color:#4b5563}
 
     /* Included grid */
@@ -150,7 +150,7 @@
     /* Process steps */
     .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2rem}
     .process-step{text-align:center;padding:1.5rem}
-    .step-number{width:48px;height:48px;background:linear-gradient(135deg,#4FC4F0,#3ab0dc);color:white;font-weight:700;font-size:1.25rem;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+    .step-number{width:48px;height:48px;background:linear-gradient(135deg,#1A7FAA,#176E96);color:white;font-weight:700;font-size:1.25rem;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
 
     /* FAQ */
     .faq-item{border-bottom:1px solid #e5e7eb;padding:1.25rem 0}
@@ -165,8 +165,8 @@
     .cta-section h2{color:white}
     .cta-section > *{max-width:1000px;margin-left:auto;margin-right:auto}
     .cta-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2rem}
-    .btn-primary{background:linear-gradient(135deg,#4FC4F0,#3ab0dc);color:white;border:none;padding:1rem 2rem;font-size:1.1rem;font-weight:500;border-radius:8px;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(79,196,240,.4)}
+    .btn-primary{background:linear-gradient(135deg,#1A7FAA,#176E96);color:white;border:none;padding:1rem 2rem;font-size:1.1rem;font-weight:500;border-radius:8px;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(26,127,170,.4)}
     .btn-secondary{background:transparent;color:white;border:2px solid rgba(255,255,255,.3);padding:1rem 2rem;font-size:1.1rem;font-weight:500;border-radius:8px;cursor:pointer;transition:all .2s ease;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem}
     .btn-secondary:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5)}
 
@@ -254,7 +254,7 @@ include __DIR__ . '/partials/site-header.php';
       </div>
       <div>
         <strong class="block text-gray-900">AI-Powered Updates</strong>
-        <span class="text-gray-600 text-sm">Submit a request in plain English through your portal. Text changes, new sections, image swaps — our AI implements it overnight.</span>
+        <span class="text-gray-600 text-sm">Submit a request in plain English through your portal. Text changes, new sections, image swaps, our AI implements it overnight.</span>
       </div>
     </div>
     <div class="included-item">
@@ -272,7 +272,7 @@ include __DIR__ . '/partials/site-header.php';
       </div>
       <div>
         <strong class="block text-gray-900">Client Portal</strong>
-        <span class="text-gray-600 text-sm">Track your requests, manage billing, update preferences — all in one place at projects.serendipitylabs.cloud.</span>
+        <span class="text-gray-600 text-sm">Track your requests, manage billing, update preferences, all in one place at projects.serendipitylabs.cloud.</span>
       </div>
     </div>
     <div class="included-item">
@@ -290,7 +290,7 @@ include __DIR__ . '/partials/site-header.php';
 <!-- Pricing -->
 <section class="bg-gray-50" data-aos="fade-up">
   <h2 class="section-title">Simple, Transparent Pricing</h2>
-  <p class="text-gray-600 mb-6">Every plan includes hosting, SSL, and AI-powered site updates. No contracts — cancel anytime.</p>
+  <p class="text-gray-600 mb-6">Every plan includes hosting, SSL, and AI-powered site updates. No contracts, cancel anytime.</p>
 
   <div class="pricing-grid">
     <!-- Base -->
@@ -318,7 +318,7 @@ include __DIR__ . '/partials/site-header.php';
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          AI updates — $19 per request
+          AI updates, $19 per request
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -396,7 +396,7 @@ include __DIR__ . '/partials/site-header.php';
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Newsletter — 500 sends/month
+          Newsletter, 500 sends/month
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -407,7 +407,7 @@ include __DIR__ . '/partials/site-header.php';
           Priority support
         </li>
       </ul>
-      <button onclick="openModal('growth')" class="btn-primary w-full" style="justify-content:center;background:linear-gradient(135deg,#F7B06A,#f59e0b)">Get Started</button>
+      <button onclick="openModal('growth')" class="btn-primary w-full" style="justify-content:center;background:linear-gradient(135deg,#F7B06A,#f59e0b);color:#1F2937">Get Started</button>
     </div>
 
     <!-- Professional -->
@@ -435,7 +435,7 @@ include __DIR__ . '/partials/site-header.php';
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Newsletter — 2,000 sends/month
+          Newsletter, 2,000 sends/month
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -535,7 +535,7 @@ include __DIR__ . '/partials/site-header.php';
     <div class="process-step" data-aos="fade-up" data-aos-delay="200">
       <div class="step-number">3</div>
       <h3 class="font-semibold mb-2">Point Your Domain</h3>
-      <p class="text-gray-600 text-sm">Simple DNS update — we walk you through every step</p>
+      <p class="text-gray-600 text-sm">Simple DNS update, we walk you through every step</p>
     </div>
     <div class="process-step" data-aos="fade-up" data-aos-delay="300">
       <div class="step-number">4</div>
@@ -556,7 +556,7 @@ include __DIR__ . '/partials/site-header.php';
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
       <div class="faq-answer">
-        Text changes, image swaps, new sections, color adjustments, adding pages, contact form updates, and more. Submit your request in plain English — no technical knowledge needed. For complex custom features like booking systems or integrations, we offer hourly development.
+        Text changes, image swaps, new sections, color adjustments, adding pages, contact form updates, and more. Submit your request in plain English, no technical knowledge needed. For complex custom features like booking systems or integrations, we offer hourly development.
       </div>
     </div>
 
@@ -576,7 +576,7 @@ include __DIR__ . '/partials/site-header.php';
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
       <div class="faq-answer">
-        Extra AI update requests are just $25 each, or you can upgrade your plan anytime. No contracts or commitments — everything is month-to-month.
+        Extra AI update requests are just $25 each, or you can upgrade your plan anytime. No contracts or commitments, everything is month-to-month.
       </div>
     </div>
 
@@ -586,7 +586,7 @@ include __DIR__ . '/partials/site-header.php';
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
       <div class="faq-answer">
-        None at all. Submit requests in plain English through your client portal. "Add a new section about our weekend specials" or "change the hero image to this photo" — our AI understands what you need and makes it happen overnight.
+        None at all. Submit requests in plain English through your client portal. "Add a new section about our weekend specials" or "change the hero image to this photo", our AI understands what you need and makes it happen overnight.
       </div>
     </div>
 
@@ -616,7 +616,7 @@ include __DIR__ . '/partials/site-header.php';
 <section class="bg-gray-50" data-aos="fade-up">
   <h2 class="section-title">About Serendipity Technology</h2>
   <p class="text-lg text-gray-600 max-w-3xl mb-6">
-    We're a civic technology company based in Volusia County, Florida. We believe every local business deserves a professional web presence — without the enterprise price tag or the DIY headaches.
+    We're a civic technology company based in Volusia County, Florida. We believe every local business deserves a professional web presence, without the enterprise price tag or the DIY headaches.
   </p>
 
   <div class="trust-badges">
@@ -713,10 +713,10 @@ include __DIR__ . '/partials/site-header.php';
             focus:bg-white focus:border-[#4FC4F0] focus:ring-2 focus:ring-[#4FC4F0]/20
             outline-none transition-all duration-200 text-sm">
             <option value="">Not sure yet</option>
-            <option value="base">Base — $9/mo</option>
-            <option value="starter">Starter — $19/mo</option>
-            <option value="growth">Growth — $49/mo</option>
-            <option value="professional">Professional — $99/mo</option>
+            <option value="base">Base, $9/mo</option>
+            <option value="starter">Starter, $19/mo</option>
+            <option value="growth">Growth, $49/mo</option>
+            <option value="professional">Professional, $99/mo</option>
           </select>
         </label>
 

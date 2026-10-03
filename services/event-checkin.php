@@ -15,8 +15,8 @@
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Event Check-In Service — $499 per event">
-  <meta property="og:description" content="Multi-device synced check-in app for galas, conferences, and private events. Set up in days — includes training and live remote support.">
+  <meta property="og:title" content="Event Check-In Service | $499 per event">
+  <meta property="og:description" content="Multi-device synced check-in app for galas, conferences, and private events. Set up in days, includes training and live remote support.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://serendipitytechnology.com/services/event-checkin">
   <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png">
@@ -67,7 +67,7 @@ $hero_bg_image       = 'https://images.unsplash.com/photo-1540575467063-178a50c2
 $hero_eyebrow        = 'Event Check-In App';
 $hero_title          = 'The real-time event check-in app, deployed for your event';
 $hero_lede           = 'Multi-device synced check-in app for galas, conferences, and private events. Set up in days, includes training and live remote support.';
-$hero_accent_text    = 'Book an Event — $499';
+$hero_accent_text    = 'Book an Event, $499';
 $hero_accent_href    = 'javascript:openEventContactModal()';
 $hero_cta_text       = "See What's Included";
 $hero_cta_href       = '#features';
@@ -79,32 +79,32 @@ include __DIR__ . '/partials/service-hero.php';
 <?php
 /* ============ FEATURES ============ */
 $features_title    = "What's included with every event";
-$features_subtitle = 'Everything you need to run a smooth, professional check-in — from roster setup to the last guest walking in the door.';
+$features_subtitle = 'Everything you need to run a smooth, professional check-in, from roster setup to the last guest walking in the door.';
 $features_items = [
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><path d="M8 2v16"/><path d="M16 6v16"/></svg>',
     'title' => 'Real-Time Multi-Device Sync',
-    'desc'  => 'The moment one door staff member checks in a guest, every other device sees the update instantly — no refresh required, no duplicate entries, no confusion when you have multiple entry points.',
+    'desc'  => 'The moment one door staff member checks in a guest, every other device sees the update instantly, no refresh required, no duplicate entries, no confusion when you have multiple entry points.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>',
     'title' => 'Intuitive Check-In Interface',
-    'desc'  => 'Swipe gestures and tap interactions for rapid guest processing. Bulk check-in entire tables or groups with a single action. Designed for volunteers and first-time users — no training manual required.',
+    'desc'  => 'Swipe gestures and tap interactions for rapid guest processing. Bulk check-in entire tables or groups with a single action. Designed for volunteers and first-time users, no training manual required.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>',
     'title' => 'Roster Import (CSV or Google Sheets)',
-    'desc'  => 'Upload your guest list as a CSV or connect directly to a Google Sheet. Smart column mapping handles varied file formats — first name, last name, table number, meal preference, whatever you have.',
+    'desc'  => 'Upload your guest list as a CSV or connect directly to a Google Sheet. Smart column mapping handles varied file formats, first name, last name, table number, meal preference, whatever you have.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
     'title' => 'Role-Based Access Control',
-    'desc'  => 'Five-tier permission system — Owner, Admin, Manager, Checker, Member. Door staff can only check in guests. Managers can view dashboards. Admins can import rosters and invite team members.',
+    'desc'  => 'Five-tier permission system, Owner, Admin, Manager, Checker, Member. Door staff can only check in guests. Managers can view dashboards. Admins can import rosters and invite team members.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
     'title' => 'Magic Link Authentication',
-    'desc'  => 'Secure, passwordless sign-in via email. Invite volunteers who can start checking in guests within minutes — no app store downloads required for web access.',
+    'desc'  => 'Secure, passwordless sign-in via email. Invite volunteers who can start checking in guests within minutes, no app store downloads required for web access.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
@@ -114,7 +114,7 @@ $features_items = [
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>',
     'title' => 'Mobile + Tablet Support',
-    'desc'  => 'Works on iOS, Android, and any modern web browser. Use your existing tablets at the door — no specialized hardware required. iOS App Store version also available.',
+    'desc'  => 'Works on iOS, Android, and any modern web browser. Use your existing tablets at the door, no specialized hardware required. iOS App Store version also available.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>',
@@ -135,7 +135,7 @@ $pricing_tiers = [
     'tagline' => 'For a one-time gala, conference, or private event',
     'price'   => 499,
     'period'  => '',
-    'setup'   => 'Per event — everything included',
+    'setup'   => 'Per event, everything included',
     'features' => [
       '1 event',
       'Full setup and configuration',
@@ -156,7 +156,7 @@ $pricing_tiers = [
     'tagline' => 'Best value for organizations running multiple events',
     'price'   => 1349,
     'period'  => '',
-    'setup'   => '10% off — save $150 vs. single pricing',
+    'setup'   => '10% off, save $150 vs. single pricing',
     'features' => [
       '3 events (use within 12 months)',
       'Full setup and configuration for each event',
@@ -165,7 +165,7 @@ $pricing_tiers = [
       'Role-based access for your team',
       'Live attendance dashboard',
       'Day-of remote support for all 3 events',
-      'Staff training session (once — reuse your team)',
+      'Staff training session (once, reuse your team)',
       'Post-event attendance data export for each event',
       'Priority scheduling for event setup calls',
     ],
@@ -176,7 +176,7 @@ $pricing_tiers = [
   ],
   [
     'name'    => 'Onsite Support Add-On',
-    'tagline' => 'Serendipity staff at your venue — in person',
+    'tagline' => 'Serendipity staff at your venue, in person',
     'price'   => 750,
     'period'  => '/day',
     'setup'   => 'Add to any single event or bundle booking',
@@ -193,14 +193,14 @@ $pricing_tiers = [
     'cta_href'  => 'javascript:openEventContactModal()',
   ],
 ];
-$pricing_footnote = 'All pricing is per event. Contact us for custom arrangements — recurring series, multi-day events, or high-attendance venues with specific requirements. Travel for onsite support outside Central Florida is quoted on a per-event basis.';
+$pricing_footnote = 'All pricing is per event. Contact us for custom arrangements, recurring series, multi-day events, or high-attendance venues with specific requirements. Travel for onsite support outside Central Florida is quoted on a per-event basis.';
 include __DIR__ . '/partials/service-pricing.php';
 ?>
 
 <!-- Cross-link to the full-service AV/on-site offering -->
 <div style="max-width:820px;margin:0 auto;padding:20px 24px;text-align:center;">
   <p style="color:#4b5563;font-size:15px;margin:0;">
-    Prefer we run it for you? Our <a href="/events" style="color:#2cb1e3;font-weight:600;">event AV &amp; on-site check-in services</a>
+    Prefer we run it for you? Our <a href="/events" style="color:#1A7FAA;font-weight:600;">event AV &amp; on-site check-in services</a>
     add trained operators, AV support, and day-of staffing for your event.
   </p>
 </div>
@@ -211,7 +211,7 @@ $faq_title = 'Common questions';
 $faq_items = [
   [
     'q' => 'What devices does the check-in app run on?',
-    'a' => 'The web app runs on any modern browser — Chrome, Safari, Firefox — on phones, tablets, and laptops. iOS users can also install the native app from the App Store. We recommend tablets (iPad or Android) at the door for the best experience, but phones work fine.',
+    'a' => 'The web app runs on any modern browser, Chrome, Safari, Firefox, on phones, tablets, and laptops. iOS users can also install the native app from the App Store. We recommend tablets (iPad or Android) at the door for the best experience, but phones work fine.',
   ],
   [
     'q' => 'How long does setup take?',
@@ -219,23 +219,23 @@ $faq_items = [
   ],
   [
     'q' => 'Can we use tablets we already own?',
-    'a' => 'Yes. Any iPad, Android tablet, or laptop works. We just need a modern browser and an internet connection. No specialized hardware or app installs are required for the web version — your team can be checking in guests within minutes of getting login links.',
+    'a' => 'Yes. Any iPad, Android tablet, or laptop works. We just need a modern browser and an internet connection. No specialized hardware or app installs are required for the web version, your team can be checking in guests within minutes of getting login links.',
   ],
   [
     'q' => 'What format does the guest roster need to be in?',
-    'a' => 'CSV or Google Sheets. We can handle most column layouts — the import wizard maps your columns to the right fields. Minimum required: first name, last name. Optional: email, table number, meal preference, ticket type, or any custom fields you want visible to door staff.',
+    'a' => 'CSV or Google Sheets. We can handle most column layouts, the import wizard maps your columns to the right fields. Minimum required: first name, last name. Optional: email, table number, meal preference, ticket type, or any custom fields you want visible to door staff.',
   ],
   [
     'q' => 'What is the refund policy if the event is canceled?',
-    'a' => 'If you cancel more than 7 days before the event date, we will issue a full refund or credit toward a future event. If you cancel within 7 days, we retain 50% to cover the setup work already completed. Events rescheduled (not canceled) carry no penalty — we will transfer everything to the new date.',
+    'a' => 'If you cancel more than 7 days before the event date, we will issue a full refund or credit toward a future event. If you cancel within 7 days, we retain 50% to cover the setup work already completed. Events rescheduled (not canceled) carry no penalty, we will transfer everything to the new date.',
   ],
   [
     'q' => 'Does check-in work if the internet goes down?',
-    'a' => 'The app requires an internet connection for real-time sync. If your venue has spotty Wi-Fi, we strongly recommend having a cellular hotspot as backup. In our experience, most venues have sufficient connectivity — but for outdoor or remote events, we will discuss connectivity options during setup.',
+    'a' => 'The app requires an internet connection for real-time sync. If your venue has spotty Wi-Fi, we strongly recommend having a cellular hotspot as backup. In our experience, most venues have sufficient connectivity, but for outdoor or remote events, we will discuss connectivity options during setup.',
   ],
   [
     'q' => 'Is there a white-label option?',
-    'a' => 'Yes — for the 3-event bundle and above, we can configure the interface with your organization name and logo. Contact us to discuss branding requirements. Full custom branding is also available for recurring clients as a custom engagement.',
+    'a' => 'Yes, for the 3-event bundle and above, we can configure the interface with your organization name and logo. Contact us to discuss branding requirements. Full custom branding is also available for recurring clients as a custom engagement.',
   ],
   [
     'q' => 'What happens to our data after the event?',
@@ -249,7 +249,7 @@ include __DIR__ . '/partials/service-faq.php';
 /* ============ CLOSING CTA ============ */
 $cta_title          = 'Ready to run a smoother event?';
 $cta_subtitle       = 'Tell us about your event and we will have your check-in system ready in days.';
-$cta_text           = 'Book an Event — $499';
+$cta_text           = 'Book an Event, $499';
 $cta_href           = 'javascript:openEventContactModal()';
 $cta_secondary_text = 'Have Questions? Contact Us';
 $cta_secondary_href = 'javascript:openEventContactModal()';
@@ -357,7 +357,7 @@ include __DIR__ . '/partials/service-cta.php';
         <div id="eventFormMessage" style="display:none; margin-bottom:12px; padding:10px 14px; border-radius:6px; font-size:14px;"></div>
 
         <button type="submit" id="eventSubmitBtn"
-          style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:12px 24px; font-size:15px; font-weight:700; background:#4FC4F0; color:#fff; border:none; border-radius:6px; cursor:pointer; font-family:inherit; transition:background 0.15s;">
+          style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:12px 24px; font-size:15px; font-weight:700; background:#1A7FAA; color:#fff; border:none; border-radius:6px; cursor:pointer; font-family:inherit; transition:background 0.15s;">
           Submit Inquiry
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

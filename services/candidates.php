@@ -16,7 +16,7 @@
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Candidate Site Package — $20/month">
+  <meta property="og:title" content="Candidate Site Package | $20/month">
   <meta property="og:description" content="Professional campaign website with custom domain, branded email, and unlimited updates. Designed for candidates who deserve better tools.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://serendipitytechnology.com/services/candidates">
@@ -67,9 +67,9 @@ include __DIR__ . '/../partials/site-header.php';
 /* ============ HERO ============ */
 $hero_bg_image = 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=2000&q=70';
 $hero_eyebrow = 'Candidate Package';
-$hero_title = 'Campaign websites for local candidates — ready in days';
+$hero_title = 'Campaign websites for local candidates, ready in days';
 $hero_lede = 'Single-page campaign site with your custom domain, branded email, and unlimited content updates throughout the season. Built for local and down-ballot candidates who deserve better tools.';
-$hero_accent_text = 'Get Started — $49';
+$hero_accent_text = 'Get Started, $49';
 $hero_accent_href = '/services/candidates/signup';
 $hero_cta_text = 'See Pricing';
 $hero_cta_href = '#pricing';
@@ -86,7 +86,7 @@ $features_items = [
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
     'title' => 'Custom Domain Included',
-    'desc' => 'Your name, your race, your domain (e.g. JohnFor2026.com). We register it, configure DNS, and set up SSL — included in setup, no extra cost.',
+    'desc' => 'Your name, your race, your domain (e.g. JohnFor2026.com). We register it, configure DNS, and set up SSL, included in setup, no extra cost.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
@@ -96,17 +96,17 @@ $features_items = [
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
     'title' => 'Unlimited Content Updates',
-    'desc' => 'Add a press release, update your events, change your platform statement — submit a request, and we make the change. No per-update charges through your campaign cycle.',
+    'desc' => 'Add a press release, update your events, change your platform statement, submit a request, and we make the change. No per-update charges through your campaign cycle.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
     'title' => 'Donate Button',
-    'desc' => "Bring your ActBlue, Anedot, or other donation link — we'll wire it to a prominent button on the site. Your processor, your account, your control.",
+    'desc' => "Bring your ActBlue, Anedot, or other donation link, we'll wire it to a prominent button on the site. Your processor, your account, your control.",
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
     'title' => 'Volunteer Signup Form',
-    'desc' => 'Built-in form to collect volunteer information — names, contact info, areas of interest. Submissions emailed to you, no extra software needed.',
+    'desc' => 'Built-in form to collect volunteer information, names, contact info, areas of interest. Submissions emailed to you, no extra software needed.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
@@ -116,7 +116,7 @@ $features_items = [
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>',
     'title' => 'Mobile-First Design',
-    'desc' => "Most voters will see your site on their phone. We design for that first — fast loading, readable, and easy to navigate.",
+    'desc' => "Most voters will see your site on their phone. We design for that first, fast loading, readable, and easy to navigate.",
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
@@ -135,7 +135,7 @@ include __DIR__ . '/partials/service-features.php';
 <?php
 /* ============ PRICING ============ */
 $pricing_title = 'Simple, predictable pricing';
-$pricing_subtitle = 'No multi-year contracts. No qualifying-stage rate hikes. Cancel anytime — like when we help you win your primary so you can turn your focus to serving your constituents.';
+$pricing_subtitle = 'No multi-year contracts. No qualifying-stage rate hikes. Cancel anytime, like when we help you win your primary so you can turn your focus to serving your constituents.';
 $pricing_tiers = [
   [
     'name' => 'Candidate',
@@ -157,12 +157,12 @@ $pricing_tiers = [
     ],
     'featured' => true,
     'badge' => 'All-In-One',
-    'cta_text' => 'Get Started — $49',
+    'cta_text' => 'Get Started, $49',
     'cta_href' => '/services/candidates/signup',
   ],
   [
     'name' => 'Newsletter Add-On',
-    'tagline' => 'Optional — add when you need it',
+    'tagline' => 'Optional, add when you need it',
     'price' => 10,
     'period' => '/month',
     'setup' => 'Add to any active candidate plan',
@@ -193,28 +193,28 @@ $faq_items = [
     'a' => 'Most campaign sites launch within 5 business days of signup. We collect your content, design, and donation link, then build and deploy. If you need faster turnaround for a primary or filing deadline, let us know during signup and we will rush.',
   ],
   [
-    'q' => 'What happens if my race ends early — primary loss, withdrew, or election over?',
+    'q' => 'What happens if my race ends early, primary loss, withdrew, or election over?',
     'a' => 'Just cancel. There is no contract, no early-termination fee. Your last billed month is the last month. We will keep your site live through the end of the billing period, then archive your content. If you want a final snapshot or an offline copy, just ask.',
   ],
   [
     'q' => 'Can I keep the site running after the election?',
-    'a' => "Yes — many candidates pivot the site into an 'elected official' page or community presence. Reach out and we will discuss converting your account to one of our Business Site packages.",
+    'a' => "Yes, many candidates pivot the site into an 'elected official' page or community presence. Reach out and we will discuss converting your account to one of our Business Site packages.",
   ],
   [
     'q' => 'Do I own my domain?',
-    'a' => 'Yes. The domain is registered in your name (or your committee\'s name) — not ours. If you ever leave, the domain goes with you.',
+    'a' => 'Yes. The domain is registered in your name (or your committee\'s name), not ours. If you ever leave, the domain goes with you.',
   ],
   [
     'q' => 'Can I use my own donation processor?',
-    'a' => 'Yes — and we strongly recommend that. Bring your ActBlue, Anedot, WinRed, NGP, or any other link. We just wire it to a prominent button on your site. Your donations flow directly to your committee.',
+    'a' => 'Yes, and we strongly recommend that. Bring your ActBlue, Anedot, WinRed, NGP, or any other link. We just wire it to a prominent button on your site. Your donations flow directly to your committee.',
   ],
   [
     'q' => 'What kind of updates can I request?',
-    'a' => "Any content change — adding a new endorsement, updating your events list, swapping out photos, changing your platform language, posting a press statement. We don't restrict by type or count. If a request requires significant new design work (a totally new section, complex graphics, etc.) we may quote it separately, but routine campaign updates are unlimited.",
+    'a' => "Any content change, adding a new endorsement, updating your events list, swapping out photos, changing your platform language, posting a press statement. We don't restrict by type or count. If a request requires significant new design work (a totally new section, complex graphics, etc.) we may quote it separately, but routine campaign updates are unlimited.",
   ],
   [
     'q' => 'Why no email blasts to voter files?',
-    'a' => 'Our newsletter add-on requires opt-in subscribers — people who actively signed up for your updates through your website. Sending unsolicited email to voter files violates our email provider\'s acceptable use policy and damages email deliverability for everyone. If you specifically need voter-file email outreach, we can refer you to our partner platform <a href="https://flddc.org">FLDDC FES</a> which is purpose-built for that and has the proper sender infrastructure.',
+    'a' => 'Our newsletter add-on requires opt-in subscribers, people who actively signed up for your updates through your website. Sending unsolicited email to voter files violates our email provider\'s acceptable use policy and damages email deliverability for everyone. If you specifically need voter-file email outreach, we can refer you to our partner platform <a href="https://flddc.org">FLDDC FES</a> which is purpose-built for that and has the proper sender infrastructure.',
     'id' => 'faq-newsletter',
   ],
   [
@@ -233,7 +233,7 @@ include __DIR__ . '/partials/service-faq.php';
 /* ============ CLOSING CTA ============ */
 $cta_title = 'Run your campaign, not your website';
 $cta_subtitle = 'Tell us about your race and we will have your site live in days.';
-$cta_text = 'Get Started — $49';
+$cta_text = 'Get Started, $49';
 $cta_href = '/services/candidates/signup';
 $cta_secondary_text = 'Have Questions? Contact Us';
 $cta_secondary_href = 'javascript:openContactModal()';
@@ -320,7 +320,7 @@ include __DIR__ . '/partials/service-cta.php';
               style="width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; background:#f9fafb; box-sizing:border-box; font-family:inherit; color:#1f2937;"
               onfocus="this.style.borderColor='#4FC4F0';this.style.background='#fff'"
               onblur="this.style.borderColor='#e5e7eb';this.style.background='#f9fafb'">
-              <option value="">— Select —</option>
+              <option value="">Select</option>
               <option value="have">I have a domain</option>
               <option value="need">I need one registered</option>
               <option value="unsure">Not sure yet</option>
@@ -346,7 +346,7 @@ include __DIR__ . '/partials/service-cta.php';
         <div id="candidateFormMessage" style="display:none; margin-bottom:12px; padding:10px 14px; border-radius:6px; font-size:14px;"></div>
 
         <button type="submit" id="candidateSubmitBtn"
-          style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:12px 24px; font-size:15px; font-weight:700; background:#4FC4F0; color:#fff; border:none; border-radius:6px; cursor:pointer; font-family:inherit; transition:background 0.15s;">
+          style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:12px 24px; font-size:15px; font-weight:700; background:#1A7FAA; color:#fff; border:none; border-radius:6px; cursor:pointer; font-family:inherit; transition:background 0.15s;">
           Submit Inquiry
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

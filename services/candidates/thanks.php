@@ -9,7 +9,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Submission Received — Serendipity Technology</title>
+  <title>Submission Received | Serendipity Technology</title>
   <meta name="description" content="We received your campaign signup. We'll be in touch within 1 business day.">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
   <meta name="robots" content="noindex">
@@ -148,7 +148,7 @@ include __DIR__ . '/../../partials/site-header.php';
       </div>
 
       <p style="margin-top:20px; font-size:13px; color:var(--svc-text-muted);">
-        Questions? Email <a href="mailto:info@serendipitytech.net" style="color:var(--svc-primary);">info@serendipitytech.net</a>
+        Questions? Email <a href="mailto:info@serendipitytech.net" style="color:#1A7FAA;">info@serendipitytech.net</a>
       </p>
     </div>
   </div>

@@ -28,10 +28,10 @@ h1{font-size:24px;font-weight:800;margin:0 0 6px;text-align:center;letter-spacin
 label{display:block;font-size:13px;font-weight:600;margin:16px 0 6px;color:#2a3a57}
 label:first-child{margin-top:0}
 input,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:15px;color:var(--ink);background:#fbfcfe}
-input:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,162,232,.12)}
+input:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(79,196,240,.25)}
 textarea{min-height:74px;resize:vertical}
 .ref{background:#eef4fb;border:1px solid #d6e6f7;border-radius:10px;padding:10px 13px;font-size:14px;color:#2a4a72;margin-bottom:4px}
-button{width:100%;margin-top:22px;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--blue),#2E9FD1);color:#fff;font-size:16px;font-weight:700;cursor:pointer}
+button{width:100%;margin-top:22px;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,#1A7FAA,#176E96);color:#fff;font-size:16px;font-weight:700;cursor:pointer}
 button:disabled{opacity:.6;cursor:default}
 .note{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
 .ok{display:none;text-align:center;padding:14px 0}

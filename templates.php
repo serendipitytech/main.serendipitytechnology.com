@@ -8,8 +8,8 @@ include __DIR__ . '/partials/site-header.php';
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Site Templates — Serendipity Technology</title>
-  <meta name="description" content="Ready-to-deploy website templates for political campaigns, small businesses, and nonprofits — launched for you in days, then updated on request by our AI." />
+  <title>Site Templates | Serendipity Technology</title>
+  <meta name="description" content="Ready-to-deploy website templates for political campaigns, small businesses, and nonprofits, launched for you in days, then updated on request by our AI." />
   <link rel="canonical" href="https://serendipitytechnology.com/templates" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
@@ -152,7 +152,7 @@ include __DIR__ . '/partials/site-header.php';
       flex-wrap: wrap;
     }
     .btn-preview {
-      background: var(--st-primary);
+      background: #1A7FAA;
       color: #fff;
       border: none;
       border-radius: 6px;
@@ -343,14 +343,14 @@ include __DIR__ . '/partials/site-header.php';
           <div class="template-card active" data-preview="https://sites-demo.serendipitylabs.cloud/templates/preview-campaign.html" data-name="Campaign" data-primary="#0B1F3A" data-accent="#E36A2C" id="card-campaign" onclick="selectVariant(this)">
             <div class="card-swatch" style="background: #0B1F3A;"></div>
             <div class="card-body-inner">
-              <p class="card-title">Campaign — Navy &amp; Orange</p>
+              <p class="card-title">Campaign, Navy &amp; Orange</p>
               <p class="card-desc">Bold navy and orange. Ideal for political campaigns, advocacy groups, and civic organizations.</p>
               <div class="color-dots">
                 <div class="color-dot" style="background: #0B1F3A;" title="Primary: #0B1F3A"></div>
                 <div class="color-dot" style="background: #E36A2C;" title="Accent: #E36A2C"></div>
               </div>
               <div class="card-actions">
-                <button class="btn-preview" onclick="event.stopPropagation(); loadPreview('https://sites-demo.serendipitylabs.cloud/templates/preview-campaign.html','Campaign — Navy &amp; Orange','#0B1F3A','#E36A2C')">Preview</button>
+                <button class="btn-preview" onclick="event.stopPropagation(); loadPreview('https://sites-demo.serendipitylabs.cloud/templates/preview-campaign.html','Campaign, Navy &amp; Orange','#0B1F3A','#E36A2C')">Preview</button>
                 <a href="mailto:hello@serendipitytechnology.com?subject=Template%20Request%20%E2%80%94%20Campaign%20(Navy%20%26%20Orange)" class="btn-use" onclick="event.stopPropagation()">Use This Template</a>
               </div>
             </div>
@@ -359,17 +359,17 @@ include __DIR__ . '/partials/site-header.php';
 
         <!-- Campaign Standard — Slate & Teal -->
         <div class="col-md-4">
-          <div class="template-card" data-preview="https://sites-demo.serendipitylabs.cloud/templates/preview-campaign.html" data-name="Campaign — Slate &amp; Teal" data-primary="#2c3e50" data-accent="#17a589" id="card-campaign-teal" onclick="selectVariant(this)">
+          <div class="template-card" data-preview="https://sites-demo.serendipitylabs.cloud/templates/preview-campaign.html" data-name="Campaign, Slate &amp; Teal" data-primary="#2c3e50" data-accent="#17a589" id="card-campaign-teal" onclick="selectVariant(this)">
             <div class="card-swatch" style="background: #2c3e50;"></div>
             <div class="card-body-inner">
-              <p class="card-title">Campaign — Slate &amp; Teal</p>
+              <p class="card-title">Campaign, Slate &amp; Teal</p>
               <p class="card-desc">Clean slate and teal. Modern, professional variation for nonprofits, researchers, and civic professionals.</p>
               <div class="color-dots">
                 <div class="color-dot" style="background: #2c3e50;" title="Primary: #2c3e50"></div>
                 <div class="color-dot" style="background: #17a589;" title="Accent: #17a589"></div>
               </div>
               <div class="card-actions">
-                <button class="btn-preview" onclick="event.stopPropagation(); loadPreview('https://sites-demo.serendipitylabs.cloud/templates/preview-campaign.html','Campaign — Slate &amp; Teal','#2c3e50','#17a589')">Preview</button>
+                <button class="btn-preview" onclick="event.stopPropagation(); loadPreview('https://sites-demo.serendipitylabs.cloud/templates/preview-campaign.html','Campaign, Slate &amp; Teal','#2c3e50','#17a589')">Preview</button>
                 <a href="mailto:hello@serendipitytechnology.com?subject=Template%20Request%20%E2%80%94%20Campaign%20(Slate%20%26%20Teal)" class="btn-use" onclick="event.stopPropagation()">Use This Template</a>
               </div>
             </div>
@@ -388,17 +388,17 @@ include __DIR__ . '/partials/site-header.php';
 
         <!-- Nonprofit / Cause — Green & Gold -->
         <div class="col-md-4">
-          <div class="template-card" data-preview="https://sites-demo.serendipitylabs.cloud/templates/preview-nonprofit.html" data-name="Nonprofit / Cause — Green &amp; Gold" data-primary="#2d6a4f" data-accent="#d4a017" id="card-nonprofit" onclick="selectVariant(this)">
+          <div class="template-card" data-preview="https://sites-demo.serendipitylabs.cloud/templates/preview-nonprofit.html" data-name="Nonprofit / Cause, Green &amp; Gold" data-primary="#2d6a4f" data-accent="#d4a017" id="card-nonprofit" onclick="selectVariant(this)">
             <div class="card-swatch" style="background: #2d6a4f;"></div>
             <div class="card-body-inner">
-              <p class="card-title">Nonprofit / Cause — Green &amp; Gold</p>
+              <p class="card-title">Nonprofit / Cause, Green &amp; Gold</p>
               <p class="card-desc">Warm green and gold. Purpose-built for charities, nonprofits, and cause-driven organizations. Includes donation progress bars, causes grid, events, and volunteer sections.</p>
               <div class="color-dots">
                 <div class="color-dot" style="background: #2d6a4f;" title="Primary: #2d6a4f"></div>
                 <div class="color-dot" style="background: #d4a017;" title="Accent: #d4a017"></div>
               </div>
               <div class="card-actions">
-                <button class="btn-preview" onclick="event.stopPropagation(); loadPreview('https://sites-demo.serendipitylabs.cloud/templates/preview-nonprofit.html','Nonprofit / Cause — Green &amp; Gold','#2d6a4f','#d4a017')">Preview</button>
+                <button class="btn-preview" onclick="event.stopPropagation(); loadPreview('https://sites-demo.serendipitylabs.cloud/templates/preview-nonprofit.html','Nonprofit / Cause, Green &amp; Gold','#2d6a4f','#d4a017')">Preview</button>
                 <a href="mailto:hello@serendipitytechnology.com?subject=Template%20Request%20%E2%80%94%20Nonprofit%20(Green%20%26%20Gold)" class="btn-use" onclick="event.stopPropagation()">Use This Template</a>
               </div>
             </div>
@@ -407,17 +407,17 @@ include __DIR__ . '/partials/site-header.php';
 
         <!-- Nonprofit / Cause — Blue & Coral -->
         <div class="col-md-4">
-          <div class="template-card" data-preview="https://sites-demo.serendipitylabs.cloud/templates/preview-nonprofit.html" data-name="Nonprofit / Cause — Blue &amp; Coral" data-primary="#1B4F72" data-accent="#E74C3C" id="card-nonprofit-blue" onclick="selectVariant(this)">
+          <div class="template-card" data-preview="https://sites-demo.serendipitylabs.cloud/templates/preview-nonprofit.html" data-name="Nonprofit / Cause, Blue &amp; Coral" data-primary="#1B4F72" data-accent="#E74C3C" id="card-nonprofit-blue" onclick="selectVariant(this)">
             <div class="card-swatch" style="background: #1B4F72;"></div>
             <div class="card-body-inner">
-              <p class="card-title">Nonprofit / Cause — Blue &amp; Coral</p>
+              <p class="card-title">Nonprofit / Cause, Blue &amp; Coral</p>
               <p class="card-desc">Bold blue and coral. Strong, urgent palette for advocacy campaigns, social justice organizations, and cause-first nonprofits.</p>
               <div class="color-dots">
                 <div class="color-dot" style="background: #1B4F72;" title="Primary: #1B4F72"></div>
                 <div class="color-dot" style="background: #E74C3C;" title="Accent: #E74C3C"></div>
               </div>
               <div class="card-actions">
-                <button class="btn-preview" onclick="event.stopPropagation(); loadPreview('https://sites-demo.serendipitylabs.cloud/templates/preview-nonprofit.html','Nonprofit / Cause — Blue &amp; Coral','#1B4F72','#E74C3C')">Preview</button>
+                <button class="btn-preview" onclick="event.stopPropagation(); loadPreview('https://sites-demo.serendipitylabs.cloud/templates/preview-nonprofit.html','Nonprofit / Cause, Blue &amp; Coral','#1B4F72','#E74C3C')">Preview</button>
                 <a href="mailto:hello@serendipitytechnology.com?subject=Template%20Request%20%E2%80%94%20Nonprofit%20(Blue%20%26%20Coral)" class="btn-use" onclick="event.stopPropagation()">Use This Template</a>
               </div>
             </div>
@@ -426,17 +426,17 @@ include __DIR__ . '/partials/site-header.php';
 
         <!-- Business / Consulting — Forest & Gold -->
         <div class="col-md-4">
-          <div class="template-card" data-preview="https://sites-demo.serendipitylabs.cloud/templates/preview-business.html" data-name="Business / Consulting — Forest &amp; Gold" data-primary="#1a3d2b" data-accent="#c8973a" id="card-business" onclick="selectVariant(this)">
+          <div class="template-card" data-preview="https://sites-demo.serendipitylabs.cloud/templates/preview-business.html" data-name="Business / Consulting, Forest &amp; Gold" data-primary="#1a3d2b" data-accent="#c8973a" id="card-business" onclick="selectVariant(this)">
             <div class="card-swatch" style="background: #1a3d2b;"></div>
             <div class="card-body-inner">
-              <p class="card-title">Business / Consulting — Forest &amp; Gold</p>
+              <p class="card-title">Business / Consulting, Forest &amp; Gold</p>
               <p class="card-desc">Professional forest green and gold. Built for consulting firms, agencies, and service businesses. Includes services showcase, process steps, pricing tiers, and client testimonials.</p>
               <div class="color-dots">
                 <div class="color-dot" style="background: #1a3d2b;" title="Primary: #1a3d2b"></div>
                 <div class="color-dot" style="background: #c8973a;" title="Accent: #c8973a"></div>
               </div>
               <div class="card-actions">
-                <button class="btn-preview" onclick="event.stopPropagation(); loadPreview('https://sites-demo.serendipitylabs.cloud/templates/preview-business.html','Business / Consulting — Forest &amp; Gold','#1a3d2b','#c8973a')">Preview</button>
+                <button class="btn-preview" onclick="event.stopPropagation(); loadPreview('https://sites-demo.serendipitylabs.cloud/templates/preview-business.html','Business / Consulting, Forest &amp; Gold','#1a3d2b','#c8973a')">Preview</button>
                 <a href="mailto:hello@serendipitytechnology.com?subject=Template%20Request%20%E2%80%94%20Business%20Consulting%20(Forest%20%26%20Gold)" class="btn-use" onclick="event.stopPropagation()">Use This Template</a>
               </div>
             </div>
@@ -445,17 +445,17 @@ include __DIR__ . '/partials/site-header.php';
 
         <!-- Business / Consulting — Slate & Teal -->
         <div class="col-md-4">
-          <div class="template-card" data-preview="https://sites-demo.serendipitylabs.cloud/templates/preview-business.html" data-name="Business / Consulting — Slate &amp; Teal" data-primary="#2c3e50" data-accent="#17a589" id="card-business-slate" onclick="selectVariant(this)">
+          <div class="template-card" data-preview="https://sites-demo.serendipitylabs.cloud/templates/preview-business.html" data-name="Business / Consulting, Slate &amp; Teal" data-primary="#2c3e50" data-accent="#17a589" id="card-business-slate" onclick="selectVariant(this)">
             <div class="card-swatch" style="background: #2c3e50;"></div>
             <div class="card-body-inner">
-              <p class="card-title">Business / Consulting — Slate &amp; Teal</p>
+              <p class="card-title">Business / Consulting, Slate &amp; Teal</p>
               <p class="card-desc">Sleek slate and teal. Modern, versatile palette for tech firms, agencies, and professional service providers.</p>
               <div class="color-dots">
                 <div class="color-dot" style="background: #2c3e50;" title="Primary: #2c3e50"></div>
                 <div class="color-dot" style="background: #17a589;" title="Accent: #17a589"></div>
               </div>
               <div class="card-actions">
-                <button class="btn-preview" onclick="event.stopPropagation(); loadPreview('https://sites-demo.serendipitylabs.cloud/templates/preview-business.html','Business / Consulting — Slate &amp; Teal','#2c3e50','#17a589')">Preview</button>
+                <button class="btn-preview" onclick="event.stopPropagation(); loadPreview('https://sites-demo.serendipitylabs.cloud/templates/preview-business.html','Business / Consulting, Slate &amp; Teal','#2c3e50','#17a589')">Preview</button>
                 <a href="mailto:hello@serendipitytechnology.com?subject=Template%20Request%20%E2%80%94%20Business%20Consulting%20(Slate%20%26%20Teal)" class="btn-use" onclick="event.stopPropagation()">Use This Template</a>
               </div>
             </div>
@@ -471,7 +471,7 @@ include __DIR__ . '/partials/site-header.php';
     <div class="container" style="max-width: 1200px; padding-left: 2rem; padding-right: 2rem;">
       <div class="preview-label-bar">
         <p class="label-text">
-          Previewing: <span class="label-variant" id="preview-variant-name">Campaign — Navy &amp; Orange</span>
+          Previewing: <span class="label-variant" id="preview-variant-name">Campaign, Navy &amp; Orange</span>
         </p>
         <a href="https://sites-demo.serendipitylabs.cloud/templates/preview-campaign.html" id="preview-new-tab-link" target="_blank" rel="noopener noreferrer">Open in new tab ↗</a>
       </div>
@@ -501,7 +501,7 @@ include __DIR__ . '/partials/site-header.php';
   <section class="cta-section">
     <div class="container" style="max-width: 700px; padding-left: 2rem; padding-right: 2rem;">
       <h2>Ready to get started?</h2>
-      <p>Pick a template and we'll have your site live in days — not weeks.</p>
+      <p>Pick a template and we'll have your site live in days, not weeks.</p>
       <a href="/get-started" class="btn-cta">Start Your Site →</a>
     </div>
   </section>

@@ -31,7 +31,7 @@ $name    = 'Troy Shimkus';
 $title   = 'Owner, Serendipity Technology';
 $links = [
     ['label' => 'Save my contact', 'url' => '/me?vcard=1', 'icon' => 'contact', 'primary' => true],
-    ['label' => 'Book a call',     'url' => 'https://book.serendipitytechnology.com/serendipitytech', 'icon' => 'calendar'],
+    ['label' => 'Book a call',     'url' => 'https://serendipitytechnology.com/book', 'icon' => 'calendar'],
     ['label' => 'Website',         'url' => 'https://serendipitytechnology.com', 'icon' => 'globe'],
     ['label' => 'Email me',        'url' => 'mailto:troy@serendipitytech.net',   'icon' => 'mail'],
     ['label' => 'Text me',         'url' => 'sms:+14074436844', 'icon' => 'message'],
@@ -78,12 +78,12 @@ a.btn{display:flex;align-items:center;gap:14px;width:100%;padding:18px 22px;bord
 a.btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(20,40,80,.12)}
 a.btn:active{transform:translateY(0)}
 a.btn .lbl{flex:1;text-align:center;margin-right:21px}
-a.btn.primary{background:linear-gradient(135deg,var(--blue),#2E9FD1);color:#fff;border:none;box-shadow:0 8px 20px rgba(0,120,190,.30)}
+a.btn.primary{background:linear-gradient(135deg,#1A7FAA,#176E96);color:#fff;border:none;box-shadow:0 8px 20px rgba(26,127,170,.30)}
 .ico{display:flex;width:21px}
 footer{margin-top:auto;padding-top:38px}
 .accent{width:64px;height:4px;border-radius:4px;margin:0 auto 16px;background:linear-gradient(to right,var(--blue),var(--orange))}
 .site{font-size:16px;font-weight:600;color:#12233f}
-.email{display:block;margin-top:4px;font-size:15px;color:var(--blue);text-decoration:none}
+.email{display:block;margin-top:4px;font-size:15px;color:#1A7FAA;text-decoration:none}
 </style>
 </head>
 <body>

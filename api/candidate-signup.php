@@ -97,7 +97,7 @@ $filepath = $dataDir . '/' . $filename;
 file_put_contents($filepath, json_encode($fields, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
 // Build email notification body
-$body  = "New candidate signup (Pass 1 — awaiting Stripe)\n\n";
+$body  = "New candidate signup (Pass 1, awaiting Stripe)\n\n";
 $body .= "--- CANDIDATE ---\n";
 $body .= "Name:  {$fields['candidate_name']}\n";
 $body .= "Email: {$fields['candidate_email']}\n";
@@ -126,7 +126,7 @@ if (RESEND_API_KEY) {
     $emailPayload = [
         'from'    => 'Candidate Signups <contact@serendipitytechnology.com>',
         'to'      => ['info@serendipitytech.net'],
-        'subject' => "New Candidate Signup — {$fields['campaign_name']}",
+        'subject' => "New Candidate Signup, {$fields['campaign_name']}",
         'text'    => $body,
     ];
 
@@ -148,7 +148,7 @@ if (RESEND_API_KEY) {
         error_log('Resend error on candidate signup: HTTP ' . $resendCode . ' - ' . $resendResponse);
     }
 } else {
-    error_log('Resend API key not configured — candidate signup email not sent');
+    error_log('Resend API key not configured, candidate signup email not sent');
 }
 
 // Admin SMS (non-fatal)

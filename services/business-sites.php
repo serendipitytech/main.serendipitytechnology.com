@@ -11,12 +11,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Small Business Websites with AI Updates | Serendipity Technology</title>
-  <meta name="description" content="Small business websites with AI-powered updates — submit a request, our AI builds it overnight. Hosting, SSL, and business email included. From $10/month + $49 setup.">
+  <meta name="description" content="Small business websites with AI-powered updates, submit a request, our AI builds it overnight. Hosting, SSL, and business email included. From $10/month + $49 setup.">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Business Website Packages — From $10/month">
-  <meta property="og:description" content="Professional websites with AI-powered updates, hosting, and business email. Managed for you — submit a request and it goes live overnight.">
+  <meta property="og:title" content="Business Website Packages | From $10/month">
+  <meta property="og:description" content="Professional websites with AI-powered updates, hosting, and business email. Managed for you, submit a request and it goes live overnight.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://serendipitytechnology.com/services/business-sites">
   <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png">
@@ -66,8 +66,8 @@ include __DIR__ . '/../partials/site-header.php';
 $hero_bg_image    = 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=70';
 $hero_eyebrow     = 'Business Sites';
 $hero_title       = 'Small business websites with AI-powered updates';
-$hero_lede        = 'Hosting, security, and a client portal — managed for you. Submit a change request, our AI builds it overnight. Starting at $10/month.';
-$hero_accent_text = 'Get Started — $49';
+$hero_lede        = 'Hosting, security, and a client portal, managed for you. Submit a change request, our AI builds it overnight. Starting at $10/month.';
+$hero_accent_text = 'Get Started, $49';
 $hero_accent_href = 'javascript:openBusinessContactModal()';
 $hero_cta_text    = 'See Pricing';
 $hero_cta_href    = '#pricing';
@@ -84,7 +84,7 @@ $features_items = [
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>',
     'title' => 'AI-Powered Updates',
-    'desc'  => 'Submit a change request through your client portal — update hours, swap photos, post announcements. Our AI drafts the changes overnight and our team reviews before going live.',
+    'desc'  => 'Submit a change request through your client portal, update hours, swap photos, post announcements. Our AI drafts the changes overnight and our team reviews before going live.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
@@ -94,12 +94,12 @@ $features_items = [
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
     'title' => 'Business Email Mailbox',
-    'desc'  => 'A professional inbox at your domain — like hello@yourbusiness.com. Included from the Growth tier up, so you stop emailing clients from a Gmail address.',
+    'desc'  => 'A professional inbox at your domain, like hello@yourbusiness.com. Included from the Growth tier up, so you stop emailing clients from a Gmail address.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>',
     'title' => 'Client Portal Access',
-    'desc'  => 'Log in to your branded portal to submit update requests, view project status, and communicate with our team — no email threads required.',
+    'desc'  => 'Log in to your branded portal to submit update requests, view project status, and communicate with our team, no email threads required.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>',
@@ -109,22 +109,22 @@ $features_items = [
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
     'title' => 'Analytics Included',
-    'desc'  => 'See who is visiting your site, where they are coming from, and what pages they view. No extra tools to install — your dashboard shows the essentials.',
+    'desc'  => 'See who is visiting your site, where they are coming from, and what pages they view. No extra tools to install, your dashboard shows the essentials.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
     'title' => 'Fast Update Turnaround',
-    'desc'  => 'Starter plan gets per-request updates at $19 each. Growth and above include monthly updates — with priority turnaround on Business and Pro tiers.',
+    'desc'  => 'Starter plan gets per-request updates at $19 each. Growth and above include monthly updates, with priority turnaround on Business and Pro tiers.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
     'title' => 'Multi-Page Support',
-    'desc'  => 'Growth tier supports up to 3 pages (Home, About, Contact). Business gets up to 5. Pro supports up to 10 — enough for a full service menu and location pages.',
+    'desc'  => 'Growth tier supports up to 3 pages (Home, About, Contact). Business gets up to 5. Pro supports up to 10, enough for a full service menu and location pages.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
     'title' => 'Custom Domain',
-    'desc'  => 'Bring your existing domain or we help you pick one. DNS, SSL, and configuration are all handled. You own the domain — always.',
+    'desc'  => 'Bring your existing domain or we help you pick one. DNS, SSL, and configuration are all handled. You own the domain, always.',
   ],
   [
     'icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
@@ -138,7 +138,7 @@ include __DIR__ . '/partials/service-features.php';
 <?php
 /* ============ PRICING ============ */
 $pricing_title    = 'Simple, predictable pricing';
-$pricing_subtitle = 'Pick a tier that fits your business today. Upgrade anytime — no contract required.';
+$pricing_subtitle = 'Pick a tier that fits your business today. Upgrade anytime, no contract required.';
 $pricing_tiers = [
   [
     'name'    => 'Starter',
@@ -150,7 +150,7 @@ $pricing_tiers = [
       '1-page website',
       'Custom domain (you bring it or we help)',
       'Hosting & SSL included',
-      'Per-request updates — <strong>$19 each</strong>',
+      'Per-request updates, <strong>$19 each</strong>',
       'Client portal access',
       'Analytics dashboard',
       'Month-to-month, cancel anytime',
@@ -160,7 +160,7 @@ $pricing_tiers = [
       'Included monthly updates',
     ],
     'featured'  => false,
-    'cta_text'  => 'Get Started — $49',
+    'cta_text'  => 'Get Started, $49',
     'cta_href'  => 'javascript:openBusinessContactModal()',
   ],
   [
@@ -174,14 +174,14 @@ $pricing_tiers = [
       'Custom domain',
       'Hosting & SSL included',
       '<strong>1 included update per month</strong>',
-      'Additional updates — $19 each',
+      'Additional updates, $19 each',
       '<strong>1 business email mailbox</strong>',
       'Client portal access',
       'Analytics dashboard',
       'Month-to-month, cancel anytime',
     ],
     'featured'  => false,
-    'cta_text'  => 'Get Started — $99',
+    'cta_text'  => 'Get Started, $99',
     'cta_href'  => 'javascript:openBusinessContactModal()',
   ],
   [
@@ -195,7 +195,7 @@ $pricing_tiers = [
       'Custom domain',
       'Hosting & SSL included',
       '<strong>2 included updates per month</strong>',
-      'Additional updates — $10 each',
+      'Additional updates, $10 each',
       '<strong>2 business email mailboxes</strong>',
       'Client portal with priority queue',
       'Analytics dashboard',
@@ -203,7 +203,7 @@ $pricing_tiers = [
     ],
     'featured' => true,
     'badge'    => 'Most Popular',
-    'cta_text' => 'Get Started — $199',
+    'cta_text' => 'Get Started, $199',
     'cta_href' => 'javascript:openBusinessContactModal()',
   ],
   [
@@ -216,15 +216,15 @@ $pricing_tiers = [
       'Up to 10 pages',
       'Custom domain',
       'Hosting & SSL included',
-      '<strong>5 included updates per month — priority</strong>',
-      'Additional updates — $5 each',
+      '<strong>5 included updates per month, priority</strong>',
+      'Additional updates, $5 each',
       '<strong>2 business email mailboxes (1GB each)</strong>',
       'Client portal with priority support',
       'Analytics dashboard',
       'Month-to-month, cancel anytime',
     ],
     'featured'  => false,
-    'cta_text'  => 'Get Started — $399',
+    'cta_text'  => 'Get Started, $399',
     'cta_href'  => 'javascript:openBusinessContactModal()',
   ],
 ];
@@ -238,11 +238,11 @@ $faq_title = 'Common questions';
 $faq_items = [
   [
     'q' => 'Can you migrate my existing website?',
-    'a' => 'Yes. If you have an existing site, we will review it during onboarding and replicate the content and design into your new managed setup. We can match your existing look or redesign — your call. Migrations are included in the setup fee.',
+    'a' => 'Yes. If you have an existing site, we will review it during onboarding and replicate the content and design into your new managed setup. We can match your existing look or redesign, your call. Migrations are included in the setup fee.',
   ],
   [
     'q' => 'What counts as an "update"?',
-    'a' => 'An update is any content change you submit through your client portal — updating text, swapping images, adding a new announcement, changing business hours, adding a menu item. One logical change request = one update. If you submit several related changes at once (e.g. "update our hours, phone number, and address"), that counts as one update. Major structural redesigns or adding new pages are quoted separately.',
+    'a' => 'An update is any content change you submit through your client portal, updating text, swapping images, adding a new announcement, changing business hours, adding a menu item. One logical change request = one update. If you submit several related changes at once (e.g. "update our hours, phone number, and address"), that counts as one update. Major structural redesigns or adding new pages are quoted separately.',
   ],
   [
     'q' => 'How does the AI-powered update process work?',
@@ -254,11 +254,11 @@ $faq_items = [
   ],
   [
     'q' => 'Do I own my domain?',
-    'a' => 'Yes — always. If we register a domain on your behalf, it is registered in your name or your business name. If you ever leave, the domain goes with you. We never hold domains hostage.',
+    'a' => 'Yes, always. If we register a domain on your behalf, it is registered in your name or your business name. If you ever leave, the domain goes with you. We never hold domains hostage.',
   ],
   [
     'q' => 'What is the difference between a "page" and a section?',
-    'a' => 'A page is a distinct URL — like /about or /services. Sections are scrollable blocks within a single page. Starter clients get one page (which can have multiple sections — hero, services, contact, etc.). Growth clients can have up to 3 separate pages, Business up to 5, Pro up to 10.',
+    'a' => 'A page is a distinct URL, like /about or /services. Sections are scrollable blocks within a single page. Starter clients get one page (which can have multiple sections, hero, services, contact, etc.). Growth clients can have up to 3 separate pages, Business up to 5, Pro up to 10.',
   ],
   [
     'q' => 'How long does it take to launch?',
@@ -266,15 +266,15 @@ $faq_items = [
   ],
   [
     'q' => 'What support is available if something breaks?',
-    'a' => 'All plans include support via your client portal. Business and Pro clients get priority response — typically within a few hours during business hours. For Starter and Growth, we respond within 1 business day. Critical issues (site down) are treated as urgent regardless of plan.',
+    'a' => 'All plans include support via your client portal. Business and Pro clients get priority response, typically within a few hours during business hours. For Starter and Growth, we respond within 1 business day. Critical issues (site down) are treated as urgent regardless of plan.',
   ],
   [
     'q' => 'Can I upgrade or downgrade my plan?',
-    'a' => 'Yes. Upgrade at any time — the new pricing takes effect at the next billing cycle. Downgrades take effect at the end of your current billing period. If you need to drop pages when downgrading, we will work with you on what to consolidate.',
+    'a' => 'Yes. Upgrade at any time, the new pricing takes effect at the next billing cycle. Downgrades take effect at the end of your current billing period. If you need to drop pages when downgrading, we will work with you on what to consolidate.',
   ],
   [
     'q' => 'Do you build e-commerce or booking systems?',
-    'a' => 'The managed packages cover informational and lead-generation websites. For e-commerce, online booking, or other interactive features, contact us — we handle custom builds outside the standard tier structure.',
+    'a' => 'The managed packages cover informational and lead-generation websites. For e-commerce, online booking, or other interactive features, contact us, we handle custom builds outside the standard tier structure.',
   ],
 ];
 include __DIR__ . '/partials/service-faq.php';
@@ -284,7 +284,7 @@ include __DIR__ . '/partials/service-faq.php';
 /* ============ CLOSING CTA ============ */
 $cta_title          = 'Ready to launch your site?';
 $cta_subtitle       = 'Tell us about your business and we will have your site live within a week.';
-$cta_text           = 'Get Started — $49';
+$cta_text           = 'Get Started, $49';
 $cta_href           = 'javascript:openBusinessContactModal()';
 $cta_secondary_text = 'Have Questions? Contact Us';
 $cta_secondary_href = 'javascript:openBusinessContactModal()';
@@ -355,7 +355,7 @@ include __DIR__ . '/partials/service-cta.php';
               style="width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; background:#f9fafb; box-sizing:border-box; font-family:inherit; color:#1f2937;"
               onfocus="this.style.borderColor='#4FC4F0';this.style.background='#fff'"
               onblur="this.style.borderColor='#e5e7eb';this.style.background='#f9fafb'">
-              <option value="">— Select —</option>
+              <option value="">Select</option>
               <option value="retail">Retail / Shop</option>
               <option value="restaurant">Restaurant / Food</option>
               <option value="services">Professional Services</option>
@@ -371,7 +371,7 @@ include __DIR__ . '/partials/service-cta.php';
               style="width:100%; padding:9px 12px; border:1px solid #e5e7eb; border-radius:6px; font-size:14px; background:#f9fafb; box-sizing:border-box; font-family:inherit; color:#1f2937;"
               onfocus="this.style.borderColor='#4FC4F0';this.style.background='#fff'"
               onblur="this.style.borderColor='#e5e7eb';this.style.background='#f9fafb'">
-              <option value="">— Not sure yet —</option>
+              <option value="">Not sure yet</option>
               <option value="starter">Starter ($10/mo)</option>
               <option value="growth">Growth ($19/mo)</option>
               <option value="business">Business ($49/mo)</option>
@@ -399,7 +399,7 @@ include __DIR__ . '/partials/service-cta.php';
         <div id="businessFormMessage" style="display:none; margin-bottom:12px; padding:10px 14px; border-radius:6px; font-size:14px;"></div>
 
         <button type="submit" id="businessSubmitBtn"
-          style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:12px 24px; font-size:15px; font-weight:700; background:#4FC4F0; color:#fff; border:none; border-radius:6px; cursor:pointer; font-family:inherit; transition:background 0.15s;">
+          style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:12px 24px; font-size:15px; font-weight:700; background:#1A7FAA; color:#fff; border:none; border-radius:6px; cursor:pointer; font-family:inherit; transition:background 0.15s;">
           Submit Inquiry
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

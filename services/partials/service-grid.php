@@ -90,7 +90,7 @@
 .svc-service-card-price {
   font-size: 13px;
   font-weight: 600;
-  color: var(--svc-primary);
+  color: #1A7FAA;
   margin: 0 0 16px 0;
 }
 

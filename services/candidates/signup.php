@@ -14,7 +14,7 @@ $error = trim($_GET['error'] ?? '');
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campaign Signup — Serendipity Technology</title>
+  <title>Campaign Signup | Serendipity Technology</title>
   <meta name="description" content="Start your campaign website. Tell us about your race and we'll get your site live in days.">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
   <link rel="canonical" href="https://serendipitytechnology.com/services/candidates/signup">
@@ -82,7 +82,7 @@ $error = trim($_GET['error'] ?? '');
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--svc-primary);
+      color: #1A7FAA;
       margin: 0 0 16px 0;
       padding-bottom: 8px;
       border-bottom: 2px solid var(--svc-border);
@@ -99,7 +99,7 @@ $error = trim($_GET['error'] ?? '');
       width: 22px;
       height: 22px;
       border-radius: 50%;
-      background: var(--svc-primary);
+      background: var(--svc-primary-solid, #1A7FAA);
       color: #fff;
       font-size: 11px;
       font-weight: 700;
@@ -173,7 +173,7 @@ $error = trim($_GET['error'] ?? '');
       accent-color: var(--svc-primary);
       cursor: pointer;
     }
-    .signup-check a { color: var(--svc-primary); text-decoration: underline; }
+    .signup-check a { color: #1A7FAA; text-decoration: underline; }
 
     .signup-submit {
       display: flex;
@@ -230,7 +230,7 @@ include __DIR__ . '/../../partials/site-header.php';
 <!-- Hero banner -->
 <div class="signup-hero">
   <div class="svc-container">
-    <p class="svc-eyebrow" style="color:#F7B06A; text-align:center;">Candidate Package — $49 Setup + $20/month</p>
+    <p class="svc-eyebrow" style="color:#F7B06A; text-align:center;">Candidate Package, $49 Setup + $20/month</p>
     <h2 style="font-family:'Gill Sans','Gill Sans MT',sans-serif; font-size:32px; font-weight:700; color:#fff; margin:0 0 8px; text-align:center;">
       Tell us about your campaign
     </h2>
@@ -303,7 +303,7 @@ include __DIR__ . '/../../partials/site-header.php';
             <div class="signup-field">
               <label for="party">Party Affiliation <span class="opt">(optional)</span></label>
               <select class="signup-input" id="party" name="party">
-                <option value="">— Select —</option>
+                <option value="">Select</option>
                 <option value="Democrat">Democrat</option>
                 <option value="Republican">Republican</option>
                 <option value="Nonpartisan">Nonpartisan</option>
@@ -348,7 +348,7 @@ include __DIR__ . '/../../partials/site-header.php';
             <div class="signup-field">
               <label for="donation_processor">Donation Processor <span class="opt">(optional)</span></label>
               <select class="signup-input" id="donation_processor" name="donation_processor">
-                <option value="">— Select —</option>
+                <option value="">Select</option>
                 <option value="ActBlue">ActBlue</option>
                 <option value="Anedot">Anedot</option>
                 <option value="WinRed">WinRed</option>
@@ -374,7 +374,7 @@ include __DIR__ . '/../../partials/site-header.php';
             </label>
             <label class="signup-check">
               <input type="checkbox" name="confirm_optin" value="1" required>
-              <span>I understand that any newsletter add-on is for opt-in subscribers only — no voter file blasts.</span>
+              <span>I understand that any newsletter add-on is for opt-in subscribers only, no voter file blasts.</span>
             </label>
             <label class="signup-check">
               <input type="checkbox" name="confirm_tos" value="1" required>
@@ -383,7 +383,7 @@ include __DIR__ . '/../../partials/site-header.php';
           </div>
 
           <button type="submit" class="signup-submit">
-            Continue to Payment — $49 setup
+            Continue to Payment, $49 setup
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
@@ -398,7 +398,7 @@ include __DIR__ . '/../../partials/site-header.php';
     </div>
 
     <p style="text-align:center; margin-top:16px; font-size:13px; color:var(--svc-text-muted);">
-      Questions? <a href="mailto:info@serendipitytech.net" style="color:var(--svc-primary);">info@serendipitytech.net</a>
+      Questions? <a href="mailto:info@serendipitytech.net" style="color:#1A7FAA;">info@serendipitytech.net</a>
       &nbsp;&middot;&nbsp;
       <a href="/services/candidates" style="color:var(--svc-text-muted);">Back to Candidate Package</a>
     </p>

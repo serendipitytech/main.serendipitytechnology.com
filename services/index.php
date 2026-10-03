@@ -11,11 +11,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Productized Software Services in Florida | Serendipity Technology</title>
-  <meta name="description" content="Ready-to-launch productized services from Serendipity Technology. Business websites, candidate sites, event check-in, and membership portals — deployed in days.">
+  <meta name="description" content="Ready-to-launch productized services from Serendipity Technology. Business websites, candidate sites, event check-in, and membership portals, deployed in days.">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Services — Serendipity Technology">
+  <meta property="og:title" content="Services | Serendipity Technology">
   <meta property="og:description" content="Ready-to-launch solutions, no custom build required. Built and proven, deployed for you within days.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://serendipitytechnology.com/services/">
@@ -69,7 +69,7 @@ include __DIR__ . '/../partials/site-header.php';
 /* ============ HERO ============ */
 $hero_eyebrow        = 'Services';
 $hero_title          = 'Ready-to-launch solutions, no custom build required';
-$hero_lede           = 'Productized services from Serendipity Technology — built and proven, deployed for you within days.';
+$hero_lede           = 'Productized services from Serendipity Technology, built and proven, deployed for you within days.';
 $hero_cta_text       = 'View Custom Projects';
 $hero_cta_href       = '/projects.php';
 $hero_secondary_text = 'Get in Touch';
@@ -83,7 +83,7 @@ include __DIR__ . '/partials/service-hero.php';
   <div class="svc-container">
     <div class="svc-text-center">
       <h2 class="svc-h2 svc-h2-center">Our Productized Services</h2>
-      <p class="svc-lede svc-text-center" style="margin-left:auto;margin-right:auto;">Four services, each built to be deployed quickly. No discovery phase, no months of back-and-forth — pick the one that fits and we get started.</p>
+      <p class="svc-lede svc-text-center" style="margin-left:auto;margin-right:auto;">Four services, each built to be deployed quickly. No discovery phase, no months of back-and-forth, pick the one that fits and we get started.</p>
     </div>
 
     <?php
@@ -112,7 +112,7 @@ include __DIR__ . '/partials/service-hero.php';
       [
         'icon'    => '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
         'name'    => 'Membership Portal',
-        'tagline' => 'Unlimited members, events, and admins. Flat monthly pricing — no per-seat fees. Built for clubs, nonprofits, and associations.',
+        'tagline' => 'Unlimited members, events, and admins. Flat monthly pricing, no per-seat fees. Built for clubs, nonprofits, and associations.',
         'price'   => '$49/mo + $199 setup',
         'href'    => '/services/membership',
       ],
@@ -123,7 +123,7 @@ include __DIR__ . '/partials/service-hero.php';
     <!-- Custom Work Block -->
     <div class="svc-custom-block">
       <h3>Need something custom?</h3>
-      <p>The productized services above cover the most common needs — but not every problem fits a packaged solution. If you need something purpose-built, we do that too.</p>
+      <p>The productized services above cover the most common needs, but not every problem fits a packaged solution. If you need something purpose-built, we do that too.</p>
       <div class="svc-custom-actions">
         <a href="/projects.php" class="svc-btn svc-btn-primary svc-btn-lg">
           View Custom Projects

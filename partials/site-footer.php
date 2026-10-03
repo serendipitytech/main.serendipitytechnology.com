@@ -66,7 +66,7 @@ $footer_simple = $footer_simple ?? false;
     transition: color 0.15s ease, border-color 0.15s ease;
   }
   .site-footer-social a:hover {
-    color: #4FC4F0;
+    color: #1A7FAA;
     border-color: #4FC4F0;
   }
   .site-footer-col h4 {
@@ -89,7 +89,7 @@ $footer_simple = $footer_simple ?? false;
     text-decoration: none;
     transition: color 0.15s ease;
   }
-  .site-footer-col a:hover { color: #4FC4F0; }
+  .site-footer-col a:hover { color: #1A7FAA; }
   .site-footer-bottom {
     border-top: 1px solid #e5e7eb;
     max-width: 1100px;
@@ -107,7 +107,7 @@ $footer_simple = $footer_simple ?? false;
     color: #6b7280;
     text-decoration: none;
   }
-  .site-footer-bottom a:hover { color: #4FC4F0; }
+  .site-footer-bottom a:hover { color: #1A7FAA; }
   @media (max-width: 480px) {
     .site-footer-bottom {
       flex-direction: column;
