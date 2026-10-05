@@ -131,12 +131,18 @@ include __DIR__ . '/partials/site-header.php';
       <button type="button" class="choice" id="btn-intro" data-target="intro" aria-pressed="false">
         Intro Call (30 min)<small>A quick hello and a first look</small>
       </button>
+      <button type="button" class="choice" id="btn-client-call" data-target="client-call" aria-pressed="false">
+        Client Call (1 hr)<small>For current clients, optional 2nd hour</small>
+      </button>
     </div>
     <div class="cal-panel" id="panel-discovery">
       <div id="cal-discovery" class="cal-embed-box"></div>
     </div>
     <div class="cal-panel" id="panel-intro" hidden>
       <div id="cal-intro" class="cal-embed-box"></div>
+    </div>
+    <div class="cal-panel" id="panel-client-call" hidden>
+      <div id="cal-client-call" class="cal-embed-box"></div>
     </div>
   </div>
   <noscript>
@@ -162,7 +168,8 @@ include __DIR__ . '/partials/site-header.php';
   var CAL_ORIGIN = "https://book.serendipitytechnology.com";
   var EVENTS = {
     discovery: "serendipitytech/discovery",
-    intro: "serendipitytech/intro"
+    intro: "serendipitytech/intro",
+    "client-call": "serendipitytech/client-call"
   };
   var loaded = {};
 
