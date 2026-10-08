@@ -153,7 +153,7 @@ function watch_render(): void
     .cta .more { margin: 16px 0 0; font-size: 15px; }
     .card { max-width: 480px; margin: 28px 0 0; padding: 28px; border: 1px solid var(--line); border-radius: 12px; background: #fff; box-shadow: 0 4px 18px rgba(31,41,55,.06); }
     .card label { display: block; font-weight: 500; margin-bottom: 8px; }
-    .card input[type=text] { width: 100%; font: inherit; font-size: 16px; padding: 12px 14px; border: 1px solid #94a3b8; border-radius: 8px; margin-bottom: 8px; color: var(--text); }
+    .card input[type=text] { width: 100%; font: inherit; font-size: 16px; padding: 12px 14px; border: 1px solid #64748b; border-radius: 8px; margin-bottom: 8px; color: var(--text); }
     .hint { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
     .err { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 10px 14px; border-radius: 8px; margin: 0 0 16px; font-size: 15px; }
     @media (max-width: 640px) { .wrap { padding: 28px 16px 8px; } h1 { font-size: 28px; } .btn { width: 100%; text-align: center; } .cta { padding: 20px; } }
@@ -180,7 +180,7 @@ include __DIR__ . '/partials/site-header.php';
 <?php elseif ($mode === 'gate'): ?>
   <p class="eyebrow">Private recording</p>
   <h1>Your meeting recording</h1>
-  <p class="sub">Enter your name to watch.</p>
+  <p class="sub">Enter your organization's name to watch.</p>
   <form class="card" method="post" action="/watch/<?= $h($slug) ?>" autocomplete="off">
     <?php if ($error !== ''): ?><p class="err" role="alert"><?= $h($error) ?></p><?php endif; ?>
     <label for="pw">Your business or organization name</label>
