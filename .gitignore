@@ -41,3 +41,6 @@ data/candidate_signups/
 # Local-only working dirs (not part of the deployed site)
 _vps_backup_*/
 img/ecamm/
+
+# Recordings: binaries + index DB + HMAC key never go in git (dir is created at runtime by www-data)
+data/recordings/

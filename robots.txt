@@ -10,6 +10,7 @@ Disallow: /chat_ui.php
 Disallow: /chat_ui.html
 Disallow: /api/
 Disallow: /data/
+Disallow: /watch/
 Disallow: /send_sms.php
 Disallow: /sms_inbound.php
 

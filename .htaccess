@@ -41,6 +41,11 @@ RewriteRule ^websites(\.php)?/?$ https://serendipitytechnology.com/services/busi
 # Clean URL: /book -> book.php (Cal.com embed page)
 RewriteRule ^book/?$ /book.php [L]
 
+# Private meeting recordings: /watch/<slug>[/stream|/download] -> watch.php (see lib/recordings.php)
+# Slug format is validated in PHP; anything else gets the same branded 404.
+RewriteRule ^watch/([A-Za-z0-9]{1,32})/?$ /watch.php?slug=$1 [L,QSA]
+RewriteRule ^watch/([A-Za-z0-9]{1,32})/(stream|download)/?$ /watch.php?slug=$1&a=$2 [L]
+
 # Force www to non-www (optional - uncomment if preferred)
 # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
