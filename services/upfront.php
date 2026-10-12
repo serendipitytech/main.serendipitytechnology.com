@@ -11,6 +11,15 @@
  * HARD RULE: every product image is a REAL capture from the demo tenant. No AI-generated or mocked screens.
  */
 
+// Cache-busting: every /img/upfront/ asset URL carries a content hash (?v=), so a swapped
+// file gets a new URL even though the server caches images for 30 days. ALWAYS reference
+// product images through up_img(); never hardcode /img/upfront/ paths.
+function up_img(string $file): string {
+    $path = __DIR__ . '/../img/upfront/' . $file;
+    $v = is_file($path) ? substr(md5_file($path), 0, 10) : '0';
+    return '/img/upfront/' . $file . '?v=' . $v;
+}
+
 // PENDING: confirm demo booking target (and ideally a dedicated 15-minute event type).
 $book_url = '/book';
 // Live demo workspace: registration page (not /sign-in).
@@ -227,7 +236,7 @@ include __DIR__ . '/../partials/site-header.php';
           <span class="up-price-note">Starting at <strong>$20/month</strong></span>
         </div>
       </div>
-      <img class="up-shot up-shot-hero" src="/img/upfront/hero-customer-estimate.jpg" width="780" height="1840" alt="A customer-facing estimate on a phone, with the shop's logo, itemized shutters and shades, totals and the deposit to start">
+      <img class="up-shot up-shot-hero" src="<?= up_img('hero-customer-estimate.jpg') ?>" width="780" height="1840" alt="A customer-facing estimate on a phone, with the shop's logo, itemized shutters and shades, totals and the deposit to start">
     </div>
   </section>
 
@@ -258,25 +267,25 @@ include __DIR__ . '/../partials/site-header.php';
           <span class="up-step-num" aria-hidden="true">1</span>
           <h3>Build the quote</h3>
           <p>Your products, your options, your pricing. Optional line items let customers pick what they want.</p>
-          <img class="up-shot up-thumb" src="/img/upfront/step1-estimate-builder.jpg" width="1000" height="1341" loading="lazy" alt="The Upfront estimate builder with product-specific fields, line totals and optional line items">
+          <img class="up-shot up-thumb" src="<?= up_img('step1-estimate-builder.jpg') ?>" width="1000" height="1341" loading="lazy" alt="The Upfront estimate builder with product-specific fields, line totals and optional line items">
         </div>
         <div class="up-step">
           <span class="up-step-num" aria-hidden="true">2</span>
           <h3>Send one link</h3>
           <p>Your customer sees a clean page with your logo and colors, not ours.</p>
-          <img class="up-shot up-thumb" src="/img/upfront/step2-customer-page.jpg" width="1000" height="1851" loading="lazy" alt="A customer estimate page with the shop's branding, itemized products, totals and an approval form">
+          <img class="up-shot up-thumb" src="<?= up_img('step2-customer-page.jpg') ?>" width="1000" height="1851" loading="lazy" alt="A customer estimate page with the shop's branding, itemized products, totals and an approval form">
         </div>
         <div class="up-step">
           <span class="up-step-num" aria-hidden="true">3</span>
           <h3>They approve</h3>
           <p>Every approval is timestamped, so there's never a question about what was agreed.</p>
-          <img class="up-shot up-thumb" src="/img/upfront/step3-approval.jpg" width="780" height="1426" loading="lazy" alt="The customer approval form with name, email, and an approve button, noting the name, time and IP address are recorded">
+          <img class="up-shot up-thumb" src="<?= up_img('step3-approval.jpg') ?>" width="780" height="1426" loading="lazy" alt="The customer approval form with name, email, and an approve button, noting the name, time and IP address are recorded">
         </div>
         <div class="up-step up-step-pay">
           <span class="up-step-num" aria-hidden="true">4</span>
           <h3>You get paid</h3>
           <p>Deposits and invoices are paid online, straight into your own Stripe account.</p>
-          <img class="up-shot up-thumb" src="/img/upfront/step4-payment.jpg" width="780" height="1410" loading="lazy" alt="A customer estimate page marked Approved with the deposit received, showing itemized products, totals and the paid deposit">
+          <img class="up-shot up-thumb" src="<?= up_img('step4-payment.jpg') ?>" width="780" height="1410" loading="lazy" alt="A customer estimate page marked Approved with the deposit received, showing itemized products, totals and the paid deposit">
         </div>
       </div>
     </div>
@@ -292,7 +301,7 @@ include __DIR__ . '/../partials/site-header.php';
         <p>Send us your current estimate sheets, the field names you use, and the line items you sell. We'll build your quote and invoice forms to match, so they tell your customers exactly what they're getting and why they can trust it.</p>
         <div class="up-badge"><strong>$150</strong><span>Custom setup, one time</span></div>
       </div>
-      <img class="up-shot" src="/img/upfront/custom-setup-products.jpg" width="1000" height="698" loading="lazy" alt="Settings, Products: product types and the fields each one asks for, configurable per business">
+      <img class="up-shot" src="<?= up_img('custom-setup-products.jpg') ?>" width="1000" height="698" loading="lazy" alt="Settings, Products: product types and the fields each one asks for, configurable per business">
     </div>
   </section>
 
