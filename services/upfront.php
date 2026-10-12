@@ -47,7 +47,11 @@ $check = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="cu
   <meta property="og:description" content="Send a custom estimate, get it approved, get paid. All on one page with your brand on it. Starting at $20/month.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://serendipitytechnology.com/services/upfront">
-  <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png">
+  <meta property="og:image" content="https://serendipitytechnology.com<?= up_img('upfront-og-1200x630.jpg') ?>">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://serendipitytechnology.com<?= up_img('upfront-og-1200x630.jpg') ?>">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -267,13 +271,13 @@ include __DIR__ . '/../partials/site-header.php';
           <span class="up-step-num" aria-hidden="true">1</span>
           <h3>Build the quote</h3>
           <p>Your products, your options, your pricing. Optional line items let customers pick what they want.</p>
-          <img class="up-shot up-thumb" src="<?= up_img('step1-estimate-builder.jpg') ?>" width="1000" height="1341" loading="lazy" alt="The Upfront estimate builder with product-specific fields, line totals and optional line items">
+          <img class="up-shot up-thumb" src="<?= up_img('step1-thumb.jpg') ?>" width="784" height="1060" loading="lazy" alt="An estimate line item in the Upfront builder with product-specific fields and a line total">
         </div>
         <div class="up-step">
           <span class="up-step-num" aria-hidden="true">2</span>
           <h3>Send one link</h3>
           <p>Your customer sees a clean page with your logo and colors, not ours.</p>
-          <img class="up-shot up-thumb" src="<?= up_img('step2-customer-page.jpg') ?>" width="1000" height="1851" loading="lazy" alt="A customer estimate page with the shop's branding, itemized products, totals and an approval form">
+          <img class="up-shot up-thumb" src="<?= up_img('step2-thumb.jpg') ?>" width="784" height="889" loading="lazy" alt="The customer link box on an estimate, with a Copy link button to send it to the customer">
         </div>
         <div class="up-step">
           <span class="up-step-num" aria-hidden="true">3</span>
