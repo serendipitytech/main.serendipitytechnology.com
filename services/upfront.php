@@ -6,7 +6,7 @@
  * Copy source: Marketing/upfront-landing-page-copy-draft.md (v2, 2026-10-11).
  *
  * PENDING INPUTS (search this file for "PENDING"):
- *   - Real UI captures from the CRM demo tenant (5 slots: hero, builder, customer page, approval, payment, setup)
+ *   - (Resolved 2026-10-12) Real captures from the demo tenant are in /img/upfront/ (cropped, demo banner removed). Step 4 uses the invoices list; swap for a payment screen if one is captured.
  *   - Upfront wordmark (text placeholder in the hero)
  *   - Demo booking link (currently the site's own /book page, a branded embed of book.serendipitytechnology.com)
  * HARD RULE: every product image is a REAL capture from the demo tenant. No AI-generated or mocked screens.
@@ -14,6 +14,8 @@
 
 // PENDING: confirm demo booking target (and ideally a dedicated 15-minute event type).
 $book_url = '/book';
+// Live demo workspace: registration page (not /sign-in).
+$demo_url = 'https://upfront-demo.serendipitytechnology.com';
 
 // Show the draft banner on the preview host only, never on production.
 $is_preview = isset($_SERVER['HTTP_HOST']) && strpos($_SERVER['HTTP_HOST'], 'preview.') === 0;
@@ -111,6 +113,10 @@ $check = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="cu
     }
     .up-capture .up-capture-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #176E96; }
     .up-capture svg { color: #1A7FAA; }
+    .up-shot-hero { max-width: 360px; margin: 0 auto; }
+    .up-thumb { margin-top: 16px; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; box-shadow: var(--svc-shadow); }
+    .up-thumb-wide { aspect-ratio: auto; }
+    .up-step .up-thumb { margin-top: auto; }
     .up-capture-phone { width: 100%; max-width: 280px; aspect-ratio: 9 / 18; margin: 0 auto; border-radius: 32px; box-shadow: var(--svc-shadow-lg); }
     .up-capture-wide { width: 100%; aspect-ratio: 16 / 10; box-shadow: var(--svc-shadow); }
     .up-capture-thumb { width: 100%; aspect-ratio: 4 / 3; margin-top: 16px; padding: 12px; }
@@ -134,7 +140,7 @@ $check = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="cu
     .up-step-pay .up-step-num { background: #F7B06A; color: #1F2937; }
     .up-step h3 { font-family: "Gill Sans", "Gill Sans MT", 'Roboto', sans-serif; font-size: 20px; margin: 0 0 8px; color: var(--svc-text); }
     .up-step p { font-size: 15px; color: #475569; margin: 0; }
-    .up-step .up-capture { margin-top: auto; }
+    .up-step h3 + p { margin-bottom: 16px; }
 
     /* ---- Custom setup ---- */
     .up-badge {
@@ -208,15 +214,11 @@ include __DIR__ . '/../partials/site-header.php';
         <p class="up-sub">Upfront is built by a solo business owner, for solo business owners who are done paying for software made for fifty people.</p>
         <div class="up-hero-cta">
           <a href="<?= htmlspecialchars($book_url) ?>" class="svc-btn svc-btn-primary svc-btn-lg">Book a 15-minute demo</a>
+          <a href="<?= htmlspecialchars($demo_url) ?>" class="svc-btn svc-btn-secondary svc-btn-lg" rel="noopener">Try the live demo</a>
           <span class="up-price-note">Starting at <strong>$20/month</strong></span>
         </div>
       </div>
-      <!-- PENDING CAPTURE hero-phone-estimate: real screen capture of a branded estimate on a phone (demo tenant) -->
-      <div class="up-capture up-capture-phone" role="img" aria-label="Placeholder: real screen capture of a branded estimate on a phone, coming from the demo tenant">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
-        <span class="up-capture-tag">Real capture pending</span>
-        <span>A branded estimate on a phone, from the demo tenant</span>
-      </div>
+      <img class="up-shot up-shot-hero" src="/img/upfront/hero-customer-estimate.jpg" width="578" height="739" alt="A customer-facing estimate with the shop's logo, itemized shutters and shades, totals, deposit, and an approval form">
     </div>
   </section>
 
@@ -247,37 +249,25 @@ include __DIR__ . '/../partials/site-header.php';
           <span class="up-step-num" aria-hidden="true">1</span>
           <h3>Build the quote</h3>
           <p>Your products, your options, your pricing. Optional line items let customers pick what they want.</p>
-          <!-- PENDING CAPTURE step-1-builder: quote builder (demo tenant) -->
-          <div class="up-capture up-capture-thumb" role="img" aria-label="Placeholder: real capture of the quote builder">
-            <span class="up-capture-tag">Real capture pending</span><span>Quote builder</span>
-          </div>
+          <img class="up-shot up-thumb" src="/img/upfront/step1-estimate-builder.jpg" width="745" height="725" loading="lazy" alt="The Upfront estimate builder with project work and monthly service lines, optional and pre-selected options, and a running total">
         </div>
         <div class="up-step">
           <span class="up-step-num" aria-hidden="true">2</span>
           <h3>Send one link</h3>
           <p>Your customer sees a clean page with your logo and colors, not ours.</p>
-          <!-- PENDING CAPTURE step-2-customer-page: branded customer page (demo tenant) -->
-          <div class="up-capture up-capture-thumb" role="img" aria-label="Placeholder: real capture of the branded customer page">
-            <span class="up-capture-tag">Real capture pending</span><span>Branded customer page</span>
-          </div>
+          <img class="up-shot up-thumb" src="/img/upfront/step2-customer-page.jpg" width="578" height="739" loading="lazy" alt="A customer estimate page where the customer ticks optional items and the total updates">
         </div>
         <div class="up-step">
           <span class="up-step-num" aria-hidden="true">3</span>
           <h3>They approve</h3>
           <p>Every approval is timestamped, so there's never a question about what was agreed.</p>
-          <!-- PENDING CAPTURE step-3-approval: timestamped approval (demo tenant) -->
-          <div class="up-capture up-capture-thumb" role="img" aria-label="Placeholder: real capture of a timestamped approval">
-            <span class="up-capture-tag">Real capture pending</span><span>Timestamped approval</span>
-          </div>
+          <img class="up-shot up-thumb" src="/img/upfront/step3-approval.jpg" width="578" height="430" loading="lazy" alt="The customer approval form with name, email, and an approve button, noting the name, time and IP address are recorded">
         </div>
         <div class="up-step up-step-pay">
           <span class="up-step-num" aria-hidden="true">4</span>
           <h3>You get paid</h3>
           <p>Deposits and invoices are paid online, straight into your own Stripe account.</p>
-          <!-- PENDING CAPTURE step-4-payment: online payment / invoice (demo tenant) -->
-          <div class="up-capture up-capture-thumb" role="img" aria-label="Placeholder: real capture of the online payment page">
-            <span class="up-capture-tag">Real capture pending</span><span>Online payment</span>
-          </div>
+          <img class="up-shot up-thumb up-thumb-wide" src="/img/upfront/step4-invoices.jpg" width="900" height="226" loading="lazy" alt="The invoices list showing an invoice with its status and balance">
         </div>
       </div>
     </div>
@@ -293,12 +283,7 @@ include __DIR__ . '/../partials/site-header.php';
         <p>Send us your current estimate sheets, the field names you use, and the line items you sell. We'll build your quote and invoice forms to match, so they tell your customers exactly what they're getting and why they can trust it.</p>
         <div class="up-badge"><strong>$150</strong><span>Custom setup, one time</span></div>
       </div>
-      <!-- PENDING CAPTURE custom-setup-form: a customer-specific estimate/invoice form built from their sheet (demo tenant) -->
-      <div class="up-capture up-capture-wide" role="img" aria-label="Placeholder: real capture of a custom quote form built from a customer's own estimate sheet">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg>
-        <span class="up-capture-tag">Real capture pending</span>
-        <span>A custom quote form built from a customer's own sheet</span>
-      </div>
+      <img class="up-shot" src="/img/upfront/custom-setup-products.jpg" width="638" height="725" loading="lazy" alt="Settings, Products: product types and the fields each one asks for, configurable per business">
     </div>
   </section>
 
@@ -403,6 +388,8 @@ $cta_subtitle       = '';
 $cta_text           = 'Book a demo';
 $cta_href           = $book_url;
 $cta_style          = 'primary';
+$cta_secondary_text = 'Try the live demo';
+$cta_secondary_href = $demo_url;
 include __DIR__ . '/partials/service-cta.php';
 ?>
 
@@ -412,7 +399,7 @@ include __DIR__ . '/partials/service-cta.php';
 <?php include __DIR__ . '/../partials/site-contact-modal.php'; ?>
 
 <?php if ($is_preview): ?>
-<div class="up-draft" role="note">Draft preview. Gray dashed boxes are placeholders for real captures from the demo tenant. Not for publishing.</div>
+<div class="up-draft" role="note">Draft preview. Not for publishing.</div>
 <?php endif; ?>
 
 </body>
