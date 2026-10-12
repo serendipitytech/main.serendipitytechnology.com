@@ -6,7 +6,7 @@
  * Copy source: Marketing/upfront-landing-page-copy-draft.md (v2, 2026-10-11).
  *
  * PENDING INPUTS (search this file for "PENDING"):
- *   - (Resolved 2026-10-12) Real captures from the demo tenant are in /img/upfront/ (cropped, demo banner removed). Step 4 uses the invoices list; swap for a payment screen if one is captured.
+ *   - (Resolved 2026-10-12) Real captures from the demo tenant are in /img/upfront/ (cropped, demo banner removed). Replaced 2026-10-12 with the marketing team's versions.
  *   - Upfront wordmark (text placeholder in the hero)
  *   - Demo booking link (currently the site's own /book page, a branded embed of book.serendipitytechnology.com)
  * HARD RULE: every product image is a REAL capture from the demo tenant. No AI-generated or mocked screens.
@@ -113,9 +113,8 @@ $check = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="cu
     }
     .up-capture .up-capture-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #176E96; }
     .up-capture svg { color: #1A7FAA; }
-    .up-shot-hero { max-width: 360px; margin: 0 auto; }
-    .up-thumb { margin-top: 16px; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; box-shadow: var(--svc-shadow); }
-    .up-thumb-wide { aspect-ratio: auto; }
+    .up-shot-hero { max-width: 340px; margin: 0 auto; aspect-ratio: 9 / 17; object-fit: cover; object-position: top; border-radius: 28px; }
+    .up-thumb { margin-top: 16px; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; box-shadow: var(--svc-shadow); }
     .up-step .up-thumb { margin-top: auto; }
     .up-capture-phone { width: 100%; max-width: 280px; aspect-ratio: 9 / 18; margin: 0 auto; border-radius: 32px; box-shadow: var(--svc-shadow-lg); }
     .up-capture-wide { width: 100%; aspect-ratio: 16 / 10; box-shadow: var(--svc-shadow); }
@@ -218,7 +217,7 @@ include __DIR__ . '/../partials/site-header.php';
           <span class="up-price-note">Starting at <strong>$20/month</strong></span>
         </div>
       </div>
-      <img class="up-shot up-shot-hero" src="/img/upfront/hero-customer-estimate.jpg" width="578" height="739" alt="A customer-facing estimate with the shop's logo, itemized shutters and shades, totals, deposit, and an approval form">
+      <img class="up-shot up-shot-hero" src="/img/upfront/hero-customer-estimate.jpg" width="780" height="1840" alt="A customer-facing estimate on a phone, with the shop's logo, itemized shutters and shades, totals and the deposit to start">
     </div>
   </section>
 
@@ -249,25 +248,25 @@ include __DIR__ . '/../partials/site-header.php';
           <span class="up-step-num" aria-hidden="true">1</span>
           <h3>Build the quote</h3>
           <p>Your products, your options, your pricing. Optional line items let customers pick what they want.</p>
-          <img class="up-shot up-thumb" src="/img/upfront/step1-estimate-builder.jpg" width="745" height="725" loading="lazy" alt="The Upfront estimate builder with project work and monthly service lines, optional and pre-selected options, and a running total">
+          <img class="up-shot up-thumb" src="/img/upfront/step1-estimate-builder.jpg" width="1000" height="1341" loading="lazy" alt="The Upfront estimate builder with product-specific fields, line totals and optional line items">
         </div>
         <div class="up-step">
           <span class="up-step-num" aria-hidden="true">2</span>
           <h3>Send one link</h3>
           <p>Your customer sees a clean page with your logo and colors, not ours.</p>
-          <img class="up-shot up-thumb" src="/img/upfront/step2-customer-page.jpg" width="578" height="739" loading="lazy" alt="A customer estimate page where the customer ticks optional items and the total updates">
+          <img class="up-shot up-thumb" src="/img/upfront/step2-customer-page.jpg" width="1000" height="1851" loading="lazy" alt="A customer estimate page with the shop's branding, itemized products, totals and an approval form">
         </div>
         <div class="up-step">
           <span class="up-step-num" aria-hidden="true">3</span>
           <h3>They approve</h3>
           <p>Every approval is timestamped, so there's never a question about what was agreed.</p>
-          <img class="up-shot up-thumb" src="/img/upfront/step3-approval.jpg" width="578" height="430" loading="lazy" alt="The customer approval form with name, email, and an approve button, noting the name, time and IP address are recorded">
+          <img class="up-shot up-thumb" src="/img/upfront/step3-approval.jpg" width="780" height="1426" loading="lazy" alt="The customer approval form with name, email, and an approve button, noting the name, time and IP address are recorded">
         </div>
         <div class="up-step up-step-pay">
           <span class="up-step-num" aria-hidden="true">4</span>
           <h3>You get paid</h3>
           <p>Deposits and invoices are paid online, straight into your own Stripe account.</p>
-          <img class="up-shot up-thumb up-thumb-wide" src="/img/upfront/step4-invoices.jpg" width="900" height="226" loading="lazy" alt="The invoices list showing an invoice with its status and balance">
+          <img class="up-shot up-thumb" src="/img/upfront/step4-payment.jpg" width="780" height="1410" loading="lazy" alt="A customer estimate page marked Approved with the deposit received, showing itemized products, totals and the paid deposit">
         </div>
       </div>
     </div>
@@ -283,7 +282,7 @@ include __DIR__ . '/../partials/site-header.php';
         <p>Send us your current estimate sheets, the field names you use, and the line items you sell. We'll build your quote and invoice forms to match, so they tell your customers exactly what they're getting and why they can trust it.</p>
         <div class="up-badge"><strong>$150</strong><span>Custom setup, one time</span></div>
       </div>
-      <img class="up-shot" src="/img/upfront/custom-setup-products.jpg" width="638" height="725" loading="lazy" alt="Settings, Products: product types and the fields each one asks for, configurable per business">
+      <img class="up-shot" src="/img/upfront/custom-setup-products.jpg" width="1000" height="698" loading="lazy" alt="Settings, Products: product types and the fields each one asks for, configurable per business">
     </div>
   </section>
 
