@@ -4,7 +4,7 @@
  * Same embed approach as /book (Cal.com embed.js, self-hosted instance), single event only,
  * styled to match /services/upfront. Event: serendipitytech/upfront-demo.
  */
-$mark = '<span class="up-wordmark-mark" aria-hidden="true"></span>Upfront';
+require_once __DIR__ . '/partials/upfront-helpers.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,11 +24,8 @@ $mark = '<span class="up-wordmark-mark" aria-hidden="true"></span>Upfront';
   <link rel="preconnect" href="https://book.serendipitytechnology.com">
   <?php include __DIR__ . '/services/partials/service-styles.php'; ?>
   <style>
-    .up-wordmark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; font-size: 24px; font-weight: 700;
-      color: var(--svc-text); letter-spacing: -0.01em; line-height: 1; }
-    .up-wordmark:hover { color: var(--svc-text); }
-    .up-wordmark-mark { width: 12px; height: 12px; border-radius: 3px; background: #1A7FAA; box-shadow: 3px 3px 0 #F7B06A; flex: none; }
+    .up-wordmark { display: inline-flex; align-items: center; line-height: 0; text-decoration: none; }
+    .up-wordmark-img { display: block; height: auto; }
     .up-bar { background: #fff; border-bottom: 1px solid var(--svc-border); }
     .up-bar-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 12px; padding-bottom: 12px; }
     .up-bar a.back { font-size: 14px; color: #1A7FAA; font-weight: 500; }
@@ -58,7 +55,7 @@ include __DIR__ . '/partials/site-header.php';
 
 <div class="up-bar">
   <div class="svc-container up-bar-in">
-    <a class="up-wordmark" href="/services/upfront" aria-label="Upfront, back to the Upfront page"><?= $mark ?></a>
+    <a class="up-wordmark" href="/services/upfront" aria-label="Upfront, back to the Upfront page"><?= up_wordmark(110) ?></a>
     <a class="back" href="/services/upfront">Back to Upfront</a>
   </div>
 </div>

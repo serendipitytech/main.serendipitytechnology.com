@@ -10,14 +10,7 @@
  * HARD RULE: every product image is a REAL capture from the demo tenant. No AI-generated or mocked screens.
  */
 
-// Cache-busting: every /img/upfront/ asset URL carries a content hash (?v=), so a swapped
-// file gets a new URL even though the server caches images for 30 days. ALWAYS reference
-// product images through up_img(); never hardcode /img/upfront/ paths.
-function up_img(string $file): string {
-    $path = __DIR__ . '/../img/upfront/' . $file;
-    $v = is_file($path) ? substr(md5_file($path), 0, 10) : '0';
-    return '/img/upfront/' . $file . '?v=' . $v;
-}
+require_once __DIR__ . '/../partials/upfront-helpers.php';
 
 // Branded embed of the dedicated 15-minute Cal event (Upfront Demo only; /book exposes the longer call types).
 $book_url = '/book/upfront-demo';
@@ -95,21 +88,15 @@ $check = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="cu
     }
     .up-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--svc-gradient); }
     .up-hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
-    /* Typographic wordmark: small square mark + "Upfront" in the display font. No logo file. */
-    .up-wordmark {
-      display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-      font-size: 24px; font-weight: 700; color: var(--svc-text); letter-spacing: -0.01em; line-height: 1;
-    }
-    .up-wordmark:hover { color: var(--svc-text); }
-    .up-wordmark-mark { width: 12px; height: 12px; border-radius: 3px; background: #1A7FAA; box-shadow: 3px 3px 0 #F7B06A; flex: none; }
+    /* Wordmark: rendered image (see partials/upfront-helpers.php). */
+    .up-wordmark { display: inline-flex; align-items: center; line-height: 0; text-decoration: none; }
+    .up-wordmark-img { display: block; height: auto; }
     .up-hero .up-wordmark { margin-bottom: 20px; }
     .up-bar { background: #fff; border-bottom: 1px solid var(--svc-border); }
     .up-bar-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 12px; padding-bottom: 12px; }
     .up-bar .svc-btn { padding: 9px 14px; font-size: 14px; }
     .up-foot { border-top: 1px solid var(--svc-border); padding: 28px 0 0; margin-top: 16px; }
     .up-foot-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; font-size: 14px; color: #475569; }
-    .up-foot .up-wordmark { font-size: 20px; }
     .up-hero .svc-h1 { font-size: 52px; }
     .up-hero .svc-lede { font-size: 20px; color: #475569; margin-bottom: 16px; }
     .up-hero .up-sub { color: #475569; max-width: 520px; margin: 0 0 28px; }
@@ -187,14 +174,15 @@ $check = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="cu
     .up-pricing-note { font-size: 14px; color: #475569; margin: 16px 0 0; }
 
     /* ---- Who ---- */
-    .up-who { max-width: 640px; margin: 0 auto; text-align: center; }
-    .up-who p { font-size: 18px; color: #475569; }
+    .up-who { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+    .up-who p { font-size: 18px; color: #475569; margin: 0 0 14px; }
+    .up-who-photo { width: 100%; height: auto; border-radius: var(--svc-radius-lg); box-shadow: var(--svc-shadow-lg); }
 
     /* ---- Draft banner (preview host only) ---- */
     .up-draft { position: sticky; bottom: 0; z-index: 50; background: #fff7ed; border-top: 1px solid #F7B06A; color: #7c4a10; font-size: 13px; font-weight: 500; text-align: center; padding: 8px 16px; }
 
     @media (max-width: 900px) {
-      .up-hero-grid, .up-split, .up-pricing { grid-template-columns: 1fr; }
+      .up-hero-grid, .up-split, .up-pricing, .up-who { grid-template-columns: 1fr; }
       .up-steps { grid-template-columns: 1fr 1fr; }
       .up-hero .svc-h1 { font-size: 38px; }
       .up-hero { padding: 48px 0; }
@@ -217,7 +205,7 @@ include __DIR__ . '/../partials/site-header.php';
 
 <div class="up-bar">
   <div class="svc-container up-bar-in">
-    <a class="up-wordmark" href="#top" aria-label="Upfront, back to top"><span class="up-wordmark-mark" aria-hidden="true"></span>Upfront</a>
+    <a class="up-wordmark" href="#top" aria-label="Upfront, back to top"><?= up_wordmark(110) ?></a>
     <a href="<?= htmlspecialchars($book_url) ?>" class="svc-btn svc-btn-primary">Book a demo</a>
   </div>
 </div>
@@ -228,7 +216,7 @@ include __DIR__ . '/../partials/site-header.php';
   <section class="up-hero">
     <div class="svc-container up-hero-grid">
       <div>
-        <div class="up-wordmark" aria-label="Upfront"><span class="up-wordmark-mark" aria-hidden="true"></span>Upfront</div>
+        <div class="up-wordmark"><?= up_wordmark(150) ?></div>
         <p class="svc-eyebrow">For solo and small service businesses</p>
         <h1 class="svc-h1">Quotes made to measure.</h1>
         <p class="svc-lede">Send a custom estimate, get it approved, get paid. All on one page with your brand on it.</p>
@@ -372,9 +360,14 @@ include __DIR__ . '/../partials/site-header.php';
   <!-- ============ WHO'S BEHIND IT ============ -->
   <section class="svc-section" style="padding-top:64px;">
     <div class="svc-container up-who">
-      <p class="svc-eyebrow">Who's behind it</p>
-      <h2 class="svc-h2 svc-h2-center">A real person runs your account.</h2>
-      <p>Upfront is built and run by Serendipity Technology. That means a real person set it up, knows your account, and answers when you reach out. We don't just ship software, we run it.</p>
+      <div class="up-who-copy">
+        <p class="svc-eyebrow">Who's behind it</p>
+        <h2 class="svc-h2">A real person runs your account.</h2>
+        <!-- DRAFT bio (Marketing/upfront-bio-draft.md), pending Marketing's final review. -->
+        <p>Hi, I'm Troy. I built Upfront after watching too many small shops pay for bloated software that does a hundred things they will never use. I run it myself, so when you reach out, you get the person who knows your account, not a ticket queue.</p>
+        <p>Serendipity Technology is a small shop building practical tools for other small operators. Upfront is the one I use for my own clients, so it has to actually work.</p>
+      </div>
+      <img class="up-who-photo" src="<?= up_img('troy-presenting.jpg') ?>" width="1000" height="667" loading="lazy" alt="Troy Shimkus, founder of Serendipity Technology, gesturing toward the text beside him">
     </div>
   </section>
 
@@ -418,7 +411,7 @@ include __DIR__ . '/partials/service-cta.php';
 
 <div class="svc-container up-foot">
   <div class="up-foot-in">
-    <span class="up-wordmark" aria-label="Upfront"><span class="up-wordmark-mark" aria-hidden="true"></span>Upfront</span>
+    <span class="up-wordmark"><?= up_wordmark(100) ?></span>
     <span>Upfront, by Serendipity Technology. Quotes made to measure.</span>
   </div>
 </div>
