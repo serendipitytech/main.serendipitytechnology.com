@@ -6,8 +6,7 @@
  * Copy source: Marketing/upfront-landing-page-copy-draft.md (v2, 2026-10-11).
  *
  * PENDING INPUTS (search this file for "PENDING"):
- *   - (Resolved 2026-10-12) Real captures from the demo tenant are in /img/upfront/ (cropped, demo banner removed). Replaced 2026-10-12 with the marketing team's versions.
- *   - Upfront wordmark (text placeholder in the hero)
+ * Wordmark: typographic (square mark + "Upfront" in display font), approved by Troy 2026-10-12. No logo file.
  *   - Demo booking link (currently the site's own /book page, a branded embed of book.serendipitytechnology.com)
  * HARD RULE: every product image is a REAL capture from the demo tenant. No AI-generated or mocked screens.
  */
@@ -84,16 +83,21 @@ $check = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="cu
     }
     .up-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--svc-gradient); }
     .up-hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+    /* Typographic wordmark: small square mark + "Upfront" in the display font. No logo file. */
     .up-wordmark {
-      /* PENDING: replace with the real Upfront wordmark (SVG) when supplied. */
-      display: inline-flex; align-items: center; gap: 10px;
+      display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-      font-size: 24px; font-weight: 700; color: var(--svc-text); letter-spacing: -0.01em; margin-bottom: 20px;
+      font-size: 24px; font-weight: 700; color: var(--svc-text); letter-spacing: -0.01em; line-height: 1;
     }
-    .up-wordmark small {
-      font-family: 'Roboto', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
-      color: #475569; border: 1px dashed #9ca3af; border-radius: 4px; padding: 2px 6px;
-    }
+    .up-wordmark:hover { color: var(--svc-text); }
+    .up-wordmark-mark { width: 12px; height: 12px; border-radius: 3px; background: #1A7FAA; box-shadow: 3px 3px 0 #F7B06A; flex: none; }
+    .up-hero .up-wordmark { margin-bottom: 20px; }
+    .up-bar { background: #fff; border-bottom: 1px solid var(--svc-border); }
+    .up-bar-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 12px; padding-bottom: 12px; }
+    .up-bar .svc-btn { padding: 9px 14px; font-size: 14px; }
+    .up-foot { border-top: 1px solid var(--svc-border); padding: 28px 0 0; margin-top: 16px; }
+    .up-foot-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; font-size: 14px; color: #475569; }
+    .up-foot .up-wordmark { font-size: 20px; }
     .up-hero .svc-h1 { font-size: 52px; }
     .up-hero .svc-lede { font-size: 20px; color: #475569; margin-bottom: 16px; }
     .up-hero .up-sub { color: #475569; max-width: 520px; margin: 0 0 28px; }
@@ -199,14 +203,20 @@ $header_always_visible = true;
 include __DIR__ . '/../partials/site-header.php';
 ?>
 
+<div class="up-bar">
+  <div class="svc-container up-bar-in">
+    <a class="up-wordmark" href="#top" aria-label="Upfront, back to top"><span class="up-wordmark-mark" aria-hidden="true"></span>Upfront</a>
+    <a href="<?= htmlspecialchars($book_url) ?>" class="svc-btn svc-btn-primary">Book a demo</a>
+  </div>
+</div>
+
 <main id="top">
 
   <!-- ============ HERO ============ -->
   <section class="up-hero">
     <div class="svc-container up-hero-grid">
       <div>
-        <!-- PENDING: Upfront wordmark. Text placeholder until the asset is supplied. -->
-        <div class="up-wordmark">Upfront <small>wordmark TBD</small></div>
+        <div class="up-wordmark" aria-label="Upfront"><span class="up-wordmark-mark" aria-hidden="true"></span>Upfront</div>
         <p class="svc-eyebrow">For solo and small service businesses</p>
         <h1 class="svc-h1">Quotes made to measure.</h1>
         <p class="svc-lede">Send a custom estimate, get it approved, get paid. All on one page with your brand on it.</p>
@@ -393,6 +403,13 @@ include __DIR__ . '/partials/service-cta.php';
 ?>
 
 </main>
+
+<div class="svc-container up-foot">
+  <div class="up-foot-in">
+    <span class="up-wordmark" aria-label="Upfront"><span class="up-wordmark-mark" aria-hidden="true"></span>Upfront</span>
+    <span>Upfront, by Serendipity Technology. Quotes made to measure.</span>
+  </div>
+</div>
 
 <?php include __DIR__ . '/../partials/site-footer.php'; ?>
 <?php include __DIR__ . '/../partials/site-contact-modal.php'; ?>
