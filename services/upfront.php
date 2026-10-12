@@ -236,7 +236,7 @@ include __DIR__ . '/../partials/site-header.php';
     <div class="svc-container up-split">
       <div>
         <p class="svc-eyebrow">The problem</p>
-        <h2 class="svc-h2">You need about four things, done right.</h2>
+        <h2 class="svc-h2">Too many tools for one quote.</h2>
         <p>You quote in one app, take payments in another, and chase approvals by text. Or you're paying for QuickBooks just to send an estimate.</p>
       </div>
       <div class="up-callout">
@@ -362,7 +362,7 @@ include __DIR__ . '/../partials/site-header.php';
     <div class="svc-container up-who">
       <p class="svc-eyebrow">Who's behind it</p>
       <h2 class="svc-h2 svc-h2-center">A real person runs your account.</h2>
-      <p>Upfront is built and run by Serendipity Technology. That means a real person set it up, knows your account, and answers when you call. We don't just ship software, we run it.</p>
+      <p>Upfront is built and run by Serendipity Technology. That means a real person set it up, knows your account, and answers when you reach out. We don't just ship software, we run it.</p>
     </div>
   </section>
 
@@ -380,7 +380,7 @@ $faq_items = [
   ],
   [
     'q' => 'Can my customers see that it\'s Upfront?',
-    'a' => 'Your customers see your brand: your logo, your colors, your terms.',
+    'a' => 'Your brand leads every page: your logo, your colors, your terms. A small "powered by Upfront" line sits in the footer, and that\'s it.',
   ],
   [
     'q' => 'What if I need a feature you don\'t have?',
