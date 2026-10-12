@@ -143,6 +143,7 @@ $footer_simple = $footer_simple ?? false;
         <li><a href="/services/business-sites">Business Websites</a></li>
         <li><a href="/services/event-checkin">Event Check-In</a></li>
         <li><a href="/services/membership">Membership Portal</a></li>
+        <li><a href="/services/upfront">Upfront (Quotes &amp; Payments)</a></li>
         <li><a href="/services/">All Services</a></li>
       </ul>
     </div>
