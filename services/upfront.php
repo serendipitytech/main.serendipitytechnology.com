@@ -19,8 +19,8 @@ function up_img(string $file): string {
     return '/img/upfront/' . $file . '?v=' . $v;
 }
 
-// Dedicated 15-minute Cal event (Upfront Demo only; /book exposes the longer call types).
-$book_url = 'https://book.serendipitytechnology.com/serendipitytech/upfront-demo';
+// Branded embed of the dedicated 15-minute Cal event (Upfront Demo only; /book exposes the longer call types).
+$book_url = '/book/upfront-demo';
 // Live demo workspace: registration page (not /sign-in).
 $demo_url = 'https://upfront-demo.serendipitytechnology.com';
 
