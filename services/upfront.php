@@ -7,7 +7,6 @@
  *
  * PENDING INPUTS (search this file for "PENDING"):
  * Wordmark: typographic (square mark + "Upfront" in display font), approved by Troy 2026-10-12. No logo file.
- *   - Demo booking link (currently the site's own /book page, a branded embed of book.serendipitytechnology.com)
  * HARD RULE: every product image is a REAL capture from the demo tenant. No AI-generated or mocked screens.
  */
 
@@ -20,8 +19,8 @@ function up_img(string $file): string {
     return '/img/upfront/' . $file . '?v=' . $v;
 }
 
-// PENDING: confirm demo booking target (and ideally a dedicated 15-minute event type).
-$book_url = '/book';
+// Dedicated 15-minute Cal event (Upfront Demo only; /book exposes the longer call types).
+$book_url = 'https://book.serendipitytechnology.com/serendipitytech/upfront-demo';
 // Live demo workspace: registration page (not /sign-in).
 $demo_url = 'https://upfront-demo.serendipitytechnology.com';
 
