@@ -188,8 +188,18 @@ $check = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="cu
       .up-hero { padding: 48px 0; }
       .up-capture-phone { max-width: 240px; }
     }
-    @media (max-width: 520px) {
+    @media (max-width: 640px) {
+      /* Steps go single column so thumbnails render ~full width (legible), not ~200px. */
       .up-steps { grid-template-columns: 1fr; }
+      .up-step .up-thumb { aspect-ratio: auto; max-height: 460px; }
+      .up-shot-hero { max-width: 300px; }
+      .up-hero .svc-h1 { font-size: 34px; }
+      /* Hero CTAs stack full width so labels never wrap awkwardly on small phones. */
+      .up-hero-cta { flex-direction: column; align-items: stretch; gap: 12px; }
+      .up-hero-cta .svc-btn { width: 100%; justify-content: center; text-align: center; }
+      .up-price-note { text-align: center; }
+    }
+    @media (max-width: 520px) {
       .up-proof blockquote { font-size: 21px; }
       .up-addon { flex-direction: column; align-items: flex-start; gap: 4px; }
       .up-addon-price { text-align: left; }
