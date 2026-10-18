@@ -341,8 +341,18 @@ include __DIR__ . '/../partials/site-header.php';
         <div>
           <div class="up-addons">
             <div class="up-addon">
-              <div><div class="up-addon-name">Document signing</div></div>
+              <div>
+                <div class="up-addon-name">Document signing</div>
+                <div class="up-addon-note">Collect a real signature on formal contracts. Approving an estimate is already built in and timestamped, no add-on needed.</div>
+              </div>
               <div class="up-addon-price">$5/month</div>
+            </div>
+            <div class="up-addon">
+              <div>
+                <div class="up-addon-name">Text reminders &amp; updates</div>
+                <div class="up-addon-note">Usage-based, with a short setup step.</div>
+              </div>
+              <div class="up-addon-price">Starting at $5/month</div><!-- Included usage and setup fee TBD (Marketing/strategy); do not add numbers until confirmed. -->
             </div>
             <div class="up-addon">
               <div><div class="up-addon-name">Job scheduling</div></div>
