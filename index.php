@@ -269,12 +269,16 @@ include __DIR__ . '/partials/site-header.php';
 </header>
 
 <!-- Contact Modal -->
-<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-  <div class="bg-white rounded-lg shadow-xl p-6 max-w-md w-full relative">
-    <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">
-      &times;
-    </button>
-    <h2 class="text-xl font-semibold mb-4">Contact Us</h2>
+<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+  <div id="contactModalCard" class="bg-white rounded-lg shadow-xl max-w-md w-full relative flex flex-col" style="max-height:90vh;max-height:90dvh;">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100 flex-shrink-0">
+      <h2 id="contactModalTitle" class="text-xl font-semibold">Contact Us</h2>
+      <button type="button" onclick="closeModal()" aria-label="Close"
+        class="text-gray-500 hover:text-gray-800 text-3xl leading-none w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100">
+        &times;
+      </button>
+    </div>
+    <div class="overflow-y-auto px-6 py-4" style="overscroll-behavior:contain;-webkit-overflow-scrolling:touch;">
     <form id="contactForm" class="space-y-4">
       <label class="block">
         <span class="text-gray-700 font-medium">Name</span>
@@ -337,6 +341,7 @@ include __DIR__ . '/partials/site-header.php';
       </button>
     </form>
     <div id="formSuccess" class="text-green-600 mt-4 hidden">Thanks! Your message has been sent.</div>
+    </div>
   </div>
 </div>
   <section>
@@ -479,10 +484,12 @@ include __DIR__ . '/partials/site-header.php';
 <script>
 function openModal() {
   document.getElementById("contactModal").classList.remove("hidden");
+  document.body.style.overflow = "hidden";
 }
 
 function closeModal() {
   document.getElementById("contactModal").classList.add("hidden");
+  document.body.style.overflow = "";
   document.getElementById("formSuccess").classList.add("hidden");
   document.getElementById("contactForm").reset();
   // Reset Turnstile so the next time the modal opens the user gets a fresh challenge
@@ -492,6 +499,15 @@ function closeModal() {
     }
   }
 }
+
+// Close on backdrop click and Escape
+document.getElementById("contactModal").addEventListener("click", function (e) {
+  if (e.target === this) closeModal();
+});
+document.addEventListener("keydown", function (e) {
+  var m = document.getElementById("contactModal");
+  if (e.key === "Escape" && !m.classList.contains("hidden")) closeModal();
+});
 
 // Alias so openContactModal() (used by site-header partial) triggers the same modal
 window.openContactModal = openModal;
