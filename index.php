@@ -269,7 +269,7 @@ include __DIR__ . '/partials/site-header.php';
 </header>
 
 <!-- Contact Modal -->
-<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" style="z-index:10000;" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
   <div id="contactModalCard" class="bg-white rounded-lg shadow-xl max-w-md w-full relative flex flex-col" style="max-height:90vh;max-height:90dvh;">
     <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100 flex-shrink-0">
       <h2 id="contactModalTitle" class="text-xl font-semibold">Contact Us</h2>
