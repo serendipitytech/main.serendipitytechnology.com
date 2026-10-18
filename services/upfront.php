@@ -346,7 +346,7 @@ include __DIR__ . '/../partials/site-header.php';
             </div>
             <div class="up-addon">
               <div><div class="up-addon-name">Job scheduling</div></div>
-              <div class="up-addon-price soon">Coming soon</div><!-- When it ships, swap to "$10/month". -->
+              <div class="up-addon-price soon">Available</div><!-- Price pending Troy's decision; do not add a number until confirmed. -->
             </div>
             <div class="up-addon">
               <div>
