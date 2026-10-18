@@ -310,7 +310,7 @@ include __DIR__ . '/../partials/site-header.php';
   <section class="svc-section" style="padding-top:64px;">
     <div class="svc-container up-proof">
       <p class="svc-eyebrow">Proof</p>
-      <blockquote>A custom shutter shop was paying $110 a month for QuickBooks and Clover. They dropped both for one platform that starts at $20, and now their customers see the shop's brand front and center on every quote.</blockquote>
+      <blockquote>A custom shutter shop was paying $110 a month for QuickBooks and Clover. They are replacing both with Upfront, a platform that starts at $20, so their customers see the shop's brand front and center on every quote.</blockquote>
     </div>
   </section>
 
@@ -395,7 +395,7 @@ $faq_items = [
   ],
   [
     'q' => 'Can my customers see that it\'s Upfront?',
-    'a' => 'Your brand leads every page: your logo, your colors, your terms. A small "powered by Upfront" line sits in the footer, and that\'s it.',
+    'a' => 'Your brand leads every page: your logo, your colors, your terms. A small "Upfront, powered by Serendipity Technology" line sits in the footer, and that\'s it.',
   ],
   [
     'q' => 'What if I need a feature you don\'t have?',
@@ -422,7 +422,7 @@ include __DIR__ . '/partials/service-cta.php';
 <div class="svc-container up-foot">
   <div class="up-foot-in">
     <span class="up-wordmark"><?= up_wordmark(100) ?></span>
-    <span>Upfront, by Serendipity Technology. Quotes made to measure.</span>
+    <span>Upfront, powered by Serendipity Technology. Quotes made to measure.</span>
   </div>
 </div>
 
