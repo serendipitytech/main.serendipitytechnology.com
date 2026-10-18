@@ -332,15 +332,17 @@ include __DIR__ . '/partials/site-header.php';
         </p>
       </div>
       <div id="turnstileWidget" class="cf-turnstile" data-sitekey="0x4AAAAAACWJ-_uz-IpGJG0B" data-theme="light"></div>
-      <button type="submit"
+    </form>
+    <div id="formSuccess" class="text-green-600 mt-4 hidden">Thanks! Your message has been sent.</div>
+    </div>
+    <div class="px-6 py-3 border-t border-gray-100 bg-white rounded-b-lg flex-shrink-0" style="padding-bottom:max(0.75rem,env(safe-area-inset-bottom));">
+      <button type="submit" id="contactSubmit" form="contactForm"
         class="w-full py-3 px-4 rounded-lg font-semibold text-white
         bg-[#1A7FAA] hover:bg-[#176E96]
-        shadow-md hover:shadow-lg hover:-translate-y-0.5
+        shadow-md hover:shadow-lg
         transition-all duration-200">
         Send Message
       </button>
-    </form>
-    <div id="formSuccess" class="text-green-600 mt-4 hidden">Thanks! Your message has been sent.</div>
     </div>
   </div>
 </div>
@@ -597,7 +599,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   }
 
   const form = e.target;
-  const submitBtn = form.querySelector('button[type="submit"]');
+  const submitBtn = document.getElementById('contactSubmit');
   const successMsg = document.getElementById('formSuccess');
   const errorMsg = document.getElementById('formError');
 
@@ -626,6 +628,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     if (res.ok && data.status === 'ok') {
       if (typeof gtag === 'function') { gtag('event', 'generate_lead', { form_location: 'homepage_contact' }); }
       successMsg.classList.remove('hidden');
+      successMsg.scrollIntoView({ block: 'nearest' });
       setTimeout(() => closeModal(), 3000);
     } else {
       showFormError(data.message || 'Something went wrong. Please try again.');
@@ -659,6 +662,7 @@ function showFormError(message) {
   }
   errorMsg.textContent = message;
   errorMsg.classList.remove('hidden');
+  errorMsg.scrollIntoView({ block: 'nearest' });
 }
 
 
