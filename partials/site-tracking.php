@@ -16,7 +16,7 @@ define('SITE_TRACKING_LOADED', true);
 // ---- CONFIG -------------------------------------------------------------
 // Meta Pixel ID: one-line drop-in. Replace PIXEL_ID_PENDING with the numeric ID from
 // Events Manager. While it is not purely numeric the Pixel is NOT loaded (nothing breaks).
-const META_PIXEL_ID = 'PIXEL_ID_PENDING';
+const META_PIXEL_ID = '1678137287072257';
 const GA4_ID        = 'G-G50KCN37LQ';
 // -------------------------------------------------------------------------
 
