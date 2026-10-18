@@ -81,7 +81,8 @@ $__st_path     = strtok($_SERVER['REQUEST_URI'] ?? '', '?');
       var u = new URL(a.href, location.href);
       var cur = new URLSearchParams(location.search);
       cur.forEach(function (v, k) { if (!u.searchParams.has(k)) { u.searchParams.set(k, v); } });
-      a.href = u.toString();
+      // keep internal links relative so selectors and canonical form stay stable
+      a.setAttribute('href', u.origin === location.origin ? u.pathname + u.search + u.hash : u.toString());
       a.dataset.stFwd = '1';
     } catch (e) {}
   }
