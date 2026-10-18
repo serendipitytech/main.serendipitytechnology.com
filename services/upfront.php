@@ -169,6 +169,7 @@ $check = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="cu
     .up-addon-name { font-weight: 600; color: var(--svc-text); }
     .up-addon-note { font-size: 13px; color: #475569; }
     .up-addon-price { font-weight: 700; color: #1A7FAA; white-space: nowrap; text-align: right; }
+    .up-addon-fine { font-size: 12px; margin-top: 4px; }
     .up-addon-price.soon { color: #475569; font-weight: 500; }
     .up-addon-setup { border-left: 4px solid #F7B06A; }
     .up-pricing-note { font-size: 14px; color: #475569; margin: 16px 0 0; }
@@ -345,18 +346,19 @@ include __DIR__ . '/../partials/site-header.php';
                 <div class="up-addon-name">Document signing</div>
                 <div class="up-addon-note">Collect a real signature on formal contracts. Approving an estimate is already built in and timestamped, no add-on needed.</div>
               </div>
-              <div class="up-addon-price">$5/month</div>
+              <div class="up-addon-price">Available<br>$5/month</div>
             </div>
             <div class="up-addon">
               <div>
                 <div class="up-addon-name">Text reminders &amp; updates</div>
-                <div class="up-addon-note">Usage-based, with a short setup step.</div>
+                <div class="up-addon-note">$100 one-time setup. Volume discounts available at 1,000+ messages a month.</div>
+                <div class="up-addon-note up-addon-fine">1 message = up to 160 characters. Longer texts, or texts with emoji, count as 2 or more.</div>
               </div>
-              <div class="up-addon-price">Starting at $5/month</div><!-- Included usage and setup fee TBD (Marketing/strategy); do not add numbers until confirmed. -->
+              <div class="up-addon-price" style="white-space:normal;max-width:190px;">$15/month for 100 messages, then 4&cent; each</div>
             </div>
             <div class="up-addon">
               <div><div class="up-addon-name">Job scheduling</div></div>
-              <div class="up-addon-price soon">Available</div><!-- Price pending Troy's decision; do not add a number until confirmed. -->
+              <div class="up-addon-price">Available<br>$5/month</div>
             </div>
             <div class="up-addon">
               <div>
@@ -387,7 +389,10 @@ include __DIR__ . '/../partials/site-header.php';
         <p>Hi, I'm Troy. I built Upfront after watching too many small shops pay for bloated software that does a hundred things they will never use. I run it myself, so when you reach out, you get the person who knows your account, not a ticket queue.</p>
         <p>Serendipity Technology is a small shop building practical tools for other small operators. Upfront is the one I use for my own clients, so it has to actually work.</p>
       </div>
-      <img class="up-who-photo" src="<?= up_img('troy-presenting.jpg') ?>" width="1000" height="667" loading="lazy" alt="Troy Shimkus, founder of Serendipity Technology, gesturing toward the text beside him">
+      <picture>
+        <source media="(max-width: 900px)" srcset="<?= up_img('troy-headshot-about-square.jpg') ?>" width="640" height="640">
+        <img class="up-who-photo" src="<?= up_img('troy-headshot-about.jpg') ?>" width="1000" height="667" loading="lazy" alt="Troy Shimkus, founder of Serendipity Technology, with open hands, facing the camera">
+      </picture>
     </div>
   </section>
 
