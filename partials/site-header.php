@@ -18,6 +18,7 @@
 $header_always_visible = $header_always_visible ?? false;
 $header_chat_action = $header_chat_action ?? 'openContactModal()';
 ?>
+<?php include __DIR__ . '/site-tracking.php'; // GA4 + Meta Pixel + funnel events (self-gates to /services/* and /book/upfront-demo) ?>
 <style>
   #scrollNav {
     position: fixed;

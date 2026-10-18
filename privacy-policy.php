@@ -68,7 +68,7 @@ include __DIR__ . '/partials/site-header.php';
     <ul>
       <li><strong>Contact information</strong> you provide through our forms: name, email address, phone number, organization, and the details of your inquiry.</li>
       <li><strong>Communication preferences</strong>, such as whether you asked to be contacted by email or text message.</li>
-      <li><strong>Usage information</strong> collected automatically through standard web analytics (for example, pages visited and general device information).</li>
+      <li><strong>Usage information</strong> collected automatically through standard web analytics (for example, pages visited and general device information), including through Google Analytics and the Meta Pixel as described below.</li>
     </ul>
 
     <h2>How we use your information</h2>
@@ -77,6 +77,10 @@ include __DIR__ . '/partials/site-header.php';
       <li>To send service-related and account-related communications, including appointment reminders, project and account updates, and replies to your messages.</li>
       <li>To operate, maintain, and improve our website and services.</li>
     </ul>
+
+    <h2>How we use tracking</h2>
+    <p>Our website uses Google Analytics 4 to measure which pages are visited, and, on our Upfront pages, the Meta (Facebook) Pixel to measure how our ads perform. These tools set cookies and collect information such as pages viewed, buttons clicked, device and browser details, approximate location, and the campaign link you arrived from. When you book a demo through our scheduling page (powered by Cal.com, hosted by us), we receive the name, email address, time, and any notes you enter, and we record that a booking occurred so we can measure which ads lead to demos. Meta and Google may use this information under their own privacy policies; we do not sell it.</p>
+    <p><strong>To opt out:</strong> use your browser's tracking and cookie settings or a content blocker, install the <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics opt-out add-on</a>, adjust your ad preferences at <a href="https://www.facebook.com/adpreferences">facebook.com/adpreferences</a>, or email us and we will help.</p>
 
     <h2>SMS / text messaging</h2>
     <p>If you provide your mobile number and choose text as a preferred contact method, or if you text one of our keywords, you consent to receive SMS messages from Serendipity Technology related to your inquiry and your account (for example, replies, appointment reminders, and project or account updates).</p>
