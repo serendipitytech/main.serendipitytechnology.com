@@ -18,8 +18,8 @@ $gridProjects = getGridProjects();
     gtag('js', new Date());
     gtag('config', 'G-G50KCN37LQ');
   </script>
-  <title>Custom Software Development in Volusia County, FL | Serendipity</title>
-  <meta name="description" content="Custom software development in Volusia County, FL. Workflow automation, data integration, and reporting for small businesses, nonprofits, and local government." />
+  <title>AI-Directed Engineering: Fractional CTO and Custom Software | Serendipity Technology</title>
+  <meta name="description" content="A real engineer directing AI to ship real software. Fractional CTO leadership and custom development for organizations in Florida and beyond." />
   <meta name="keywords" content="custom software development Volusia County, workflow automation Florida, data integration small business, business process automation, technology consulting Central Florida" />
   <meta name="geo.region" content="US-FL" />
   <meta name="geo.placename" content="Volusia County" />
@@ -43,8 +43,8 @@ $gridProjects = getGridProjects();
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://serendipitytechnology.com/" />
-  <meta property="og:title" content="Serendipity Technology | Custom App Solutions" />
-  <meta property="og:description" content="Custom software development in Volusia County. Workflow automation and data integration for Florida businesses." />
+  <meta property="og:title" content="Serendipity Technology | AI-Directed Engineering" />
+  <meta property="og:description" content="Fractional CTO leadership and custom software, built by a real engineer directing AI." />
   <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
   <meta property="og:site_name" content="Serendipity Technology" />
   <meta property="og:locale" content="en_US" />
@@ -52,8 +52,8 @@ $gridProjects = getGridProjects();
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Serendipity Technology | Custom App Solutions" />
-  <meta name="twitter:description" content="Custom software development in Volusia County. Workflow automation and data integration for Florida businesses." />
+  <meta name="twitter:title" content="Serendipity Technology | AI-Directed Engineering" />
+  <meta name="twitter:description" content="Fractional CTO leadership and custom software, built by a real engineer directing AI." />
   <meta name="twitter:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
 
   <!-- Schema.org Structured Data -->
@@ -247,6 +247,111 @@ $gridProjects = getGridProjects();
     @media (max-width: 560px) {
       .wwd-grid { grid-template-columns: 1fr; }
     }
+    /* ===== Homepage v2 (feat/homepage-refresh) ===== */
+    body{padding-top:60px}
+    .hp{--hp-blue:#1A7FAA;--hp-blue-dk:#176E96;--hp-sky:#4FC4F0;--hp-orange:#F7B06A;--hp-ink:#1F2937;--hp-slate:#475569;--hp-line:#e5e7eb;--hp-bg:#f4f6f8;color:var(--hp-ink)}
+    .hp *{box-sizing:border-box}
+    .hp-wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+    :where(.hp) h1,:where(.hp) h2,:where(.hp) h3{margin:0}
+    .hp h1,.hp h2,.hp h3{font-family:var(--font-heading);font-weight:700;color:var(--hp-ink);text-shadow:none}
+    :where(.hp) p{margin:0}
+    .hp-eyebrow{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--hp-blue);margin-bottom:16px}
+    .hp-lede{font-size:19px;line-height:1.65;color:var(--hp-slate);max-width:34em}
+
+    /* hero: overrides the legacy photo-header rule in the critical CSS */
+    .hp header.hp-hero{background:radial-gradient(60% 80% at 100% 0%,rgba(79,196,240,.18),transparent 70%),radial-gradient(50% 70% at 0% 100%,rgba(247,176,106,.16),transparent 70%),#fff;color:var(--hp-ink);text-align:left;padding:56px 0 72px;position:relative}
+    .hp-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(to right,#4FC4F0,#F7B06A)}
+    .hp-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+    .hp-hero h1{font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:24px}
+    .hp-lede{margin-bottom:32px}
+    .hp-cta-row{display:flex;flex-wrap:wrap;gap:12px 16px;margin-bottom:36px}
+    .hp-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:8px;font-weight:500;font-size:16px;text-decoration:none;transition:background-color .15s,box-shadow .15s,border-color .15s;cursor:pointer;border:1px solid transparent}
+    .hp-btn-primary{background:var(--hp-blue);color:#fff;box-shadow:0 1px 2px rgba(16,24,40,.12)}
+    .hp-btn-primary:hover{background:var(--hp-blue-dk);color:#fff;box-shadow:0 4px 12px rgba(26,127,170,.3)}
+    .hp-btn-ghost{background:#fff;color:var(--hp-ink);border-color:#cbd5e1}
+    .hp-btn-ghost:hover{border-color:var(--hp-blue);color:var(--hp-blue)}
+    .hp a:focus-visible,.hp button:focus-visible{outline:3px solid var(--hp-sky);outline-offset:2px;border-radius:6px}
+    .hp-hero-offers{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 28px}
+    .hp-hero-offers a{display:block;text-decoration:none;color:var(--hp-slate);font-size:15px;line-height:1.4;padding-left:14px;border-left:3px solid var(--hp-orange)}
+    .hp-hero-offers a span{display:block;font-weight:500;color:var(--hp-ink);font-size:16px}
+    .hp-hero-offers a:hover span{color:var(--hp-blue)}
+
+    .hp-hero-panel{background:#fff;border:1px solid var(--hp-line);border-radius:16px;padding:28px;box-shadow:0 20px 40px -16px rgba(16,24,40,.18),0 2px 6px rgba(16,24,40,.05)}
+    .hp-panel-title{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--hp-slate);margin-bottom:20px}
+    .hp-steps{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+    .hp-steps li{display:flex;gap:16px;align-items:flex-start}
+    .hp-step-n{flex:none;width:32px;height:32px;border-radius:50%;background:rgba(79,196,240,.16);color:var(--hp-blue);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px}
+    .hp-steps strong{display:block;font-weight:700;font-family:var(--font-heading);font-size:17px;color:var(--hp-ink);margin-bottom:2px}
+    .hp-steps p{font-size:15px;line-height:1.55;color:var(--hp-slate)}
+    .hp-panel-foot{margin-top:24px;padding-top:16px;border-top:1px solid var(--hp-line);font-size:14px;color:var(--hp-slate)}
+
+    /* bands */
+    .hp-band{background:var(--hp-bg);padding:88px 0}
+    .hp-head{max-width:40em;margin-bottom:48px}
+    .hp-head h2{font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1.2;letter-spacing:-.01em}
+    .hp-sub{margin-top:16px;font-size:18px;color:var(--hp-slate);line-height:1.6}
+
+    .hp-offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .hp-offer{background:#fff;border:1px solid var(--hp-line);border-top:4px solid var(--hp-sky);border-radius:14px;padding:36px;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(16,24,40,.05)}
+    .hp-offer + .hp-offer{border-top-color:var(--hp-orange)}
+    .hp-offer-icon{width:48px;height:48px;border-radius:10px;background:rgba(79,196,240,.16);color:var(--hp-blue);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+    .hp-offer-icon-alt{background:rgba(247,176,106,.22);color:#8a4b0a}
+    .hp-offer h3{font-size:1.65rem;margin-bottom:8px}
+    .hp-offer-tag{font-size:17px;color:var(--hp-slate);line-height:1.55;margin-bottom:20px}
+    .hp-checks{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px}
+    .hp-checks li{position:relative;padding-left:28px;font-size:16px;line-height:1.55}
+    .hp-checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:9px;border-left:2.5px solid var(--hp-blue);border-bottom:2.5px solid var(--hp-blue);transform:rotate(-45deg) scale(.85);transform-origin:center}
+    .hp-proof{background:var(--hp-bg);border-radius:10px;padding:18px 20px;margin-bottom:28px}
+    .hp-proof-label{font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--hp-slate);margin-bottom:8px}
+    .hp-proof ul{margin:0;padding-left:18px;font-size:15px;line-height:1.6;color:var(--hp-ink)}
+    .hp-offer-cta{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+    .hp-link{background:none;border:0;padding:8px 0;font:inherit;font-size:15px;font-weight:500;color:var(--hp-blue);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+    .hp-link:hover{color:var(--hp-blue-dk)}
+
+    /* built */
+    .hp-built{padding-top:88px;padding-bottom:40px}
+    .hp-feature{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;text-decoration:none;color:var(--hp-ink);background:linear-gradient(135deg,rgba(79,196,240,.10),rgba(247,176,106,.12));border:1px solid var(--hp-line);border-radius:16px;padding:36px;margin-bottom:24px;transition:box-shadow .2s,border-color .2s,transform .2s}
+    .hp-feature:hover{box-shadow:0 12px 32px -12px rgba(16,24,40,.2);border-color:var(--hp-sky);transform:translateY(-2px);color:var(--hp-ink)}
+    .hp-badge{display:inline-block;background:var(--hp-orange);color:var(--hp-ink);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:14px}
+    .hp-feature h3{font-size:2rem;margin-bottom:6px}
+    .hp-feature-tag{font-size:18px;font-weight:500;color:var(--hp-blue);margin-bottom:12px}
+    .hp-feature p{line-height:1.65}
+    .hp-feature-art{background:#fff;border-radius:12px;padding:32px;display:flex;align-items:center;justify-content:center;border:1px solid var(--hp-line)}
+    .hp-feature-art img{max-width:100%;height:auto}
+    .hp-more{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-weight:500;font-size:15px;color:var(--hp-blue)}
+    .hp-product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .hp-product{display:flex;flex-direction:column;background:#fff;border:1px solid var(--hp-line);border-radius:12px;padding:24px;text-decoration:none;color:var(--hp-ink);transition:box-shadow .2s,border-color .2s,transform .2s}
+    a.hp-product:hover{box-shadow:0 8px 24px -8px rgba(16,24,40,.18);border-color:var(--hp-sky);transform:translateY(-2px);color:var(--hp-ink)}
+    .hp-product-icon{width:40px;height:40px;border-radius:8px;background:rgba(79,196,240,.16);color:var(--hp-blue);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .hp-product h3{font-size:1.15rem;margin-bottom:8px}
+    .hp-product p{font-size:15px;line-height:1.6;color:var(--hp-slate);flex:1}
+    .hp-product .hp-more,.hp-status{margin-top:14px}
+    .hp-status{font-size:14px;color:var(--hp-slate)}
+    .hp-status-inline{display:inline-block;vertical-align:middle;margin-left:6px;font-family:var(--font-body);font-size:12px;font-weight:500;color:var(--hp-slate);background:var(--hp-bg);border:1px solid var(--hp-line);padding:2px 8px;border-radius:999px}
+    .hp-note{margin-top:32px;text-align:center;font-size:15px;color:var(--hp-slate)}
+    .hp-note a{color:var(--hp-blue);font-weight:500}
+
+    /* projects section keeps its own styles; align spacing */
+    .hp .projects-section{padding-top:56px}
+
+    @media (max-width:900px){
+      .hp-hero-grid{grid-template-columns:1fr;gap:40px}
+      .hp-offer-grid{grid-template-columns:1fr}
+      .hp-product-grid{grid-template-columns:1fr}
+      .hp-feature{grid-template-columns:1fr;padding:28px}
+      .hp-feature-art{order:-1;padding:20px}
+      .hp-feature-art img{max-width:200px}
+    }
+    @media (max-width:560px){
+      .hp-wrap{padding:0 18px}
+      .hp .hp-hero{padding:40px 0 56px}
+      .hp-band{padding:64px 0}
+      .hp-offer{padding:26px 22px}
+      .hp-btn{width:100%}
+      .hp-offer-cta .hp-btn{width:auto;flex:1 1 100%}
+      .hp-lede{font-size:17px}
+    }
+    @media (prefers-reduced-motion:reduce){.hp-feature,.hp-product,.hp-btn{transition:none}.hp-feature:hover,a.hp-product:hover{transform:none}}
   </style>
 </head>
 <body>
@@ -257,16 +362,43 @@ include __DIR__ . '/partials/site-header.php';
 ?>
 
 <div id="header-sentinel"></div>
-<header id="mainHeader">
-  <div class="header-overlay">
-    <img src="img/logo.png" alt="Serendipity Technology Logo" class="mx-auto mb-4" style="width: 300px;" />
-    <h1 class="text-4xl font-bold mt-6 mb-2 text-white">Custom Software Development in Volusia County</h1>
-    <p class="text-lg mb-6 text-white">Workflow automation and data integration for Florida businesses, no vendor lock-in.</p>
-<button onclick="openModal()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-  Let's Talk
-</button>
+<main class="hp">
+<header id="mainHeader" class="hp-hero">
+  <div class="hp-wrap hp-hero-grid">
+    <div class="hp-hero-copy">
+      <p class="hp-eyebrow">AI-Directed Engineering</p>
+      <h1>A real engineer, directing AI, shipping real software.</h1>
+      <p class="hp-lede">I own the architecture, the security, and the final call. AI does the heavy lifting under that direction, so you get senior judgment and agency-scale output without the agency overhead.</p>
+      <div class="hp-cta-row">
+        <a href="/book" class="hp-btn hp-btn-primary">Book a call</a>
+        <a href="#built" class="hp-btn hp-btn-ghost">See what we've built</a>
+      </div>
+      <ul class="hp-hero-offers" aria-label="What we do">
+        <li><a href="#fractional-cto"><span>Fractional CTO</span> Technical leadership, part-time</a></li>
+        <li><a href="#custom-development"><span>Custom Development</span> Software built and shipped</a></li>
+      </ul>
+    </div>
+    <aside class="hp-hero-panel" aria-label="How the work gets done">
+      <p class="hp-panel-title">How the work gets done</p>
+      <ol class="hp-steps">
+        <li>
+          <span class="hp-step-n" aria-hidden="true">1</span>
+          <div><strong>Engineer decides</strong><p>Architecture, security, and tradeoffs are human calls, made up front.</p></div>
+        </li>
+        <li>
+          <span class="hp-step-n" aria-hidden="true">2</span>
+          <div><strong>AI builds, fast</strong><p>Drafts, tests, and refactors at a speed a solo engineer can't match alone.</p></div>
+        </li>
+        <li>
+          <span class="hp-step-n" aria-hidden="true">3</span>
+          <div><strong>Engineer reviews and ships</strong><p>Every change is reviewed against real standards before it goes live.</p></div>
+        </li>
+      </ol>
+      <p class="hp-panel-foot">Receipts over hype. See the work below.</p>
+    </aside>
   </div>
 </header>
+
 
 <!-- Contact Modal -->
 <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" style="z-index:10000;" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
@@ -346,84 +478,111 @@ include __DIR__ . '/partials/site-header.php';
     </div>
   </div>
 </div>
-  <section>
-    <h2 class="section-title">What We Do</h2>
-    <div class="cards-row wwd-grid">
-      <div class="card">
-        <div class="img-frame"><img src="img/data_integration.svg" alt="Workflow Automation"></div>
-        <h3>Workflow Automation</h3>
-        <p>Business process automation specialists serving Volusia County. Reduce manual tasks with purpose-built workflows tailored to your operations.</p>
-      </div>
-      <div class="card">
-        <div class="img-frame"><img src="img/integration.svg" alt="Data Integration"></div>
-        <h3>Data Integration</h3>
-        <p>Data integration for small businesses in Florida. Connect CRMs, spreadsheets, and existing tools so your data works smarter.</p>
-      </div>
-      <div class="card">
-        <div class="img-frame"><img src="img/insight.svg" alt="Automated Reporting"></div>
-        <h3>Automated Reporting</h3>
-        <p>Automated reporting for nonprofits and local government. Turn your data into actionable intelligence with custom dashboards.</p>
-      </div>
-      <div class="card">
-        <div class="img-frame"><img src="img/reply-to-message.svg" alt="Client Communications"></div>
-        <h3>Client Communications</h3>
-        <p>SMS, text notifications, and email delivery sent on behalf of client businesses and organizations: appointment reminders, event and shift confirmations, and account updates. Opt-in, compliant, and on your brand voice. See our <a href="/terms.php">Terms</a> and <a href="/privacy-policy.php">Privacy Policy</a>.</p>
-      </div>
+<div class="hp-band" id="offerings">
+  <div class="hp-wrap">
+    <div class="hp-head">
+      <p class="hp-eyebrow">Two ways to work together</p>
+      <h2>Strategy when you need judgment. Software when you need it built.</h2>
     </div>
-  </section>
-  
-<section id="services-section" style="padding:2rem 1rem; max-width:1000px; margin:auto;">
-  <h2 class="section-title">Services</h2>
-  <p style="color:#475569; margin-bottom:1.5rem;">Ready-to-launch solutions, no custom build required.</p>
-  <div class="services-cards-grid">
-    <a href="/services/candidates" class="services-index-card">
-      <div class="services-index-card-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      </div>
-      <div class="services-index-card-body">
-        <h3>Candidate Sites</h3>
-        <p>Single-page campaign websites with unlimited updates throughout your race.</p>
-        <span class="services-index-card-price">$20/mo + $49 setup</span>
-      </div>
+    <div class="hp-offer-grid">
+      <article class="hp-offer" id="fractional-cto">
+        <div class="hp-offer-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg>
+        </div>
+        <h3>Fractional CTO</h3>
+        <p class="hp-offer-tag">Strategic technical leadership for organizations that can't hire a full-time CTO.</p>
+        <ul class="hp-checks">
+          <li>Technology strategy, roadmap, and vendor decisions you can defend</li>
+          <li>Architecture and security review before money gets spent</li>
+          <li>Hiring, contractor oversight, and honest build-versus-buy advice</li>
+          <li>AI adoption that fits your organization, not a trend</li>
+        </ul>
+        <div class="hp-proof">
+          <p class="hp-proof-label">Where the experience comes from</p>
+          <ul>
+            <li>PowerSchool, supporting 150+ school districts</li>
+            <li>Elected City Commissioner, so public-sector constraints are familiar</li>
+            <li>Vice Chair of the FDDC, running technology for a statewide political organization</li>
+          </ul>
+        </div>
+        <div class="hp-offer-cta">
+          <a href="/book" class="hp-btn hp-btn-primary">Book a call</a>
+          <button type="button" class="hp-link" onclick="openContactModal()">Or send a message</button>
+        </div>
+      </article>
+
+      <article class="hp-offer" id="custom-development">
+        <div class="hp-offer-icon hp-offer-icon-alt" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+        </div>
+        <h3>Custom Development</h3>
+        <p class="hp-offer-tag">We build the real software, AI-accelerated and engineered to last.</p>
+        <ul class="hp-checks">
+          <li>Web apps, internal tools, and portals built around how you actually work</li>
+          <li>Workflow automation and data integration across the tools you already use</li>
+          <li>Payments, messaging, and reporting wired in properly, not bolted on</li>
+          <li>You own the code and the data, with no vendor lock-in</li>
+        </ul>
+        <div class="hp-proof">
+          <p class="hp-proof-label">What you get from the approach</p>
+          <ul>
+            <li>Working software in weeks, not quarters</li>
+            <li>Senior engineering review on every release</li>
+            <li>Plain-English updates, no jargon</li>
+          </ul>
+        </div>
+        <div class="hp-offer-cta">
+          <a href="/book" class="hp-btn hp-btn-primary">Book a call</a>
+          <button type="button" class="hp-link" onclick="openContactModal()">Or tell us what you need</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="hp-wrap hp-built" id="built">
+  <div class="hp-head">
+    <p class="hp-eyebrow">What we've built</p>
+    <h2>Proof that we ship.</h2>
+    <p class="hp-sub">These are products we designed, built, and run ourselves. They are the output of the approach above.</p>
+  </div>
+
+  <a href="/services/upfront" class="hp-feature">
+    <div class="hp-feature-copy">
+      <span class="hp-badge">Featured product</span>
+      <h3>Upfront</h3>
+      <p class="hp-feature-tag">Quotes to payment for service businesses.</p>
+      <p>Send a custom estimate, get it approved, and get paid, all on one page with your brand on it. Money goes straight to your own Stripe account.</p>
+      <span class="hp-more">Explore Upfront <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </div>
+    <div class="hp-feature-art">
+      <img src="img/upfront/upfront-wordmark-560.png" alt="Upfront" width="280" loading="lazy">
+    </div>
+  </a>
+
+  <div class="hp-product-grid">
+    <a href="/project.php?slug=custom-membership-platform" class="hp-product">
+      <div class="hp-product-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <h3>Membership Database</h3>
+      <p>A multitenant membership platform for clubs, chapters, and nonprofits: dues, events, volunteer hours, and reporting, with each organization's data kept separate.</p>
+      <span class="hp-more">Read the case study</span>
     </a>
-    <a href="/services/business-sites" class="services-index-card">
-      <div class="services-index-card-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      </div>
-      <div class="services-index-card-body">
-        <h3>Business Websites</h3>
-        <p>Professionally managed sites with AI-powered updates and business email.</p>
-        <span class="services-index-card-price">From $10/mo + $49 setup</span>
-      </div>
-    </a>
-    <a href="/services/event-checkin" class="services-index-card">
-      <div class="services-index-card-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-      </div>
-      <div class="services-index-card-body">
-        <h3>Event Check-In</h3>
-        <p>Real-time multi-device check-in for galas, conferences, and private events.</p>
-        <span class="services-index-card-price">$499 per event</span>
-      </div>
-    </a>
-    <a href="/services/membership" class="services-index-card">
-      <div class="services-index-card-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <div class="services-index-card-body">
-        <h3>Membership Portal</h3>
-        <p>Unlimited members, events, and admins. Flat pricing for clubs and nonprofits.</p>
-        <span class="services-index-card-price">$49/mo + $199 setup</span>
-      </div>
+    <div class="hp-product">
+      <div class="hp-product-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <h3>Voter Engagement Platform</h3>
+      <p>PrecinctWins: voter data and outreach tools for campaigns, party committees, and the volunteers who run them.</p>
+      <span class="hp-status">Details coming soon</span>
+    </div>
+    <a href="/project.php?slug=cancer-card" class="hp-product hp-product-quiet">
+      <div class="hp-product-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <h3>Cancer Card <span class="hp-status-inline">In development</span></h3>
+      <p>A mobile app that makes asking for help during cancer treatment a simple, low-guilt exchange. An early build, shown here as a capability example.</p>
+      <span class="hp-more">Read more</span>
     </a>
   </div>
-  <div style="text-align:center; margin-top:1.5rem;">
-    <a href="/services/" style="color:#1A7FAA; font-weight:500; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
-      View all services
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </a>
-  </div>
-</section>
+
+  <p class="hp-note">Looking for a ready-made site, check-in, or membership portal? <a href="/services/">See our packaged services</a>.</p>
+</div>
 
 <section class="projects-section" id="projects">
   <h2 class="section-title" style="color: #B3701A;">Recent Projects</h2>
@@ -481,6 +640,7 @@ include __DIR__ . '/partials/site-header.php';
   </div>
   <?php endif; ?>
 </section>
+</main>
 <?php include __DIR__ . '/partials/site-footer.php'; ?>
 
 <script>
