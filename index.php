@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/projects.php';
 // Products already shown in "What we've built" are not repeated in Recent Projects.
-$showcasedSlugs = ['custom-membership-platform', 'cancer-card'];
+$showcasedSlugs = ['custom-membership-platform', 'cancer-card', 'interactive-mapping-utility'];
 $featuredProjects = array_filter(getFeaturedProjects(), function ($p) use ($showcasedSlugs) {
   return !in_array($p['meta']['slug'], $showcasedSlugs, true);
 });
@@ -337,6 +337,10 @@ $gridProjects = getGridProjects();
     .hp-note{margin-top:32px;text-align:center;font-size:15px;color:var(--hp-slate)}
     .hp-note a{color:var(--hp-blue);font-weight:500}
 
+    /* Featured badge sits in flow above the content so it can never overlap a title */
+    .hp .featured-badge{position:static;display:inline-block;margin-bottom:.9rem}
+    .hp .featured-text h3{padding-right:0}
+
     /* projects section keeps its own styles; align spacing */
     .hp .projects-section{padding-top:56px}
 
@@ -576,7 +580,7 @@ include __DIR__ . '/partials/site-header.php';
     <a href="https://precinctwins.com" class="hp-product" rel="noopener">
       <div class="hp-product-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
       <h3>PrecinctWins</h3>
-      <p>A precinct-level voter data and outreach platform. Campaigns, party committees, and volunteers can see their voters on the map, target the right doors and contacts, and run outreach from one place.</p>
+      <p>It started as field mapping and voter engagement tools and grew into a full precinct-level voter data and outreach platform: see voters on the map, target the right doors and contacts, and run outreach from one place. The same platform can be reworked for donor engagement at nonprofits.</p>
       <span class="hp-more">Visit precinctwins.com</span>
     </a>
     <a href="/project.php?slug=cancer-card" class="hp-product hp-product-quiet">
