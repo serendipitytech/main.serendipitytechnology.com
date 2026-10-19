@@ -1,45 +1,34 @@
 # Serendipity Technology
 
-> Custom software solutions that streamline operations through purpose-built workflows, data integration, and automated reporting.
+> Fractional CTO leadership and custom software development, delivered by a senior engineer who directs AI to build real software fast. Receipts over hype.
 
 ## About
 
-Serendipity Technology builds custom software applications for businesses that need tailored solutions. Based in Volusia County, Florida, we serve clients throughout the United States.
+Serendipity Technology is led by Troy Shimkus, a working engineer who practices AI-directed engineering: the engineer owns architecture, security, and the final call, and AI does the heavy lifting under that direction. Based in Volusia County, Florida, serving organizations nationwide.
 
-We specialize in:
+## What we do
 
-- **Workflow Automation**: Streamlining processes and reducing manual tasks with purpose-built workflows
-- **Data Integration**: Connecting existing tools (CRMs, spreadsheets, databases) so data works smarter
-- **Business Intelligence**: Turning information into actionable insights with dashboards and reporting tools
+- **Fractional CTO**: Part-time technology leadership for organizations that cannot hire a full-time CTO. Strategy, architecture and security review, vendor decisions, hiring and contractor oversight, and AI adoption.
+- **Custom Software Development**: Web apps, internal tools, portals, workflow automation, and data integration, AI-accelerated and engineered to last.
 
-## Services
+## What we have built
 
-- Custom application development
-- Workflow automation
-- System integration
-- Data migration and ETL
-- API development
-- Dashboard and reporting tools
+- Upfront: quotes, approvals, invoices, and online payments for service businesses (https://serendipitytechnology.com/services/upfront)
+- Membership Database: multitenant membership platform for clubs, chapters, and nonprofits
+- PrecinctWins: precinct-level voter data and outreach platform (https://precinctwins.com)
+- Multi-store commerce, event check-in, and other client platforms (see Recent Projects on the homepage)
+
+## Key pages
+
+- Home: https://serendipitytechnology.com/
+- How we work: https://serendipitytechnology.com/how-we-work
+- Book a call: https://serendipitytechnology.com/book
+- Packaged services: https://serendipitytechnology.com/services/
+- Media kit: https://serendipitytechnology.com/media.php
 
 ## Contact
 
-- Website: https://serendipitytechnology.com
 - Phone: (407) 545-6070
+- Email: troy@serendipitytech.net
 - Location: Volusia County, Florida, USA
 - Facebook: https://www.facebook.com/serendipitytech
-
-## Projects
-
-We have completed projects including:
-- Custom membership platforms
-- Event check-in systems
-- Interactive mapping utilities
-- Community resource locators
-- Email marketing integrations
-- Dynamic inventory catalogs
-- Production asset management systems
-
-## Documentation
-
-- Main site: https://serendipitytechnology.com/
-- Media kit: https://serendipitytechnology.com/media.html

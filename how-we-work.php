@@ -14,12 +14,26 @@
   <link rel="canonical" href="https://serendipitytechnology.com/how-we-work">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
+  <!-- Google Analytics (GA4 only; not an ad funnel page, so no Meta Pixel) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G50KCN37LQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G50KCN37LQ');
+  </script>
+
   <!-- Open Graph -->
-  <meta property="og:title" content="How We Work | Serendipity Technology">
+  <meta property="og:title" content="How We Work | AI-Directed Engineering | Serendipity Technology">
   <meta property="og:description" content="One architect. AI-directed execution. Agency-scale results for small organizations in Central Florida.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://serendipitytechnology.com/how-we-work">
-  <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png">
+  <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_og_1200x630.png">
+  <meta property="og:image:alt" content="Serendipity Technology: a real engineer, directing AI, shipping real software.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How We Work | AI-Directed Engineering | Serendipity Technology">
+  <meta name="twitter:description" content="One architect. AI-directed execution. Agency-scale results for small organizations in Central Florida.">
+  <meta name="twitter:image" content="https://serendipitytechnology.com/img/logos/serendipity_og_1200x630.png">
 
   <!-- Fonts & Tailwind -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

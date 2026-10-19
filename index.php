@@ -22,9 +22,8 @@ $gridProjects = getGridProjects();
     gtag('js', new Date());
     gtag('config', 'G-G50KCN37LQ');
   </script>
-  <title>AI-Directed Engineering: Fractional CTO and Custom Software | Serendipity Technology</title>
-  <meta name="description" content="A real engineer directing AI to ship real software. Fractional CTO leadership and custom development for organizations in Florida and beyond." />
-  <meta name="keywords" content="custom software development Volusia County, workflow automation Florida, data integration small business, business process automation, technology consulting Central Florida" />
+  <title>Fractional CTO &amp; Custom Software Development | Serendipity Technology</title>
+  <meta name="description" content="Fractional CTO leadership and custom software development from a senior engineer directing AI. Based in Florida, serving organizations nationwide." />
   <meta name="geo.region" content="US-FL" />
   <meta name="geo.placename" content="Volusia County" />
   <link rel="canonical" href="https://serendipitytechnology.com/" />
@@ -47,82 +46,42 @@ $gridProjects = getGridProjects();
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://serendipitytechnology.com/" />
-  <meta property="og:title" content="Serendipity Technology | AI-Directed Engineering" />
+  <meta property="og:title" content="Fractional CTO &amp; Custom Software Development | Serendipity Technology" />
   <meta property="og:description" content="Fractional CTO leadership and custom software, built by a real engineer directing AI." />
-  <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
+  <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_og_1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Serendipity Technology: a real engineer, directing AI, shipping real software. Fractional CTO and custom development." />
   <meta property="og:site_name" content="Serendipity Technology" />
   <meta property="og:locale" content="en_US" />
   <meta property="article:publisher" content="https://www.facebook.com/serendipitytech" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Serendipity Technology | AI-Directed Engineering" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fractional CTO &amp; Custom Software Development | Serendipity Technology" />
   <meta name="twitter:description" content="Fractional CTO leadership and custom software, built by a real engineer directing AI." />
-  <meta name="twitter:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
+  <meta name="twitter:image" content="https://serendipitytechnology.com/img/logos/serendipity_og_1200x630.png" />
+  <meta name="twitter:image:alt" content="Serendipity Technology: a real engineer, directing AI, shipping real software." />
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Serendipity Technology",
-    "url": "https://serendipitytechnology.com",
-    "logo": "https://serendipitytechnology.com/img/logos/serendipity_icon_500.png",
-    "description": "Custom software solutions that streamline operations through purpose-built workflows, data integration, and automated reporting.",
-    "founder": {
-      "@type": "Person",
-      "name": "Troy Shimkus"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-407-545-6070",
-      "contactType": "customer service",
-      "areaServed": {
-        "@type": "State",
-        "name": "Florida"
-      }
-    },
-    "sameAs": [
-      "https://www.facebook.com/serendipitytech"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Serendipity Technology",
-    "image": "https://serendipitytechnology.com/img/logos/serendipity_icon_500.png",
-    "url": "https://serendipitytechnology.com",
-    "telephone": "+1-407-545-6070",
-    "email": "troy@serendipitytech.net",
-    "priceRange": "$$",
-    "description": "Custom software solutions for workflow automation, data integration, and reporting. Serving Volusia County, FL and beyond.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Volusia County",
-      "addressRegion": "FL",
-      "addressCountry": "US"
-    },
-    "areaServed": [
-      {
-        "@type": "Place",
-        "name": "Volusia County, FL"
-      },
-      {
-        "@type": "Place",
-        "name": "Central Florida"
-      },
-      {
-        "@type": "State",
-        "name": "Florida"
-      }
-    ],
-    "sameAs": [
-      "https://facebook.com/serendipitytech"
-    ],
-    "serviceType": ["Custom Software Development", "Workflow Automation", "Data Integration", "Business Process Automation", "Automated Reporting", "Technology Consulting", "SMS and Text Messaging Services", "Email Delivery", "Client Communications"]
-  }
+  {"@context":"https://schema.org","@graph":[
+  {"@type":["ProfessionalService","LocalBusiness"],"@id":"https://serendipitytechnology.com/#org",
+   "name":"Serendipity Technology","url":"https://serendipitytechnology.com/",
+   "logo":"https://serendipitytechnology.com/img/logos/serendipity_icon_500.png",
+   "image":"https://serendipitytechnology.com/img/logos/serendipity_icon_500.png",
+   "description":"Fractional CTO leadership and custom software development, delivered by a senior engineer directing AI.",
+   "telephone":"+1-407-545-6070","email":"troy@serendipitytech.net",
+   "address":{"@type":"PostalAddress","addressLocality":"Volusia County","addressRegion":"FL","addressCountry":"US"},
+   "areaServed":[{"@type":"State","name":"Florida"},{"@type":"Country","name":"United States"}],
+   "founder":{"@id":"https://serendipitytechnology.com/#troy"},
+   "sameAs":["https://www.facebook.com/serendipitytech"],
+   "hasOfferCatalog":{"@type":"OfferCatalog","name":"Services","itemListElement":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Fractional CTO","serviceType":"Fractional CTO","description":"Part-time technology leadership: strategy, architecture and security review, vendor decisions, hiring and contractor oversight, AI adoption.","provider":{"@id":"https://serendipitytechnology.com/#org"}}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Custom Software Development","serviceType":"Custom software development","description":"Web apps, internal tools, portals, workflow automation and data integration, AI-accelerated and engineered to last.","provider":{"@id":"https://serendipitytechnology.com/#org"}}}]}},
+  {"@type":"Person","@id":"https://serendipitytechnology.com/#troy","name":"Troy Shimkus","jobTitle":"Founder and Fractional CTO","worksFor":{"@id":"https://serendipitytechnology.com/#org"},"url":"https://serendipitytechnology.com/how-we-work"},
+  {"@type":"WebSite","@id":"https://serendipitytechnology.com/#site","url":"https://serendipitytechnology.com/","name":"Serendipity Technology","publisher":{"@id":"https://serendipitytechnology.com/#org"}}
+  ]}
   </script>
 
   <!-- Your custom styles -->
@@ -342,6 +301,7 @@ $gridProjects = getGridProjects();
     .hp .featured-text h3{padding-right:0}
     .hp .featured-projects{grid-template-columns:1fr}
     .hp-proof li + li{margin-top:6px}
+    .hp .project-text h3{margin:0 0 .35rem;font-size:.95rem;color:#1F2937;font-weight:600;line-height:1.3}
     .hp .projects-section{max-width:1100px;padding:56px 24px 0}
     .hp .projects-section .hp-head{margin-bottom:32px}
 
@@ -380,9 +340,9 @@ include __DIR__ . '/partials/site-header.php';
 <header id="mainHeader" class="hp-hero">
   <div class="hp-wrap hp-hero-grid">
     <div class="hp-hero-copy">
-      <p class="hp-eyebrow">AI-Directed Engineering <a href="/how-we-work.php" class="hp-eyebrow-link">How we work <span aria-hidden="true">&rarr;</span></a></p>
+      <p class="hp-eyebrow">AI-Directed Engineering <a href="/how-we-work" class="hp-eyebrow-link">How we work <span aria-hidden="true">&rarr;</span></a></p>
       <h1>A real engineer, directing AI, shipping real software.</h1>
-      <p class="hp-lede">I own the architecture, the security, and the final call. AI does the heavy lifting under that direction, so you get senior judgment and agency-scale output without the agency overhead.</p>
+      <p class="hp-lede">As your fractional CTO or your custom software development team, I own the architecture, the security, and the final call. AI does the heavy lifting under that direction, so you get senior judgment and agency-scale output without the agency overhead.</p>
       <div class="hp-cta-row">
         <a href="/book" class="hp-btn hp-btn-primary">Book a call</a>
         <a href="#built" class="hp-btn hp-btn-ghost">See what we've built</a>
@@ -570,7 +530,7 @@ include __DIR__ . '/partials/site-header.php';
       <span class="hp-more">Explore Upfront <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
     </div>
     <div class="hp-feature-art">
-      <img src="img/upfront/upfront-wordmark-560.png" alt="Upfront" width="280" loading="lazy">
+      <img src="img/upfront/upfront-wordmark-560.png" alt="Upfront quote-to-payment software logo" width="280" loading="lazy">
     </div>
   </a>
 
@@ -607,11 +567,11 @@ include __DIR__ . '/partials/site-header.php';
   <!-- Featured Projects (dynamically rendered from /projects/*.md) -->
   <div class="featured-projects">
     <?php $delay = 0; foreach ($featuredProjects as $project): $meta = $project['meta']; ?>
-    <a href="project.php?slug=<?= htmlspecialchars($meta['slug']) ?>" class="featured-card" data-aos="fade-up"<?= $delay ? " data-aos-delay=\"$delay\"" : '' ?>>
+    <a href="/project.php?slug=<?= htmlspecialchars($meta['slug']) ?>" class="featured-card" data-aos="fade-up"<?= $delay ? " data-aos-delay=\"$delay\"" : '' ?>>
       <div class="featured-badge">Featured</div>
       <div class="featured-content">
         <div class="featured-icon">
-          <img src="img/<?= htmlspecialchars($meta['icon'] ?? 'default.svg') ?>" alt="<?= htmlspecialchars($meta['title']) ?> icon" />
+          <img src="img/<?= htmlspecialchars($meta['icon'] ?? 'default.svg') ?>" alt="" />
         </div>
         <div class="featured-text">
           <h3><?= htmlspecialchars($meta['title']) ?></h3>
@@ -633,12 +593,12 @@ include __DIR__ . '/partials/site-header.php';
       $meta = $project['meta'];
       $hiddenClass = $i >= $visibleCount ? ' hidden-project' : '';
     ?>
-    <a href="project.php?slug=<?= htmlspecialchars($meta['slug']) ?>" class="project-card<?= $hiddenClass ?>" data-aos="fade-up"<?= $i < $visibleCount ? " data-aos-delay=\"$delay\"" : '' ?>>
+    <a href="/project.php?slug=<?= htmlspecialchars($meta['slug']) ?>" class="project-card<?= $hiddenClass ?>" data-aos="fade-up"<?= $i < $visibleCount ? " data-aos-delay=\"$delay\"" : '' ?>>
       <div class="project-icon">
-        <img src="img/<?= htmlspecialchars($meta['icon'] ?? 'default.svg') ?>" alt="<?= htmlspecialchars($meta['title']) ?> icon" />
+        <img src="img/<?= htmlspecialchars($meta['icon'] ?? 'default.svg') ?>" alt="" />
       </div>
       <div class="project-text">
-        <h4><?= htmlspecialchars($meta['title']) ?></h4>
+        <h3><?= htmlspecialchars($meta['title']) ?></h3>
         <p><?= htmlspecialchars($meta['summary'] ?? '') ?></p>
       </div>
     </a>

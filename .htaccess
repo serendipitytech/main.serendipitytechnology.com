@@ -39,6 +39,9 @@ RewriteRule ^media\.html$ /media.php [L,R=301]
 RewriteRule ^websites(\.php)?/?$ https://serendipitytechnology.com/services/business-sites [L,R=301]
 
 # Clean URL: /how-we-work -> how-we-work.php (canonical omits .php)
+# Direct hits on the .php form 301 to the clean URL (checks THE_REQUEST so the internal rewrite does not loop)
+RewriteCond %{THE_REQUEST} \s/how-we-work\.php[\s?]
+RewriteRule ^how-we-work\.php$ https://serendipitytechnology.com/how-we-work [R=301,L]
 RewriteRule ^how-we-work/?$ /how-we-work.php [L]
 
 # Retired case study: the old Constituent Engagement / mapping utility grew into PrecinctWins
