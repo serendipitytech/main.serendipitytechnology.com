@@ -38,6 +38,13 @@ RewriteRule ^media\.html$ /media.php [L,R=301]
 # canonical page now. 301 preserves any inbound links + link equity.
 RewriteRule ^websites(\.php)?/?$ https://serendipitytechnology.com/services/business-sites [L,R=301]
 
+# Clean URL: /how-we-work -> how-we-work.php (canonical omits .php)
+RewriteRule ^how-we-work/?$ /how-we-work.php [L]
+
+# Retired case study: the old Constituent Engagement / mapping utility grew into PrecinctWins
+RewriteCond %{QUERY_STRING} (^|&)slug=interactive-mapping-utility(&|$)
+RewriteRule ^project\.php$ https://precinctwins.com/? [R=301,L]
+
 # Clean URL: /book -> book.php (Cal.com embed page)
 RewriteRule ^book/?$ /book.php [L]
 

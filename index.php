@@ -259,8 +259,8 @@ $gridProjects = getGridProjects();
     :where(.hp) h1,:where(.hp) h2,:where(.hp) h3{margin:0}
     .hp h1,.hp h2,.hp h3{font-family:var(--font-heading);font-weight:700;color:var(--hp-ink);text-shadow:none}
     :where(.hp) p{margin:0}
-    .hp-eyebrow{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--hp-blue);margin-bottom:16px}
-    .hp-eyebrow-link{margin-left:14px;padding-left:14px;border-left:1px solid #cbd5e1;text-transform:none;letter-spacing:0;font-size:14px;font-weight:500;color:var(--hp-blue);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+    .hp-eyebrow{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#176E96;margin-bottom:16px}
+    .hp-eyebrow-link{margin-left:14px;padding-left:14px;border-left:1px solid #cbd5e1;text-transform:none;letter-spacing:0;font-size:14px;font-weight:500;color:#176E96;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
     .hp-eyebrow-link:hover{color:var(--hp-blue-dk)}
     .hp-lede{font-size:19px;line-height:1.65;color:var(--hp-slate);max-width:34em}
 
@@ -340,6 +340,10 @@ $gridProjects = getGridProjects();
     /* Featured badge sits in flow above the content so it can never overlap a title */
     .hp .featured-badge{position:static;display:inline-block;margin-bottom:.9rem}
     .hp .featured-text h3{padding-right:0}
+    .hp .featured-projects{grid-template-columns:1fr}
+    .hp-proof li + li{margin-top:6px}
+    .hp .projects-section{max-width:1100px;padding:56px 24px 0}
+    .hp .projects-section .hp-head{margin-bottom:32px}
 
     /* projects section keeps its own styles; align spacing */
     .hp .projects-section{padding-top:56px}
@@ -435,7 +439,7 @@ include __DIR__ . '/partials/site-header.php';
           class="mt-1 w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50
           focus:bg-white focus:border-[#4FC4F0] focus:ring-2 focus:ring-[#4FC4F0]/20
           outline-none transition-all duration-200" />
-        <span id="emailError" class="text-red-500 text-sm mt-1 hidden"></span>
+        <span id="emailError" class="text-red-600 text-sm mt-1 hidden"></span>
       </label>
       <label class="block">
         <span class="text-gray-700 font-medium">Phone</span>
@@ -446,7 +450,7 @@ include __DIR__ . '/partials/site-header.php';
           class="mt-1 w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50
           focus:bg-white focus:border-[#4FC4F0] focus:ring-2 focus:ring-[#4FC4F0]/20
           outline-none transition-all duration-200" />
-        <span id="phoneError" class="text-red-500 text-sm mt-1 hidden"></span>
+        <span id="phoneError" class="text-red-600 text-sm mt-1 hidden"></span>
       </label>
       <label class="block">
         <span class="text-gray-700 font-medium">What is your project?</span>
@@ -580,7 +584,7 @@ include __DIR__ . '/partials/site-header.php';
     <a href="https://precinctwins.com" class="hp-product" rel="noopener">
       <div class="hp-product-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
       <h3>PrecinctWins</h3>
-      <p>It started as field mapping and voter engagement tools and grew into a full precinct-level voter data and outreach platform: see voters on the map, target the right doors and contacts, and run outreach from one place. The same platform can be reworked for donor engagement at nonprofits.</p>
+      <p>Grew from field mapping into a full precinct-level voter data and outreach platform. Adaptable to donor engagement for nonprofits.</p>
       <span class="hp-more">Visit precinctwins.com</span>
     </a>
     <a href="/project.php?slug=cancer-card" class="hp-product hp-product-quiet">
@@ -595,7 +599,10 @@ include __DIR__ . '/partials/site-header.php';
 </div>
 
 <section class="projects-section" id="projects">
-  <h2 class="section-title" style="color: #B3701A;">Recent Projects</h2>
+  <div class="hp-head">
+    <p class="hp-eyebrow">What we've done</p>
+    <h2>Recent projects</h2>
+  </div>
 
   <!-- Featured Projects (dynamically rendered from /projects/*.md) -->
   <div class="featured-projects">
@@ -654,9 +661,14 @@ include __DIR__ . '/partials/site-header.php';
 <?php include __DIR__ . '/partials/site-footer.php'; ?>
 
 <script>
+var modalTrigger = null;
 function openModal() {
+  modalTrigger = document.activeElement;
   document.getElementById("contactModal").classList.remove("hidden");
   document.body.style.overflow = "hidden";
+  // Move focus into the dialog (first field) for keyboard and screen reader users
+  var first = document.querySelector('#contactForm input[name="name"]');
+  if (first) first.focus();
 }
 
 function closeModal() {
@@ -664,6 +676,9 @@ function closeModal() {
   document.body.style.overflow = "";
   document.getElementById("formSuccess").classList.add("hidden");
   document.getElementById("contactForm").reset();
+  // Return focus to whatever opened the dialog
+  if (modalTrigger && typeof modalTrigger.focus === 'function') { modalTrigger.focus(); }
+  modalTrigger = null;
   // Reset Turnstile so the next time the modal opens the user gets a fresh challenge
   if (typeof turnstile !== 'undefined') {
     try { turnstile.reset('#turnstileWidget'); } catch (e) {
@@ -678,7 +693,20 @@ document.getElementById("contactModal").addEventListener("click", function (e) {
 });
 document.addEventListener("keydown", function (e) {
   var m = document.getElementById("contactModal");
-  if (e.key === "Escape" && !m.classList.contains("hidden")) closeModal();
+  if (m.classList.contains("hidden")) return;
+  if (e.key === "Escape") { closeModal(); return; }
+  // Trap Tab inside the dialog card
+  if (e.key === "Tab") {
+    var card = document.getElementById("contactModalCard");
+    var f = Array.prototype.filter.call(
+      card.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), textarea, select, iframe, [tabindex]:not([tabindex="-1"])'),
+      function (el) { return el.offsetParent !== null; });
+    if (!f.length) return;
+    var firstEl = f[0], lastEl = f[f.length - 1];
+    if (!card.contains(document.activeElement)) { e.preventDefault(); firstEl.focus(); }
+    else if (e.shiftKey && document.activeElement === firstEl) { e.preventDefault(); lastEl.focus(); }
+    else if (!e.shiftKey && document.activeElement === lastEl) { e.preventDefault(); firstEl.focus(); }
+  }
 });
 
 // Alias so openContactModal() (used by site-header partial) triggers the same modal
