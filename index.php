@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/projects.php';
-$featuredProjects = getFeaturedProjects();
+// Products already shown in "What we've built" are not repeated in Recent Projects.
+$showcasedSlugs = ['custom-membership-platform', 'cancer-card'];
+$featuredProjects = array_filter(getFeaturedProjects(), function ($p) use ($showcasedSlugs) {
+  return !in_array($p['meta']['slug'], $showcasedSlugs, true);
+});
 $gridProjects = getGridProjects();
 ?>
 <!DOCTYPE html>
@@ -256,6 +260,8 @@ $gridProjects = getGridProjects();
     .hp h1,.hp h2,.hp h3{font-family:var(--font-heading);font-weight:700;color:var(--hp-ink);text-shadow:none}
     :where(.hp) p{margin:0}
     .hp-eyebrow{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--hp-blue);margin-bottom:16px}
+    .hp-eyebrow-link{margin-left:14px;padding-left:14px;border-left:1px solid #cbd5e1;text-transform:none;letter-spacing:0;font-size:14px;font-weight:500;color:var(--hp-blue);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+    .hp-eyebrow-link:hover{color:var(--hp-blue-dk)}
     .hp-lede{font-size:19px;line-height:1.65;color:var(--hp-slate);max-width:34em}
 
     /* hero: overrides the legacy photo-header rule in the critical CSS */
@@ -366,7 +372,7 @@ include __DIR__ . '/partials/site-header.php';
 <header id="mainHeader" class="hp-hero">
   <div class="hp-wrap hp-hero-grid">
     <div class="hp-hero-copy">
-      <p class="hp-eyebrow">AI-Directed Engineering</p>
+      <p class="hp-eyebrow">AI-Directed Engineering <a href="/how-we-work.php" class="hp-eyebrow-link">How we work <span aria-hidden="true">&rarr;</span></a></p>
       <h1>A real engineer, directing AI, shipping real software.</h1>
       <p class="hp-lede">I own the architecture, the security, and the final call. AI does the heavy lifting under that direction, so you get senior judgment and agency-scale output without the agency overhead.</p>
       <div class="hp-cta-row">
@@ -501,7 +507,7 @@ include __DIR__ . '/partials/site-header.php';
           <p class="hp-proof-label">Where the experience comes from</p>
           <ul>
             <li>PowerSchool, supporting 150+ school districts</li>
-            <li>Elected City Commissioner, so public-sector constraints are familiar</li>
+            <li>City Commissioner, so public-sector constraints are familiar</li>
             <li>Vice Chair of the FDDC, running technology for a statewide political organization</li>
           </ul>
         </div>
@@ -567,12 +573,12 @@ include __DIR__ . '/partials/site-header.php';
       <p>A multitenant membership platform for clubs, chapters, and nonprofits: dues, events, volunteer hours, and reporting, with each organization's data kept separate.</p>
       <span class="hp-more">Read the case study</span>
     </a>
-    <div class="hp-product">
+    <a href="https://precinctwins.com" class="hp-product" rel="noopener">
       <div class="hp-product-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <h3>Voter Engagement Platform</h3>
-      <p>PrecinctWins: voter data and outreach tools for campaigns, party committees, and the volunteers who run them.</p>
-      <span class="hp-status">Details coming soon</span>
-    </div>
+      <h3>PrecinctWins</h3>
+      <p>A precinct-level voter data and outreach platform. Campaigns, party committees, and volunteers can see their voters on the map, target the right doors and contacts, and run outreach from one place.</p>
+      <span class="hp-more">Visit precinctwins.com</span>
+    </a>
     <a href="/project.php?slug=cancer-card" class="hp-product hp-product-quiet">
       <div class="hp-product-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
       <h3>Cancer Card <span class="hp-status-inline">In development</span></h3>

@@ -1,5 +1,5 @@
 ---
-title: Custom Membership Platform
+title: Membership Database
 slug: custom-membership-platform
 icon: group.svg
 featured: true
