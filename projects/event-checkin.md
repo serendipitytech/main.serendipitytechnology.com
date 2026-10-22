@@ -4,6 +4,7 @@ slug: event-checkin
 icon: clipboard-check.svg
 featured: false
 order: 5
+noindex: true
 summary: >
   A real-time event check-in app with multi-device sync, role-based access,
   and roster import, live on the iOS App Store.

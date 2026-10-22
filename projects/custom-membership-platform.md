@@ -4,6 +4,9 @@ slug: custom-membership-platform
 icon: group.svg
 featured: true
 order: 4
+seo_title: "Membership Database: How It Works"
+related_url: /services/membership
+related_label: See the Membership Database service, features and pricing
 summary: >
   A secure, scalable membership database for signups, communication, events,
   and reporting, tailored to how nonprofits actually run their operations.

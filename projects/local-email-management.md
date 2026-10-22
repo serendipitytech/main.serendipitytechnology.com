@@ -4,6 +4,7 @@ slug: local-email-management
 icon: inbox.svg
 featured: false
 order: 11
+noindex: true
 summary: >
   An AI-powered email triage system that reads local inbox storage directly,
   surfacing urgent items, flagging stale threads, and generating reports you

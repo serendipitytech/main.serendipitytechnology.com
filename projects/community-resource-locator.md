@@ -4,6 +4,7 @@ slug: community-resource-locator
 icon: maps-arrow-diagonal.svg
 featured: false
 order: 8
+noindex: true
 summary: >
   A clean, public-facing map that pulls scattered data into one place,
   surfacing physical access points and support services in underserved

@@ -4,6 +4,7 @@ slug: dynamic-inventory-catalog
 icon: multiple-pages-empty.svg
 featured: false
 order: 6
+noindex: true
 summary: >
   An internal product catalog that pulls multiple vendor sources into one
   searchable system for sales teams, plus segmented views customers can

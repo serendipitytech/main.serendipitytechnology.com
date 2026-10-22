@@ -4,6 +4,9 @@ slug: cancer-card
 icon: group.svg
 featured: true
 order: 1
+seo_title: "Case Study: The Cancer Card, a Custom Web App"
+related_url: /get-started
+related_label: Need something custom built? Start a project
 summary: >
   A mobile app that turns asking for help during cancer treatment into a
   simple, low-guilt exchange, so patients can request what they need and stay

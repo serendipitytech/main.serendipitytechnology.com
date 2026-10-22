@@ -4,6 +4,9 @@ slug: custom-ecommerce-platform
 icon: view-grid.svg
 featured: true
 order: 3
+seo_title: "Case Study: Multi-Store Commerce Platform"
+related_url: /get-started
+related_label: Need something custom built? Start a project
 summary: >
   One platform that runs many branded storefronts at once, each with its own
   look, catalog, and payments, sharing the same infrastructure and reporting

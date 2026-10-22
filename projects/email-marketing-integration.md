@@ -4,6 +4,7 @@ slug: email-marketing-integration
 icon: reply-to-message.svg
 featured: false
 order: 9
+noindex: true
 summary: >
   An open-source Mautic deployment built for statewide outreach at scale,
   with automated data sync, custom segment imports, and support for multiple

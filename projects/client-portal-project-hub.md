@@ -4,6 +4,9 @@ slug: client-portal-project-hub
 icon: clipboard-check.svg
 featured: false
 order: 7
+seo_title: "Case Study: Client Portal and Project Hub"
+related_url: /get-started
+related_label: Need something custom built? Start a project
 summary: >
   One system with two faces: clients see status, files, and invoices, while
   the team runs projects, tickets, and payments behind the same screen.

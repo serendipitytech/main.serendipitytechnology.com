@@ -30,6 +30,12 @@ if (!$project || empty($project['meta']['title'])) {
     $pageTitle = $meta['title'];
     $notFound = false;
 }
+// SEO-only overrides (front matter): seo_title changes <title>/og/twitter but not the on-page H1;
+// noindex: true emits robots noindex,follow (a robots.txt disallow would hide the tag from Google).
+$seoTitle  = (!$notFound && !empty($meta['seo_title'])) ? $meta['seo_title'] : $pageTitle;
+$noindex   = !$notFound && !empty($meta['noindex']) && $meta['noindex'] !== 'false';
+$relatedUrl   = (!$notFound && !empty($meta['related_url']) && strpos($meta['related_url'], '/') === 0) ? $meta['related_url'] : '';
+$relatedLabel = (!$notFound && !empty($meta['related_label'])) ? $meta['related_label'] : '';
 
 // Get all projects for navigation
 $allProjects = getAllProjects();
@@ -61,8 +67,9 @@ $nextProject = $allProjects[$nextIndex];
       gtag('js', new Date());
       gtag('config', 'G-G50KCN37LQ');
     </script>
-    <title><?= htmlspecialchars($pageTitle) ?> | Serendipity Technology</title>
+    <title><?= htmlspecialchars($seoTitle) ?> | Serendipity Technology</title>
     <?php if (!$notFound): ?>
+    <?php if ($noindex): ?><meta name="robots" content="noindex,follow" /><?php endif; ?>
     <meta name="description" content="<?= htmlspecialchars($meta['summary'] ?? 'Custom software project by Serendipity Technology') ?> | Volusia County workflow automation specialists." />
     <meta name="geo.region" content="US-FL" />
     <meta name="geo.placename" content="Volusia County" />
@@ -85,7 +92,7 @@ $nextProject = $allProjects[$nextIndex];
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://serendipitytechnology.com/project.php?slug=<?= htmlspecialchars($slug) ?>" />
-    <meta property="og:title" content="<?= htmlspecialchars($pageTitle) ?> | Serendipity Technology" />
+    <meta property="og:title" content="<?= htmlspecialchars($seoTitle) ?> | Serendipity Technology" />
     <meta property="og:description" content="<?= htmlspecialchars($meta['summary'] ?? 'Custom software project by Serendipity Technology') ?>" />
     <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
     <meta property="og:site_name" content="Serendipity Technology" />
@@ -94,7 +101,7 @@ $nextProject = $allProjects[$nextIndex];
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="<?= htmlspecialchars($pageTitle) ?>" />
+    <meta name="twitter:title" content="<?= htmlspecialchars($seoTitle) ?>" />
     <meta name="twitter:description" content="<?= htmlspecialchars($meta['summary'] ?? 'Custom software project') ?>" />
     <meta name="twitter:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />
 
@@ -245,6 +252,9 @@ include __DIR__ . '/partials/site-header.php';
 
         <div class="project-body">
             <?= markdownToHtml($content) ?>
+            <?php if ($relatedUrl && $relatedLabel): ?>
+                <p class="project-related"><a href="<?= htmlspecialchars($relatedUrl) ?>"><?= htmlspecialchars($relatedLabel) ?> &rarr;</a></p>
+            <?php endif; ?>
         </div>
     </article>
 

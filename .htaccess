@@ -52,6 +52,12 @@ RewriteCond %{THE_REQUEST} \s/how-we-work\.php[\s?]
 RewriteRule ^how-we-work\.php$ https://serendipitytechnology.com/how-we-work [R=301,L]
 RewriteRule ^how-we-work/?$ /how-we-work.php [L]
 
+# Clean URLs: /privacy-policy and /terms (canonicals + sitemap use the extensionless form; the .php
+# forms 301 to them, same pattern as how-we-work above). THE_REQUEST check avoids a rewrite loop.
+RewriteCond %{THE_REQUEST} \s/(privacy-policy|terms)\.php[\s?]
+RewriteRule ^(privacy-policy|terms)\.php$ https://serendipitytechnology.com/$1 [R=301,L]
+RewriteRule ^(privacy-policy|terms)/?$ /$1.php [L]
+
 # Retired case study: the old Constituent Engagement / mapping utility grew into PrecinctWins
 RewriteCond %{QUERY_STRING} (^|&)slug=interactive-mapping-utility(&|$)
 RewriteRule ^project\.php$ https://precinctwins.com/? [R=301,L]

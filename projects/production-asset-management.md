@@ -4,6 +4,7 @@ slug: production-asset-management
 icon: settings-profiles.svg
 featured: false
 order: 10
+noindex: true
 summary: >
   A digital asset portal for live event productions: centralized submission,
   review, and approval of audio, video, and presentation files, all in one
