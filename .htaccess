@@ -6,6 +6,14 @@ RewriteCond %{HTTPS} off
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Legacy /main/ prefix (301). The site used to live in a /main/ subdirectory on HostGator;
+# the prefix was dropped at the VPS migration (2026-04) with no redirect, so old Google results,
+# backlinks and bookmarks 404 (~180 direct sessions/period). Strip the prefix; the query string is
+# carried over automatically. Chained rules below (media.html, websites.php, ...) then finish the hop.
+RewriteRule ^main/?$ https://serendipitytechnology.com/ [R=301,L]
+RewriteRule ^main/index\.(html|php)$ https://serendipitytechnology.com/ [R=301,L]
+RewriteRule ^main/(.+)$ https://serendipitytechnology.com/$1 [R=301,L]
+
 # Clean URLs for /services/*
 #
 # Tricky case: /services/candidates exists as BOTH a .php file AND a directory
