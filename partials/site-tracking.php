@@ -5,8 +5,9 @@
  * Included ONCE, from partials/site-header.php (never copy this per page; per-page copies
  * are exactly why GA4 was missing on /services/* and /book/upfront-demo).
  *
- * Active only on /services/* and /book-upfront.php (/book/upfront-demo). Older pages keep
- * their own hard-coded GA4 loader and are not touched.
+ * Active only on /services/* and /book-upfront.php (/book/upfront-demo). GA4 + the cookie
+ * consent component come from partials/site-analytics.php (also included in the <head> of every
+ * other public page); this file adds the Meta Pixel and the Upfront funnel events on top.
  */
 if (defined('SITE_TRACKING_LOADED')) { return; }
 $__st_script = $_SERVER['SCRIPT_NAME'] ?? '';
@@ -17,26 +18,20 @@ define('SITE_TRACKING_LOADED', true);
 // Meta Pixel ID: one-line drop-in. Replace PIXEL_ID_PENDING with the numeric ID from
 // Events Manager. While it is not purely numeric the Pixel is NOT loaded (nothing breaks).
 const META_PIXEL_ID = '1678137287072257';
-const GA4_ID        = 'G-G50KCN37LQ';
 // -------------------------------------------------------------------------
 
 $__st_pixel_on = (bool) preg_match('/^\d{8,20}$/', META_PIXEL_ID);
 $__st_path     = strtok($_SERVER['REQUEST_URI'] ?? '', '?');
 ?>
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA4_ID ?>"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '<?= GA4_ID ?>');
-</script>
+<?php include __DIR__ . '/site-analytics.php'; // consent component + GA4 (shared, loads once) ?>
 <?php if ($__st_pixel_on): ?>
-<!-- Meta Pixel -->
+<!-- Meta Pixel: loads only if the visitor has not opted out and is not sending Global Privacy Control (fails closed if st-consent.js is missing) -->
 <script>
+  if (window.stConsent && stConsent.adsAllowed()) {
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '<?= META_PIXEL_ID ?>');
   fbq('track', 'PageView');
+  } else { window.fbq = function(){}; }
 </script>
 <?php else: ?>
 <script>

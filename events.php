@@ -4,20 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G50KCN37LQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-G50KCN37LQ');
-  </script>
+  <?php include __DIR__ . '/partials/site-analytics.php'; // consent notice + GA4 ?>
   <title>Event AV & On-Site Support Services | Volusia County, FL</title>
   <meta name="description" content="Done-for-you event AV support and on-site guest check-in for galas, fundraisers, and civic events in Volusia County. On-site operators, custom packages, nonprofit discounts." />
   <meta name="keywords" content="event check-in Volusia County, AV operator Florida, gala check-in service, fundraiser technology support, nonprofit event services, Daytona Beach event tech" />
   <meta name="geo.region" content="US-FL" />
   <meta name="geo.placename" content="Volusia County" />
-  <link rel="canonical" href="https://serendipitytechnology.com/events.php" />
+  <link rel="canonical" href="https://serendipitytechnology.com/events" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="img/logos/serendipity_icon_150.png" />
@@ -36,7 +29,7 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://serendipitytechnology.com/events.php" />
+  <meta property="og:url" content="https://serendipitytechnology.com/events" />
   <meta property="og:title" content="Event Check-In & AV Operator Services | Volusia County, FL" />
   <meta property="og:description" content="Simplify your next gala, fundraiser, or civic event with local, reliable guest check-in and AV support in Central Florida." />
   <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />

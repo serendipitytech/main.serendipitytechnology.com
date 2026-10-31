@@ -10,14 +10,7 @@ include __DIR__ . '/partials/site-header.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="3TXwmMDxBCEQDR9EF8e6yvCEyiTcS7at1zDQ5f0F2zc" />
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G50KCN37LQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-G50KCN37LQ');
-    </script>
+  <?php include __DIR__ . '/partials/site-analytics.php'; // consent notice + GA4 ?>
 
     <title>Get Started | Custom Software Project | Serendipity Technology</title>
     <meta name="description" content="Start your custom software project with Serendipity Technology. Tell us what you need, workflow automation, data integration, or a custom app, and we'll scope it with you." />
@@ -1501,6 +1494,7 @@ async function submitOrder() {
         document.getElementById('confirmationContent').style.display = 'block';
         document.getElementById('dnsDomain').textContent  = formState.domainName;
         document.getElementById('confirmEmail').textContent = formState.contactEmail;
+        if (typeof gtag === 'function') { gtag('event', 'generate_lead', { form_location: 'get_started_onboarding' }); }
 
     } catch (error) {
         document.getElementById('loadingContent').style.display = 'none';

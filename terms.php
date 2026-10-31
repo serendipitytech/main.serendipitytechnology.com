@@ -42,6 +42,7 @@
       padding: 14px 18px; border-radius: 8px; margin: 16px 0;
     }
   </style>
+  <?php include __DIR__ . '/partials/site-analytics.php'; // consent notice + GA4 ?>
 </head>
 <body>
 

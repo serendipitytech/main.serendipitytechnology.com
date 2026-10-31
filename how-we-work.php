@@ -14,14 +14,7 @@
   <link rel="canonical" href="https://serendipitytechnology.com/how-we-work">
   <link rel="icon" href="/img/logos/serendipity_icon_150.png">
 
-  <!-- Google Analytics (GA4 only; not an ad funnel page, so no Meta Pixel) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G50KCN37LQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-G50KCN37LQ');
-  </script>
+  <?php include __DIR__ . '/partials/site-analytics.php'; // consent notice + GA4 ?>
 
   <!-- Open Graph -->
   <meta property="og:title" content="How We Work | AI-Directed Engineering | Serendipity Technology">

@@ -39,7 +39,7 @@ RewriteRule ^services/([a-z0-9-]+)/?$ /services/$1.php [L]
 
 # media.html was renamed to media.php (PHP includes for shared header/footer)
 # Redirect old URL to new for inbound link preservation
-RewriteRule ^media\.html$ /media.php [L,R=301]
+RewriteRule ^media\.html$ https://serendipitytechnology.com/media [L,R=301]
 
 # websites.php consolidated into services/business-sites.php (2026-08).
 # Both were selling the same AI-website product with conflicting pricing — one
@@ -57,6 +57,12 @@ RewriteRule ^how-we-work/?$ /how-we-work.php [L]
 RewriteCond %{THE_REQUEST} \s/(privacy-policy|terms)\.php[\s?]
 RewriteRule ^(privacy-policy|terms)\.php$ https://serendipitytechnology.com/$1 [R=301,L]
 RewriteRule ^(privacy-policy|terms)/?$ /$1.php [L]
+
+# Clean URLs: /get-started, /templates, /media, /events (canonicals + sitemap use the extensionless form;
+# the .php forms 301 to them, same pattern as how-we-work above). Query strings carry over automatically.
+# THE_REQUEST check avoids a rewrite loop with the internal rewrite further down.
+RewriteCond %{THE_REQUEST} \s/(get-started|templates|media|events)\.php[\s?]
+RewriteRule ^(get-started|templates|media|events)\.php$ https://serendipitytechnology.com/$1 [R=301,L]
 
 # Retired case study: the old Constituent Engagement / mapping utility grew into PrecinctWins
 RewriteCond %{QUERY_STRING} (^|&)slug=interactive-mapping-utility(&|$)

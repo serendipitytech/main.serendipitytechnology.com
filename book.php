@@ -99,6 +99,7 @@
       .booking-card { border-radius: 0; border-left: 0; border-right: 0; }
     }
   </style>
+  <?php include __DIR__ . '/partials/site-analytics.php'; // consent notice + GA4 ?>
 </head>
 <body class="has-fixed-header">
 

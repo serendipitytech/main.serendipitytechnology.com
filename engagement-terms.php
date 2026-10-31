@@ -133,6 +133,7 @@
       .terms-hero h1 { font-size: 30px; }
     }
   </style>
+  <?php include __DIR__ . '/partials/site-analytics.php'; // consent notice + GA4 ?>
 </head>
 <body class="svc-page has-fixed-header">
 

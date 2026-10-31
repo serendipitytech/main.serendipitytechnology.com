@@ -164,7 +164,7 @@ $header_chat_action = $header_chat_action ?? 'openContactModal()';
     <div class="scroll-nav-links">
       <a href="/services/" class="scroll-nav-link">Services</a>
       <a href="/#projects" class="scroll-nav-link">Projects</a>
-      <a href="/media.php" class="scroll-nav-link">Media</a>
+      <a href="/media" class="scroll-nav-link">Media</a>
     </div>
     <div class="scroll-nav-actions">
     <button type="button" class="scroll-menu-btn" id="scrollMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="scrollMobileMenu">
@@ -181,7 +181,7 @@ $header_chat_action = $header_chat_action ?? 'openContactModal()';
 <div class="scroll-mobile-menu" id="scrollMobileMenu">
   <a href="/services/">Services</a>
   <a href="/#projects">Projects</a>
-  <a href="/media.php">Media</a>
+  <a href="/media">Media</a>
 </div>
 <script>
   // Mobile menu disclosure: aria-expanded, Escape and outside click close it.

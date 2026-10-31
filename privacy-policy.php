@@ -42,6 +42,7 @@
       padding: 14px 18px; border-radius: 8px; margin: 16px 0;
     }
   </style>
+  <?php include __DIR__ . '/partials/site-analytics.php'; // consent notice + GA4 ?>
 </head>
 <body>
 
@@ -78,9 +79,25 @@ include __DIR__ . '/partials/site-header.php';
       <li>To operate, maintain, and improve our website and services.</li>
     </ul>
 
+<div id="cookies">
+<h2>Cookies, Analytics and Advertising</h2>
+<p>Serendipity Technology uses a small number of cookies and similar technologies on this website. They fall into the groups below.</p>
+<ul>
+<li><strong>Strictly necessary.</strong> These keep the site working and secure, and they remember your privacy choice on this page. They do not need your consent.</li>
+<li><strong>Analytics.</strong> We use Google Analytics to understand, in aggregate, how people find and use this site, such as which pages are viewed, what kind of device is used, and the general area visitors come from. Google sets cookies (for example <code>_ga</code>) to do this. We do not use analytics data to identify you personally.</li>
+<li><strong>Advertising.</strong> On our Upfront pages we use the Meta (Facebook) Pixel to measure how our ads perform and to show our ads to people who have visited those pages. Meta sets cookies (for example <code>_fbp</code>) and may use other identifiers for this. Under some state privacy laws this can count as &ldquo;sharing&rdquo; personal information for cross-context behavioral advertising, which is why we give you the opt-out below. If you opt out, or your browser sends Global Privacy Control, the Meta Pixel is not loaded.</li>
+</ul>
+<h3>Your choices</h3>
+<p>Analytics and advertising cookies are on by default. You can opt out at any time with the button below or from the cookie notice on the site. We also honor the Global Privacy Control (GPC) signal: if your browser sends GPC, we automatically turn advertising cookies off for you (the Meta Pixel does not load).</p>
+<p><button type="button" data-st-consent-toggle class="st-consent-toggle">Opt out of analytics and advertising cookies</button></p>
+<p data-st-consent-status class="st-consent-status"></p>
+<noscript><p>Your browser has JavaScript turned off, so this site cannot run the cookie controls. You can also block or delete cookies in your browser settings, or install the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out browser add-on</a>.</p></noscript>
+<p>You can also block or delete cookies in your browser settings. Learn how Google uses information from sites that use its services at <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a>.</p>
+</div>
+
     <h2>How we use tracking</h2>
     <p>Our website uses Google Analytics 4 to measure which pages are visited, and, on our Upfront pages, the Meta (Facebook) Pixel to measure how our ads perform. These tools set cookies and collect information such as pages viewed, buttons clicked, device and browser details, approximate location, and the campaign link you arrived from. When you book a demo through our scheduling page (powered by Cal.com, hosted by us), we receive the name, email address, time, and any notes you enter, and we record that a booking occurred so we can measure which ads lead to demos. Meta and Google may use this information under their own privacy policies; we do not sell it.</p>
-    <p><strong>To opt out:</strong> use your browser's tracking and cookie settings or a content blocker, install the <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics opt-out add-on</a>, adjust your ad preferences at <a href="https://www.facebook.com/adpreferences">facebook.com/adpreferences</a>, or email us and we will help.</p>
+    <p><strong>To opt out:</strong> use the button in the <a href="#cookies">Cookies, Analytics and Advertising</a> section above or the cookie notice on the site, send Global Privacy Control from your browser, adjust your ad preferences at <a href="https://www.facebook.com/adpreferences">facebook.com/adpreferences</a>, or email us and we will help.</p>
 
     <h2>SMS / text messaging</h2>
     <p>If you provide your mobile number and choose text as a preferred contact method, or if you text one of our keywords, you consent to receive SMS messages from Serendipity Technology related to your inquiry and your account (for example, replies, appointment reminders, and project or account updates).</p>

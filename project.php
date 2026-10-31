@@ -59,14 +59,7 @@ $nextProject = $allProjects[$nextIndex];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G50KCN37LQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-G50KCN37LQ');
-    </script>
+  <?php include __DIR__ . '/partials/site-analytics.php'; // consent notice + GA4 ?>
     <title><?= htmlspecialchars($seoTitle) ?> | Serendipity Technology</title>
     <?php if (!$notFound): ?>
     <?php if ($noindex): ?><meta name="robots" content="noindex,follow" /><?php endif; ?>

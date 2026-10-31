@@ -159,7 +159,7 @@ $footer_simple = $footer_simple ?? false;
     <div class="site-footer-col">
       <h4>Company</h4>
       <ul>
-        <li><a href="/media.php">Media Kit</a></li>
+        <li><a href="/media">Media Kit</a></li>
         <li><a href="/engagement-terms.php">Engagement Terms</a></li>
         <li><a href="/privacy-policy.php">Privacy Policy</a></li>
         <li><a href="/terms.php">Terms of Service</a></li>

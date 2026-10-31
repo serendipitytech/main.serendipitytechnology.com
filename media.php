@@ -10,19 +10,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G50KCN37LQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-G50KCN37LQ');
-  </script>
+  <?php include __DIR__ . '/partials/site-analytics.php'; // consent notice + GA4 ?>
   <title>Media Kit & Brand Assets | Serendipity Technology Press Resources</title>
   <meta name="description" content="Download Serendipity Technology logos, brand colors, and press materials. Official brand assets for Volusia County's custom software development partner." />
   <meta name="geo.region" content="US-FL" />
   <meta name="geo.placename" content="Volusia County" />
-  <link rel="canonical" href="https://serendipitytechnology.com/media.php" />
+  <link rel="canonical" href="https://serendipitytechnology.com/media" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="img/logos/serendipity_icon_150.png" />
@@ -42,7 +35,7 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://serendipitytechnology.com/media.php" />
+  <meta property="og:url" content="https://serendipitytechnology.com/media" />
   <meta property="og:title" content="Media Kit & Brand Assets | Serendipity Technology" />
   <meta property="og:description" content="Download Serendipity Technology logos, brand colors, typography guidelines, and press materials." />
   <meta property="og:image" content="https://serendipitytechnology.com/img/logos/serendipity_icon_500.png" />

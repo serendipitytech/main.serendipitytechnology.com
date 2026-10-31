@@ -14,14 +14,7 @@ $gridProjects = getGridProjects();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="3TXwmMDxBCEQDR9EF8e6yvCEyiTcS7at1zDQ5f0F2zc" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G50KCN37LQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-G50KCN37LQ');
-  </script>
+  <?php include __DIR__ . '/partials/site-analytics.php'; // consent notice + GA4 ?>
   <title>Fractional CTO &amp; Custom Software Development | Serendipity Technology</title>
   <meta name="description" content="Fractional CTO leadership and custom software development from a senior engineer directing AI. Based in Florida, serving organizations nationwide." />
   <meta name="geo.region" content="US-FL" />
