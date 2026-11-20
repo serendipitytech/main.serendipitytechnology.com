@@ -69,9 +69,9 @@ include __DIR__ . '/partials/site-header.php';
     <p>You may use this website for lawful purposes only. You agree not to misuse the site, interfere with its operation, or attempt to access it in an unauthorized way.</p>
 
     <h2>SMS / text messaging program</h2>
-    <p>By providing your mobile number and selecting text as a preferred contact method, or by texting one of our keywords, you agree to receive SMS messages from Serendipity Technology related to your inquiry and your account (for example, replies to your message, appointment reminders, and project or account updates).</p>
+    <p>By providing your mobile number and selecting text as a preferred contact method, or by texting one of our keywords, you agree to receive SMS messages from Serendipity Technology related to your inquiry and your account. These include one-time verification and login codes (one-time passcodes), account notifications, appointment, shift, and meeting reminders, task and project updates and notifications, and replies to your messages.</p>
     <ul>
-      <li><strong>Program:</strong> Serendipity Technology customer-service and account notifications.</li>
+      <li><strong>Program:</strong> Serendipity Technology account and service notifications: one-time verification and login codes, account notifications, appointment, shift, and meeting reminders, and task and project updates.</li>
       <li><strong>Message frequency</strong> varies based on your interactions with us.</li>
       <li><strong>Message and data rates may apply</strong>, per your mobile carrier plan.</li>
       <li><strong>To opt out</strong>, reply STOP at any time. You will receive one confirmation message and no further texts.</li>

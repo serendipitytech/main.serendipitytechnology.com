@@ -100,7 +100,7 @@ include __DIR__ . '/partials/site-header.php';
     <p><strong>To opt out:</strong> use the button in the <a href="#cookies">Cookies, Analytics and Advertising</a> section above or the cookie notice on the site, send Global Privacy Control from your browser, adjust your ad preferences at <a href="https://www.facebook.com/adpreferences">facebook.com/adpreferences</a>, or email us and we will help.</p>
 
     <h2>SMS / text messaging</h2>
-    <p>If you provide your mobile number and choose text as a preferred contact method, or if you text one of our keywords, you consent to receive SMS messages from Serendipity Technology related to your inquiry and your account (for example, replies, appointment reminders, and project or account updates).</p>
+    <p>If you provide your mobile number and choose text as a preferred contact method, or if you text one of our keywords, you consent to receive SMS messages from Serendipity Technology related to your inquiry and your account. These include one-time verification and login codes (one-time passcodes), account notifications, appointment, shift, and meeting reminders, task and project updates and notifications, and replies to your messages.</p>
     <ul>
       <li>Message frequency varies.</li>
       <li>Message and data rates may apply.</li>
