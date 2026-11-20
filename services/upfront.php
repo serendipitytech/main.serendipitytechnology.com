@@ -16,6 +16,8 @@ require_once __DIR__ . '/../partials/upfront-helpers.php';
 $book_url = '/book/upfront-demo';
 // Live demo workspace: registration page (not /sign-in).
 $demo_url = 'https://upfront-demo.serendipitytechnology.com';
+// Production app login front (CoS-wired).
+$login_url = 'https://upfront.serendipitylabs.cloud';
 
 // Show the draft banner on the preview host only, never on production.
 $is_preview = isset($_SERVER['HTTP_HOST']) && strpos($_SERVER['HTTP_HOST'], 'preview.') === 0;
@@ -95,6 +97,7 @@ $check = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="cu
     .up-bar { background: #fff; border-bottom: 1px solid var(--svc-border); }
     .up-bar-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 12px; padding-bottom: 12px; }
     .up-bar .svc-btn { padding: 9px 14px; font-size: 14px; }
+    .up-bar-cta { display: flex; align-items: center; gap: 10px; }
     .up-foot { border-top: 1px solid var(--svc-border); padding: 28px 0 0; margin-top: 16px; }
     .up-foot-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; font-size: 14px; color: #475569; }
     .up-hero .svc-h1 { font-size: 52px; }
@@ -221,7 +224,10 @@ include __DIR__ . '/../partials/site-header.php';
 <div class="up-bar">
   <div class="svc-container up-bar-in">
     <a class="up-wordmark" href="#top" aria-label="Upfront, back to top"><?= up_wordmark(110) ?></a>
-    <a href="<?= htmlspecialchars($book_url) ?>" class="svc-btn svc-btn-primary">Book a demo</a>
+    <div class="up-bar-cta">
+      <a href="<?= htmlspecialchars($login_url) ?>" class="svc-btn svc-btn-secondary" rel="noopener">Log in</a>
+      <a href="<?= htmlspecialchars($book_url) ?>" class="svc-btn svc-btn-primary">Book a demo</a>
+    </div>
   </div>
 </div>
 
